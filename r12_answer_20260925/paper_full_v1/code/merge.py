@@ -23,7 +23,23 @@ ORDER = ["00_摘要.md", "01_问题重述.md", "02_问题分析.md", "03_模型�
          "05_问题一.md", "06_问题二.md", "07_问题三.md", "08_模型检验与算法分析.md", "09_模型评价与推广.md",
          "10_结论.md", "REFS", "12_附录.md"]
 REFS = json.loads((HERE / "refs.json").read_text(encoding="utf-8"))
-NEW_FIGS = {"F35": "全文技术路线"}
+NEW_FIGS = {"F35": "全文技术路线", "F37": "R12一次求解请求的流程"}
+# 正文图题：交付物曲线写明题目要求的名称，概念图标注“示意图”；其余沿用figures_v3元数据标题
+CAPTIONS = {
+    "F01": "计算资源、私有缓存与共享带宽池（示意图）",
+    "F02": "调度方案的三种视图：操作划分、核心映射与核序（概念示例）",
+    "F05": "同一计算片段在场景A与场景B下的Task边界（示意图）",
+    "F06": "数据依赖与核心队列的联合无环约束（合法例与反例）",
+    "F07": "问题一：场景A下1至5核平均加速比折线图（R12完整流程与C3基线）",
+    "F13": "逻辑活跃、物理驻留与容量冲突（示意图）",
+    "F14": "局部微批：依赖不变，共享输入成组使用（示意图）",
+    "F15": "问题二：场景B下1至5核平均加速比折线图（R12完整流程与C3基线）",
+    "F22": "FIFO状态快照与在途读取（示意图）",
+    "F23": "方案×配置：两种比较的实验结构（示意图）",
+    "F24": "问题三：无L2与只读Cache两种配置下的1至5核平均加速比对比曲线（a）与两种配置比（b）",
+    "F33": "安全链与依赖带如何形成子图（示意图）",
+    "F34": "Treap区间索引：相同插入规则，更少无效搜索（示意图）",
+}
 
 EQ_LABEL = re.compile(r"^【式\(([^)]+)\)】\s*$")
 TAB_CAP = re.compile(r"^\*\*表(\S+?)\s{1,3}(.+?)\*\*\s*$")
@@ -34,7 +50,7 @@ def fig_info(fid: str) -> tuple[str, Path]:
     if fid in NEW_FIGS:
         return NEW_FIGS[fid], ROOT / "figures" / f"{fid}.png"
     meta = json.loads((R12 / "figures_v3/metadata" / f"{fid}.json").read_text(encoding="utf-8"))
-    return meta["title"], R12 / "figures_v3/delivery/figures" / f"{fid}.png"
+    return CAPTIONS.get(fid, meta["title"]), R12 / "figures_v3/delivery/figures" / f"{fid}.png"
 
 
 def chapter_no(name: str) -> int | None:

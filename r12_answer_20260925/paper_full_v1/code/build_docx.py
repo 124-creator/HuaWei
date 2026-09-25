@@ -1,7 +1,8 @@
 """把合稿中间件转成Word草稿：三线表、公式右对齐编号、图题表题、正文首行缩进。
 
 依赖：pypandoc-binary（pandoc 3.x）、python-docx、Pillow。输出 ../out/R12论文_v1.docx。
-figures_v3 图片顶部带内部图号标题，这里裁掉标题带后再嵌入（原图不改）。
+figures_v3 图片顶部带内部图号标题、底部带一行口径注记，这里裁掉这两条文字带后再嵌入（原图不改）；
+口径注记的内容在正文相应段落中已有交代。
 """
 from __future__ import annotations
 
@@ -49,12 +50,69 @@ def crop_title_band(src: Path, dst: Path) -> None:
             y += 1
         cut = max(gap_start, y - int(0.01 * h))
         im = im.crop((0, cut, w, h))
+    im = crop_note_band(im, h)
     dst.parent.mkdir(parents=True, exist_ok=True)
     im.save(dst, dpi=(600, 600))
 
 
+def crop_note_band(im, h0):
+    """裁掉图片底部的一行口径注记：自下而上找到最后一段文字带（允许标点下沿的细小断开）及其上方的空白间隔。
+    文字带高度不超过原图高度的4.5%、上方空白不少于0.4%时才裁，否则原样返回。"""
+    w, h = im.size
+    px = im.convert("L").load()
+    step = max(1, w // 400)
+    def dark(y):
+        return any(px[x, y] < 200 for x in range(0, w, step))
+    min_gap = 0.004 * h0
+    y = h - 1
+    while y > h * 0.8 and not dark(y):
+        y -= 1
+    band_bottom = top = y
+    gap = 0
+    while y > h * 0.8:
+        if dark(y):
+            top = y; y -= 1; continue
+        run_start = y
+        while y > h * 0.75 and not dark(y):
+            y -= 1
+        gap = run_start - y
+        if gap >= min_gap:
+            break
+    if band_bottom - top <= 0.045 * h0 and gap >= min_gap:
+        keep = y + 1 + int(min(gap, 0.02 * h0) * 0.6)
+        return im.crop((0, 0, w, keep))
+    return im
+
+
+def word_compat(m: str) -> str:
+    """公式兼容改写（只用于docx）：保证Word与LibreOffice/WPS的OMML渲染一致。
+    源稿保留标准LaTeX（Typora/MathJax可直接渲染），这里只替换几种OMML导入易出错的写法。"""
+    m = m.replace("\\setminus", "\\smallsetminus")
+    m = re.sub(r"\^\{?\\ast\}?|\^\{\*\}|\^\*", r"^{\\text{*}}", m)
+    m = re.sub(r"([_^])\{([+\-])\}", lambda g: g.group(1) + "{\\text{" + ("+" if g.group(2) == "+" else "−") + "}}", m)
+    m = m.replace("\\lvert", "\\left|").replace("\\rvert", "\\right|")
+    m = m.replace("\\left|", "\x00L").replace("\\right|", "\x00R")
+    m = re.sub(r"\|([^|\x00]+?)\|", lambda g: "\\left|" + g.group(1) + "\\right|", m)
+    m = m.replace("\x00L", "\\left|").replace("\x00R", "\\right|")
+    m = re.sub(r"\\#\s*(\\left\\\{.*?\\right\\\}|\\\{.*?\\\})", lambda g: "\\left|" + g.group(1) + "\\right|", m)
+    m = re.sub(r"\\text\{([^{}]*)\}", lambda g: "\\text{" + g.group(1).replace("(", "（").replace(")", "）") + "}", m)
+    return m
+
+
+def compat_math(text: str) -> str:
+    parts = re.split(r"(```.*?```)", text, flags=re.S)
+    out = []
+    for part in parts:
+        if part.startswith("```"):
+            out.append(part); continue
+        part = re.sub(r"\$\$(.+?)\$\$", lambda g: "$$" + word_compat(g.group(1)) + "$$", part, flags=re.S)
+        part = re.sub(r"(?<![\$\\])\$([^$\n]+?)\$(?!\$)", lambda g: "$" + word_compat(g.group(1)) + "$", part)
+        out.append(part)
+    return "".join(out)
+
+
 def prepare_markdown() -> Path:
-    text = (OUT / "_pandoc_input.md").read_text(encoding="utf-8")
+    text = compat_math((OUT / "_pandoc_input.md").read_text(encoding="utf-8"))
     def repl(m):
         src = Path(m.group(1))
         dst = FIGDIR / src.name
@@ -190,6 +248,8 @@ def style_paragraphs(doc) -> None:
         if name in ("表题", "图题"):
             par.alignment = WD_ALIGN_PARAGRAPH.CENTER
             par.paragraph_format.first_line_indent = Cm(0)
+            if name == "表题":                      # 表题与表格同页
+                par.paragraph_format.keep_with_next = True
             par.paragraph_format.space_before = Pt(3 if name == "表题" else 0)
             par.paragraph_format.space_after = Pt(3 if name == "表题" else 6)
             for run in par.runs:
@@ -206,6 +266,7 @@ def style_paragraphs(doc) -> None:
         if has_img:
             par.alignment = WD_ALIGN_PARAGRAPH.CENTER
             par.paragraph_format.first_line_indent = Cm(0)
+            par.paragraph_format.keep_with_next = True   # 图与图题同页
             continue
         if name.startswith("Heading"):
             if txt in ("1 问题重述", "参考文献", "附录"):

@@ -8,6 +8,7 @@ from __future__ import annotations
 import csv
 import json
 import math
+import re
 import statistics as st
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -302,6 +303,49 @@ def main() -> None:
         key = f"case_087.A{r['cores']}"
         F[f"{key}.wall"], F[f"{key}.T"], F[f"{key}.speedup"] = float(r["wall_seconds"]), int(r["makespan"]), float(r["speedup"])
     F["case_087.budget_ratio_vs_A5_median"] = 1800 / F["A5.wall_median_s"]
+
+    # ---- 9. 最终方案由哪个组件产生（selected_per_case.csv 中选中方案官方结果文件的相对路径） ----
+    def origin(raw: str) -> str:
+        rel = re.search(r"/case_\d+_n\d_(?:A|B|L2)/(.*)$", raw).group(1)
+        if rel.startswith("indexed_insertion/"):
+            return "insertion"
+        if rel.startswith("local_microbatch/"):
+            return "microbatch"
+        if rel.startswith("control/extra/B_plan_evaluated_in_L2"):
+            return "cross_config"
+        if rel.startswith("control/extra/"):
+            return "family"
+        if "/control_work/" in rel:
+            return "base"
+        if "/control_r6/core/" in rel:
+            return "core"
+        if "/control_r6/critical/" in rel or rel.startswith("control/r7/reassign/"):
+            return "feedback"
+        if rel.startswith("control/r7/bands/"):
+            return "bands"
+        raise ValueError(f"未登记的方案来源: {rel}")
+    sel_rows = rows(RES / "selected_per_case.csv")
+    assert len(sel_rows) == 1400
+    oc = Counter((r["scene"], int(r["cores"]), origin(r["raw"])) for r in sel_rows)
+    ORIGINS = ("base", "core", "bands", "feedback", "family", "cross_config", "insertion", "microbatch")
+    for sc in SCENES:
+        for o in ORIGINS:
+            F[f"{sc}.origin.{o}"] = sum(oc[(sc, k, o)] for k in CORES[sc])
+            for k in CORES[sc]:
+                F[f"{sc}{k}.origin.{o}"] = oc[(sc, k, o)]
+        F[f"{sc}.origin.improved_stage"] = sum(F[f"{sc}.origin.{o}"] for o in ORIGINS if o != "base")
+        F[f"{sc}.origin.improved_stage_pct"] = F[f"{sc}.origin.improved_stage"] / (100 * len(CORES[sc])) * 100
+    # 参数层面：场景A依赖带宽度、反馈重排时长口径各自产生的最终方案数
+    for w in (2, 4, 8, 16):
+        F[f"A.origin.band_w{w}"] = sum(1 for r in sel_rows if r["scene"] == "A" and f"/bands/band{w}_result" in r["raw"])
+    for mode in ("local", "observed"):
+        F[f"A.origin.reassign_{mode}"] = sum(1 for r in sel_rows if r["scene"] == "A" and f"/reassign/reassign_{mode}_result" in r["raw"])
+    assert sum(F[f"A.origin.band_w{w}"] for w in (2, 4, 8, 16)) == F["A.origin.bands"]
+    assert F["A.origin.reassign_local"] + F["A.origin.reassign_observed"] == F["A.origin.feedback"]
+    # 与五核B同请求阶段记录（F19）交叉核对：最终方案来自插入或微批的图，恰是R12阶段相对控制链有改善的图
+    late = {r["case"] for r in sel_rows if r["scene"] == "B" and int(r["cores"]) == 5
+            and origin(r["raw"]) in ("insertion", "microbatch")}
+    assert late == {r["case"] for r in stages if int(r["full"]) < int(r["control"])}, late
 
     QA.mkdir(parents=True, exist_ok=True)
     (QA / "facts.json").write_text(json.dumps(F, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")

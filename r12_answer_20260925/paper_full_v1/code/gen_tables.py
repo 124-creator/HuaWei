@@ -72,6 +72,21 @@ def rank_table():
     write("S8_rank", "\n".join(out))
 
 
+def origin_table():
+    names = [("base", "基础构造"), ("core", "减少活动核心"), ("bands", "依赖带候选"), ("feedback", "反馈重排"),
+             ("family", "分量家族"), ("cross_config", "跨配置重评价"), ("insertion", "插入式候选"),
+             ("microbatch", "局部微批")]
+    off = {("B", "bands"), ("L2", "bands"), ("A", "cross_config"), ("B", "cross_config"), ("A", "microbatch")}
+    out = ["| 产生最终方案的组件 | 场景A（400格） | 场景B（500格） | L2场景（500格） |",
+           "|---|---:|---:|---:|"]
+    for key, name in names:
+        cells = ["—" if (sc, key) in off else str(F[f"{sc}.origin.{key}"]) for sc in ("A", "B", "L2")]
+        out.append(f"| {name} | " + " | ".join(cells) + " |")
+    out.append("| 改进阶段合计（占比） | " + " | ".join(
+        f"{F[f'{sc}.origin.improved_stage']}（{F[f'{sc}.origin.improved_stage_pct']:.1f}%）" for sc in ("A", "B", "L2")) + " |")
+    write("S8_origin", "\n".join(out))
+
+
 def summary_table():
     out = ["| 核数 | 问题一 场景A | 问题二 场景B | 问题三 无L2（$P_B$） | 问题三 只读Cache（$P_L$） | 同方案配置比 $\\overline R_{\\mathrm{hw}}$ | 分别选优比 $\\overline R_{\\mathrm{select}}$ |",
            "|---|---:|---:|---:|---:|---:|---:|"]
@@ -125,5 +140,5 @@ def appendix():
 
 
 if __name__ == "__main__":
-    speed_table(); sign_table(); rank_table(); summary_table(); appendix()
+    speed_table(); sign_table(); rank_table(); origin_table(); summary_table(); appendix()
     print("tables ->", GEN)
