@@ -32,7 +32,11 @@ ROOT = HERE.parent
 OUT = ROOT / "out"
 FIGDIR = OUT / "fig"
 M_NS = "http://schemas.openxmlformats.org/officeDocument/2006/math"
-TITLE = "多核NPU切图调度的评价一致建模与结构化求解"
+TITLE = "基于可证下界与结构化搜索的多核NPU切图调度"
+# 封面信息表（模板第0页）；参赛队号为空时留空，由队员在正式提交前补填
+SCHOOL = "郑州航空工业管理学院"
+TEAM_NO = ""
+MEMBERS = ["田中斐", "安镕基", "王玥"]
 TEMPLATE = ROOT / "template" / "附件3_论文模板_转docx.docx"
 TEXT_W = 16.5          # 版心宽度（cm）：A4宽21 cm减去模板左右边距各2.25 cm
 
@@ -499,8 +503,38 @@ def normalize_ooxml(el) -> None:
             bm.getparent().remove(bm)
 
 
+def fill_cover(table) -> None:
+    """按SCHOOL、TEAM_NO、MEMBERS填写封面信息表，字体字号沿用模板单元格（加粗小二号）；
+    学校与队号的内容与左侧标签同样靠下对齐，队员姓名接在“1.”“2.”“3.”之后。"""
+    cells = [tr.findall(qn("w:tc")) for tr in table.findall(qn("w:tr"))]
+    assert el_text(cells[0][0]).replace(" ", "") == "学校" and el_text(cells[1][0]) == "参赛队号" \
+        and el_text(cells[2][0]) == "队员姓名" and len(cells) == 2 + len(MEMBERS), "模板封面信息表结构与预期不符"
+    def write(tc, text, bottom=False):
+        if bottom:
+            tcpr = tc.get_or_add_tcPr()
+            va = tcpr.find(qn("w:vAlign"))
+            if va is None:
+                va = OxmlElement("w:vAlign"); tcpr.append(va)
+            va.set(qn("w:val"), "bottom")
+        p = tc.findall(qn("w:p"))[-1]
+        runs = p.findall(qn("w:r"))
+        if not runs:
+            runs = [OxmlElement("w:r")]; p.append(runs[0])
+        t = runs[-1].find(qn("w:t"))
+        if t is None:
+            t = OxmlElement("w:t"); runs[-1].append(t)
+        t.text = (t.text or "") + text
+        t.set(qn("xml:space"), "preserve")
+    write(cells[0][1], SCHOOL, bottom=True)
+    if TEAM_NO:
+        write(cells[1][1], TEAM_NO, bottom=True)
+    for k, name in enumerate(MEMBERS):
+        assert el_text(cells[2 + k][1]) == f"{k + 1}.", "模板队员行应为“1.”“2.”“3.”"
+        write(cells[2 + k][1], " " + name)
+
+
 def front_matter(doc) -> None:
-    """封面（模板第0页）与摘要页（第1页）取自官方模板：封面信息表留空由参赛队填写；
+    """封面（模板第0页）与摘要页（第1页）取自官方模板：封面信息表按SCHOOL、TEAM_NO、MEMBERS填写；
     摘要页依次为赛事名称、“题 目：”＋三号黑体题目、“摘 要：”、摘要正文、“关键词：”＋关键词。"""
     tpl = Document(TEMPLATE)
     tk = list(tpl.element.body.iterchildren())
@@ -526,6 +560,7 @@ def front_matter(doc) -> None:
         blip.set(f"{{{R}}}embed", rid)
     for j, dp in enumerate(cover[0].iter(qn("wp:docPr"))):
         dp.set("id", str(10001 + j))
+    fill_cover(cover[6])
     head = [clone(i) for i in range(14, 21)]         # 赛事名称三行、空行、“题 目：”、空行、“摘 要：”
     Paragraph(head[0], doc._body).paragraph_format.page_break_before = True
     title = head[4]
@@ -608,6 +643,7 @@ def main() -> None:
     algos = algorithm_boxes(doc)
     front_matter(doc)
     page_setup(doc)
+    doc.core_properties.title = TITLE
     reorder_children(doc)
     doc.save(out)
     print(f"docx -> {out}  (numbered equations: {n}, tables: {len(doc.tables)}, algorithms: {algos})")
