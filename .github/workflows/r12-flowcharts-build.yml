@@ -1,0 +1,119 @@
+name: R12 standalone flowchart render
+on:
+  push:
+    branches: [figures/r12-flowcharts-20260926]
+    paths:
+      - 'r12_answer_20260925/流程图_优化版_20260926/code/**'
+      - '.github/workflows/r12-flowcharts-build.yml'
+permissions:
+  contents: write
+concurrency:
+  group: r12-flowcharts-review
+  cancel-in-progress: false
+jobs:
+  render:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OUT: r12_answer_20260925/流程图_优化版_20260926
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: figures/r12-flowcharts-20260926
+          fetch-depth: 0
+      - name: Check renderer presence
+        id: source
+        run: |
+          if [ -f "$OUT/code/build.py.gz.b64" ] || [ -f "$OUT/code/build.py" ]; then echo 'ready=true' >> "$GITHUB_OUTPUT"; else echo 'ready=false' >> "$GITHUB_OUTPUT"; fi
+      - name: Install fixed rendering tools and manuscript font families
+        if: steps.source.outputs.ready == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-wqy-zenhei fonts-liberation fontconfig poppler-utils xvfb
+          python3 -m venv "$RUNNER_TEMP/render-env"
+          "$RUNNER_TEMP/render-env/bin/pip" install reportlab==4.4.9 fonttools==4.63.0 pymupdf==1.26.7 pillow==12.3.0
+          echo "$RUNNER_TEMP/render-env/bin" >> "$GITHUB_PATH"
+      - name: Decode exact reviewed source
+        if: steps.source.outputs.ready == 'true'
+        run: |
+          python3 - <<'PY'
+          import base64,gzip,hashlib,os
+          from pathlib import Path
+          p=Path(os.environ['OUT'])/'code/build.py.gz.b64'
+          if p.exists():
+              raw=gzip.decompress(base64.b64decode(p.read_text()))
+              assert hashlib.sha256(raw).hexdigest()=='244827dbb92d261410b05ebec2de3c48ded3a4ced0868df4a6e4cfccc0e1261c'
+              p.with_name('build.py').write_bytes(raw)
+              p.unlink()
+          PY
+      - name: Strict font, vector and geometry build
+        if: steps.source.outputs.ready == 'true'
+        run: |
+          python "$OUT/code/build.py" --output "$OUT"
+          python "$OUT/code/build.py" --output "$RUNNER_TEMP/rebuild"
+          python - <<'PY'
+          import os,json,hashlib,subprocess
+          from pathlib import Path
+          out=Path(os.environ['OUT']); qa=out/'qa'; qa.mkdir(exist_ok=True)
+          other=Path(os.environ['RUNNER_TEMP'])/'rebuild'
+          checks=[]
+          for p in sorted((out/'figures').iterdir()):
+              if p.suffix in ('.pdf','.svg','.png','.drawio'):
+                  q=other/'figures'/p.name
+                  checks.append({'file':p.name,'identical':p.read_bytes()==q.read_bytes()})
+          assert all(c['identical'] for c in checks)
+          for p in list((out/'figures').glob('*_review.png'))+list((out/'figures').glob('*_geometry.json')):
+              p.replace(qa/p.name)
+          protected='r12_answer_20260925/paper_full_v1'
+          base='3ecc0f114cf828cffb5200ca86fc8c9f5f135c3f'
+          assert subprocess.check_output(['git','diff',base,'--',protected])==b''
+          psha=subprocess.check_output(['git','rev-parse',base+':'+protected],text=True).strip()
+          (qa/'BUILD_RECEIPT.json').write_text(json.dumps({'status':'PASS','base_commit':base,'protected_tree':psha,'manuscript_diff_empty':True,'deterministic_rebuild':checks,'run_id':os.environ.get('GITHUB_RUN_ID'),'font_files_distributed':False},ensure_ascii=False,indent=2))
+          PY
+      - name: Native draw.io compatibility export
+        if: steps.source.outputs.ready == 'true'
+        run: |
+          curl -fL --retry 2 -o "$RUNNER_TEMP/drawio.deb" https://github.com/jgraph/drawio-desktop/releases/download/v24.7.17/drawio-amd64-24.7.17.deb
+          sudo apt-get install -y "$RUNNER_TEMP/drawio.deb"
+          mkdir -p "$OUT/qa/native"
+          for f in "$OUT"/figures/*.drawio; do
+            name="$(basename "$f" .drawio)"
+            timeout 90 xvfb-run -a drawio --no-sandbox --disable-gpu --export --format pdf --crop --output "$OUT/qa/native/$name.pdf" "$f" > "$OUT/qa/native/$name.log" 2>&1
+          done
+          python - <<'PY'
+          import os,json,re,collections
+          from pathlib import Path
+          import fitz
+          root=Path(os.environ['OUT']); reports=[]
+          spec=json.loads((root/'DESIGN_SPEC.json').read_text())
+          for d in spec:
+              p=root/'qa/native'/(d['name']+'.pdf'); doc=fitz.open(p)
+              text=''.join(pg.get_text() for pg in doc)
+              expect=''.join(''.join(n['lines']) for n in d['nodes'])+''.join(x['label'] for x in d['panels'])+''.join(''.join(x['lines']) for x in d['labels'])
+              only=lambda s:collections.Counter(re.findall('[\u4e00-\u9fff]',s))
+              missing=dict(only(expect)-only(text)); fonts=[]
+              for f in doc[0].get_fonts(full=True):
+                  fonts.append({'name':f[3],'embedded_bytes':len(doc.extract_font(f[0])[-1])})
+              doc[0].get_pixmap(matrix=fitz.Matrix(2,2),alpha=False).save(root/'qa/native'/(d['name']+'_review.png'))
+              reports.append({'file':p.name,'pages':len(doc),'missing_chinese':missing,'fonts':fonts,'status':'PASS' if not missing and len(doc)==1 and all(f['embedded_bytes']>0 for f in fonts) else 'FAIL'})
+          (root/'qa/NATIVE_DRAWIO_CHECK.json').write_text(json.dumps({'drawio_version':'24.7.17','reports':reports,'visual_review':'PENDING'},ensure_ascii=False,indent=2))
+          assert all(r['status']=='PASS' for r in reports),reports
+          PY
+      - name: Commit standalone outputs only
+        if: steps.source.outputs.ready == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- "$OUT"
+          git diff --cached --quiet || git commit -m 'figures: render four R12 standalone vector diagrams and verification evidence [skip ci]'
+          git push origin HEAD:figures/r12-flowcharts-20260926
+      - name: Review artifact without fonts or manuscript
+        if: always() && steps.source.outputs.ready == 'true'
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: R12-flowcharts-review-${{ github.run_id }}
+          path: r12_answer_20260925/流程图_优化版_20260926/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
