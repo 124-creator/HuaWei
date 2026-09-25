@@ -1,0 +1,17 @@
+{
+ "problem2026": "2026年中国研究生数学建模竞赛组委会. 2026年中国研究生数学建模竞赛A题：通用神经网络处理器下的多核调度问题（赛题、附录与评估程序）[Z]. 2026.",
+ "sze2017": "Sze V, Chen Y H, Yang T J, et al. Efficient processing of deep neural networks: a tutorial and survey[J]. Proceedings of the IEEE, 2017, 105(12): 2295-2329.",
+ "chen2017": "Chen Y H, Krishna T, Emer J S, et al. Eyeriss: an energy-efficient reconfigurable accelerator for deep convolutional neural networks[J]. IEEE Journal of Solid-State Circuits, 2017, 52(1): 127-138.",
+ "graham1969": "Graham R L. Bounds on multiprocessing timing anomalies[J]. SIAM Journal on Applied Mathematics, 1969, 17(2): 416-429.",
+ "kwok1999": "Kwok Y K, Ahmad I. Static scheduling algorithms for allocating directed task graphs to multiprocessors[J]. ACM Computing Surveys, 1999, 31(4): 406-471.",
+ "topcuoglu2002": "Topcuoglu H, Hariri S, Wu M Y. Performance-effective and low-complexity task scheduling for heterogeneous computing[J]. IEEE Transactions on Parallel and Distributed Systems, 2002, 13(3): 260-274.",
+ "xing2019": "Xing Y, Liang S, Sui L, et al. DNNVM: end-to-end compiler leveraging heterogeneous optimizations on FPGA-based CNN accelerators[EB/OL]. arXiv:1902.07463, 2019.",
+ "zheng2022": "Zheng L, Li Z, Zhang H, et al. Alpa: automating inter- and intra-operator parallelism for distributed deep learning[C]//16th USENIX Symposium on Operating Systems Design and Implementation (OSDI 22). Carlsbad: USENIX Association, 2022: 559-578.",
+ "shi2023": "Shi Y, Yang Z, Xue J, et al. Welder: scheduling deep learning memory access via tile-graph[C]//17th USENIX Symposium on Operating Systems Design and Implementation (OSDI 23). Boston: USENIX Association, 2023.",
+ "garey1979": "Garey M R, Johnson D S. Computers and intractability: a guide to the theory of NP-completeness[M]. San Francisco: W. H. Freeman, 1979.",
+ "belady1966": "Belady L A. A study of replacement algorithms for a virtual-storage computer[J]. IBM Systems Journal, 1966, 5(2): 78-101.",
+ "seidel1996": "Seidel R, Aragon C R. Randomized search trees[J]. Algorithmica, 1996, 16(4-5): 464-497.",
+ "kahn1962": "Kahn A B. Topological sorting of large networks[J]. Communications of the ACM, 1962, 5(11): 558-562.",
+ "wilcoxon1945": "Wilcoxon F. Individual comparisons by ranking methods[J]. Biometrics Bulletin, 1945, 1(6): 80-83.",
+ "spearman1904": "Spearman C. The proof and measurement of association between two things[J]. The American Journal of Psychology, 1904, 15(1): 72-101."
+}
