@@ -125,5 +125,5 @@ def appendix():
 
 
 if __name__ == "__main__":
-    gap_table(); speed_table(); sign_table(); rank_table(); summary_table(); appendix()
+    speed_table(); sign_table(); rank_table(); summary_table(); appendix()
     print("tables ->", GEN)

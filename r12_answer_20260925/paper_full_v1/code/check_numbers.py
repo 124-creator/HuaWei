@@ -79,7 +79,6 @@ def derived_values() -> dict[str, float]:
         "C3五核A加速比": F["A5.C3_speedup_mean"],
         "case_062最忙核心Task数(2核)": -(-F["case_062.A2.tasks"] // 2),
         "场景B→A五核边界降幅（%）": (1 - F["B5.mean_partition_MiB"] / F["A5.mean_partition_MiB"]) * 100,
-        "单核下界间隙：B1 vs REF": F["B1.gap.median_pct"],
         "五核L2配置比中位与1之差": F["Q3.k5.same_plan_median"] - 1,
     }
     for k in range(1, 6):

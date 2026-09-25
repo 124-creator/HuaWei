@@ -23,7 +23,7 @@ ORDER = ["00_摘要.md", "01_问题重述.md", "02_问题分析.md", "03_模型�
          "05_问题一.md", "06_问题二.md", "07_问题三.md", "08_模型检验与算法分析.md", "09_模型评价与推广.md",
          "10_结论.md", "REFS", "12_附录.md"]
 REFS = json.loads((HERE / "refs.json").read_text(encoding="utf-8"))
-NEW_FIGS = {"F35": "全文技术路线", "F36": "各场景、各核数的最优性间隙上界 γ 分布"}
+NEW_FIGS = {"F35": "全文技术路线"}
 
 EQ_LABEL = re.compile(r"^【式\(([^)]+)\)】\s*$")
 TAB_CAP = re.compile(r"^\*\*表(\S+?)\s{1,3}(.+?)\*\*\s*$")

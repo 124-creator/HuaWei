@@ -1,9 +1,9 @@
 {
  "counts": {
-  "tokens": 1887,
-  "small_int": 943,
-  "constant": 173,
-  "fact": 734,
+  "tokens": 1707,
+  "small_int": 816,
+  "constant": 168,
+  "fact": 686,
   "derived": 3,
   "raw": 34,
   "appendix_rows": 900

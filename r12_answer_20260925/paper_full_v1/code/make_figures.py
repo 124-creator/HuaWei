@@ -1,4 +1,4 @@
-"""新增两张图：F35 全文技术路线（结构示意），F36 最优性间隙上界分布（冻结校验数据）。
+"""新增图：F35 全文技术路线（结构示意）。（原F36下界间隙分布图已随8.2节删除。）
 
 输出到 ../figures/：PNG(600dpi)、PDF、SVG，以及F36作图数据CSV。
 只读 publication/sources/closeout/results/verification.json 与 figures_v3/delivery/data/F31.csv。
@@ -80,7 +80,7 @@ def f35():
         fc=COLORS["light"], fs=8.2)
     arrow(ax, 0.5, 0.262, 0.5, 0.212)
     box(ax, 0.03, 0.125, 0.94, 0.085,
-        "第8章 模型检验：可证下界与间隙上界 ｜ 相对C3的配对检验\n核数与图规模的稳健性 ｜ 预算敏感性与求解成本",
+        "第8章 模型检验：证据矩阵 ｜ 加速比分布与并行效率 ｜ 相对C3的配对检验\n核数与图规模的稳健性 ｜ 预算敏感性与求解成本",
         fc="white", fs=8.2)
     arrow(ax, 0.5, 0.125, 0.5, 0.083)
     box(ax, 0.03, 0.012, 0.94, 0.07,
@@ -146,4 +146,4 @@ def f36():
 
 
 if __name__ == "__main__":
-    f35(); f36(); print("figures ->", OUT)
+    f35(); print("figures ->", OUT)
