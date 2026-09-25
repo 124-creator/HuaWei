@@ -13,5 +13,10 @@
  "seidel1996": "Seidel R, Aragon C R. Randomized search trees[J]. Algorithmica, 1996, 16(4-5): 464-497.",
  "kahn1962": "Kahn A B. Topological sorting of large networks[J]. Communications of the ACM, 1962, 5(11): 558-562.",
  "wilcoxon1945": "Wilcoxon F. Individual comparisons by ranking methods[J]. Biometrics Bulletin, 1945, 1(6): 80-83.",
- "spearman1904": "Spearman C. The proof and measurement of association between two things[J]. The American Journal of Psychology, 1904, 15(1): 72-101."
+ "spearman1904": "Spearman C. The proof and measurement of association between two things[J]. The American Journal of Psychology, 1904, 15(1): 72-101.",
+ "chen2018tvm": "Chen T, Moreau T, Jiang Z, et al. TVM: an automated end-to-end optimizing compiler for deep learning[C]//13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18). Carlsbad: USENIX Association, 2018: 578-594.",
+ "popp2020": "Popp M, Schlag S, Schulz C, et al. Multilevel acyclic hypergraph partitioning[EB/OL]. arXiv:2002.02962, 2020.",
+ "hongkung1981": "Hong J W, Kung H T. I/O complexity: the red-blue pebble game[C]//Proceedings of the 13th Annual ACM Symposium on Theory of Computing. New York: ACM, 1981: 326-333.",
+ "williams2009": "Williams S, Waterman A, Patterson D. Roofline: an insightful visual performance model for multicore architectures[J]. Communications of the ACM, 2009, 52(4): 65-76.",
+ "amdahl1967": "Amdahl G M. Validity of the single processor approach to achieving large scale computing capabilities[C]//Proceedings of the AFIPS Spring Joint Computer Conference. New York: ACM, 1967: 483-485."
 }

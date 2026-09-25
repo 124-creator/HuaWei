@@ -204,7 +204,7 @@ def f37():
     i7 = node(ax, cx, 186, W, 11, "⑦ 插入式候选：HEFT式优先级＋Treap区间索引\n生成≤30 s，评价≤120 s", ec=grey, fs=7.9)
     dS = diamond(ax, 42, 201, 48, 13, "B/L2 且 Spill > 0？", ec=grey, fc=COLORS["light"], fs=7.9)
     m8 = node(ax, 96, 201, 48, 13, "⑧ Spill触发的局部微批：\n诊断≤40 s，至多2个候选，\n每个评价≤45 s", ec=cB, fc=fcB, fs=7.9)
-    out = node(ax, 145, 202.5, 32, 10, "输出 P*\n与官方评价结果", ec=grey, fc=COLORS["light"], round_=5, fs=7.9)
+    out = node(ax, 145, 199, 34, 17, "输出两字段方案\n与官方评价结果；\n无成功解则返回\n失败，不补零", ec=grey, fc=COLORS["light"], round_=4, fs=7.9)
     # 主干
     path(ax, [(cx, s["b"]), (cx, lb["t"])])
     path(ax, [(cx, lb["b"]), (cx, b1["t"])])

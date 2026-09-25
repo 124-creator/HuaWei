@@ -148,14 +148,19 @@
   "graham1969": 4,
   "kwok1999": 5,
   "topcuoglu2002": 6,
-  "xing2019": 7,
-  "zheng2022": 8,
-  "shi2023": 9,
-  "belady1966": 10,
-  "garey1979": 11,
-  "seidel1996": 12,
-  "kahn1962": 13,
-  "wilcoxon1945": 14,
-  "spearman1904": 15
+  "chen2018tvm": 7,
+  "xing2019": 8,
+  "zheng2022": 9,
+  "shi2023": 10,
+  "popp2020": 11,
+  "hongkung1981": 12,
+  "belady1966": 13,
+  "garey1979": 14,
+  "seidel1996": 15,
+  "kahn1962": 16,
+  "williams2009": 17,
+  "amdahl1967": 18,
+  "wilcoxon1945": 19,
+  "spearman1904": 20
  }
 }
