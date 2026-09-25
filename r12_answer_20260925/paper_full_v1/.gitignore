@@ -1,0 +1,6 @@
+out/fig/
+out/_pandoc_input.md
+out/_pandoc_ready.md
+out/_reference.docx
+__pycache__/
+code/__pycache__/
