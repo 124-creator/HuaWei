@@ -1,0 +1,176 @@
+{
+  "status": "32_FIGURES_DELIVERED_AUTHOR_CHECKED",
+  "figures": 32,
+  "evidence": 24,
+  "schematics": 8,
+  "files": 164,
+  "zip_bytes": 13549671,
+  "zip_sha256": "e330cd833bcebc7495cfad2619aa56c7efb7bd797a3b619f8b59baa036b8be10",
+  "privacy_scan": "PASS",
+  "independent_science_review": "NOT_PERFORMED",
+  "source_inputs_unchanged": 712,
+  "visual_reviews": [
+    {
+      "id": "F01",
+      "pdf_sha256": "d15b8dd9dc65612fb6df1fbfc7e0f7de91fa7829179cd542720645af00f87646",
+      "note": "Readable core resources, DDR bidirectional links and Q3-only L2; representative cores explicitly described in catalogue."
+    },
+    {
+      "id": "F02",
+      "pdf_sha256": "0eaac66ed90bfe29090bf3e91c86c945883d520204e4484c1bc007e9157b5fba",
+      "note": "Candidate checks, official evaluation, comparison and output form an unambiguous flow; no title overlap."
+    },
+    {
+      "id": "F03",
+      "pdf_sha256": "ed5776672800e4f3c1b1bddcb15dd02ea0e648a6e7a2a0b048b7cda61fbf8278",
+      "note": "Two panels have readable scales and legend; log powers are legitimate mathematical superscripts."
+    },
+    {
+      "id": "F04",
+      "pdf_sha256": "4fb7947ae82d134de04ffd9f622879c9d75bd18f3325574110fb7ad62099e2d3",
+      "note": "Zero ratios and full distributions retained; capacity reference is distinct from observed curves."
+    },
+    {
+      "id": "F05",
+      "pdf_sha256": "e211924f311c2cd6df0892b981355302c3d58c3d4b37918a5a4bcf0af1ac63f2",
+      "note": "Same-core and cross-core Task paths distinguish DDR movement and waiting rules."
+    },
+    {
+      "id": "F06",
+      "pdf_sha256": "329bf7fc6de5c48f7a9eeb444b9183dea2afda61582d43be9c3b30473b1bdffd",
+      "note": "Band and subgraph labels are explicit; example core queues are readable and jointly acyclic."
+    },
+    {
+      "id": "F07",
+      "pdf_sha256": "81c2e20afe9fc65f9576d50a8067a993704010b2ca4500b50869637f99b210d6",
+      "note": "Both curves start at the defined one-core reference; markers and dashed baseline are distinct."
+    },
+    {
+      "id": "F08",
+      "pdf_sha256": "d345c42df0af8b4bfca799143fa6bedd3f4e5be01bc0bdca4049a66157e89a3c",
+      "note": "All 400 cells retained with a symmetric log-ratio colour scale; negative changes are not clipped."
+    },
+    {
+      "id": "F09",
+      "pdf_sha256": "493719e6edae836d484dc20192959907dd2084ecb28f6ebbcf33e0237f091979",
+      "note": "Task count and per-Task size boxes are separate; outliers and log superscripts are visible."
+    },
+    {
+      "id": "F10",
+      "pdf_sha256": "e2dd165fd835e45751424f9e9e07c01f2998f9327902201885a443997f9ad142",
+      "note": "COPY components and spill-positive case count are distinguishable; legend is separated from heading."
+    },
+    {
+      "id": "F11",
+      "pdf_sha256": "91978ff5dcdde46aa999f45fe01c9726c06d4843174c99371796a950143e50ca",
+      "note": "Observed static imbalance range is fully included; ideal-one reference and outliers are readable."
+    },
+    {
+      "id": "F12",
+      "pdf_sha256": "7c53b9eb1642bc1b8a1ba1d9a921607908d41f55d2cff8695477361db361cdf6",
+      "note": "All 20 core/Pipe lanes have readable labels and a separate panel heading; sparse intervals preserved."
+    },
+    {
+      "id": "F13",
+      "pdf_sha256": "0585f296f8d23876bf204ca4fee923d3eda368efcad5ef418d02097e5b7363b2",
+      "note": "Conditional capacity and cross-core paths are labelled; local reuse is not depicted as permanent residency."
+    },
+    {
+      "id": "F14",
+      "pdf_sha256": "efe5d66f82b12017a523b574727d3544ee030501a13c8b6c81e6fffff2df33cb",
+      "note": "Before/after rows explicitly labelled; the illustrative dependency assumption is visible."
+    },
+    {
+      "id": "F15",
+      "pdf_sha256": "6b413d2aa0ff15a648a8e863091bdaab6e03b38164523334a2a7eaec5cee76f9",
+      "note": "B standard reference curve and C3 baseline clearly separated; header does not cover plotting area."
+    },
+    {
+      "id": "F16",
+      "pdf_sha256": "8af62cfd6adbf10672821e48c0d2c8dface69d09ef277a5f634e8eb5d4acb957",
+      "note": "All 100 sorted cases represented; 55 improving and 45 unchanged cases explained in the figure."
+    },
+    {
+      "id": "F17",
+      "pdf_sha256": "ac501bdbb8097f04b7950fb4625b1b4f1dc61848d16b56dd92ff28e54b255112",
+      "note": "Boundary and spill components plus nonzero-case count are readable; no legend overlap."
+    },
+    {
+      "id": "F18",
+      "pdf_sha256": "aeecaec2a357d605e53512fc7879b25859d12b033c224e0f8a1e2539e23d9c82",
+      "note": "Zero-spill cases remain in the ranking; cumulative contribution clearly distinguished from equal-contribution reference."
+    },
+    {
+      "id": "F19",
+      "pdf_sha256": "87855671ce92ae6c9d5ef6dc0fee61440bcbdffe7c37ecb27d0eb4153c1d827b",
+      "note": "Within-request stage means and strict improvement counts use distinct axes; enlarged mean axis is visible."
+    },
+    {
+      "id": "F20",
+      "pdf_sha256": "7ba50964fe4f0fc0449d091033478436c3271cfe7d87dc0e92e8d1c039d8fce1",
+      "note": "Symmetric-log COPY changes and signed time changes retain all quadrants; no Pareto-optimality claim."
+    },
+    {
+      "id": "F21",
+      "pdf_sha256": "6d26bbe9b70d5dc0bddfad60794d4d8c53db66557825a3ee5136d32975ba8910",
+      "note": "Five-core B activity lanes and units readable; chart described as a final-result case, not isolated causal proof."
+    },
+    {
+      "id": "F22",
+      "pdf_sha256": "e4e4091383abe5e59d78adc5d294f0fb74ed6429f09134ecac2f39255e4c70f9",
+      "note": "Issue, hit/miss transport and completion-time insertion are separated; FIFO semantics readable."
+    },
+    {
+      "id": "F23",
+      "pdf_sha256": "e077f0a78ff115e867a641431b6cb0402c8f389cd6ffd26d6504c07924abcde8",
+      "note": "PB/PL comparison paths and shared B numerator explicitly distinguish configuration and reselection effects."
+    },
+    {
+      "id": "F24",
+      "pdf_sha256": "c1acdb54c53b4039232fe41584b35143db6a935160b1d25cf33061efcba0dab9",
+      "note": "Same-plan reference curves and two ratio definitions are clear; ratio-one line and enlarged right scale are visible."
+    },
+    {
+      "id": "F25",
+      "pdf_sha256": "2241b48f923f1cdf3d9820caf06ec0df1782ab46d3182bcff0e83175d12ae3f1",
+      "note": "Full gain range and negative points retained; boxes are described as distributions rather than confidence intervals."
+    },
+    {
+      "id": "F26",
+      "pdf_sha256": "c00a3cb7319deaaff2f49cf0c22dd45b5a0430ce5f82fd312e16fe2b3f5e7952",
+      "note": "Both case labels have leaders; case_026 is clear of axis ticks and the dense ratio-one cluster."
+    },
+    {
+      "id": "F27",
+      "pdf_sha256": "71d8f9c8f1a739b4fc8dcb9106d21544487e7412649207df28721b08dc759768",
+      "note": "FIFO occupancy and cumulative byte-hit rate have separate units, shared event time and visible capacity bound."
+    },
+    {
+      "id": "F28",
+      "pdf_sha256": "3662917ceaaf71e9853377f48b9fc174823c0ed7b85b8e97da2b1dbd88874fcd",
+      "note": "Both panels share the same absolute time axis; all 40 labelled lanes retained; panel headings separated."
+    },
+    {
+      "id": "F29",
+      "pdf_sha256": "f35aa0a1fd2a83a45125f1c4f9326bbdfb1c2da5e91180b41621e0bd8b44ed8e",
+      "note": "All 28 different-plan cases labelled; case_099 degradation retained; reference-one line clear."
+    },
+    {
+      "id": "F30",
+      "pdf_sha256": "e9fd97d99ec346a640fc9b75da10e41a991fc2e570980cbad69d5ef819bac310",
+      "note": "All eight degradations labelled with six-decimal ratios; enlarged axis explicitly disclosed."
+    },
+    {
+      "id": "F31",
+      "pdf_sha256": "3c0c6bde2526c175cfd1b63a7d1407f2d1aad9936498b4925cdc2d327cfcd864",
+      "note": "Fourteen complete groups, visible win/tie/loss counts and separate legend; no title collision."
+    },
+    {
+      "id": "F32",
+      "pdf_sha256": "dfbb993543859f5173e2dbb9d2fccdc125b71a2829b858c90383d2c38f33c1ff",
+      "note": "All groups and four extended-budget markers shown; budget legend is above, not covering low observations."
+    }
+  ],
+  "new_solver_calls": 0,
+  "new_official_scoring_calls": 0
+}

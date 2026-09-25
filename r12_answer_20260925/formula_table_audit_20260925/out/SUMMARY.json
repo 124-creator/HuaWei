@@ -1,0 +1,169 @@
+{
+  "summary": {
+    "competition_2024": {
+      "n": 24,
+      "eq_main": {
+        "min": 0,
+        "q1": 33.25,
+        "median": 51.0,
+        "q3": 62.25,
+        "max": 139
+      },
+      "tables_main": {
+        "min": 0,
+        "median": 9.5,
+        "max": 38
+      },
+      "eq_per_10_body_pages": {
+        "min": 0.0,
+        "median": 8.96,
+        "max": 30.89
+      }
+    },
+    "competition_2025": {
+      "n": 21,
+      "eq_main": {
+        "min": 0,
+        "q1": 15.0,
+        "median": 67,
+        "q3": 98.0,
+        "max": 175
+      },
+      "tables_main": {
+        "min": 2,
+        "median": 12,
+        "max": 29
+      },
+      "eq_per_10_body_pages": {
+        "min": 0.0,
+        "median": 9.74,
+        "max": 31.25
+      }
+    },
+    "journal_research": {
+      "n": 3,
+      "eq_main": {
+        "min": 1,
+        "q1": 1,
+        "median": 3,
+        "q3": 6,
+        "max": 6
+      },
+      "tables_main": {
+        "min": 5,
+        "median": 5,
+        "max": 5
+      },
+      "eq_per_10_body_pages": {
+        "min": 1.0,
+        "median": 2.5,
+        "max": 4.0
+      }
+    },
+    "journal_survey": {
+      "n": 1,
+      "eq_main": {
+        "min": 2,
+        "q1": 2,
+        "median": 2,
+        "q3": 2,
+        "max": 2
+      },
+      "tables_main": {
+        "min": 4,
+        "median": 4,
+        "max": 4
+      },
+      "eq_per_10_body_pages": {
+        "min": 0.74,
+        "median": 0.74,
+        "max": 0.74
+      }
+    },
+    "conference": {
+      "n": 5,
+      "eq_main": {
+        "min": 0,
+        "q1": 0.0,
+        "median": 2,
+        "q3": 4.5,
+        "max": 6
+      },
+      "tables_main": {
+        "min": 2,
+        "median": 5,
+        "max": 7
+      },
+      "eq_per_10_body_pages": {
+        "min": 0.0,
+        "median": 1.11,
+        "max": 4.0
+      }
+    },
+    "all_competition": {
+      "n": 45,
+      "eq_main": {
+        "min": 0,
+        "median": 52,
+        "max": 175
+      },
+      "tables_main": {
+        "min": 0,
+        "median": 11,
+        "max": 38
+      }
+    }
+  },
+  "flags": {
+    "missing_boundaries": [
+      "T_WELDER",
+      "T_SYNCOPATE"
+    ],
+    "duplicate_table_ids": {
+      "C24_B03": 1,
+      "C24_B04": 1,
+      "C24_C01": 1,
+      "C24_C03": 3,
+      "C25_A04": 1,
+      "C25_B02": 1,
+      "C25_B03": 1,
+      "C25_C01": 1,
+      "C25_C04": 1,
+      "C25_F02": 5,
+      "C25_F04": 4,
+      "J_SURVEY": 1,
+      "T_WELDER": 1,
+      "T_LADDER": 1
+    },
+    "glued_samples": {},
+    "multi_page_equation_tags": {
+      "J_SURVEY": {
+        "2": [
+          3,
+          8,
+          13
+        ]
+      },
+      "T_ALPA": {
+        "1": [
+          7,
+          8,
+          20
+        ]
+      },
+      "T_MIRAGE": {
+        "1": [
+          5,
+          6,
+          9
+        ],
+        "2": [
+          5,
+          7,
+          9,
+          11
+        ]
+      }
+    }
+  }
+}

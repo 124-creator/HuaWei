@@ -1,0 +1,19 @@
+{
+  "command": [
+    "D:\\AGent员工\\Agent02-数学建模工作流的打造\\environment\\venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "D:\\AGent员工\\Agent02-数学建模工作流的打造\\工作流\\mmwf.py",
+    "solution-doc",
+    "--root",
+    "E:\\HWCupA2026\\derived\\r12_answer_20260925\\publication",
+    "--question",
+    "Q1",
+    "--output",
+    "E:\\HWCupA2026\\derived\\r12_answer_20260925\\qa\\share_renderer"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"status\": \"RENDERED\",\n  \"root\": \"E:\\\\HWCupA2026\\\\derived\\\\r12_answer_20260925\\\\publication\",\n  \"output_dir\": \"E:\\\\HWCupA2026\\\\derived\\\\r12_answer_20260925\\\\qa\\\\share_renderer\",\n  \"questions\": [\n    {\n      \"question\": \"Q1\",\n      \"status\": \"RENDERED\",\n      \"output\": \"E:\\\\HWCupA2026\\\\derived\\\\r12_answer_20260925\\\\qa\\\\share_renderer\\\\Q1.md\",\n      \"sections\": 3,\n      \"blocks\": 25,\n      \"evidence_ids\": 3,\n      \"placeholders_used\": 21,\n      \"placeholders_unresolved\": [],\n      \"unhandled_blocks\": 0,\n      \"bindings_verified\": 16,\n      \"bindings_stale\": [],\n      \"bindings_missing\": [],\n      \"bytes\": 16726,\n      \"overwritten\": true\n    }\n  ],\n  \"stale_bindings_questions\": [],\n  \"failed_questions\": [],\n  \"note\": \"One markdown per question; numbers come only from RESULTS.json.paper_values.\"\n}\n",
+  "stderr": ""
+}

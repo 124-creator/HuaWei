@@ -1,0 +1,12 @@
+{
+  "status": "WORKING_DOC_VERIFIED_MACHINE",
+  "doc_sha256": "13da89c1404eefa29b1c78e3249ae275790b328181eb4cd4a4edb46d1e3c1afe",
+  "equations": 38,
+  "tables": 13,
+  "privacy_scan": "PASS",
+  "idempotent_rebuild": true,
+  "spot_values_present": 9,
+  "sources_tracked": 9,
+  "independent_science_review": "NOT_PERFORMED",
+  "solver_calls": 0
+}

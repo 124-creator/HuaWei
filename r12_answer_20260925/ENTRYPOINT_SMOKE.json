@@ -1,0 +1,14 @@
+[
+  {
+    "script": "solve_round12.py",
+    "returncode": 0,
+    "stdout": "usage: solve_round12.py [-h] -n CORES --scene {A,B,L2} [--budget BUDGET]\n                        [--profile {reference,indexed,full}] --out OUT\n                        graph\n\npositional arguments:\n  graph\n\noptions:\n  -h, --help            show this help message and exit\n  -n CORES, --cores CORES\n  --scene {A,B,L2}\n  --budget BUDGET\n  --profile {reference,indexed,full}\n  --out OUT\n",
+    "scope": "argument/import smoke only; not a solver run"
+  },
+  {
+    "script": "run_matrix.py",
+    "returncode": 0,
+    "stdout": "usage: run_matrix.py [-h] [--cases CASES [CASES ...]]\n                     [--cores CORES [CORES ...]]\n                     [--scenes SCENES [SCENES ...]]\n                     [--profile {full,indexed,reference}] [--workers WORKERS]\n                     [--budget BUDGET] --out OUT [--resume]\n\noptions:\n  -h, --help            show this help message and exit\n  --cases CASES [CASES ...]\n  --cores CORES [CORES ...]\n  --scenes SCENES [SCENES ...]\n  --profile {full,indexed,reference}\n  --workers WORKERS\n  --budget BUDGET\n  --out OUT\n  --resume\n",
+    "scope": "argument/import smoke only; not a solver run"
+  }
+]

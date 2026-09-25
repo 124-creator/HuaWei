@@ -1,0 +1,284 @@
+{
+  "status": "V3_FIGURES_AND_ANSWERS_DELIVERED_AUTHOR_CHECKED",
+  "figures": 34,
+  "evidence": 24,
+  "schematics": 10,
+  "files": 189,
+  "zip_bytes": 18201303,
+  "zip_sha256": "d0496737e37dc32839a787445969f274f3af2c7346cae4b10c55b912d4461c3a",
+  "privacy_scan": "PASS",
+  "independent_science_review": "NOT_PERFORMED",
+  "source_inputs_unchanged": 712,
+  "visual_reviews": [
+    {
+      "id": "F01",
+      "pdf_sha256": "a33e8b340556e399d1737c462bcb0c11ae59c0d38f876d4ad78937ae38a5f899",
+      "note": "逐字节沿用v2，继承其作者检查：检查嵌套资源、DDR双向读写和独立L2读池；修正两条总线的重合竖线。容量与共享带宽含义可区分。"
+    },
+    {
+      "id": "F02",
+      "pdf_sha256": "0e583e3bcf51803a6ba5903a160c3fb69faf69e56455a1ed9907eab39c387bea",
+      "note": "逐字节沿用v2，继承其作者检查：三层视图对象对应；六操作、五张量、四子图及两核心队列清晰。重复绘制的共享生产边已去重。数学下标单独检查。"
+    },
+    {
+      "id": "F03",
+      "pdf_sha256": "ed5776672800e4f3c1b1bddcb15dd02ea0e648a6e7a2a0b048b7cda61fbf8278",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Two panels have readable scales and legend; log powers are legitimate mathematical superscripts."
+    },
+    {
+      "id": "F04",
+      "pdf_sha256": "4fb7947ae82d134de04ffd9f622879c9d75bd18f3325574110fb7ad62099e2d3",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Zero ratios and full distributions retained; capacity reference is distinct from observed curves."
+    },
+    {
+      "id": "F05",
+      "pdf_sha256": "120db43475975f592903c6c73d73a79a01b7da1582ce28e7a8e0e51b8f3579c7",
+      "note": "逐字节沿用v2，继承其作者检查：检查A/B相同片段、Task容器和2b/0的限定。修正背景遮住内部连线、搬运线穿过Task标签的问题；仅为单消费中间张量示意。"
+    },
+    {
+      "id": "F06",
+      "pdf_sha256": "a7bf21d2a2a96f10f5e696aacbf6d3b136610edda87433add9193b2665a9e016",
+      "note": "逐字节沿用v2，继承其作者检查：黑实线为数据依赖、彩色虚线为核心约束；合法例与成环反例清楚，循环关系另经拓扑测试。"
+    },
+    {
+      "id": "F07",
+      "pdf_sha256": "81c2e20afe9fc65f9576d50a8067a993704010b2ca4500b50869637f99b210d6",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Both curves start at the defined one-core reference; markers and dashed baseline are distinct."
+    },
+    {
+      "id": "F08",
+      "pdf_sha256": "960846e06d3131cab58caaab8505f39b58f9488e64d149d88a032adc5f84726e",
+      "note": "逐字节沿用v2，继承其作者检查：完整400格色标不截断；九个退化配置逐一显示。小幅负例有框线冗余编码，下图标签、单位与数值可读。"
+    },
+    {
+      "id": "F09",
+      "pdf_sha256": "493719e6edae836d484dc20192959907dd2084ecb28f6ebbcf33e0237f091979",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Task count and per-Task size boxes are separate; outliers and log superscripts are visible."
+    },
+    {
+      "id": "F10",
+      "pdf_sha256": "e2dd165fd835e45751424f9e9e07c01f2998f9327902201885a443997f9ad142",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：COPY components and spill-positive case count are distinguishable; legend is separated from heading."
+    },
+    {
+      "id": "F11",
+      "pdf_sha256": "91978ff5dcdde46aa999f45fe01c9726c06d4843174c99371796a950143e50ca",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Observed static imbalance range is fully included; ideal-one reference and outliers are readable."
+    },
+    {
+      "id": "F12",
+      "pdf_sha256": "7c53b9eb1642bc1b8a1ba1d9a921607908d41f55d2cff8695477361db361cdf6",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：All 20 core/Pipe lanes have readable labels and a separate panel heading; sparse intervals preserved."
+    },
+    {
+      "id": "F13",
+      "pdf_sha256": "aa7fe0a3fe1513c4ae2b9c9ad5accc3f3cb1b1b057b9600264d6c52f8925b499",
+      "note": "逐字节沿用v2，继承其作者检查：活期与容量需求分图表达；512 KiB容量线和576 KiB概念需求可区分。不是实测驻留峰值或Spill计量。"
+    },
+    {
+      "id": "F14",
+      "pdf_sha256": "8b85fa707a5f7dcf29005db0b64c4bed90c78b9364d8e90fd2e8499e82676cf7",
+      "note": "逐字节沿用v2，继承其作者检查：原依赖、操作顺序和共享输入分层；前后八操作覆盖与A_i先于B_i经测试。顺序宽度未冒充执行时长。"
+    },
+    {
+      "id": "F15",
+      "pdf_sha256": "6b413d2aa0ff15a648a8e863091bdaab6e03b38164523334a2a7eaec5cee76f9",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：B standard reference curve and C3 baseline clearly separated; header does not cover plotting area."
+    },
+    {
+      "id": "F16",
+      "pdf_sha256": "8af62cfd6adbf10672821e48c0d2c8dface69d09ef277a5f634e8eb5d4acb957",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：All 100 sorted cases represented; 55 improving and 45 unchanged cases explained in the figure."
+    },
+    {
+      "id": "F17",
+      "pdf_sha256": "ac501bdbb8097f04b7950fb4625b1b4f1dc61848d16b56dd92ff28e54b255112",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Boundary and spill components plus nonzero-case count are readable; no legend overlap."
+    },
+    {
+      "id": "F18",
+      "pdf_sha256": "764d245fcbedc59f68b226bc977bfce5d6c3380599326b77215f65e66ee75c61",
+      "note": "逐字节沿用v2，继承其作者检查：非零22图及零值78图明确；左log10右完整100图累计比例，前十图93.84%注释可读，未删零值分母。"
+    },
+    {
+      "id": "F19",
+      "pdf_sha256": "08a38592fc768c8fe429dac27dafb797d77db23041a40c836e8be24bc2be9f03",
+      "note": "逐字节沿用v2，继承其作者检查：检查六位小数均值与增量标注，修正首点数值与增量邻近冲突；12/100和2/100分母明确。增量按未舍入数值计算。"
+    },
+    {
+      "id": "F20",
+      "pdf_sha256": "7ba50964fe4f0fc0449d091033478436c3271cfe7d87dc0e92e8d1c039d8fce1",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Symmetric-log COPY changes and signed time changes retain all quadrants; no Pareto-optimality claim."
+    },
+    {
+      "id": "F21",
+      "pdf_sha256": "1f977a93127ddc021e9399179deb1b37af04912da4011b760614fad4f998fd80",
+      "note": "实际查看PDF渲染。两案例共用相对尺度并标注原始cycles；展示全部进一步改善案例，98个其余请求状态与非独立消融限定保留。"
+    },
+    {
+      "id": "F22",
+      "pdf_sha256": "bf5b2f2d03ea33abc1095391abdd92002f8a2133e4edbd31d058e5e56c97d845",
+      "note": "逐字节沿用v2，继承其作者检查：FIFO三个状态与在途请求分开；最早键在左，命中不刷新、途中逐出、完成重插的概念关系可读。"
+    },
+    {
+      "id": "F23",
+      "pdf_sha256": "bd2d21ce2e791aa4d74343b62055fd7ddb4347a78139aa1a47ffaec9ad4a8791",
+      "note": "逐字节沿用v2，继承其作者检查：三评分格及未纳入比较格明确；去掉影响文字的密集阴影，R_hw与R_select符号对应主解。"
+    },
+    {
+      "id": "F24",
+      "pdf_sha256": "00676f7d9b41c06b49857d4569ac15d1f76dfb9c20ace8a928c3f32445b7c4c7",
+      "note": "实际查看PDF渲染。PB/B、PB/L2和PL/L2三条曲线由颜色和标记区分；右侧逐图配置比独立计算，均值不能相除。"
+    },
+    {
+      "id": "F25",
+      "pdf_sha256": "ab4954d20c6bc0df1b883f99df10bf63871fe83bf6536f515d418aeb509f3626",
+      "note": "实际查看PDF渲染。长尾完整保留，局部ECDF保持100分母；修正原生压缩重复值导致的计数问题，比例1处为39/100，图例背景避免竖线穿字。"
+    },
+    {
+      "id": "F26",
+      "pdf_sha256": "c00a3cb7319deaaff2f49cf0c22dd45b5a0430ce5f82fd312e16fe2b3f5e7952",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Both case labels have leaders; case_026 is clear of axis ticks and the dense ratio-one cluster."
+    },
+    {
+      "id": "F27",
+      "pdf_sha256": "b94d7c9308d9eb1b0be3191294266b5b80f89f161d211e363fb05a0f2f615943",
+      "note": "实际查看PDF渲染。全4252事件保留，共同窗口及e2428可定位；219 KiB只称占用净降，不称驱逐总量或流水线瓶颈原因。"
+    },
+    {
+      "id": "F28",
+      "pdf_sha256": "13805eb4e83d9c271f7806871819b0d516095240e29f93e367caeecf27aebe22",
+      "note": "实际查看PDF渲染。高度从255降至235 mm，字号保持；两配置共用时间，红线只标在L2视图，局部仍明确是核心0而缓存事件是全局事件。"
+    },
+    {
+      "id": "F29",
+      "pdf_sha256": "f35aa0a1fd2a83a45125f1c4f9326bbdfb1c2da5e91180b41621e0bd8b44ed8e",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：All 28 different-plan cases labelled; case_099 degradation retained; reference-one line clear."
+    },
+    {
+      "id": "F30",
+      "pdf_sha256": "e9fd97d99ec346a640fc9b75da10e41a991fc2e570980cbad69d5ef819bac310",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：All eight degradations labelled with six-decimal ratios; enlarged axis explicitly disclosed."
+    },
+    {
+      "id": "F31",
+      "pdf_sha256": "3c0c6bde2526c175cfd1b63a7d1407f2d1aad9936498b4925cdc2d327cfcd864",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Fourteen complete groups, visible win/tie/loss counts and separate legend; no title collision."
+    },
+    {
+      "id": "F32",
+      "pdf_sha256": "dfbb993543859f5173e2dbb9d2fccdc125b71a2829b858c90383d2c38f33c1ff",
+      "note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：All groups and four extended-budget markers shown; budget legend is above, not covering low observations."
+    },
+    {
+      "id": "F33",
+      "pdf_sha256": "76454ed2ffca78e765d705a67cd140e0e13bc128e5d3272d836d033d077c2c1f",
+      "note": "实际查看PDF渲染。安全链、链块深度、width=2分带和四个子图对应明确；同带独立分量未强并，示例覆盖10操作且安全边和深度关系经测试。"
+    },
+    {
+      "id": "F34",
+      "pdf_sha256": "ec41e283a53d5c70d51dd9d17fcdb1a74c6a57afb5b8e7169aa582adaa6f0ec7",
+      "note": "实际查看PDF渲染。区间、左子树摘要和原插入不等式分开；标明1单位=100代理cycles及gap斜线，不冒充实际Treap快照或官方时刻。"
+    }
+  ],
+  "revised_figures": [
+    "F33",
+    "F34",
+    "F21",
+    "F24",
+    "F25",
+    "F27",
+    "F28"
+  ],
+  "unchanged_figures": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08",
+    "F09",
+    "F10",
+    "F11",
+    "F12",
+    "F13",
+    "F14",
+    "F15",
+    "F16",
+    "F17",
+    "F18",
+    "F19",
+    "F20",
+    "F22",
+    "F23",
+    "F26",
+    "F29",
+    "F30",
+    "F31",
+    "F32"
+  ],
+  "answer_integration": {
+    "status": "TEXT_AND_LINK_CHECKS_PASS",
+    "records": [
+      {
+        "question": "Q1",
+        "original_sha256": "1657629a5e5b1155a2827ac6e663860e2cc537d954371ca1eb54cb9215cac312",
+        "output_sha256": "c509456052c5446c796415111b3064865297ac95d7473f29c0ffb4d9664c1d6b",
+        "main_figures": [
+          "F02",
+          "F01",
+          "F06",
+          "F33",
+          "F34",
+          "F07",
+          "F08",
+          "F10"
+        ],
+        "original_text_reversible": true,
+        "display_equations_unchanged": true,
+        "links_checked": 25
+      },
+      {
+        "question": "Q2",
+        "original_sha256": "9753df4640b866119c2f9c8fd11c43206c23c38d4ddd6884c307de70df92121d",
+        "output_sha256": "7389fc09cabe8cd633811b17340b9cf9640ccf41ee11d136f837dd0c83336423",
+        "main_figures": [
+          "F05",
+          "F13",
+          "F14",
+          "F15",
+          "F17",
+          "F18",
+          "F19",
+          "F21"
+        ],
+        "original_text_reversible": true,
+        "display_equations_unchanged": true,
+        "links_checked": 25
+      },
+      {
+        "question": "Q3",
+        "original_sha256": "13a37fe39f01664c8437ac233aa26ce9918e2327ded9b3bc6d6d799af3d2f6c5",
+        "output_sha256": "194f15100b25517daf78acbb22a8a9703e3dc8d4128bf35459d8e8b4d2b5d84e",
+        "main_figures": [
+          "F22",
+          "F23",
+          "F24",
+          "F25",
+          "F30",
+          "F27",
+          "F28"
+        ],
+        "original_text_reversible": true,
+        "display_equations_unchanged": true,
+        "links_checked": 23
+      }
+    ],
+    "scope": "Markdown integration only; not final full-paper typesetting"
+  },
+  "new_solver_calls": 0,
+  "new_official_scoring_calls": 0,
+  "github_references": "SKILL_REFERENCES.md"
+}

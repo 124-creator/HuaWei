@@ -1,0 +1,26 @@
+{
+  "id": "F31",
+  "kind": "evidence",
+  "title": "跨场景：相对C3的逐例胜平负",
+  "reading_question": "平均优势是否覆盖多数实际用例？",
+  "caveat": "14组各100图；非等搜索预算，仅描述终点解质量。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 1400,
+  "data_sha256": "0827e79f235bbb07625e9fe91e6f60add30ee6b8778ae97202f94e77d0ae5b2d",
+  "files": {
+    "pdf": "3c0c6bde2526c175cfd1b63a7d1407f2d1aad9936498b4925cdc2d327cfcd864",
+    "png": "cf8e537e46fad46be13bf46ef2beb7f22b4be5b1f32e02d24bda31a573e361fc",
+    "svg": "fccb9bb9bb9d1acf7c47540e17b1c74bbc0d7eac27cd7bb038ecef2f15d1e67b"
+  },
+  "width_mm": 166,
+  "height_mm": 151.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "在14个配置组中保留全部胜平负。相同评估配置下的最终解比较并不等于同运行时间、同搜索次数的算法效率比较。",
+  "source_data": "data/F31.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Fourteen complete groups, visible win/tie/loss counts and separate legend; no title collision."
+}

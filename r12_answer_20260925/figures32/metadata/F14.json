@@ -1,0 +1,24 @@
+{
+  "id": "F14",
+  "kind": "schematic",
+  "title": "局部微批：保留核心，改变就绪顺序",
+  "reading_question": "窗口重排如何保持依赖与核心归属？",
+  "caveat": "示意前提为A_i→B_i，无跨链依赖；非实测排序。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 32,
+  "data_sha256": "92ce513fe5ef61d75982af3987a7580ec083a2d759bfa5e7b99fbf73ba50147a",
+  "files": {
+    "pdf": "efe5d66f82b12017a523b574727d3544ee030501a13c8b6c81e6fffff2df33cb",
+    "png": "fdb5e74834bbd52a89fe9b94bc924333ae5ac1fe01b2da92876992460ed82047",
+    "svg": "269dd398657320d20b0bc52d3e86dea1a75f22a90e92b7af8105ab8b386e1a6a"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER"
+}

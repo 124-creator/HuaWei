@@ -1,0 +1,45 @@
+﻿record,x,y,text,segment,end_x,end_y,dashed,color,w,h,fill,hatch,layer
+label,1,96,(a) 合法核序,,,,,,,,,,
+relationship,10,69,,0,20,84,False,#253845,,,,,
+relationship,10,69,,0,20,54,False,#253845,,,,,
+relationship,28,84,,0,38,69,False,#253845,,,,,
+relationship,28,54,,0,38,69,False,#253845,,,,,
+region,2,65,$S_0$,,,,,,8,8,#E9F0F7,,2
+label,6.0,69.0,$S_0$,,,,,,,,,,
+region,20,80,$S_1$,,,,,,8,8,#E5F2EF,,2
+label,24.0,84.0,$S_1$,,,,,,,,,,
+region,20,50,$S_2$,,,,,,8,8,#E5F2EF,,2
+label,24.0,54.0,$S_2$,,,,,,,,,,
+region,38,65,$S_3$,,,,,,8,8,#E9F0F7,,2
+label,42.0,69.0,$S_3$,,,,,,,,,,
+relationship,6,65,,0,6,39,True,#087F83,,,,,
+relationship,6,39,,1,42,39,True,#087F83,,,,,
+relationship,42,39,,2,42,65,True,#087F83,,,,,
+relationship,24,80,,0,24,58,True,#087F83,,,,,
+label,24,27,"核心0：S0，S3
+核心1：S1，S2",,,,,,,,,,
+label,53,96,(b) 核序造成等待环,,,,,,,,,,
+relationship,62,69,,0,72,84,False,#253845,,,,,
+relationship,62,69,,0,72,54,False,#253845,,,,,
+relationship,80,84,,0,90,69,False,#253845,,,,,
+relationship,80,54,,0,90,69,False,#253845,,,,,
+region,54,65,$S_0$,,,,,,8,8,#E9F0F7,,2
+label,58.0,69.0,$S_0$,,,,,,,,,,
+region,72,80,$S_1$,,,,,,8,8,#E5F2EF,,2
+label,76.0,84.0,$S_1$,,,,,,,,,,
+region,72,50,$S_2$,,,,,,8,8,#E5F2EF,,2
+label,76.0,54.0,$S_2$,,,,,,,,,,
+region,90,65,$S_3$,,,,,,8,8,#E9F0F7,,2
+label,94.0,69.0,$S_3$,,,,,,,,,,
+relationship,94,65,,0,94,39,True,#AB4949,,,,,
+relationship,94,39,,1,58,39,True,#AB4949,,,,,
+relationship,58,39,,2,58,65,True,#AB4949,,,,,
+relationship,76,80,,0,76,58,True,#AB4949,,,,,
+label,76,27,"核心0：S3，S0
+核心1：S1，S2",,,,,,,,,,
+label,25,11,依赖边与核序边的并图仍无环,,,,,,,,,,
+label,76,11,S0 → S1 → S3 → S0,,,,,,,,,,
+relationship,22,3,,0,30,3,False,#253845,,,,,
+label,39,3,数据依赖,,,,,,,,,,
+relationship,57,3,,0,65,3,True,#087F83,,,,,
+label,75,3,核心队列约束,,,,,,,,,,

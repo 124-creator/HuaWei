@@ -1,0 +1,24 @@
+{
+  "id": "F08",
+  "kind": "evidence",
+  "title": "场景A：逐例相对C3的性能变化",
+  "reading_question": "改善与退化集中在哪些图和核数？",
+  "caveat": "颜色为log2(T_C3/T_R12)；正值更快；全部400格。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 400,
+  "data_sha256": "9590bc5496792960ea1c415aef1b591ed8c82da81350dbced99409a3da08a8ba",
+  "files": {
+    "pdf": "d345c42df0af8b4bfca799143fa6bedd3f4e5be01bc0bdca4049a66157e89a3c",
+    "png": "7ecd93f86422e8b0c9034580376d2fa5e542f770db5ff6aa9483ccc7c62cad95",
+    "svg": "e1a54d1febf6bf98a04c5996ddc951b6eeea1333a6ed91609a4c6cfb22ed49e5"
+  },
+  "width_mm": 166,
+  "height_mm": 91.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER"
+}

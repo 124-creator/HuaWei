@@ -1,0 +1,26 @@
+{
+  "id": "F25",
+  "kind": "evidence",
+  "title": "L2配置收益的逐图分布",
+  "reading_question": "均值能否代表每张图都获得相同收益？",
+  "caveat": "每组100对，全部500对；箱体不是置信区间。",
+  "sources": [
+    "pairs"
+  ],
+  "data_rows": 500,
+  "data_sha256": "0ed5157e3a5459ef4fe2cb43c0425f530ca59ba0a46b85518dbcf98af6cc62cd",
+  "files": {
+    "pdf": "2241b48f923f1cdf3d9820caf06ec0df1782ab46d3182bcff0e83175d12ae3f1",
+    "png": "c7f7beca6c06ec26f2ed7461f9fc6a1e3808da6186487a357c18250e99bf7661",
+    "svg": "806fd6b196ac7a4059eeaf375444967f77c9a9d8c3733b108c071e522f52fbcd"
+  },
+  "width_mm": 166,
+  "height_mm": 107.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "分布中保留长尾和小幅退化，典型值与均值可能不同；箱线图不等于置信区间或跨总体显著性检验。",
+  "source_data": "data/F25.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Full gain range and negative points retained; boxes are described as distributions rather than confidence intervals."
+}

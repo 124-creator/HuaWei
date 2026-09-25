@@ -1,0 +1,59 @@
+{
+  "status": "AUTHOR_MECHANICAL_CHECKS_PASS",
+  "independent_science_review": "NOT_PERFORMED",
+  "protected_unchanged": 15,
+  "input_bindings_unchanged": 91,
+  "copied_source_files": 68,
+  "appendix_counts": {
+    "Q1": 400,
+    "Q2": 500,
+    "Q3": 500
+  },
+  "display_values_checked": 453,
+  "arithmetic_tolerance": "1e-12",
+  "tests": {
+    "returncode": 0,
+    "stdout": "......                                                                   [100%]\n6 passed in 0.03s\n",
+    "stderr": ""
+  },
+  "source_pure_lines": {
+    "charts.py": 79,
+    "check_delivery.py": 131,
+    "derive.py": 108,
+    "metrics.py": 34,
+    "package_delivery.py": 49,
+    "prepare.py": 76,
+    "render.py": 53,
+    "test_metrics.py": 27
+  },
+  "pdf_renders": [
+    {
+      "pdf": "publication\\figures\\q1_curve.pdf",
+      "sha256": "55a97b3e3171345d64de7f7c351d5a592477b42d17bbf3d29175f22a41b3795a",
+      "image": "qa\\q1_curve_from_pdf.png",
+      "width_pt": 470.1600036621094,
+      "height_pt": 241.1999969482422,
+      "text_chars": 84
+    },
+    {
+      "pdf": "publication\\figures\\q2_curve.pdf",
+      "sha256": "bf6b9da22014d52a33887518d59e252050e304e0e0944bdeba61e3ba8e52ef55",
+      "image": "qa\\q2_curve_from_pdf.png",
+      "width_pt": 470.1600036621094,
+      "height_pt": 241.1999969482422,
+      "text_chars": 84
+    },
+    {
+      "pdf": "publication\\figures\\q3_configuration.pdf",
+      "sha256": "8ce56d595e9c0b933c0f32251194287908c7b4c70d5f7a134d25430682addaa8",
+      "image": "qa\\q3_configuration_from_pdf.png",
+      "width_pt": 470.1600036621094,
+      "height_pt": 244.8000030517578,
+      "text_chars": 193
+    }
+  ],
+  "visual_review": "REQUIRES_DIRECT_IMAGE_INSPECTION",
+  "lsp": "Unavailable; no install performed",
+  "new_solver_calls": 0,
+  "new_official_scoring_calls": 0
+}

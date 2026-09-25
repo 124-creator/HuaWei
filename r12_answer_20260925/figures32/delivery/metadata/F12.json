@@ -1,0 +1,26 @@
+{
+  "id": "F12",
+  "kind": "evidence",
+  "title": "困难案例case_087：五核执行时间线",
+  "reading_question": "1800秒补跑所得方案如何占用各Pipe？",
+  "caveat": "原始官方时间线；仅合并相接忙区间，保留空闲。",
+  "sources": [
+    "timelineA"
+  ],
+  "data_rows": 41355,
+  "data_sha256": "6e6d684226d9139122dd94bf6b44110c88fdcde273f89c9b4772d6f69037b28c",
+  "files": {
+    "pdf": "7c53b9eb1642bc1b8a1ba1d9a921607908d41f55d2cff8695477361db361cdf6",
+    "png": "a6668e95ed093fdc08c48cff1f3d740a09cb25d3e37ed7cfcea5dffb3a14fd7f",
+    "svg": "f8ed2c53f1c4979f975dd540f76f675738437ca0efaed3fc00483c7ff3f9b1d9"
+  },
+  "width_mm": 166,
+  "height_mm": 153.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "这是case_087的A五核补跑结果，Makespan为1038529 cycles；画面中的空白保留真实空闲，不自动解释其唯一原因。",
+  "source_data": "data/F12.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "All 20 core/Pipe lanes have readable labels and a separate panel heading; sparse intervals preserved."
+}

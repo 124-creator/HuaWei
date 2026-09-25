@@ -1,0 +1,73 @@
+{
+  "id": "F28",
+  "kind": "evidence",
+  "title": "case_073：同方案全局时间线与共同窗口",
+  "reading_question": "保持方案不变后，流水线占用如何变化？",
+  "caveat": "共用绝对时间；阴影为0.90—1.20百万cycles，局部仅显示核心0。",
+  "sources": [
+    "timelineB",
+    "timelineL2"
+  ],
+  "data_rows": 18784,
+  "data_sha256": "c8b02b673b2173d233bbd3cd53d5af14dc11b7b392fda61550bc146a8c461c30",
+  "files": {
+    "pdf": "001f89b21b785a2358c9d21dfc652a0475f66025d30c3e0072784ed216e678f3",
+    "png": "5964eee96f293911442e920c416df7196697374e15181a4f4f8f0fc1c43625d6",
+    "svg": "0a1847f714645e42a31e3f8647d763fc3a1faac42d392c48fc18978e0f0a740f"
+  },
+  "width_mm": 166,
+  "height_mm": 254.99999999999997,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        2.05533283
+      ],
+      "ylim": [
+        19.7,
+        -0.7
+      ]
+    },
+    {
+      "axis": 1,
+      "xlim": [
+        0.0,
+        2.05533283
+      ],
+      "ylim": [
+        19.7,
+        -0.7
+      ]
+    },
+    {
+      "axis": 2,
+      "xlim": [
+        0.9,
+        1.2
+      ],
+      "ylim": [
+        3.6,
+        -0.6
+      ]
+    },
+    {
+      "axis": 3,
+      "xlim": [
+        0.9,
+        1.2
+      ],
+      "ylim": [
+        3.6,
+        -0.6
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

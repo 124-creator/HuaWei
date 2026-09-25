@@ -1,0 +1,26 @@
+{
+  "id": "F23",
+  "kind": "schematic",
+  "title": "同方案对照与分别选优",
+  "reading_question": "哪些比较能描述配置效应，哪些含方案变化？",
+  "caveat": "比较设计示意；各比值先逐图计算再汇总。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 13,
+  "data_sha256": "d2abde343738e9e06ec52bd6f516aede35400fd2a112f4cbb36f7e5aa3cbbd6d",
+  "files": {
+    "pdf": "e077f0a78ff115e867a641431b6cb0402c8f389cd6ffd26d6504c07924abcde8",
+    "png": "8700806ca5bb09d2da5cd9f95f1d228b13ce0ea1c9c1130757180d7a9a50857f",
+    "svg": "0a6a0ba2bb642be93468f600ab894857f4561fe9907f459dad80269dd8fa1f60"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "同方案PB在B/L2下比较描述配置效应；PB与PL分别评分的比值包含选解变化，二者不能互换。",
+  "source_data": "data/F23.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "PB/PL comparison paths and shared B numerator explicitly distinguish configuration and reselection effects."
+}

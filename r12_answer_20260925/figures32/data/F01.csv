@@ -1,0 +1,22 @@
+﻿record,id,label,x,y,width,height,color,border,source,target,both
+node,ddr,共享DDR：60 bytes/cycle,5,5.2,6,0.7,#F8F2E7,True,,,
+node,c0,"核心0
+M / V / IN / OUT
+L1 512 KiB
+UB 128 KiB",1.6,3,2.7,1.6,#F0F4F6,True,,,
+node,c1,"核心1
+M / V / IN / OUT
+L1 512 KiB
+UB 128 KiB",5,3,2.7,1.6,#F0F4F6,True,,,
+node,cn,"核心k−1
+M / V / IN / OUT
+L1 512 KiB
+UB 128 KiB",8.4,3,2.7,1.6,#F0F4F6,True,,,
+node,l2,"仅Q3：共享只读L2，1 MiB
+独立读带宽250 bytes/cycle",5,0.85,6,1,#EDF5F1,True,,,
+edge,,,,,,,,,ddr,c0,True
+edge,,,,,,,,,ddr,c1,True
+edge,,,,,,,,,ddr,cn,True
+edge,,,,,,,,,l2,c0,False
+edge,,,,,,,,,l2,c1,False
+edge,,,,,,,,,l2,cn,False

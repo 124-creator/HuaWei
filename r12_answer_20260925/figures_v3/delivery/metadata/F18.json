@@ -1,0 +1,26 @@
+{
+  "id": "F18",
+  "kind": "evidence",
+  "title": "五核B：非零Spill细节与全量集中度",
+  "reading_question": "平均Spill是否被少数困难用例主导？",
+  "caveat": "左侧log10轴仅显示非零值并披露零值数；右侧保留全部100图。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 100,
+  "data_sha256": "d140a9d274831531bb69ed5eeec9258bbaacf78fde971c6fcb7919e99c262e96",
+  "files": {
+    "pdf": "764d245fcbedc59f68b226bc977bfce5d6c3380599326b77215f65e66ee75c61",
+    "png": "ebcd1bb718a7673c0313d5f409eebe732a0642c3f314d3a7d94cf30b8a122d22",
+    "svg": "733fa1583fe4a1ca0165235d2131d4a52476bd03a16c0a937e40192d42501aae"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "按Spill降序的前10图贡献五核B总Spill字节的93.84%；这是一种集中度描述，不是统计推断。",
+  "source_data": "data/F18.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：非零22图及零值78图明确；左log10右完整100图累计比例，前十图93.84%注释可读，未删零值分母。"
+}

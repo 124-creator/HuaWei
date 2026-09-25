@@ -1,0 +1,26 @@
+{
+  "id": "F20",
+  "kind": "evidence",
+  "title": "五核B：执行时间与COPY的权衡",
+  "reading_question": "更快的最终方案是否一定搬运更少？",
+  "caveat": "相对C3的逐例变化；非等搜索预算；不称全局Pareto前沿。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 100,
+  "data_sha256": "1f2cd34f77187f31665f8e8c097894f513e6e58fb82749206181a177df773eda",
+  "files": {
+    "pdf": "7ba50964fe4f0fc0449d091033478436c3271cfe7d87dc0e92e8d1c039d8fce1",
+    "png": "67d9053b5baccc69f4648e8ea771fed1755b56ff03292d0e984ca18c88e717e0",
+    "svg": "397e5ef23d9d80fa94fbc8431e09b611276d39850e5832b138047730e4eec27e"
+  },
+  "width_mm": 166,
+  "height_mm": 110.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "五核B有4图比C3更快但新增COPY更高；主次目标确有权衡，不是每例双目标支配。",
+  "source_data": "data/F20.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Symmetric-log COPY changes and signed time changes retain all quadrants; no Pareto-optimality claim."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "F08",
+  "kind": "evidence",
+  "title": "场景A：全量性能变化与退化定位",
+  "reading_question": "改善与退化集中在哪些图和核数？",
+  "caveat": "保留全部400格和完整色标；退化单列，不以平均优势掩盖负例。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 400,
+  "data_sha256": "9590bc5496792960ea1c415aef1b591ed8c82da81350dbced99409a3da08a8ba",
+  "files": {
+    "pdf": "960846e06d3131cab58caaab8505f39b58f9488e64d149d88a032adc5f84726e",
+    "png": "3db85c110b754d6973ff116203e9004992e532a7b35ef8a5656a96663c688eaf",
+    "svg": "472cf2ca9bc6daada6e7b59aa15a1a1ef43ef74f076e3ea35de4b4ffa4b5e97e"
+  },
+  "width_mm": 166,
+  "height_mm": 157.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "全部400格同时显示；负色保留较C3更慢的配置，平均优势不代表逐例必胜。色标使用对称log2比值且未截断观测。",
+  "source_data": "data/F08.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：完整400格色标不截断；九个退化配置逐一显示。小幅负例有框线冗余编码，下图标签、单位与数值可读。"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "F06",
+  "kind": "schematic",
+  "title": "数据依赖与核心队列的联合无环约束",
+  "reading_question": "原图无环是否足以保证任意核序都可行？",
+  "caveat": "合法例与反例仅解释联合无环；不代替容量和带宽可行性检查。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 42,
+  "data_sha256": "8bbf87b4ed529fb84412d6e6d3fdb6f134ff995858dd607024d9ac07cb3a80e7",
+  "files": {
+    "pdf": "a7bf21d2a2a96f10f5e696aacbf6d3b136610edda87433add9193b2665a9e016",
+    "png": "23fe8d4e1e31d6746243cd3f4dabdb138dc0b659ce07f7da91c955d21bdada93",
+    "svg": "983a5f55767b61086b2639cf034eadccbe4443e89e3dcfa78a836ea8b28aa0d6"
+  },
+  "width_mm": 166,
+  "height_mm": 140.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "plotted_lines": [
+    {
+      "axis": 0,
+      "label": "_child13",
+      "x": [
+        6.0,
+        6.0,
+        42.0
+      ],
+      "y": [
+        65.0,
+        39.0,
+        39.0
+      ]
+    },
+    {
+      "axis": 0,
+      "label": "_child30",
+      "x": [
+        94.0,
+        94.0,
+        58.0
+      ],
+      "y": [
+        65.0,
+        39.0,
+        39.0
+      ]
+    }
+  ],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        100.0
+      ],
+      "ylim": [
+        0.0,
+        100.0
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

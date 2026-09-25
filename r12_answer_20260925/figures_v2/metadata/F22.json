@@ -1,0 +1,39 @@
+{
+  "id": "F22",
+  "kind": "schematic",
+  "title": "FIFO状态快照与在途读取",
+  "reading_question": "命中读取完成时为何仍可能重新插入？",
+  "caveat": "按官方语义构造的概念例；不是缓存实测时间线。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 49,
+  "data_sha256": "c9f3586ec85182a353f94ec8dbc6163242320a77915b76d849e0b707895a2fe7",
+  "files": {
+    "pdf": "bf5b2f2d03ea33abc1095391abdd92002f8a2133e4edbd31d058e5e56c97d845",
+    "png": "de8886863c9599f4e1de7c1f3baa49559eb6cf3a047e346b9a4d6edcef703947",
+    "svg": "6cd3dd414f9374ab97a673f5d73fa44fcabbb1119c95670dc4ea1689cd6b3350"
+  },
+  "width_mm": 166,
+  "height_mm": 152.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        100.0
+      ],
+      "ylim": [
+        0.0,
+        100.0
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

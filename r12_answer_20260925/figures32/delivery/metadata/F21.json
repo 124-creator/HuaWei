@@ -1,0 +1,26 @@
+{
+  "id": "F21",
+  "kind": "evidence",
+  "title": "case_073：B最终方案的Pipe活动",
+  "reading_question": "微批后最终方案如何分布计算与搬运？",
+  "caveat": "单个开发案例的最终时间线，不单独证明微批因果收益。",
+  "sources": [
+    "timelineB"
+  ],
+  "data_rows": 9392,
+  "data_sha256": "f1bc5bae9f71a9f9d042fd10f3826b2ba7ba545aff9e6823b43487d871d82484",
+  "files": {
+    "pdf": "6d26bbe9b70d5dc0bddfad60794d4d8c53db66557825a3ee5136d32975ba8910",
+    "png": "a36985bb66d27f04d2c86e27a22eec5745de4365e4891dfa70ef54132401a242",
+    "svg": "c0292a60a77095ba8b7952a6fbf1de3aa818b0e59a967db7ec0e6c23b77f736d"
+  },
+  "width_mm": 166,
+  "height_mm": 153.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "case_073最终B方案Makespan为2034983 cycles。时间线展示结果，不单独证明某个新模块的因果贡献。",
+  "source_data": "data/F21.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Five-core B activity lanes and units readable; chart described as a final-result case, not isolated causal proof."
+}

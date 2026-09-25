@@ -1,0 +1,24 @@
+{
+  "id": "F01",
+  "kind": "schematic",
+  "title": "固定硬件与三种执行场景",
+  "reading_question": "A、B、L2的Task与通信边界有何不同？",
+  "caveat": "机制示意；不是设备测量或实验结果。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 11,
+  "data_sha256": "40b73f555aa146e01f8c7e1033fab7a21d5e43bf4bef1571f03a350971832507",
+  "files": {
+    "pdf": "d15b8dd9dc65612fb6df1fbfc7e0f7de91fa7829179cd542720645af00f87646",
+    "png": "6d89a00c6cce725c822bc4486df8218dd46ae7c4182fd3d39a8b0b1fe852c066",
+    "svg": "e6aeb8129d60a72735db1af5916ad24c69c9aba0e42da5a70e27be07ffdb11e9"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER"
+}

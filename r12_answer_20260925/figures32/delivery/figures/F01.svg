@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="470.551181pt" height="351.496063pt" viewBox="0 0 470.551181 351.496063" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-25T10:41:39.055129</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 351.496063 
+L 470.551181 351.496063 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 207.467929 90.117576 
+Q 172.455417 113.628265 137.442905 137.138954 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 202.588629 90.74402 
+L 207.467929 90.117576 
+L 205.041504 94.396882 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 142.322205 136.512511 
+L 137.442905 137.138954 
+L 139.86933 132.859648 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 235.275591 91.546981 
+Q 235.275591 113.628989 235.275591 135.710996 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 233.075591 95.946981 
+L 235.275591 91.546981 
+L 237.475591 95.946981 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 237.475591 131.310996 
+L 235.275591 135.710996 
+L 233.075591 131.310996 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 263.083252 90.117576 
+Q 298.095764 113.628265 333.108276 137.138954 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 265.509677 94.396882 
+L 263.083252 90.117576 
+L 267.962552 90.74402 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 330.681851 132.859648 
+L 333.108276 137.138954 
+L 328.228976 136.512511 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 196.870516 255.952989 
+Q 167.321386 236.561883 138.800466 217.845523 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 141.272084 222.098887 
+L 138.800466 217.845523 
+L 143.686128 218.420247 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 235.275591 255.052594 
+Q 235.275591 236.564412 235.275591 219.306068 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 233.075591 223.706068 
+L 235.275591 219.306068 
+L 237.475591 223.706068 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 273.680665 255.952989 
+Q 303.229796 236.561883 331.750715 217.845523 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 326.865053 218.420247 
+L 331.750715 217.845523 
+L 329.279097 222.098887 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 95.91038 88.318179 
+L 374.640801 88.318179 
+L 374.640801 54.571621 
+L 95.91038 54.571621 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f8f2e7; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 14.614008 216.073007 
+L 140.042697 216.073007 
+L 140.042697 138.938017 
+L 14.614008 138.938017 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 172.561246 216.073007 
+L 297.989935 216.073007 
+L 297.989935 138.938017 
+L 172.561246 138.938017 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 330.508484 216.073007 
+L 455.937174 216.073007 
+L 455.937174 138.938017 
+L 330.508484 138.938017 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 95.91038 305.260339 
+L 374.640801 305.260339 
+L 374.640801 257.05097 
+L 95.91038 257.05097 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #edf5f1; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="74.362775" transform="rotate(-0 235.275591 74.362775)">共享DDR：60 bytes/cycle</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(65.703352 161.107587)">核心0</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(44.690438 174.108787)">M / V / IN / OUT</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(55.111524 187.232776)">L1 512 KiB</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(53.81679 200.320437)">UB 128 KiB</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(223.650591 161.107587)">核心1</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(202.637676 174.108787)">M / V / IN / OUT</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(213.058762 187.232776)">L1 512 KiB</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(211.764028 200.320437)">UB 128 KiB</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(376.650665 161.107587)">核心k−1</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(360.584915 174.108787)">M / V / IN / OUT</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(371.006001 187.232776)">L1 512 KiB</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(369.711266 200.320437)">UB 128 KiB</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(179.861395 277.613617)">仅Q3：共享只读L2，1 MiB</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(182.971083 290.626442)">独立读带宽250 bytes/cycle</text>
+   </g>
+  </g>
+  <g id="text_6">
+   <text style="font-size: 10.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="12.287383" transform="rotate(-0 235.275591 12.287383)">F01  固定硬件与三种执行场景</text>
+  </g>
+  <g id="text_7">
+   <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #404040" x="235.275591" y="343.399407" transform="rotate(-0 235.275591 343.399407)">机制示意；不是设备测量或实验结果。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p567d77f9d2">
+   <rect x="3.00024" y="32.877405" width="464.550701" height="289.256213"/>
+  </clipPath>
+ </defs>
+</svg>

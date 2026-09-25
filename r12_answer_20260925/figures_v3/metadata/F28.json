@@ -1,0 +1,99 @@
+{
+  "id": "F28",
+  "kind": "evidence",
+  "title": "case_073：同方案时间线与缓存事件定位",
+  "reading_question": "保持方案不变后，流水线占用如何变化？",
+  "caveat": "阴影为共同绝对时间窗；红线是L2全局缓存事件，不指定某Pipe的因果关系。",
+  "sources": [
+    "timelineB",
+    "timelineL2",
+    "cache"
+  ],
+  "data_rows": 18784,
+  "data_sha256": "c8b02b673b2173d233bbd3cd53d5af14dc11b7b392fda61550bc146a8c461c30",
+  "files": {
+    "pdf": "13805eb4e83d9c271f7806871819b0d516095240e29f93e367caeecf27aebe22",
+    "png": "e51e51df28f83e9f8883433e4343542699661b90bc84d6c749186fa7cdba9c52",
+    "svg": "3e19873447bfb587f1102e685544c546994c37d70528eb0328aa989e954b4205"
+  },
+  "width_mm": 166,
+  "height_mm": 235.00000000000003,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [
+    {
+      "axis": 1,
+      "label": "cache_event",
+      "x": [
+        1.143536,
+        1.143536
+      ],
+      "y": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "axis": 3,
+      "label": "cache_event",
+      "x": [
+        1.143536,
+        1.143536
+      ],
+      "y": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        2.05533283
+      ],
+      "ylim": [
+        19.7,
+        -0.7
+      ]
+    },
+    {
+      "axis": 1,
+      "xlim": [
+        0.0,
+        2.05533283
+      ],
+      "ylim": [
+        19.7,
+        -0.7
+      ]
+    },
+    {
+      "axis": 2,
+      "xlim": [
+        0.9,
+        1.2
+      ],
+      "ylim": [
+        3.6,
+        -0.6
+      ]
+    },
+    {
+      "axis": 3,
+      "xlim": [
+        0.9,
+        1.2
+      ],
+      "ylim": [
+        3.6,
+        -0.6
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

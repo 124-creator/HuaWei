@@ -1,0 +1,79 @@
+{
+  "id": "F21",
+  "kind": "evidence",
+  "title": "微批阶段：两个实际改善案例的配对结果",
+  "reading_question": "哪些实例在插入后到微批后进一步改善？",
+  "caveat": "展示全部2个进一步改善例；其余98例未进一步改善，非等预算独立消融。",
+  "sources": [
+    "stages"
+  ],
+  "data_rows": 100,
+  "data_sha256": "3db7d8c0520d966db33d06dcf4dfeb0ed6817e5d4a94c0dbbc3773ceb462bada",
+  "files": {
+    "pdf": "1f977a93127ddc021e9399179deb1b37af04912da4011b760614fad4f998fd80",
+    "png": "4d25b257a07c33786f7ee84e4731325bd211f2a27ebe301b500f6419ddc6f3d3",
+    "svg": "2831c1afaef03ad17aee96ea36d2be9abd2b5fa9ab0387c099e87c9241fb6c13"
+  },
+  "width_mm": 166,
+  "height_mm": 119.00000000000001,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "plotted_lines": [
+    {
+      "axis": 0,
+      "label": "_child0",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        1.0,
+        0.9044775344538045,
+        0.8557059071502883
+      ]
+    },
+    {
+      "axis": 1,
+      "label": "_child0",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        1.0,
+        0.948928939125613,
+        0.6339244299694561
+      ]
+    }
+  ],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        -0.3,
+        2.3
+      ],
+      "ylim": [
+        0.57,
+        1.08
+      ]
+    },
+    {
+      "axis": 1,
+      "xlim": [
+        -0.3,
+        2.3
+      ],
+      "ylim": [
+        0.57,
+        1.08
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

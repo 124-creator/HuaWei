@@ -1,0 +1,48 @@
+{
+  "title":"问题二：同核驻留与Spill约束下的联合调度",
+  "sections":[
+    {
+      "section_id":"Q2_s1_model",
+      "title":"问题分析与数学模型",
+      "blocks":[
+        {"type":"paragraph","writing_role":"answer","text":"针对场景B，采用完整分量与不同活动核数候选、驻留顺序组织、快速插入以及实际Spill触发的局部微批，并以未改官方评估器的Makespan决定保留。100图的1至5核优化方案均有结果；五核相对固定整图单核的平均加速比为{{value:B.k5.mean_speedup}}，中位数为{{value:B.k5.median_speedup}}。这是当前R12 full的结果，不是将场景A评分重新命名。"},
+        {"type":"paragraph","writing_role":"problem","text":"B把同一核心的全部子图合并为一个Task。因而相邻子图不再必然经DDR交换数据；但张量跨多个子图驻留会压缩L1/UB可用空间，仍可能触发Spill。减少跨核边界、保持双Pipe负载均衡与减少驻留冲突可能相互竞争。关键是优化核心归属与可表达的操作顺序，而不是假设同核数据永不换出。"},
+        {"type":"paragraph","writing_role":"formulation","text":"令$U$为非COPY操作集合，$S$为非空子图集合，$g:U\\to S$为划分，$a:S\\to\\{0,\\ldots,k-1\\}$为核心分配，$\\pi_c$为核心$c$的子图顺序，方案记为$P=(g,a,\\pi)$。每个操作恰好覆盖一次，每个子图只排一次，数据依赖与核序联合无环。固定参数$\\theta$包括L1=524288 bytes、UB=131072 bytes，以及所有核共享的DDR带宽60 bytes/cycle。瞬时容量由官方展开及容量复用依赖控制，不能用子图全部张量之和代替。"},
+        {"type":"raw_math","writing_role":"formulation","tex":"T_B(P)=\\operatorname{Makespan}\\!\\left(\\operatorname{Eval}^{\\mathrm{orig}}_B(G,P;\\theta)\\right)."},
+        {"type":"raw_math","writing_role":"formulation","tex":"\\min_{P\\in\\mathcal F_B}^{\\mathrm{lex}}\\left(T_B(P),D_{\\mathrm{added}}(P)\\right).","symbols":["$\\mathcal F_B$为满足方案规则且官方执行成功的方案集合。先比较Makespan，相同时比较新增COPY。"]},
+        {"type":"raw_math","writing_role":"formulation","tex":"s(\\mathrm{COPY\\_IN}_e)\\ge f(\\mathrm{COPY\\_OUT}_e)+500.","symbols":["$s$和$f$分别表示开始、完成时刻，$e$表示一条实际跨核传输。该式只是目标COPY_IN的必要释放条件。","目标操作还须满足Pipe FIFO、本地前驱及内存申请次序；源OUT完成加500不等于目标立即发射。"]},
+        {"type":"paragraph","writing_role":"formulation","text":"张量的边界通信按生产—消费Task集合计数，不按每条Op依赖边重复收费。例如单生产者、非最终输出的中间张量大小为b，若有r个不同远端消费核心，则r>0时Spill前边界量为一次写出加r次读入，即(r+1)b；r=0时不产生这一跨Task边界量。该特例不包含Spill、原始输入重复读入或最终输出，完整计数沿官方字段保留。"},
+        {"type":"paragraph","writing_role":"rationale","text":"对照算法C3是固定构造基线：合并安全链，按就绪层平衡计算负载，用A场景的等待与边界代理分核，再在B中按真实规则评价。R12进一步依据B的Task组织构造候选，以实际Spill事件引导局部顺序，处理“驻留复用也会占用容量”的问题。两者输入与官方配置相同，但搜索预算并不相同。"}
+      ]
+    },
+    {
+      "section_id":"Q2_s2_solver",
+      "title":"驻留候选、局部微批与可行性保证",
+      "blocks":[
+        {"type":"paragraph","writing_role":"solver","text":"从原图得到当前可行解后，在剩余预算和质量界条件允许时，枚举活动核心数$m\\le k$的完整分量家族，并尝试`target`取0、512、2048的驻留排序组织；补空队列使输出始终包含$k$条核心队列。这一扩展阶段最多评价六个新候选。减少活动核心可能降低通信，也可能牺牲并行度，所以仍需完整评价。"},
+        {"type":"paragraph","writing_role":"solver","text":"快速插入之后，仅当当前成功B/L2结果中spill_added_copy_bytes>0，才进行局部微批诊断。诊断在独立子进程观察原版Step2返回的Spill事件，检查诊断中的搬运分解与成功结果一致；正式评分在新、未插桩的进程进行，不修改原版仿真。"},
+        {"type":"paragraph","writing_role":"solver","text":"触发规则关注大小至少为相应容量1/4、前后使用子图距离不超过8的大张量事件。候选窗口固定为4和8个子图；每份候选最多16个互不重叠窗口，每个窗口不超过128个原计算操作。窗口内细化到操作级子图，用稳定Kahn顺序优先复用最近使用的大型外部输入，平局沿原位置与ID确定。窗口外顺序、所有原操作的核心归属均不改变。阈值是启发式候选规则，不是容量可行性证明。"},
+        {"type":"raw_math","writing_role":"formulation","tex":"a_{\\mathrm{new}}(g_{\\mathrm{new}}(u))=a_{\\mathrm{old}}(g_{\\mathrm{old}}(u)),\\qquad \\forall u\\in U."},
+        {"type":"paragraph","writing_role":"formulation","text":"上述条件表示每个原操作的核心归属不变。B每核心只有一个Task，因此每个张量的生产核心集合与消费核心集合均保持不变，Spill前边界COPY计账满足"},
+        {"type":"raw_math","writing_role":"formulation","tex":"D_{\\mathrm{partition,new}}^{B}=D_{\\mathrm{partition,old}}^{B}.","symbols":["partition指Spill前边界COPY。顺序和Spill仍可改变，因此不能推出Makespan不变；这一结论也不直接适用于场景A。"]},
+        {"type":"paragraph","writing_role":"validation","text":"局部Kahn顺序只保证窗口内部原依赖满足；与外部窗口、跨核释放及内存复用边的组合仍由完整方案检查和官方评价决定。窗口候选可能增大中间数据活期、改变Pipe顺序或延后关键计算，所以不能以亲和度分数下降直接认定有效。只有完整成功且(Makespan,新增COPY,名称)更优者替换当前解；失败或更慢者保留真实状态但不作为最终解。"},
+        {"type":"algorithm","writing_role":"solver","title":"场景B的完整求解步骤","input":"原图、固定B配置、k条核心队列和单请求软预算。","output":"通过原版评价的最佳已得方案及诊断/失败记录。","steps":["从原图生成并评价控制链，保存已有成功方案。","按预定分量家族、活动核心数与驻留组织生成候选，去重并用下界剪枝。","用区间索引生成插入候选，完整评价后更新当前解。","有真实Spill且尚有预算时，生成至多两个固定窗口微批候选，逐个检查并官方评分。","输出两字段方案；未产生成功方案则明确失败，不补0、不删图伪造完整均值。"]},
+        {"type":"paragraph","writing_role":"boundary","text":"所有阶段共用总软预算。R12快速生成上限30秒、插入候选评分120秒、Spill诊断40秒、每个微批候选评分45秒，还受剩余预算限制；控制链的既有预算也计入。输入分析和I/O不是硬实时中断，因此不声称硬实时保证。算法利用官方反馈的多候选搜索成本与C3一次冻结构造不同，二者终点性能比较不能自动解释为等成本算法效率比较。"}
+      ]
+    },
+    {
+      "section_id":"Q2_s3_results",
+      "title":"实验结果与分析",
+      "blocks":[
+        {"type":"paragraph","writing_role":"results","text":"![问题二平均加速比曲线](../figures/q2_curve.png)\n\n[矢量PDF](../figures/q2_curve.pdf)。每个多核点为100个T_REF/T_B比值的算术平均；一核按原题定义为参考点1。优化B1另行实测为{{value:B.k1.mean_speedup}}，不替代曲线参考点。逐例Makespan、COPY和预算见[Q2附录](../tables/Q2_per_case.csv)。"},
+        {"type":"table","writing_role":"results","caption":"场景B标准参考曲线","headers":["核数","平均加速比"],"rows":[["1（参考）","1"],["2","{{value:B.k2.mean_speedup}}"],["3","{{value:B.k3.mean_speedup}}"],["4","{{value:B.k4.mean_speedup}}"],["5","{{value:B.k5.mean_speedup}}"]]},
+        {"type":"paragraph","writing_role":"interpretation","text":"五核平均加速比为{{value:B.k5.mean_speedup}}，最小值为{{value:B.k5.min_speedup}}，全部100图均快于固定整图单核。相对C3，同核五核比较为{{value:C3.B.k5.wins}}例更快、{{value:C3.B.k5.ties}}例持平、{{value:C3.B.k5.losses}}例更慢，逐图耗时降幅平均为{{value:C3.B.k5.time_reduction_percent}}%。这些描述支持整套R12框架在当前测试集上的解质量改进，不是单独微批模块的100图消融结论。"},
+        {"type":"table","writing_role":"results","caption":"五核新增COPY分解与请求运行成本","headers":["量","结果"],"rows":[["平均新增COPY／MiB","{{value:B.k5.mean_added_MiB}}"],["平均partition新增／MiB","{{value:B.k5.mean_partition_MiB}}"],["平均Spill新增／MiB","{{value:B.k5.mean_spill_MiB}}"],["请求墙钟中位数／s","{{value:B.k5.wall_median_s}}"],["请求墙钟P95／s","{{value:B.k5.wall_p95_s}}"],["请求墙钟最大值／s","{{value:B.k5.wall_max_s}}"]],"note":"请求墙钟含评价；P95使用经验最近秩。跨机器或负载下不能按这些数值作硬实时承诺。"},
+        {"type":"paragraph","writing_role":"interpretation","text":"B五核平均partition新增为{{value:B.k5.mean_partition_MiB}} MiB，仍存在{{value:B.k5.mean_spill_MiB}} MiB的平均Spill；可见同核复用并没有消除容量代价。在R12比C3更快的五核实例中，有{{value:C3.B.k5.faster_more_copy}}例的新增COPY反而更高。主指标改善并不等于搬运逐例减少，也不构成每例的双目标Pareto支配。"},
+        {"type":"paragraph","writing_role":"interpretation","text":"作为已曝光的开发诊断案例，case_073的R12 B五核耗时为{{value:case.case_073.B.makespan}} cycles，其中partition新增{{value:case.case_073.B.partition_added_copy_bytes}} bytes，Spill新增{{value:case.case_073.B.spill_added_copy_bytes}} bytes。R12方法提出窗口排序的依据是两份大输入交替使用可能造成反复换入；本稿仅把该机制作为有源码依据的设计动机，不把当前终点值单独当作微批有效性的因果证明。"},
+        {"type":"paragraph","writing_role":"validation","text":"全部500个B请求都有冻结的成功方案和官方结果，使用600秒软预算；原图、配置与评分代码未修改。既有核查覆盖原操作计数、周期、归属、原依赖、Pipe和COPY分解等，并核对官方记录的容量峰值。完整动态容量和共享带宽并未用第二套实现全量重建，不能把自检当外部独立科学审阅。"},
+        {"type":"paragraph","writing_role":"answer","text":"场景B需要同时优化分核、驻留与执行顺序，仅替换场景A的同步常数并不足够。R12在全量测试上取得较好的执行时间，但新增COPY并非逐例下降，结果应结合主次目标共同解释。版本、单位及复现口径见[阅读说明](../阅读说明.md)。"}
+      ]
+    }
+  ]
+}

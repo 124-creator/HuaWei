@@ -1,0 +1,37 @@
+{
+  "id": "F30",
+  "kind": "evidence",
+  "title": "全部同方案L2退化记录",
+  "reading_question": "哪些图在开启L2后反而略慢？",
+  "caveat": "完整8对；横轴放大；低于1表示退化。",
+  "sources": [
+    "pairs"
+  ],
+  "data_rows": 8,
+  "data_sha256": "801cbd976f4afea443324248ab349dcfe22871519b481187aeff40f17ea43113",
+  "files": {
+    "pdf": "e9fd97d99ec346a640fc9b75da10e41a991fc2e570980cbad69d5ef819bac310",
+    "png": "59148d8edd6f34e0afb1ad9a687d790871647c92df185d5550111c858c430c9b",
+    "svg": "2424d86b39a8eae2b2b2d8f384d1a1185b1f3bb98884cd2db556f7b145baaa12"
+  },
+  "width_mm": 166,
+  "height_mm": 109.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [
+    {
+      "axis": 0,
+      "label": "_child2",
+      "x": [
+        1.0,
+        1.0
+      ],
+      "y": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER"
+}

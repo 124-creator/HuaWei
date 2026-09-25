@@ -1,0 +1,65 @@
+{
+  "id": "F19",
+  "kind": "evidence",
+  "title": "五核B：同次请求的阶段增量",
+  "reading_question": "控制、快速插入和微批各保留了什么收益？",
+  "caveat": "100个同次请求阶段配对；不是等预算独立消融。",
+  "sources": [
+    "stages"
+  ],
+  "data_rows": 100,
+  "data_sha256": "3db7d8c0520d966db33d06dcf4dfeb0ed6817e5d4a94c0dbbc3773ceb462bada",
+  "files": {
+    "pdf": "08a38592fc768c8fe429dac27dafb797d77db23041a40c836e8be24bc2be9f03",
+    "png": "ab9702e3c1333b7e00ff435e30be1f0ad290256576fe23f3a0a780228775ab56",
+    "svg": "7876c6968f599e21fd47d73fac332abbdac0fa2f754e20d72a2d143c3cc16c5f"
+  },
+  "width_mm": 166,
+  "height_mm": 126.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "plotted_lines": [
+    {
+      "axis": 0,
+      "label": "_child0",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        4.073197919292522,
+        4.1119949043683635,
+        4.131077430492359
+      ]
+    }
+  ],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        -0.25,
+        2.35
+      ],
+      "ylim": [
+        4.048197919292521,
+        4.15607743049236
+      ]
+    },
+    {
+      "axis": 1,
+      "xlim": [
+        -0.35250000000000004,
+        1.3524999999999998
+      ],
+      "ylim": [
+        0.0,
+        17.4
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

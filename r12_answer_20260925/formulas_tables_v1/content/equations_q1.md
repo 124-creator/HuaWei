@@ -1,0 +1,148 @@
+# 问题一：场景A编号公式（15条）
+
+**来源约定**：Q1.md指冻结解答 `publication/solutions/Q1.md`；代码指 `外部队友的复现包/NPU_R12_Code/NPU_R12`；行号为该文件冻结版本行号。LaTeX统一用 `\tag{}` 编号，融合时按终稿模板重排。
+
+（1-1）决策变量与输出。非COPY操作集合 $U$、非空子图集合 $S$，方案三元组
+
+$$
+P=(g,a,\pi),\quad g:U\to S,\quad a:S\to\{0,\dots,k-1\},\quad \pi_c\ \text{为核心}c\text{的子图顺序}.
+\tag{1-1}
+$$
+
+- 符号/单位：$g$ 划分（无量纲）；$a$ 核心归属（0起整数）；$\pi_c$ 排列。来源：Q1.md 第9行。
+
+（1-2）覆盖与唯一排布条件（可行性硬约束）
+
+$$
+\bigcup_{c=0}^{k-1}\ \bigcup_{s\in\pi_c} g^{-1}(s)=U,\qquad \text{且任意两 } g^{-1}(s)\text{ 互不相交、每个 } s \text{ 仅出现在一条队列一次}.
+\tag{1-2}
+$$
+
+- 来源：Q1.md 第21行文字条件的形式化；子图依赖与核序边并图须无环（同段）。
+
+（1-3）评价算子与目标。具体开始时刻由官方评价器决定：
+
+$$
+T_A(P)=\operatorname{Makespan}\!\left(\operatorname{Eval}^{\mathrm{orig}}_A(G,P;\theta)\right).
+\tag{1-3}
+$$
+
+- $\theta$：固定硬件配置；$G$：操作—张量二部DAG。单位：cycles。来源：Q1.md 第12行。
+
+（1-4）字典序择优
+
+$$
+\min_{P\in\mathcal F_A}^{\mathrm{lex}}\left(T_A(P),\,D_{\mathrm{added}}(P)\right).
+\tag{1-4}
+$$
+
+- $\mathcal F_A$：满足方案规则且官方执行成功的方案集；$D_{\mathrm{added}}$：新增COPY字节数。先比Makespan，再比COPY。来源：Q1.md 第17–19行。
+
+（1-5）同核前一Task等待
+
+$$
+r_s^{\mathrm{seq}}=f_{\operatorname{prev}(s)}+100\quad(\text{存在同核前一Task}),\qquad r_s^{\mathrm{seq}}=0\ \text{否则}.
+\tag{1-5}
+$$
+
+- $f_p$：Task $p$ 完成时刻。单位：cycles。来源：Q1.md 第23行。
+
+（1-6）跨核数据前驱释放
+
+$$
+r_s^{\mathrm{dep}}=\max\left(\{0\}\cup\left\{f_p+1000\cdot\mathbf{1}_{\{a(p)\ne a(s)\}}:p\in\operatorname{Pred}(s)\right\}\right).
+\tag{1-6}
+$$
+
+- $\operatorname{Pred}(s)$：$s$ 的数据前驱Task集合；$\mathbf{1}$ 指示函数。来源：Q1.md 第26行。
+
+（1-7）必要释放时刻
+
+$$
+r_s=\max\left\{r_s^{\mathrm{seq}},\,r_s^{\mathrm{dep}}\right\}.
+\tag{1-7}
+$$
+
+- 100周期只对同核前一Task计一次、不在每条数据边重复。来源：Q1.md 第30–33行。
+
+（1-8）私有容量约束
+
+$$
+\sum_{t\in\mathcal L_{c,m}(\tau)} b_t\le C_m,\qquad m\in\{\mathrm{L1},\mathrm{UB}\}.
+\tag{1-8}
+$$
+
+- $\mathcal L_{c,m}(\tau)$：时刻 $\tau$ 核心 $c$ 上容器 $m$ 实际活跃驻留集合（非子图全部张量）；$b_t$ 张量字节数；$C_{\mathrm{L1}}=524288$、$C_{\mathrm{UB}}=131072$ bytes。来源：Q1.md 第36–38行。
+
+（1-9）候选插入可行性（Treap索引查询的判定式）
+
+$$
+t=\max(\mathrm{ready},\,\mathrm{low}),\qquad t+\mathrm{duration}+\mathrm{gap}\le \mathrm{high}.
+\tag{1-9}
+$$
+
+- 在空闲区间 $[\mathrm{low},\mathrm{high})$ 中寻找满足就绪时刻与持续时间的最早位置；$\mathrm{gap}$ 为候选日历间隔。语义与按时间顺序扫描第一个可行空隙等价。来源：Q1.md 第48行与 `round12_src/fast_calendar.py` 第77–93行。
+
+（1-10）子树剪枝必要条件（不改判定，只跳过不可能区间）
+
+$$
+\mathrm{span}+16\,\mathrm{ulp}(\cdot)<\mathrm{need}\quad\text{或}\quad \mathrm{rightmost}+16\,\mathrm{ulp}(\cdot)<\mathrm{ready}+\mathrm{need}\ \Rightarrow\ \text{剪枝},\qquad \mathrm{need}=\mathrm{duration}+\mathrm{gap}.
+\tag{1-10}
+$$
+
+- $\mathrm{span}$：子树最大可用跨度；$\mathrm{rightmost}$：子树最右边界；容差按机器精度，避免浮点误删。来源：`round12_src/fast_calendar.py` 第83–85行（本稿将代码条件写成公式，语义不变）。
+
+（1-11）链块深度与依赖带
+
+$$
+\mathrm{depth}(C)=1+\max\left(\{\mathrm{depth}(C'):C'\in\mathrm{Pred}(C)\}\right),\qquad \mathrm{band}(C)=\left\lfloor \mathrm{depth}(C)/w \right\rfloor .
+\tag{1-11}
+$$
+
+- $C$：不可随意切开的安全链块；$w$ 取 $4,8,2,16$；带内按弱连通分量成组，软目标2048操作。来源：Q1.md 第46行与 `round7_src/task_frontier.py` 第189–191行。
+
+（1-12）求解成本分解
+
+$$
+C_{\mathrm{solve}}=C_{\mathrm{index}}+C_{\mathrm{generate}}+C_{\mathrm{bound}}+\sum_{j=1}^{K}C_{\mathrm{official}}(G,P_j,A)+C_{\mathrm{IO}}.
+\tag{1-12}
+$$
+
+- 单位：秒（墙钟）；$K$ 为评价过的候选数。来源：Q1.md 第63–65行。
+
+（1-13）逐例比值算术平均（场景A）
+
+$$
+\overline S_{A,k}=\frac{1}{100}\sum_{i=1}^{100}\frac{T_{\mathrm{REF},i}}{T_{A,i,k}},\qquad \overline S_{A,1}=1.
+\tag{1-13}
+$$
+
+- 先逐图计算比值再取算术平均，不用平均耗时之比替代。来源：Q1.md 第70–72行。
+
+（1-14）相对C3的逐例耗时降幅
+
+$$
+\rho_i=1-\frac{T_{\mathrm{R12},i}}{T_{\mathrm{C3},i}},\qquad \overline\rho=\frac{1}{100}\sum_{i=1}^{100}\rho_i .
+\tag{1-14}
+$$
+
+- 五核 $\overline\rho=43.4760\%$；是逐图降幅的平均而非程序墙钟降幅。来源：Q1.md 第88行。
+
+（1-15）静态负载不平衡度（图F11口径）
+
+$$
+B=\frac{\max_c W_c}{\frac1k\sum_{c=0}^{k-1} W_c},\qquad W_c=\sum_{u:\,a(g(u))=c}\max(1,\mathrm{cycles}_u).
+\tag{1-15}
+$$
+
+- $B=1$ 表示静态完全均衡；该量忽略通信、双Pipe重叠与等待，不是实际利用率。来源：`figures_v3/delivery/图件说明.md` F11与 `plansA` 字段。
+
+## 三线表（问题一）
+
+{{TABLE:q1_main}}
+
+{{TABLE:q1_c3}}
+
+{{TABLE:q1_budget}}
+
+{{TABLE:q1_tradeoff}}

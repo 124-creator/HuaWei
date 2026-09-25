@@ -1,0 +1,26 @@
+{
+  "id": "F30",
+  "kind": "evidence",
+  "title": "全部同方案L2退化记录",
+  "reading_question": "哪些图在开启L2后反而略慢？",
+  "caveat": "完整8对；横轴放大；低于1表示退化。",
+  "sources": [
+    "pairs"
+  ],
+  "data_rows": 8,
+  "data_sha256": "801cbd976f4afea443324248ab349dcfe22871519b481187aeff40f17ea43113",
+  "files": {
+    "pdf": "e9fd97d99ec346a640fc9b75da10e41a991fc2e570980cbad69d5ef819bac310",
+    "png": "59148d8edd6f34e0afb1ad9a687d790871647c92df185d5550111c858c430c9b",
+    "svg": "2424d86b39a8eae2b2b2d8f384d1a1185b1f3bb98884cd2db556f7b145baaa12"
+  },
+  "width_mm": 166,
+  "height_mm": 109.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "8条配置比小于1的记录完整保留；最小值对应case_026五核。图只确认退化事实，不把未经核实的机制写成原因。",
+  "source_data": "data/F30.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "本轮逐字节沿用旧图，继承既有作者检查：All eight degradations labelled with six-decimal ratios; enlarged axis explicitly disclosed."
+}

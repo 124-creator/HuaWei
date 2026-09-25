@@ -1,0 +1,384 @@
+{
+  "title": "问题三：共享只读L2的配置效应与调度选解（R12内部审阅稿）",
+  "sections": [
+    {
+      "section_id": "Q3_s1_model",
+      "title": "直接答案、研究对象与缓存模型",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "writing_role": "answer",
+          "text": "在固定1 MiB只读L2、250 bytes/cycle独立读带宽下，R12得到全部100图、1至5核的L2方案，并补齐同一B方案开启/关闭L2的500组控制。五核固定方案的平均配置比为{{value:Q3.k5.same_plan_mean}}，而两配置分别选优的平均综合比为{{value:Q3.k5.separate_selection_mean}}。后者含方案变化，不能称纯硬件收益。L2独立选优方案相对整图单核的平均加速比为{{value:L2.k5.mean_speedup}}。",
+          "id": "Q3_s1_model_b1",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "formulation",
+          "text": "决策仍为操作划分、核心归属与核上子图顺序。每核全部子图合成一个Task，L1/UB驻留、Spill、数据依赖、Pipe FIFO及跨核COPY_OUT完成后500周期的同步规则沿用B。L2不赋予额外计算、任务复制、预热或任意等待指令，也不能自由修改淘汰策略。目标是最小化固定原版L2评价器返回的Makespan；新增COPY为次要指标。",
+          "id": "Q3_s1_model_b2",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "formulation",
+          "text": "令Q(t)为按插入先后排列的逻辑张量FIFO，H(t)为其字节占用。正字节且键有效的COPY_IN在发射时查询缓存，命中进入独立L2读池，未命中进入DDR池；COPY_OUT仍走DDR。Cache命中不刷新已有键的FIFO次序。在实际官方代码中，每个COPY_IN完成都会尝试插入：无键、超容量或键仍存在则不插入，否则逐出最早键直至能容纳后插入。命中读取在途时若该键被逐出，完成时仍可能重新插入。零字节不进入正字节命中统计，但有有效键时不能据此断言没有FIFO事件。",
+          "id": "Q3_s1_model_b3",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "raw_math",
+          "writing_role": "formulation",
+          "tex": "H(t)=\\sum_{\\tau\\in Q(t)}b_\\tau\\le 1048576,\\qquad h_i=\\frac{B_{\\mathrm{hit},i}}{B_{\\mathrm{hit},i}+B_{\\mathrm{miss},i}},\\qquad \\sum_{j\\in\\mathcal A_p(t)}v_j(t)\\le B_p.",
+          "symbols": [
+            "h为按字节命中率，分母为零时沿原版约定取0。无L2配置的Cache统计是不可适用，不伪造0。",
+            "p为DDR或L2读池，其总带宽分别为60和250 bytes/cycle；所有核心共享同一池，两个池互不占用。"
+          ],
+          "id": "Q3_s1_model_b4",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "interpretation",
+          "text": "容量决定哪些已完成读取的数据能保留到下一次发射：单条数据超过容量不能缓存，FIFO驻留还取决于其间插入的不同张量。容量不是唯一未命中原因；若多个核心在首次读取尚未完成时发射同一输入，它们可能全部未命中。因此不能只凭未命中率推断容量不足，也不能把同大小的张量当作同一逻辑对象。",
+          "id": "Q3_s1_model_b5",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "raw_math",
+          "writing_role": "interpretation",
+          "tex": "d_{\\mathrm{DDR}}^{\\mathrm{isolated}}=b/60,\\qquad d_{\\mathrm{L2}}^{\\mathrm{isolated}}=b/250.",
+          "symbols": [
+            "这里只是忽略取整与并发的单次搬运理想参考时间，用于解释独立读池，不替代原版事件模拟。",
+            "局部传输时间缩短不等于整图同比加速：关键计算、Pipe占用、跨核释放与其他搬运仍可成为瓶颈。"
+          ],
+          "id": "Q3_s1_model_b6",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "boundary",
+          "text": "本轮所有正式结果固定容量与带宽，没有改config追求分数，也没有把参数扫描混入主曲线。实验识别的是该指定L2配置的联合净效应，不能分别给容量增加或带宽增加分配独立因果贡献。上面的状态模型提供机制解释，不冒充已经完成容量和带宽的分别消融。",
+          "id": "Q3_s1_model_b7",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "Q3_s2_solver",
+      "title": "求解路径与同方案对照设计",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "writing_role": "solver",
+          "text": "L2的R12 full仍先从原图运行R10控制链。其既有候选包括不同活动核心数与驻留组织；在预算允许时另外从原图生成B候选，再按L2规则评价。这个内部B阶段计入同一请求预算，不免费读取另一批次已经选出的B最优方案。R12再尝试快速插入和实际Spill触发的至多两个局部微批，保留官方Makespan更小的成功结果。",
+          "id": "Q3_s2_solver_b1",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "rationale",
+          "text": "微批是减少局部重复换入的一般B/L2策略，不是已证明最优的FIFO调度器。它可能改变实际COPY_IN发射次序及两带宽池的竞争，从而影响命中；也可能延迟关键操作。亲和度、命中率或Spill单项改善都不能替代完整Makespan。当前不把一般驻留优化包装为已证明的L2专属原创算法。",
+          "id": "Q3_s2_solver_b2",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "raw_math",
+          "writing_role": "formulation",
+          "tex": "R_{\\mathrm{hw},i,k}=\\frac{T_B(P_{B,i,k})}{T_L(P_{B,i,k})},\\qquad R_{\\mathrm{select},i,k}=\\frac{T_B(P_{B,i,k})}{T_L(P_{L,i,k})},\\qquad R_{\\mathrm{select},i,k}=R_{\\mathrm{hw},i,k}\\frac{T_L(P_{B,i,k})}{T_L(P_{L,i,k})}.",
+          "symbols": [
+            "P_B和P_L分别为冻结的B与L2最终方案。等式逐例成立，三项的算术均值不能直接相乘。",
+            "两条主对比曲线分别用同一个整图REF归一化；配置比另行对100个B/L2比值取平均，不用两条曲线均值相除。"
+          ],
+          "id": "Q3_s2_solver_b3",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "validation",
+          "text": "固定方案对照通过图、核数、配置、评估器和方案哈希匹配。500对中430对B/L2最终方案本来相同，62对复用同哈希既有候选评分，8对只补官方L2评分，不重跑求解器；总计70对B/L2最终方案不同。对照补评分不反向参与既有主方案选型。两配置下固定P_B的partition和Spill新增COPY字节均一致，这与官方在事件模拟前计账的实现相符。",
+          "id": "Q3_s2_solver_b4",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "boundary",
+          "text": "R12主实验的原图、配置及代码版本固定；同次请求择优不变差不保证两个独立请求的最终计划必然优于对方的计划。尤其不能在观察500组对照后，把每格更好的结果再次拼进“统一R12主算法”。本稿保持冻结选解来源，只新增读表分析。",
+          "id": "Q3_s2_solver_b5",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "Q3_s3_results",
+      "title": "指定配置结果、异质性与原题回答",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "writing_role": "results",
+          "text": "![问题三同方案与分别选优对照](../figures/q3_configuration.png)\n\n[矢量PDF](../figures/q3_configuration.pdf)。左图是同一P_B在两配置下相对REF的平均性能；右图区分同方案配置比与分别选优综合比，纵轴围绕1放大显示，不是从0起点的柱状比较。一核配置比是实测值，不能强设为1。",
+          "id": "Q3_s3_results_b1",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "table",
+          "writing_role": "results",
+          "caption": "同核数L2配置比与方案选优比（每行100图）",
+          "headers": [
+            "核数",
+            "同方案配置比均值",
+            "分别选优比均值",
+            "同方案改善／相同／退化"
+          ],
+          "rows": [
+            [
+              "1",
+              "{{value:Q3.k1.same_plan_mean}}",
+              "{{value:Q3.k1.separate_selection_mean}}",
+              "{{value:Q3.k1.improved}}／{{value:Q3.k1.ties}}／{{value:Q3.k1.degraded}}"
+            ],
+            [
+              "2",
+              "{{value:Q3.k2.same_plan_mean}}",
+              "{{value:Q3.k2.separate_selection_mean}}",
+              "{{value:Q3.k2.improved}}／{{value:Q3.k2.ties}}／{{value:Q3.k2.degraded}}"
+            ],
+            [
+              "3",
+              "{{value:Q3.k3.same_plan_mean}}",
+              "{{value:Q3.k3.separate_selection_mean}}",
+              "{{value:Q3.k3.improved}}／{{value:Q3.k3.ties}}／{{value:Q3.k3.degraded}}"
+            ],
+            [
+              "4",
+              "{{value:Q3.k4.same_plan_mean}}",
+              "{{value:Q3.k4.separate_selection_mean}}",
+              "{{value:Q3.k4.improved}}／{{value:Q3.k4.ties}}／{{value:Q3.k4.degraded}}"
+            ],
+            [
+              "5",
+              "{{value:Q3.k5.same_plan_mean}}",
+              "{{value:Q3.k5.separate_selection_mean}}",
+              "{{value:Q3.k5.improved}}／{{value:Q3.k5.ties}}／{{value:Q3.k5.degraded}}"
+            ]
+          ],
+          "id": "Q3_s3_results_b2",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "interpretation",
+          "text": "五核同方案配置比均值为{{value:Q3.k5.same_plan_mean}}，中位数只有{{value:Q3.k5.same_plan_median}}，说明收益在用例间不均匀，不能说每张图都有相同幅度改善。五核有{{value:Q3.k5.different_final_plan_count}}对最终方案不同；把{{value:Q3.k5.separate_selection_mean}}全部归因于L2会混入这部分选解变化。固定P_B时L2相对REF均值为{{value:Q3.k5.REF_over_L2_same_plan}}，独立选优则为{{value:L2.k5.mean_speedup}}。",
+          "id": "Q3_s3_results_b3",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "table",
+          "writing_role": "results",
+          "caption": "五核案例：开发机制案例与最差固定方案配置比",
+          "headers": [
+            "用例",
+            "无L2 P_B／cycles",
+            "有L2同一P_B／cycles",
+            "L2独立选优／cycles"
+          ],
+          "rows": [
+            [
+              "case_073（已曝光开发例）",
+              "{{value:paired.case_073.B_makespan}}",
+              "{{value:paired.case_073.L2_same_B_plan_makespan}}",
+              "{{value:paired.case_073.L2_selected_makespan}}"
+            ],
+            [
+              "case_026（五核配置比最小）",
+              "{{value:paired.case_026.B_makespan}}",
+              "{{value:paired.case_026.L2_same_B_plan_makespan}}",
+              "{{value:paired.case_026.L2_selected_makespan}}"
+            ]
+          ],
+          "note": "案例用于展示异质性，不以两个实例代替全100图。全部8条跨核数退化记录另列Q3_degraded.csv。",
+          "id": "Q3_s3_results_b4",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "interpretation",
+          "text": "五核固定方案的逐图命中字节率均值为{{value:Q3.k5.hit_percent}}%，它不是把100图命中字节池化后计算的命中率，也不是Makespan下降比例。更早完成的COPY会改变后续发射与FIFO状态，因此总体收益需要完整事件轴来判断；仅从终点统计无法给case_026的退化指定唯一原因。本稿保留该负结果，不擅自把它归因于容量、带宽或数值误差。",
+          "id": "Q3_s3_results_b5",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "table",
+          "writing_role": "results",
+          "caption": "五核L2独立选优的COPY与请求成本",
+          "headers": [
+            "量",
+            "结果"
+          ],
+          "rows": [
+            [
+              "平均新增COPY／MiB",
+              "{{value:L2.k5.mean_added_MiB}}"
+            ],
+            [
+              "平均partition新增／MiB",
+              "{{value:L2.k5.mean_partition_MiB}}"
+            ],
+            [
+              "平均Spill新增／MiB",
+              "{{value:L2.k5.mean_spill_MiB}}"
+            ],
+            [
+              "请求墙钟中位数／s",
+              "{{value:L2.k5.wall_median_s}}"
+            ],
+            [
+              "请求墙钟P95／s",
+              "{{value:L2.k5.wall_p95_s}}"
+            ],
+            [
+              "请求墙钟最大值／s",
+              "{{value:L2.k5.wall_max_s}}"
+            ]
+          ],
+          "id": "Q3_s3_results_b6",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "interpretation",
+          "text": "无L2独立选优的B五核平均新增COPY为{{value:B.k5.mean_added_MiB}} MiB，L2独立选优为{{value:L2.k5.mean_added_MiB}} MiB；后者更高，不能说开L2就减少了计划中的COPY。官方在模拟前计算added_copy_bytes，不因之后的缓存命中回减，所以该量不等于物理DDR净流量。相对C3，L2最终方案的五核逐图耗时降幅平均为{{value:C3.L2.k5.time_reduction_percent}}%，但其中{{value:C3.L2.k5.faster_more_copy}}个更快实例的COPY更高，再次表明主次目标存在权衡。",
+          "id": "Q3_s3_results_b7",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "validation",
+          "text": "全量结果与同方案对照保留图、方案、官方结果及哈希绑定；三问选解和不同控制共检查1470组输出。核查覆盖执行计数、周期、原依赖、核归属、Pipe、COPY分解等，不冒称另写完整独立缓存/带宽模拟器。所有L2最终请求均在600秒软预算配置下形成结果。文稿数值、图表和来源一致性检查属于作者自检，不代替队员科学审阅。",
+          "id": "Q3_s3_results_b8",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "writing_role": "answer",
+          "text": "本问回答了给定容量和独立带宽配置下的实际性能影响：总体为正、幅度和受益范围依方案而变；容量保留、首次读取重叠、带宽池与关键路径共同决定终点，命中率不是优化目标的替代物。完整两配置Makespan、COPY、命中率和独立选优结果见[Q3逐例附录](../tables/Q3_per_case.csv)，负例见[退化表](../tables/Q3_degraded.csv)，复现入口见[说明](../../REPRODUCE.md)。核心依据为原题问题3与附录D、未改官方缓存代码和冻结R12配对结果。",
+          "id": "Q3_s3_results_b9",
+          "evidence_ids": [
+            "original_problem",
+            "R12_source",
+            "frozen_results"
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "manuscript-craft-v1",
+  "question_id": "Q3",
+  "plan_signature": "e160df371a56c253613ac980548c4f5093201aeeb858294a4037c8b8acbdbbec",
+  "source_bindings": {
+    "RESULTS.json": "898aee4fe4fbfe7d14c5bf84a8890e7b16320052bf25fb8ae7ba4d608a5078cf",
+    "tables/display_values.csv": "6a0a600797e282cd15f37f21a9533fec52fc6b10de3a6f722fc7db996edfb308",
+    "tables/summary.csv": "c3336e49b0e5052c9b0e9546e453b71d75fdd123b1436a6a0517dbbdd99913ae",
+    "tables/comparison_C3.csv": "a51a7f8d3e4ede414518aa77ff22cf2069d200c8c4ec1fd25ac106106f24b311",
+    "sources/original_problem.docx": "d03f1d9a39f1fcae23467cc9fd384cbc61e4f13fc71f3567bdf44e1f3bab0b46",
+    "sources/METHOD_R12.md": "10ef0bec9b9858159d069af844e3bd6e736914e0da3ab9eb2b301b85ae40a7b5",
+    "sources/closeout/results/selection.json": "b9a4c89ebb6116680ea56230c9c0d453ae3e1e3d25716a458a68020d0026a635",
+    "sources/closeout/results/verification.json": "358de91ad88e4e2007645c42bd5f064b6da759a27f30b436d468f699caf0eed4",
+    "../drafts/Q3.json": "90874d9a6fe4ac70a5612c1c2bfc95db9978a8fa5c5c574462d78446863cd474",
+    "../code/derive.py": "0d868f7ab8f967afbc70c47018d25d143893a937e4b1ecb0c8e367f602dc9836",
+    "../reproduction/NPU_R12/round12_src/solve_round12.py": "8d71b5f562520b5090a31d8cedc016c0f7f1be2208317801970ee5d458bce1e0",
+    "../reproduction/NPU_R12/round12_src/residency_bands.py": "d2d145c05f2aaad00a382c680feaee7f9deddda9beb7e923c0e09ac84826b955",
+    "../reproduction/NPU_R12/official/code/multicore_cut_evaluate_problem_3.py": "eab1504dead881f4b67c0f0498cbc2dbbd9039dc3c9d198c6af58773c127eeb0",
+    "figures/q3_configuration.pdf": "8ce56d595e9c0b933c0f32251194287908c7b4c70d5f7a134d25430682addaa8",
+    "figures/q3_configuration.png": "24fa7d93897af6255fd0da74b6806db92112eb590b0e87b9057857e4949fb607",
+    "tables/Q3_per_case.csv": "406b5850714a61cfa69037f4143d152c7753a6cbc17d7ce5eeb142617cff7570"
+  },
+  "open_gaps": [
+    "队员实质性科学审阅、工具信息及引用核实尚待完成；本稿不是正式提交件。"
+  ],
+  "mathematical_preflight": {
+    "status": "AUTHOR_SELF_CHECK_ONLY",
+    "external_review": "NOT_PERFORMED",
+    "scope": "source-bound internal draft; not formal acceptance"
+  }
+}

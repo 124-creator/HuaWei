@@ -1,0 +1,26 @@
+{
+  "id": "F07",
+  "kind": "evidence",
+  "title": "场景A：核数扩展与参考性能",
+  "reading_question": "平均执行性能随核数如何变化？",
+  "caveat": "100图逐例比值算术平均；C3并非等搜索预算。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 400,
+  "data_sha256": "9590bc5496792960ea1c415aef1b591ed8c82da81350dbced99409a3da08a8ba",
+  "files": {
+    "pdf": "81c2e20afe9fc65f9576d50a8067a993704010b2ca4500b50869637f99b210d6",
+    "png": "d0b1d8cb2de2cc51e68e21a3b3862c90f5890e0256efc3153847b150d5bc2f79",
+    "svg": "7b7949bf311419f2c26ba27c2dd3b6bf9ad182ede488c680dbc8f90ab493e830"
+  },
+  "width_mm": 166,
+  "height_mm": 98.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "A五核平均REF加速比为3.743282，对照为2.036883。这是不同搜索成本的最终方案比较。",
+  "source_data": "data/F07.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Both curves start at the defined one-core reference; markers and dashed baseline are distinct."
+}

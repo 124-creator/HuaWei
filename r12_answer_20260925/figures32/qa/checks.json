@@ -1,0 +1,338 @@
+{
+  "status": "MACHINE_CHECKS_PASS_VISUAL_PENDING",
+  "figures": 32,
+  "kinds": {
+    "schematic": 8,
+    "evidence": 24
+  },
+  "source_inputs_unchanged": 712,
+  "evidence_CSV_exact_checks": 24,
+  "tests": ".........                                                                [100%]\n9 passed in 1.58s\n",
+  "records": [
+    {
+      "id": "F01",
+      "pdf_sha256": "d15b8dd9dc65612fb6df1fbfc7e0f7de91fa7829179cd542720645af00f87646",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F01.png"
+    },
+    {
+      "id": "F02",
+      "pdf_sha256": "0eaac66ed90bfe29090bf3e91c86c945883d520204e4484c1bc007e9157b5fba",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F02.png"
+    },
+    {
+      "id": "F03",
+      "pdf_sha256": "ed5776672800e4f3c1b1bddcb15dd02ea0e648a6e7a2a0b048b7cda61fbf8278",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [
+        {
+          "text": "3",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "4",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "4",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "5",
+          "size": 5.949999809265137
+        }
+      ],
+      "capture": "qa/F03.png"
+    },
+    {
+      "id": "F04",
+      "pdf_sha256": "4fb7947ae82d134de04ffd9f622879c9d75bd18f3325574110fb7ad62099e2d3",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F04.png"
+    },
+    {
+      "id": "F05",
+      "pdf_sha256": "e211924f311c2cd6df0892b981355302c3d58c3d4b37918a5a4bcf0af1ac63f2",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F05.png"
+    },
+    {
+      "id": "F06",
+      "pdf_sha256": "329bf7fc6de5c48f7a9eeb444b9183dea2afda61582d43be9c3b30473b1bdffd",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F06.png"
+    },
+    {
+      "id": "F07",
+      "pdf_sha256": "81c2e20afe9fc65f9576d50a8067a993704010b2ca4500b50869637f99b210d6",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F07.png"
+    },
+    {
+      "id": "F08",
+      "pdf_sha256": "d345c42df0af8b4bfca799143fa6bedd3f4e5be01bc0bdca4049a66157e89a3c",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F08.png"
+    },
+    {
+      "id": "F09",
+      "pdf_sha256": "493719e6edae836d484dc20192959907dd2084ecb28f6ebbcf33e0237f091979",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [
+        {
+          "text": "1",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "2",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "3",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "0",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "1",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "2",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "3",
+          "size": 5.949999809265137
+        }
+      ],
+      "capture": "qa/F09.png"
+    },
+    {
+      "id": "F10",
+      "pdf_sha256": "e2dd165fd835e45751424f9e9e07c01f2998f9327902201885a443997f9ad142",
+      "source_font_min": 8.0,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F10.png"
+    },
+    {
+      "id": "F11",
+      "pdf_sha256": "91978ff5dcdde46aa999f45fe01c9726c06d4843174c99371796a950143e50ca",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F11.png"
+    },
+    {
+      "id": "F12",
+      "pdf_sha256": "7c53b9eb1642bc1b8a1ba1d9a921607908d41f55d2cff8695477361db361cdf6",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F12.png"
+    },
+    {
+      "id": "F13",
+      "pdf_sha256": "0585f296f8d23876bf204ca4fee923d3eda368efcad5ef418d02097e5b7363b2",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F13.png"
+    },
+    {
+      "id": "F14",
+      "pdf_sha256": "efe5d66f82b12017a523b574727d3544ee030501a13c8b6c81e6fffff2df33cb",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F14.png"
+    },
+    {
+      "id": "F15",
+      "pdf_sha256": "6b413d2aa0ff15a648a8e863091bdaab6e03b38164523334a2a7eaec5cee76f9",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F15.png"
+    },
+    {
+      "id": "F16",
+      "pdf_sha256": "8af62cfd6adbf10672821e48c0d2c8dface69d09ef277a5f634e8eb5d4acb957",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F16.png"
+    },
+    {
+      "id": "F17",
+      "pdf_sha256": "ac501bdbb8097f04b7950fb4625b1b4f1dc61848d16b56dd92ff28e54b255112",
+      "source_font_min": 8.0,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F17.png"
+    },
+    {
+      "id": "F18",
+      "pdf_sha256": "aeecaec2a357d605e53512fc7879b25859d12b033c224e0f8a1e2539e23d9c82",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [
+        {
+          "text": "0",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "1",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "2",
+          "size": 5.949999809265137
+        }
+      ],
+      "capture": "qa/F18.png"
+    },
+    {
+      "id": "F19",
+      "pdf_sha256": "87855671ce92ae6c9d5ef6dc0fee61440bcbdffe7c37ecb27d0eb4153c1d827b",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F19.png"
+    },
+    {
+      "id": "F20",
+      "pdf_sha256": "7ba50964fe4f0fc0449d091033478436c3271cfe7d87dc0e92e8d1c039d8fce1",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [
+        {
+          "text": "2",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "1",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "0",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "0",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "1",
+          "size": 5.949999809265137
+        }
+      ],
+      "capture": "qa/F20.png"
+    },
+    {
+      "id": "F21",
+      "pdf_sha256": "6d26bbe9b70d5dc0bddfad60794d4d8c53db66557825a3ee5136d32975ba8910",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F21.png"
+    },
+    {
+      "id": "F22",
+      "pdf_sha256": "e4e4091383abe5e59d78adc5d294f0fb74ed6429f09134ecac2f39255e4c70f9",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F22.png"
+    },
+    {
+      "id": "F23",
+      "pdf_sha256": "e077f0a78ff115e867a641431b6cb0402c8f389cd6ffd26d6504c07924abcde8",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F23.png"
+    },
+    {
+      "id": "F24",
+      "pdf_sha256": "c1acdb54c53b4039232fe41584b35143db6a935160b1d25cf33061efcba0dab9",
+      "source_font_min": 8.0,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F24.png"
+    },
+    {
+      "id": "F25",
+      "pdf_sha256": "2241b48f923f1cdf3d9820caf06ec0df1782ab46d3182bcff0e83175d12ae3f1",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F25.png"
+    },
+    {
+      "id": "F26",
+      "pdf_sha256": "c00a3cb7319deaaff2f49cf0c22dd45b5a0430ce5f82fd312e16fe2b3f5e7952",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F26.png"
+    },
+    {
+      "id": "F27",
+      "pdf_sha256": "71d8f9c8f1a739b4fc8dcb9106d21544487e7412649207df28721b08dc759768",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F27.png"
+    },
+    {
+      "id": "F28",
+      "pdf_sha256": "3662917ceaaf71e9853377f48b9fc174823c0ed7b85b8e97da2b1dbd88874fcd",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F28.png"
+    },
+    {
+      "id": "F29",
+      "pdf_sha256": "f35aa0a1fd2a83a45125f1c4f9326bbdfb1c2da5e91180b41621e0bd8b44ed8e",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F29.png"
+    },
+    {
+      "id": "F30",
+      "pdf_sha256": "e9fd97d99ec346a640fc9b75da10e41a991fc2e570980cbad69d5ef819bac310",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F30.png"
+    },
+    {
+      "id": "F31",
+      "pdf_sha256": "3c0c6bde2526c175cfd1b63a7d1407f2d1aad9936498b4925cdc2d327cfcd864",
+      "source_font_min": 8.2,
+      "small_pdf_spans_for_math_review": [],
+      "capture": "qa/F31.png"
+    },
+    {
+      "id": "F32",
+      "pdf_sha256": "dfbb993543859f5173e2dbb9d2fccdc125b71a2829b858c90383d2c38f33c1ff",
+      "source_font_min": 8.1,
+      "small_pdf_spans_for_math_review": [
+        {
+          "text": "0",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "1",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "2",
+          "size": 5.949999809265137
+        },
+        {
+          "text": "3",
+          "size": 5.949999809265137
+        }
+      ],
+      "capture": "qa/F32.png"
+    }
+  ],
+  "scientific_review": "NOT_INDEPENDENTLY_PERFORMED",
+  "solver_calls": 0,
+  "official_scoring_calls": 0,
+  "lsp": "Not installed; no installation performed"
+}

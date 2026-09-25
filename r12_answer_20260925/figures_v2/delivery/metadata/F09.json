@@ -1,0 +1,26 @@
+{
+  "id": "F09",
+  "kind": "evidence",
+  "title": "场景A：最终Task粒度分布",
+  "reading_question": "实际Task数量与组内操作粒度如何变化？",
+  "caveat": "每核数组100图；箱体为四分位范围，不是置信区间。",
+  "sources": [
+    "plansA"
+  ],
+  "data_rows": 400,
+  "data_sha256": "803e457d8493dd06fce493d4b127d2bf9a0f64c000b431783bf8b40e1d1ce7ab",
+  "files": {
+    "pdf": "493719e6edae836d484dc20192959907dd2084ecb28f6ebbcf33e0237f091979",
+    "png": "73fd44b64cd20dd5eca81f3bc93932722c05fb02a0842089c6abec3edb8d8386",
+    "svg": "74487039def4eec5c19de303efb66c69c18150292fa0d65c0f832d6d08b2d323"
+  },
+  "width_mm": 166,
+  "height_mm": 105.00000000000001,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "Task数量和每Task粒度在用例间差异较大，算法并非固定把图均分成k块；箱体只描述样本分布。",
+  "source_data": "data/F09.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "本轮逐字节沿用旧图，继承既有作者检查：Task count and per-Task size boxes are separate; outliers and log superscripts are visible."
+}

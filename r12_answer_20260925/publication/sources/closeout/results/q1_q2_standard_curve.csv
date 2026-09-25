@@ -1,0 +1,11 @@
+﻿scene,cores,mean_speedup,basis
+A,1,1.0,defined_REF_over_REF
+A,2,1.855273958531753,fixed_REF_over_selected
+A,3,2.5605874509384363,fixed_REF_over_selected
+A,4,3.197301808178885,fixed_REF_over_selected
+A,5,3.7432824388023844,fixed_REF_over_selected
+B,1,1.0,defined_REF_over_REF
+B,2,1.9925222967196292,fixed_REF_over_selected
+B,3,2.8011092819307555,fixed_REF_over_selected
+B,4,3.5210461852141943,fixed_REF_over_selected
+B,5,4.131077430492359,fixed_REF_over_selected

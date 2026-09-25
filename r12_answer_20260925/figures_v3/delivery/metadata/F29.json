@@ -1,0 +1,26 @@
+{
+  "id": "F29",
+  "kind": "evidence",
+  "title": "五核：不同最终方案的选解效应",
+  "reading_question": "L2下改变方案还带来多少变化？",
+  "caveat": "仅列28对方案哈希不同的实例；其余72对方案相同。",
+  "sources": [
+    "pairs"
+  ],
+  "data_rows": 28,
+  "data_sha256": "1be54b781bf6930723b63d01230dd4b0bbbabee21d1901791e7676c9ed358ba7",
+  "files": {
+    "pdf": "f35aa0a1fd2a83a45125f1c4f9326bbdfb1c2da5e91180b41621e0bd8b44ed8e",
+    "png": "fc92fcf4bde321853cb238bd6b4fc0f92c95b6779c11548342d0fe837ebb9424",
+    "svg": "fb3c01e9b5b9034a0203f9ea6f684e8fef2879ec069a3ec0089f2cbcdd4644f8"
+  },
+  "width_mm": 166,
+  "height_mm": 171.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "五核共有28对方案不同；在同一L2配置中，另选方案较PB有26例更快、1例相同、1例更慢，不能默认为全部改善。",
+  "source_data": "data/F29.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：All 28 different-plan cases labelled; case_099 degradation retained; reference-one line clear."
+}

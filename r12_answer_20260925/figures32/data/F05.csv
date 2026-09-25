@@ -1,0 +1,17 @@
+﻿record,id,label,x,y,width,height,color,border,source,target,both
+node,a,"核心0 / Task s1
+完成并写出",1.6,4.6,2.65,1.05,#F0F4F6,True,,,
+node,d1,"DDR中转
+缓存不跨Task保留",5,4.6,2.65,1.05,#F0F4F6,True,,,
+node,b,"核心0 / Task s2
+前Task后等待100",8.4,4.6,2.65,1.05,#F0F4F6,True,,,
+node,c,"核心0 / Task s1
+跨核前驱完成",1.6,1.7,2.65,1.05,#F0F4F6,True,,,
+node,d2,"DDR中转
+所有边界需搬运",5,1.7,2.65,1.05,#F0F4F6,True,,,
+node,e,"核心1 / Task s2
+跨核等待1000",8.4,1.7,2.65,1.05,#F0F4F6,True,,,
+edge,,,,,,,,,a,d1,False
+edge,,,,,,,,,d1,b,False
+edge,,,,,,,,,c,d2,False
+edge,,,,,,,,,d2,e,False

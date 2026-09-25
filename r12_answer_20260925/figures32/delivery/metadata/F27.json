@@ -1,0 +1,26 @@
+{
+  "id": "F27",
+  "kind": "evidence",
+  "title": "case_073：FIFO占用与累计命中",
+  "reading_question": "缓存占用与读取完成怎样沿事件时间轴演化？",
+  "caveat": "同一B方案在L2下的真实缓存事件；不是重新选优方案。",
+  "sources": [
+    "cache"
+  ],
+  "data_rows": 4252,
+  "data_sha256": "231a7b613b2e6ca361d5f1d2a2dea4046b22d1070fe5636ab953a4021730db59",
+  "files": {
+    "pdf": "71d8f9c8f1a739b4fc8dcb9106d21544487e7412649207df28721b08dc759768",
+    "png": "220175d4ade2a4b70f76db2a57bf49c07f8b601ccce5b8efb4c1a10ac9f04ccd",
+    "svg": "32f305f70835eea6f7ef8354b25ad7f290e37141633bc225f8765946cce5496e"
+  },
+  "width_mm": 166,
+  "height_mm": 135.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "完整4252条缓存事件按原始先后读取，末累计字节命中率为63.4171%；缓存使用量不超过1 MiB。",
+  "source_data": "data/F27.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "FIFO occupancy and cumulative byte-hit rate have separate units, shared event time and visible capacity bound."
+}

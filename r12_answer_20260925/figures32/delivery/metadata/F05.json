@@ -1,0 +1,26 @@
+{
+  "id": "F05",
+  "kind": "schematic",
+  "title": "场景A：跨Task数据必须经DDR",
+  "reading_question": "同核Task是否可以省去边界搬运？",
+  "caveat": "规则示意；同核切换100、跨核前驱等待1000 cycles。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 10,
+  "data_sha256": "8f7085a401f013febd82b9f6cbd573c22baaaef9a94548c142fa7de4589b7c38",
+  "files": {
+    "pdf": "e211924f311c2cd6df0892b981355302c3d58c3d4b37918a5a4bcf0af1ac63f2",
+    "png": "eaac4eb6cf084a706610d3d29930be7fd4ffdaa32f8c6de786709c89a03e5039",
+    "svg": "36cdce3e1627ed4a2b2aaa54ba91c5e97875592a2d1c45311e3e422ce0ba8039"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "A中同核也不能跨Task保留私有缓存；DDR中转规则与100/1000周期等待分别表达，等待不是对所有前驱累加。",
+  "source_data": "data/F05.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Same-core and cross-core Task paths distinguish DDR movement and waiting rules."
+}

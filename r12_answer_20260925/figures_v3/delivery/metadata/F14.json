@@ -1,0 +1,26 @@
+{
+  "id": "F14",
+  "kind": "schematic",
+  "title": "局部微批：依赖不变，共享输入成组使用",
+  "reading_question": "局部顺序变化如何改变大型输入的连续使用？",
+  "caveat": "示意前提为A_i→B_i，无跨链依赖；不保证实际Spill或Makespan改善。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 107,
+  "data_sha256": "fdaaefe05d64a1457077d6eb12128477fd94669f23135f72a3861da8dd304d5a",
+  "files": {
+    "pdf": "8b85fa707a5f7dcf29005db0b64c4bed90c78b9364d8e90fd2e8499e82676cf7",
+    "png": "74063d2546d2ce243ad5fbde6efb3a5a15d29504190f2222539fc558b832527d",
+    "svg": "193437131596292b7e3af567c3c13bada3b33df5a3ec6532e8079f0e28b02c0c"
+  },
+  "width_mm": 166,
+  "height_mm": 159.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "四条A_i→B_i依赖和所有原操作核心归属不变；共享大型输入可从交替使用改成成组使用。中间张量活期及完整执行代价仍可能增加，不能单凭此图认定收益。",
+  "source_data": "data/F14.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：原依赖、操作顺序和共享输入分层；前后八操作覆盖与A_i先于B_i经测试。顺序宽度未冒充执行时长。"
+}

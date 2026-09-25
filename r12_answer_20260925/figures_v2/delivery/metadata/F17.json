@@ -1,0 +1,26 @@
+{
+  "id": "F17",
+  "kind": "evidence",
+  "title": "场景B：边界COPY与Spill分解",
+  "reading_question": "增加核心数如何改变两类额外搬运？",
+  "caveat": "官方模拟前COPY计账；每个核数100图。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 500,
+  "data_sha256": "38f2d7adab27d22ce0abe805727b7f424374c616e4d13a1ba9da44a7e5cf39e3",
+  "files": {
+    "pdf": "ac501bdbb8097f04b7950fb4625b1b4f1dc61848d16b56dd92ff28e54b255112",
+    "png": "cccae6f16369b4c4ce0ea89543918c788b8a0497e7c2827c5762439d5d2afba3",
+    "svg": "dbb42eedee524220a830e69871230c71c589a060dd7a201f2f13d97d3a1e5eeb"
+  },
+  "width_mm": 166,
+  "height_mm": 102.99999999999999,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "B的跨核边界开销与核内Spill可随核数呈不同变化；按字节分开报告，不用单个总量掩盖机制差异。",
+  "source_data": "data/F17.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "本轮逐字节沿用旧图，继承既有作者检查：Boundary and spill components plus nonzero-case count are readable; no legend overlap."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "F33",
+  "kind": "schematic",
+  "title": "安全链与依赖带如何形成子图",
+  "reading_question": "预定带宽内如何保留安全链并形成弱连通分组？",
+  "caveat": "width=2的概念例，非实际选解；2048为软粒度目标，不是物理容量上限。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 72,
+  "data_sha256": "604830a3018b5e054da9bccb2709ff185d2cd0b73bbf0092f372e2f5aea866f1",
+  "files": {
+    "pdf": "76454ed2ffca78e765d705a67cd140e0e13bc128e5d3272d836d033d077c2c1f",
+    "png": "536228345679cf8ca8cbc780614bb9a6a9b582f8125b323f5f0a89b7a8b2eea0",
+    "svg": "42a2e79a722178c789e17af88fb15a87ed92f10bb727a08ca309e3807d23bded"
+  },
+  "width_mm": 166,
+  "height_mm": 181.0,
+  "minimum_source_font_pt": 7.9,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "根据实际安全链与依赖带代码构造教学例：依赖带宽度为2时，带内弱连通分量分别形成S0、S1和相互独立的S2/S3；不能把整带强制并为一个Task。示意规模不触发2048操作软分组目标。",
+  "source_data": "data/F33.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "实际查看PDF渲染。安全链、链块深度、width=2分带和四个子图对应明确；同带独立分量未强并，示例覆盖10操作且安全边和深度关系经测试。"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "F13",
+  "kind": "schematic",
+  "title": "逻辑活跃、物理驻留与容量冲突",
+  "reading_question": "单张量可容纳为何不保证多个张量可同时驻留？",
+  "caveat": "概念例，非实测活期或Spill量；逻辑活跃不等于物理驻留。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 26,
+  "data_sha256": "925614fd917550de62111592c5eaa66ac89871e5f3b0d40b979f6ebe6f0416c3",
+  "files": {
+    "pdf": "aa7fe0a3fe1513c4ae2b9c9ad5accc3f3cb1b1b057b9600264d6c52f8925b499",
+    "png": "4d9ec748b212ffa1e8ad94bda99001a0d8135902a5a3456e599944fd66f8b5a6",
+    "svg": "a2fe44d97663629daf84654ea6b1c10b7c53af1a233115d26bb27f0f3b4a8df7"
+  },
+  "width_mm": 166,
+  "height_mm": 143.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        100.0
+      ],
+      "ylim": [
+        0.0,
+        100.0
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

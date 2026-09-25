@@ -1,0 +1,26 @@
+{
+  "id": "F06",
+  "kind": "schematic",
+  "title": "依赖带分块与前向核序",
+  "reading_question": "如何在扩大并行度时维持结构无环？",
+  "caveat": "小DAG为原理示意，不是实际用例的切图结果。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 10,
+  "data_sha256": "c9c7722ac7f4c8a76a17be5d921d23f07461c5da124cd75bb21a646706b9a40c",
+  "files": {
+    "pdf": "329bf7fc6de5c48f7a9eeb444b9183dea2afda61582d43be9c3b30473b1bdffd",
+    "png": "70cb2f7baf72b59b140141b96cffe1d1977dd161ec2a5a57c461909b3bd88556",
+    "svg": "c6569d0ceb490751d857fec8ee3819af11e1f8da5145bc1bcaf681f5a88dc5e9"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "示意依赖带之间只向前，安全链内部不切断；核心队列还须与这些依赖共同保持无环。",
+  "source_data": "data/F06.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Band and subgraph labels are explicit; example core queues are readable and jointly acyclic."
+}

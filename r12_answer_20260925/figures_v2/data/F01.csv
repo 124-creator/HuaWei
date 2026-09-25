@@ -1,0 +1,75 @@
+﻿record,x,y,w,h,text,fill,hatch,layer,segment,end_x,end_y,dashed,color
+region,3,83,53,14,"共享DDR（读 / 写）
+总带宽 60 bytes/cycle",#F8F0E2,,2,,,,,
+label,29.5,90.0,,,"共享DDR（读 / 写）
+总带宽 60 bytes/cycle",,,,,,,,
+region,63,83,34,14,"只读L2  /  独立于DDR
+1 MiB；250 bytes/cycle",#E5F2EF,,2,,,,,
+label,80.0,90.0,,,"只读L2  /  独立于DDR
+1 MiB；250 bytes/cycle",,,,,,,,
+relationship,28,83,,,,,,,0,28,77,False,#A66B20
+relationship,28,77,,,,,,,1,14,77,False,#A66B20
+relationship,14,77,,,,,,,2,80,77,False,#A66B20
+relationship,94,83,,,,,,,0,94,72,False,#087F83
+relationship,94,72,,,,,,,1,25,72,False,#087F83
+region,3,12,28,54,,#FAFBFC,,2,,,,,
+label,17,62,,,核心0,,,,,,,,
+relationship,14,77,,,,,,,0,14,66,False,#A66B20
+relationship,25,72,,,,,,,0,25,66,False,#087F83
+region,6,45,10,10,M,#E9F0F7,,2,,,,,
+label,11.0,50.0,,,M,,,,,,,,
+region,18,45,10,10,V,#E5F2EF,,2,,,,,
+label,23.0,50.0,,,V,,,,,,,,
+region,6,31,10,9,IN,#F8F0E2,,2,,,,,
+label,11.0,35.5,,,IN,,,,,,,,
+region,18,31,10,9,OUT,#F5E8E5,,2,,,,,
+label,23.0,35.5,,,OUT,,,,,,,,
+region,6,16,10,11,"L1
+512 KiB",white,,2,,,,,
+label,11.0,21.5,,,"L1
+512 KiB",,,,,,,,
+region,18,16,10,11,"UB
+128 KiB",white,,2,,,,,
+label,23.0,21.5,,,"UB
+128 KiB",,,,,,,,
+region,36,12,28,54,,#FAFBFC,,2,,,,,
+label,50,62,,,核心1,,,,,,,,
+relationship,47,77,,,,,,,0,47,66,False,#A66B20
+relationship,58,72,,,,,,,0,58,66,False,#087F83
+region,39,45,10,10,M,#E9F0F7,,2,,,,,
+label,44.0,50.0,,,M,,,,,,,,
+region,51,45,10,10,V,#E5F2EF,,2,,,,,
+label,56.0,50.0,,,V,,,,,,,,
+region,39,31,10,9,IN,#F8F0E2,,2,,,,,
+label,44.0,35.5,,,IN,,,,,,,,
+region,51,31,10,9,OUT,#F5E8E5,,2,,,,,
+label,56.0,35.5,,,OUT,,,,,,,,
+region,39,16,10,11,"L1
+512 KiB",white,,2,,,,,
+label,44.0,21.5,,,"L1
+512 KiB",,,,,,,,
+region,51,16,10,11,"UB
+128 KiB",white,,2,,,,,
+label,56.0,21.5,,,"UB
+128 KiB",,,,,,,,
+region,69,12,28,54,,#FAFBFC,,2,,,,,
+label,83,62,,,核心k−1,,,,,,,,
+relationship,80,77,,,,,,,0,80,66,False,#A66B20
+relationship,91,72,,,,,,,0,91,66,False,#087F83
+region,72,45,10,10,M,#E9F0F7,,2,,,,,
+label,77.0,50.0,,,M,,,,,,,,
+region,84,45,10,10,V,#E5F2EF,,2,,,,,
+label,89.0,50.0,,,V,,,,,,,,
+region,72,31,10,9,IN,#F8F0E2,,2,,,,,
+label,77.0,35.5,,,IN,,,,,,,,
+region,84,31,10,9,OUT,#F5E8E5,,2,,,,,
+label,89.0,35.5,,,OUT,,,,,,,,
+region,72,16,10,11,"L1
+512 KiB",white,,2,,,,,
+label,77.0,21.5,,,"L1
+512 KiB",,,,,,,,
+region,84,16,10,11,"UB
+128 KiB",white,,2,,,,,
+label,89.0,21.5,,,"UB
+128 KiB",,,,,,,,
+label,50,5,,,私有容量按核心独立；带宽由全部核心共享；只读L2仅在Q3启用,,,,,,,,

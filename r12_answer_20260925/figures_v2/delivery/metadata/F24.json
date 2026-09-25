@@ -1,0 +1,27 @@
+{
+  "id": "F24",
+  "kind": "evidence",
+  "title": "L2：同方案配置效应与分别选优",
+  "reading_question": "两类平均收益能否混为纯硬件收益？",
+  "caveat": "每点100对；右轴放大；不得用两条均值曲线相除。",
+  "sources": [
+    "pairs",
+    "selected"
+  ],
+  "data_rows": 500,
+  "data_sha256": "0ed5157e3a5459ef4fe2cb43c0425f530ca59ba0a46b85518dbcf98af6cc62cd",
+  "files": {
+    "pdf": "c1acdb54c53b4039232fe41584b35143db6a935160b1d25cf33061efcba0dab9",
+    "png": "fe028762e8542ce9fef12fc5f0b66a33871580d79eab15a49e42d146c62dd6e7",
+    "svg": "9d0c02104571c4e03a66c751af207b97a9d77c732f362c5c184b3ee9e948f7f2"
+  },
+  "width_mm": 166,
+  "height_mm": 107.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "五核同方案配置比均值1.016766，分别选优比均值1.027400。两者均先逐例求比值。",
+  "source_data": "data/F24.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "本轮逐字节沿用旧图，继承既有作者检查：Same-plan reference curves and two ratio definitions are clear; ratio-one line and enlarged right scale are visible."
+}

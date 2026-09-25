@@ -1,0 +1,26 @@
+{
+  "id": "F03",
+  "kind": "evidence",
+  "title": "100张计算图的规模与计算组成",
+  "reading_question": "输入规模与M/V计算组成有何差异？",
+  "caveat": "每点/每列对应一张图；非COPY工作量按max(1,cycles)。",
+  "sources": [
+    "graphs"
+  ],
+  "data_rows": 100,
+  "data_sha256": "df167733c688d36f55e82036e7f5379a1d28a3c08d5f08411c535af700fda099",
+  "files": {
+    "pdf": "ed5776672800e4f3c1b1bddcb15dd02ea0e648a6e7a2a0b048b7cda61fbf8278",
+    "png": "c1337b9680fa06056bff8fc1e29b21e6092272de7823aa374cc7eb688606b42c",
+    "svg": "c86f4a05f65af6b1bcba2be8820b616e3e1fbd762e7a60a1b5fd3d7cf42ed328"
+  },
+  "width_mm": 166,
+  "height_mm": 100.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "100张图的非COPY操作数范围为552至35705；M/V计算组成有明显差异。",
+  "source_data": "data/F03.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Two panels have readable scales and legend; log powers are legitimate mathematical superscripts."
+}

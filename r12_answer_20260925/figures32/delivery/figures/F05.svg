@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="470.551181pt" height="351.496063pt" viewBox="0 0 470.551181 351.496063" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-25T10:41:44.902497</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 351.496063 
+L 470.551181 351.496063 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 140.884525 100.370522 
+Q 156.303439 100.370522 170.492515 100.370522 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 166.092515 98.170522 
+L 170.492515 100.370522 
+L 166.092515 102.570522 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 298.831763 100.370522 
+Q 314.250677 100.370522 328.439754 100.370522 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 324.039754 98.170522 
+L 328.439754 100.370522 
+L 324.039754 102.570522 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 140.884525 240.177691 
+Q 156.303439 240.177691 170.492515 240.177691 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 166.092515 237.977691 
+L 170.492515 240.177691 
+L 166.092515 242.377691 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 298.831763 240.177691 
+Q 314.250677 240.177691 328.439754 240.177691 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 324.039754 237.977691 
+L 328.439754 240.177691 
+L 324.039754 242.377691 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 15.775384 125.68044 
+L 138.88132 125.68044 
+L 138.88132 75.060603 
+L 15.775384 75.060603 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 173.722623 125.68044 
+L 296.828558 125.68044 
+L 296.828558 75.060603 
+L 173.722623 75.060603 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 331.669861 125.68044 
+L 454.775797 125.68044 
+L 454.775797 75.060603 
+L 331.669861 75.060603 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 15.775384 265.48761 
+L 138.88132 265.48761 
+L 138.88132 214.867773 
+L 15.775384 214.867773 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 173.722623 265.48761 
+L 296.828558 265.48761 
+L 296.828558 214.867773 
+L 173.722623 214.867773 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 331.669861 265.48761 
+L 454.775797 265.48761 
+L 454.775797 214.867773 
+L 331.669861 214.867773 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(48.074766 97.078422)">核心0 / Task s1</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(54.078352 110.179161)">完成并写出</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(216.157551 97.073336)">DDR中转</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(198.6612 110.18788)">缓存不跨Task保留</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(363.969243 97.078422)">核心0 / Task s2</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(358.933438 110.201684)">前Task后等待100</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(48.074766 236.885591)">核心0 / Task s1</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(49.428352 249.981971)">跨核前驱完成</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(216.157551 236.880505)">DDR中转</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(202.725591 249.98633)">所有边界需搬运</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(363.969243 236.885591)">核心1 / Task s2</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(365.322829 249.981971)">跨核等待1000</text>
+   </g>
+  </g>
+  <g id="text_7">
+   <text style="font-size: 10.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="12.30707" transform="rotate(-0 235.275591 12.30707)">F05  场景A：跨Task数据必须经DDR</text>
+  </g>
+  <g id="text_8">
+   <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #404040" x="235.275591" y="343.399407" transform="rotate(-0 235.275591 343.399407)">规则示意；同核切换100、跨核前驱等待1000 cycles。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p567d77f9d2">
+   <rect x="3.00024" y="32.877405" width="464.550701" height="289.256213"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,26 @@
+{
+  "id": "F02",
+  "kind": "schematic",
+  "title": "调度模型：操作划分、核心映射与核序",
+  "reading_question": "P=(g,a,π)中的三个决策如何对应同一计算图？",
+  "caveat": "同一概念例的三种视图；不是实际选解，不含自由开始时刻决策。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 62,
+  "data_sha256": "925246b1b45a261386c8dd43ce7a2e23f9fe962548157339add0c42340897094",
+  "files": {
+    "pdf": "0e583e3bcf51803a6ba5903a160c3fb69faf69e56455a1ed9907eab39c387bea",
+    "png": "016ce899897c51c20feac3cdd6a7b4ce976f4c295c0374dca56807540a6277b1",
+    "svg": "5e1eb523e02e0673094a02d61b5ed2b05d9b9aa2200b2e9dcae5ffb9097ff1a9"
+  },
+  "width_mm": 166,
+  "height_mm": 174.0,
+  "minimum_source_font_pt": 7.8,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "同一概念DAG在操作—张量、子图划分和核心队列视图中保持对象对应，分别解释g、a、π；输出不含自由指定的开始时刻。",
+  "source_data": "data/F02.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：三层视图对象对应；六操作、五张量、四子图及两核心队列清晰。重复绘制的共享生产边已去重。数学下标单独检查。"
+}

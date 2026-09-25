@@ -1,0 +1,26 @@
+{
+  "id": "F15",
+  "kind": "evidence",
+  "title": "场景B：核数扩展与参考性能",
+  "reading_question": "B的总体性能与C3基线差异多大？",
+  "caveat": "标准一核点为1；实际优化B1另列；非等搜索预算。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 500,
+  "data_sha256": "38f2d7adab27d22ce0abe805727b7f424374c616e4d13a1ba9da44a7e5cf39e3",
+  "files": {
+    "pdf": "6b413d2aa0ff15a648a8e863091bdaab6e03b38164523334a2a7eaec5cee76f9",
+    "png": "38e85bff778995071c706e86dba7e88068029c8fc8e13ffbb9b803688e23e09e",
+    "svg": "497b54e95292794dea17ffd0c8e08a6310d87b91a9bd104e790f805e0e878272"
+  },
+  "width_mm": 166,
+  "height_mm": 98.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "B五核平均REF加速比为4.131077；一核参考点按定义取1，不混入优化后B1。",
+  "source_data": "data/F15.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "本轮逐字节沿用旧图，继承既有作者检查：B standard reference curve and C3 baseline clearly separated; header does not cover plotting area."
+}

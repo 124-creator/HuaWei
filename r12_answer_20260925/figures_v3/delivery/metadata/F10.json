@@ -1,0 +1,26 @@
+{
+  "id": "F10",
+  "kind": "evidence",
+  "title": "场景A：新增COPY的来源",
+  "reading_question": "边界搬运与Spill分别贡献多少字节？",
+  "caveat": "MiB=1048576 bytes；算术均值，不是每图都同向变化。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 400,
+  "data_sha256": "9590bc5496792960ea1c415aef1b591ed8c82da81350dbced99409a3da08a8ba",
+  "files": {
+    "pdf": "e2dd165fd835e45751424f9e9e07c01f2998f9327902201885a443997f9ad142",
+    "png": "16b83228c96cde9d8c271d095d844bb8a39f24d127270dc2b783a610243ef752",
+    "svg": "d8989ca43fa868636adcde54e9ff64e847c09eb32d95d39a7a97f6be62a6e749"
+  },
+  "width_mm": 166,
+  "height_mm": 102.99999999999999,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "边界新增与Spill新增合计为官方added_copy_bytes；右侧统计有Spill的图数，避免把少数大值误解为全部用例的典型情况。",
+  "source_data": "data/F10.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：COPY components and spill-positive case count are distinguishable; legend is separated from heading."
+}

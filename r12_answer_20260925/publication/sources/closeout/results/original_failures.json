@@ -1,0 +1,46 @@
+[
+  {
+    "key": [
+      "A",
+      2,
+      "case_087"
+    ],
+    "report": "/home/dreamboat/npu_r12_verify/NPU_R12/work/par5_A/case_087_n2_A/report.json",
+    "sha256": "b3d1c2186e69561b83f488288461d43f678379993492c84b6b4ea59ea897f814",
+    "status": "no_valid_solution",
+    "budget": 600.0
+  },
+  {
+    "key": [
+      "A",
+      3,
+      "case_087"
+    ],
+    "report": "/home/dreamboat/npu_r12_verify/NPU_R12/work/par5_A/case_087_n3_A/report.json",
+    "sha256": "8b8fee6a134795b801501ec575f0c9bf2b3d87bbf0db4f78ac8b32732d6d9b8d",
+    "status": "no_valid_solution",
+    "budget": 600.0
+  },
+  {
+    "key": [
+      "A",
+      4,
+      "case_087"
+    ],
+    "report": "/home/dreamboat/npu_r12_verify/NPU_R12/work/par5_A/case_087_n4_A/report.json",
+    "sha256": "f6bd5b64a85d1f0a8c594aa8f09ab7198b5c33826e7a98fcf12dfd88f1acb5ec",
+    "status": "no_valid_solution",
+    "budget": 600.0
+  },
+  {
+    "key": [
+      "A",
+      5,
+      "case_087"
+    ],
+    "report": "/home/dreamboat/npu_r12_verify/NPU_R12/work/par5_A/case_087_n5_A/report.json",
+    "sha256": "7019d0e44d1bd10f2fd5fd7286d511c7feb9c4796e1c4ace2ca92bb64dfc56ba",
+    "status": "no_valid_solution",
+    "budget": 600.0
+  }
+]

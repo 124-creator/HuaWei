@@ -1,0 +1,48 @@
+{
+  "title": "问题一：场景A下的切图与多核调度",
+  "sections": [
+    {
+      "section_id": "Q1_s1_model",
+      "title": "问题分析与数学模型",
+      "blocks": [
+        {"type":"paragraph","writing_role":"answer","text":"采用合法候选构造与官方评价反馈相结合的调度算法（R12 full），联合优化操作划分、核心分配和核上执行顺序。100张指定计算图在2至5核下均得到完整结果；五核相对整图单核的平均加速比为{{value:A.k5.mean_speedup}}，中位数为{{value:A.k5.median_speedup}}。以下给出模型、求解方法及实验分析。"},
+        {"type":"paragraph","writing_role":"problem","text":"场景A的关键不是把操作数量平均分到各核。每个子图都是独立Task，跨Task数据即使在同一核上也必须经DDR中转，Task之间还存在启动等待。过细切分扩大并行空间，却增加重复读取、边界搬运和启动次数；过粗切分减少边界，却可能压缩并行度并加重核内Spill。因此，需要在三类决策之间联合权衡，而不是只最小化切边数。"},
+        {"type":"paragraph","writing_role":"formulation","text":"输入为操作与张量构成的二部有向无环图$G$及固定硬件配置。令$U$为非COPY计算操作集合，$S$为非空子图集合，$g:U\\to S$为操作划分，$a:S\\to\\{0,\\ldots,k-1\\}$为核心分配，$\\pi_c$为核心$c$的子图执行顺序。输出仅含`node_to_subgraph`和`core_schedules`；原操作、周期及张量大小保持不变，具体操作开始时刻由官方评价器确定。时间、容量和带宽单位分别为cycles、bytes、bytes/cycle。"},
+        {"type":"raw_math","writing_role":"formulation","tex":"P=(g,a,\\pi),\\qquad T_A(P)=\\operatorname{Makespan}\\!\\left(\\operatorname{Eval}^{\\mathrm{orig}}_A(G,P;\\theta)\\right).","symbols":["$\\theta$表示题目给定的固定硬件配置；操作开始时刻由官方评价器确定。"]},
+        {"type":"raw_math","writing_role":"formulation","tex":"\\min_{P\\in\\mathcal F_A}^{\\mathrm{lex}}\\left(T_A(P),D_{\\mathrm{added}}(P)\\right).","symbols":["$\\mathcal F_A$为满足方案规则且官方执行成功的方案集合。按字典序先比较Makespan，相同时再比较新增COPY字节数。"]},
+        {"type":"paragraph","writing_role":"formulation","text":"可行性包含：U中每个操作恰好出现一次；每个子图只出现在一条核心队列中一次；子图依赖与核序边的联合图无环；原始数据依赖、Task释放、Pipe串行、容量和共享带宽约束均由原版执行过程落实。L1为524288 bytes，UB为131072 bytes，全部核心共同竞争60 bytes/cycle的DDR，而不是每核独享该带宽。"},
+        {"type":"paragraph","writing_role":"formulation","text":"记$f_p$为Task $p$的完成时刻，$\\operatorname{Pred}(s)$为$s$的数据前驱集合。有同核前一Task时，令$r_s^{\\mathrm{seq}}=f_{\\operatorname{prev}(s)}+100$；否则令$r_s^{\\mathrm{seq}}=0$。数据前驱的释放约束与最终必要释放时刻分别为"},
+        {"type":"raw_math","writing_role":"formulation","tex":"r_s^{\\mathrm{dep}}=\\max\\left(\\{0\\}\\cup\\left\\{f_p+1000\\mathbf{1}_{\\{a(p)\\ne a(s)\\}}:p\\in\\operatorname{Pred}(s)\\right\\}\\right)."},
+        {"type":"raw_math","writing_role":"formulation","tex":"r_s=\\max\\left\\{r_s^{\\mathrm{seq}},r_s^{\\mathrm{dep}}\\right\\}.","symbols":["$\\mathbf{1}$为指示函数。加入0使无前驱的Task也有定义；100周期只施加于同核前一Task，不在每条数据边重复计费。","$r_s$是必要释放时刻，内部操作还须满足Pipe、依赖和内存申请次序。"]},
+        {"type":"raw_math","writing_role":"formulation","tex":"\\sum_{t\\in\\mathcal L_{c,m}(\\tau)}b_t\\le C_m,\\qquad m\\in\\{\\mathrm{L1},\\mathrm{UB}\\}.","symbols":["$b_t$为张量字节数，$C_m$为容量；$\\mathcal L_{c,m}(\\tau)$为时刻$\\tau$实际活跃的驻留集合，而非该子图全部张量集合。"]},
+        {"type":"paragraph","writing_role":"boundary","text":"官方Step1/2/3负责固定核内顺序、插入Spill及内存复用依赖，再在共享带宽事件轴上评分。模型以该确定性评价算子为目标，并没有宣称求解自由选择开始时刻的精确MILP。零周期计算按当前原版实现的max(1,cycles)执行；保留原始输入，区分文义与实现细节。"}
+      ]
+    },
+    {
+      "section_id":"Q1_s2_solver",
+      "title":"实际算法、结构保证与停止条件",
+      "blocks":[
+        {"type":"paragraph","writing_role":"rationale","text":"首先保留非分支安全链，在依赖层带中构造不同粒度的Task，再根据依赖释放与负载代理分核。获得成功方案后，可利用本次官方反馈，在保持划分不变的情况下重新分核、排序；剩余预算用于分量家族与插入式候选。整个流程从原图开始，不读取历史结果表中的优胜方案。"},
+        {"type":"paragraph","writing_role":"solver","text":"依赖带构造使用预定宽度4、8、2、16；带内组织弱连通块，大块按原链块拓扑连续段细分，软目标2048操作不代表物理容量上限。跨带依赖只向前，带内不同弱连通块无依赖；连续拓扑段之间也只向前。追加式分核按统一合法拓扑推进，因而不会由构造自身引入等待环。其他候选仍显式检查联合图，不能把这一证明扩展成全部动态约束的证明。"},
+        {"type":"paragraph","writing_role":"solver","text":"新增插入式候选用空闲区间索引寻找满足就绪时刻与持续时间的最早位置。确定性Treap维护子树可用跨度和边界，跳过不可能容纳任务的区间；最后仍用原插入不等式判断。其贡献是加快同一插入规则，不是改变硬件时刻。精确算术下，与按时间顺序扫描第一个可行空隙等价；浮点实现另有包内等价性测试。A不使用B/L2的局部微批策略，避免把操作级细分的驻留收益错误迁移到每子图一个Task的场景。"},
+        {"type":"algorithm","writing_role":"solver","title":"R12场景A求解流程","input":"原始图G、固定配置θ、核心数k及总软预算B。","output":"已成功评价的两字段方案及完整状态记录。","steps":["构造依赖和张量索引，从原图运行控制链，保留已成功评价的当前解。","有剩余预算时生成依赖带、反馈重排和分量家族等既有候选，检查覆盖、联合无环并去重。","用有效资源下界排除不可能超过当前解的候选；仅完整成功的官方评分参与选解。","R12用至多30秒构造快速插入候选，单次完整评价上限120秒，并受总剩余预算限制。","按(Makespan,新增COPY,确定性名称)择优，输出selected_plan.json及官方命名别名；若没有成功解，明确返回失败。"]},
+        {"type":"paragraph","writing_role":"validation","text":"在同一次请求中，候选只有经过官方评价并且字典序更优才替换当前解，因此对已成功保留的控制解具有不变差性质。这不是跨版本、跨机器、不同超时截断下的保证。核数增加允许添加空核心，但有限预算启发式的输出不因此自动具备逐例单调性。下界只用于必要条件与剪枝，本稿不把松弛下界当真实最优值。"},
+        {"type":"raw_math","writing_role":"solver","tex":"C_{\\mathrm{solve}}=C_{\\mathrm{index}}+C_{\\mathrm{generate}}+C_{\\mathrm{bound}}+\\sum_{j=1}^{K}C_{\\mathrm{official}}(G,P_j,A)+C_{\\mathrm{IO}}.","symbols":["索引、依赖展开、候选生成和原版仿真都计入求解成本。Treap查询较快不意味着整套程序无条件为O(n log n)。"]}
+      ]
+    },
+    {
+      "section_id":"Q1_s3_results",
+      "title":"实验结果与分析",
+      "blocks":[
+        {"type":"raw_math","writing_role":"results","tex":"\\overline S_{A,k}=\\frac1{100}\\sum_{i=1}^{100}\\frac{T_{\\mathrm{REF},i}}{T_{A,i,k}},\\qquad \\overline S_{A,1}=1.","symbols":["REF为原版整图单核结果；不使用各方法优化后的一核作为不同分母，不以平均耗时之比替代逐例比值均值。"]},
+        {"type":"paragraph","writing_role":"results","text":"![问题一平均加速比曲线](../figures/q1_curve.png)\n\n[矢量PDF](../figures/q1_curve.pdf)。图中一核为定义参考点；C3曲线是相同输入和评分口径的事后对照，不是等搜索预算实验。完整逐例结果见[Q1附录](../tables/Q1_per_case.csv)。"},
+        {"type":"table","writing_role":"results","caption":"100图逐例加速比的算术平均","headers":["核心数","平均加速比"],"rows":[["1（参考）","1"],["2","{{value:A.k2.mean_speedup}}"],["3","{{value:A.k3.mean_speedup}}"],["4","{{value:A.k4.mean_speedup}}"],["5","{{value:A.k5.mean_speedup}}"]]},
+        {"type":"paragraph","writing_role":"interpretation","text":"平均性能随可用核数增加而提升。五核最小相对REF加速比仍为{{value:A.k5.min_speedup}}，但并非对其他启发式逐例必胜：相对冻结C3，五核为{{value:C3.A.k5.wins}}例更快、{{value:C3.A.k5.ties}}例持平、{{value:C3.A.k5.losses}}例更慢。逐图计算1−T_R12/T_C3后取平均，执行时间减少{{value:C3.A.k5.time_reduction_percent}}%；该比例不是求解程序墙钟下降率，也不能归因于单一新模块。"},
+        {"type":"table","writing_role":"results","caption":"新增COPY的分解与完整请求成本（五核100图）","headers":["量","结果"],"rows":[["平均新增COPY／MiB","{{value:A.k5.mean_added_MiB}}"],["平均partition新增／MiB","{{value:A.k5.mean_partition_MiB}}"],["平均Spill新增／MiB","{{value:A.k5.mean_spill_MiB}}"],["请求墙钟中位数／s","{{value:A.k5.wall_median_s}}"],["请求墙钟P95／s","{{value:A.k5.wall_p95_s}}"],["请求墙钟最大值／s","{{value:A.k5.wall_max_s}}"]],"note":"1 MiB=1048576 bytes；P95为经验最近秩。墙钟包含构造、子进程评价和I/O，受当时机器负载影响，不是纯生成时间。"},
+        {"type":"paragraph","writing_role":"interpretation","text":"比C3更快的五核结果中，有{{value:C3.A.k5.faster_more_copy}}例同时增加了官方COPY计账，因此不能把全部加速解释成通信下降。案例case_002的R12方案耗时{{value:case.case_002.A.makespan}} cycles、新增{{value:case.case_002.A.added_copy_bytes}} bytes；case_005耗时{{value:case.case_005.A.makespan}} cycles、新增{{value:case.case_005.A.added_copy_bytes}} bytes。这些终点值用于展示不同的并行—搬运取舍，不伪称是单因素消融。"},
+        {"type":"paragraph","writing_role":"boundary","text":"预算例外为case_087在A2/A3/A4/A5首次600秒均没有顶层成功结果，后续1800秒独立补跑成功。其余结果不据终分替换来源，首次失败和补跑均保留。完整方案通过原版评价及已有覆盖、周期、核归属、依赖、Pipe、COPY等核查；没有另行独立重建全部带宽与容量活期，也不证明大实例全局最优。"},
+        {"type":"paragraph","writing_role":"answer","text":"联合选择Task粒度、核心归属与执行顺序，可以在给定计算图上取得较好的多核加速；搬运量和并行度仍需权衡。结论限于这100张图、固定配置及已披露预算，不代表任意输入的全局最优。版本、单位和附件用法见[阅读说明](../阅读说明.md)。"}
+      ]
+    }
+  ]
+}

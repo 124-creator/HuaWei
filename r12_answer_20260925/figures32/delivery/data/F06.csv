@@ -1,0 +1,15 @@
+﻿record,id,label,x,y,width,height,color,border,source,target,both
+node,s0,"依赖带0 / S0
+u0 → u1",1.6,3.5,2.65,1.05,#F0F4F6,True,,,
+node,s1,"依赖带1 / S1
+u2",5,4.85,2.65,1.05,#EDF5F1,True,,,
+node,s2,"依赖带1 / S2
+u3",5,2.1,2.65,1.05,#EDF5F1,True,,,
+node,s3,"依赖带2 / S3
+u4 → u5",8.4,3.5,2.65,1.05,#F8F2E7,True,,,
+node,q0,核心0：S0 → S1 → S3,3,0.65,5,0.7,#FFFFFF,False,,,
+node,q1,核心1：S2,8,0.65,3,0.7,#FFFFFF,False,,,
+edge,,,,,,,,,s0,s1,False
+edge,,,,,,,,,s0,s2,False
+edge,,,,,,,,,s1,s3,False
+edge,,,,,,,,,s2,s3,False

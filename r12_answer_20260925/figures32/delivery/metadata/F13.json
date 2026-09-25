@@ -1,0 +1,26 @@
+{
+  "id": "F13",
+  "kind": "schematic",
+  "title": "场景B：复用与Spill的区别",
+  "reading_question": "同核通信省去边界COPY后为何仍可Spill？",
+  "caveat": "机制示意；同核复用不保证永久驻留。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 12,
+  "data_sha256": "c0da363b5f7c010b32a61a786d152ba2501347334eb8cf7b505049aebc868182",
+  "files": {
+    "pdf": "0585f296f8d23876bf204ca4fee923d3eda368efcad5ef418d02097e5b7363b2",
+    "png": "cd58a602ca7675c9a8f6fa356760da69fd898a41abaf45fbe8669b025b4b7874",
+    "svg": "53cb5dbf0fb462c24ea047f2c6f1799881cf8e556be602edbbe97c7c555fd54e"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "B的同核复用消除了相应Task边界COPY，但容量不足仍可产生Spill；跨核读取仍受源OUT完成后的同步条件约束。",
+  "source_data": "data/F13.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Conditional capacity and cross-core paths are labelled; local reuse is not depicted as permanent residency."
+}

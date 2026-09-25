@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="470.551181pt" height="430.866142pt" viewBox="0 0 470.551181 430.866142" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-25T11:51:19.774610</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 430.866142 
+L 470.551181 430.866142 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 365.349787 110.809278 
+Q 365.349787 210.46886 365.349787 310.128442 
+" clip-path="url(#p3801b4ef47)" style="fill: none; stroke: #087f83; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 128.428929 128.605632 
+L 170.238492 128.605632 
+L 170.238492 93.012924 
+L 128.428929 93.012924 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e5f2ef; stroke: #087f83; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 174.883999 128.605632 
+L 216.693563 128.605632 
+L 216.693563 93.012924 
+L 174.883999 93.012924 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 221.33907 128.605632 
+L 263.148633 128.605632 
+L 263.148633 93.012924 
+L 221.33907 93.012924 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 267.79414 128.605632 
+L 309.603703 128.605632 
+L 309.603703 93.012924 
+L 267.79414 93.012924 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 128.428929 228.265214 
+L 170.238492 228.265214 
+L 170.238492 192.672506 
+L 128.428929 192.672506 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 174.883999 228.265214 
+L 216.693563 228.265214 
+L 216.693563 192.672506 
+L 174.883999 192.672506 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 221.33907 228.265214 
+L 263.148633 228.265214 
+L 263.148633 192.672506 
+L 221.33907 192.672506 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 267.79414 228.265214 
+L 309.603703 228.265214 
+L 309.603703 192.672506 
+L 267.79414 192.672506 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 128.428929 327.924796 
+L 170.238492 327.924796 
+L 170.238492 292.332088 
+L 128.428929 292.332088 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 174.883999 327.924796 
+L 216.693563 327.924796 
+L 216.693563 292.332088 
+L 174.883999 292.332088 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 221.33907 327.924796 
+L 263.148633 327.924796 
+L 263.148633 292.332088 
+L 221.33907 292.332088 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 267.79414 327.924796 
+L 309.603703 327.924796 
+L 309.603703 292.332088 
+L 267.79414 292.332088 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e5f2ef; stroke: #087f83; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 351.413266 121.48709 
+L 379.286308 121.48709 
+L 379.286308 100.131465 
+L 351.413266 100.131465 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e5f2ef; stroke: #087f83; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 351.413266 320.806255 
+L 379.286308 320.806255 
+L 379.286308 299.45063 
+L 351.413266 299.45063 
+z
+" clip-path="url(#p3801b4ef47)" style="fill: #e5f2ef; stroke: #087f83; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 8.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="239.921098" y="56.827976" transform="rotate(-0 239.921098 56.827976)">概念例：每个键256 KiB；FIFO容量1 MiB；左端最早插入</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.4px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: start; fill: #253845" x="12.291254" y="113.745997" transform="rotate(-0 12.291254 113.745997)">t₀：发射读取A</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="149.333711" y="113.856622" transform="rotate(-0 149.333711 113.856622)">A</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="195.788781" y="113.789122" transform="rotate(-0 195.788781 113.789122)">B</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="242.243851" y="113.788418" transform="rotate(-0 242.243851 113.788418)">C</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="288.698921" y="113.789122" transform="rotate(-0 288.698921 113.789122)">D</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="216.693563" y="156.333027" transform="rotate(-0 216.693563 156.333027)">命中，但不刷新FIFO次序</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8.4px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: start; fill: #253845" x="12.291254" y="213.401641" transform="rotate(-0 12.291254 213.401641)">t₁：其他读取E完成</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="149.333711" y="213.448704" transform="rotate(-0 149.333711 213.448704)">B</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="195.788781" y="213.448001" transform="rotate(-0 195.788781 213.448001)">C</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="242.243851" y="213.448704" transform="rotate(-0 242.243851 213.448704)">D</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="288.698921" y="213.448704" transform="rotate(-0 288.698921 213.448704)">E</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="216.693563" y="255.968859" transform="rotate(-0 216.693563 255.968859)">插入E，最早的A被逐出</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8.4px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: start; fill: #253845" x="12.291254" y="313.061223" transform="rotate(-0 12.291254 313.061223)">t₂：读取A完成</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="149.333711" y="313.107583" transform="rotate(-0 149.333711 313.107583)">C</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="195.788781" y="313.108286" transform="rotate(-0 195.788781 313.108286)">D</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="242.243851" y="313.108286" transform="rotate(-0 242.243851 313.108286)">E</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="288.698921" y="313.175786" transform="rotate(-0 288.698921 313.175786)">A</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="216.693563" y="355.647817" transform="rotate(-0 216.693563 355.647817)">A已不在缓存：逐出B后重插A</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8.4px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #087f83" transform="translate(401.262683 169.896134)">读取A在途</text>
+    <text style="font-size: 8.4px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #087f83" transform="translate(399.63059 181.331454)">使用L2读池</text>
+    <text style="font-size: 8.4px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #087f83" transform="translate(394.85309 191.901181)">250 bytes/cycle</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #253845" transform="translate(399.845871 268.258829)">发射定命中</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #253845" transform="translate(399.845871 279.633473)">完成试插入</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="235.275591" y="387.670004" transform="rotate(-0 235.275591 387.670004)">t₀ &lt; t₁ &lt; t₂ 仅表示先后；缓存键被逐出，不撤销已发射读取的带宽池选择</text>
+   </g>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 10.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="13.049911" transform="rotate(-0 235.275591 13.049911)">F22  FIFO状态快照与在途读取</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #404040" x="235.275591" y="421.340825" transform="rotate(-0 235.275591 421.340825)">按官方语义构造的概念例；不是缓存实测时间线。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3801b4ef47">
+   <rect x="3.00024" y="39.623862" width="464.550701" height="355.927079"/>
+  </clipPath>
+ </defs>
+</svg>

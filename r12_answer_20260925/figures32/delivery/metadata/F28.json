@@ -1,0 +1,27 @@
+{
+  "id": "F28",
+  "kind": "evidence",
+  "title": "case_073：同方案两配置的时间线",
+  "reading_question": "保持方案不变后，流水线占用如何变化？",
+  "caveat": "共用真实时间坐标；不是各自归一化后比较长短。",
+  "sources": [
+    "timelineB",
+    "timelineL2"
+  ],
+  "data_rows": 18784,
+  "data_sha256": "c8b02b673b2173d233bbd3cd53d5af14dc11b7b392fda61550bc146a8c461c30",
+  "files": {
+    "pdf": "3662917ceaaf71e9853377f48b9fc174823c0ed7b85b8e97da2b1dbd88874fcd",
+    "png": "209a2fefc304f43a96aee26fea317ccca99606d2ff180056d7f093cccafbc1fd",
+    "svg": "89ec3c2e506df1d7c1d0af324d872bd643c3e1c9189741a3b033bb6a4aa11a28"
+  },
+  "width_mm": 166,
+  "height_mm": 202.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "固定同一PB，B与L2的Makespan为2034983和1806253 cycles。横轴共用绝对时间，避免归一化隐藏差异。",
+  "source_data": "data/F28.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Both panels share the same absolute time axis; all 40 labelled lanes retained; panel headings separated."
+}

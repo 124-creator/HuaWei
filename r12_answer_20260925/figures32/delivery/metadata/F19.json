@@ -1,0 +1,26 @@
+{
+  "id": "F19",
+  "kind": "evidence",
+  "title": "五核B：同次请求的阶段增量",
+  "reading_question": "控制、快速插入和微批各保留了什么收益？",
+  "caveat": "100个同次请求阶段配对；不是等预算独立消融。",
+  "sources": [
+    "stages"
+  ],
+  "data_rows": 100,
+  "data_sha256": "3db7d8c0520d966db33d06dcf4dfeb0ed6817e5d4a94c0dbbc3773ceb462bada",
+  "files": {
+    "pdf": "87855671ce92ae6c9d5ef6dc0fee61440bcbdffe7c37ecb27d0eb4153c1d827b",
+    "png": "f8551e75048bdefb661d053cefb4ceabedc1c90660d8a03b5f5d2e147d2b95cb",
+    "svg": "02b81a3ca299de4ff5d5a44b1b404d5811c5ee192acf1f0d04dd6020c57567dd"
+  },
+  "width_mm": 166,
+  "height_mm": 103.99999999999999,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "控制、插入后、微批后的平均REF加速比分别为4.073198、4.111995、4.131077。同次请求阶段共享预算，不冒称独立等预算消融。",
+  "source_data": "data/F19.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "Within-request stage means and strict improvement counts use distinct axes; enlarged mean axis is visible."
+}

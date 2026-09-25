@@ -1,0 +1,37 @@
+{
+  "id": "F26",
+  "kind": "evidence",
+  "title": "五核：命中字节率与配置收益",
+  "reading_question": "命中率是否必然对应整体加速？",
+  "caveat": "100个观测配对；散点关系不是容量或带宽的因果分解。",
+  "sources": [
+    "pairs"
+  ],
+  "data_rows": 100,
+  "data_sha256": "05fafdb8ea147609d5cf8113f0d02c9d52750484ac1e9379494906957dbbe587",
+  "files": {
+    "pdf": "c00a3cb7319deaaff2f49cf0c22dd45b5a0430ce5f82fd312e16fe2b3f5e7952",
+    "png": "d3d19df8f802406af4d52d6e14afde33a5791868502f80626c20df199ffe00d8",
+    "svg": "6d6d6741b83de18dd610f5a64afe1fa7fb3ff8c03619215b6acdfcd1cbba0979"
+  },
+  "width_mm": 166,
+  "height_mm": 107.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [
+    {
+      "axis": 0,
+      "label": "_child1",
+      "x": [
+        0.0,
+        1.0
+      ],
+      "y": [
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "INTERNAL_BUNDLE_VERIFIED",
+  "file": "R12_answers_candidate.zip",
+  "bytes": 2885972,
+  "sha256": "e173309063e2124fc3d5378d0197512fd041793e502300dedca40e6fe1002f8b",
+  "verified_files": 140,
+  "crc_check": "PASS",
+  "contents": "three drafts, three charts, per-case tables, 68 frozen source files, config, provenance",
+  "omitted": "100 original graph files and bulk raw timelines; obtain originals by frozen hashes",
+  "submission_approved": false
+}

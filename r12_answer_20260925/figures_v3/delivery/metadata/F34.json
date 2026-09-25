@@ -1,0 +1,26 @@
+{
+  "id": "F34",
+  "kind": "schematic",
+  "title": "Treap区间索引：相同插入规则，更少无效搜索",
+  "reading_question": "索引如何利用子树摘要定位同一个可行空隙？",
+  "caveat": "概念树形，非实际Treap快照；只索引候选日历，不改变官方时刻或评分。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 45,
+  "data_sha256": "369be064cfa277e56a89be622634c374c0607a9c693685fd3f3470faac096ba9",
+  "files": {
+    "pdf": "ec41e283a53d5c70d51dd9d17fcdb1a74c6a57afb5b8e7169aa582adaa6f0ec7",
+    "png": "88dcd4f7c116c324e9fd49ee7355d5853335d26c979a27ca896e783a8fb25b8f",
+    "svg": "6dffbae5fe1a747407c76ad8f8d8c6c37e3a5ee1ba99bc485ca63fcfc50a0cb8"
+  },
+  "width_mm": 166,
+  "height_mm": 171.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "图中1单位为100代理cycles。给定ready=5、duration=5、gap=1，首个可行候选起点为14，即1400代理cycles；左子树最大空隙3小于所需6，可整体跳过。树形不是实际Treap快照，代理时刻不是官方开始时刻。",
+  "source_data": "data/F34.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "实际查看PDF渲染。区间、左子树摘要和原插入不等式分开；标明1单位=100代理cycles及gap斜线，不冒充实际Treap快照或官方时刻。"
+}

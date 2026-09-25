@@ -1,0 +1,21 @@
+{
+  "version": "R12 full",
+  "files": {
+    "solutions/Q1.md": "1657629a5e5b1155a2827ac6e663860e2cc537d954371ca1eb54cb9215cac312",
+    "solutions/Q2.md": "9753df4640b866119c2f9c8fd11c43206c23c38d4ddd6884c307de70df92121d",
+    "solutions/Q3.md": "13a37fe39f01664c8437ac233aa26ce9918e2327ded9b3bc6d6d799af3d2f6c5",
+    "阅读说明.md": "c7c858c23ee2779944afc15f14681ca421d00033531523253828d739cd6492c6",
+    "figures/q1_curve.png": "c4e6d170a174c083c4a6db92f495489cdbad7db4e01662fa89bd4030e2714525",
+    "figures/q1_curve.pdf": "55a97b3e3171345d64de7f7c351d5a592477b42d17bbf3d29175f22a41b3795a",
+    "figures/q2_curve.png": "9ae7654907c5b049507d53afb463d5efb424984b6915d31535357c760ec2a48d",
+    "figures/q2_curve.pdf": "bf6b9da22014d52a33887518d59e252050e304e0e0944bdeba61e3ba8e52ef55",
+    "figures/q3_configuration.png": "24fa7d93897af6255fd0da74b6806db92112eb590b0e87b9057857e4949fb607",
+    "figures/q3_configuration.pdf": "8ce56d595e9c0b933c0f32251194287908c7b4c70d5f7a134d25430682addaa8",
+    "tables/Q1_per_case.csv": "fdeb4bb088bf4985f802b3da86dbebb6d189ec4a1614931520e0b55d57ca8509",
+    "tables/Q2_per_case.csv": "881a0bf4b9f6a66cfeb5e9d85229428c7f0661907f3383dab416ca78945d0ef7",
+    "tables/Q3_per_case.csv": "406b5850714a61cfa69037f4143d152c7753a6cbc17d7ce5eeb142617cff7570",
+    "tables/Q3_degraded.csv": "f863050bc9c4f0b50d38132469bde73c92d21e76111cf5d37c7f3ed0a1e4ef9b",
+    "tables/summary.csv": "c3336e49b0e5052c9b0e9546e453b71d75fdd123b1436a6a0517dbbdd99913ae",
+    "tables/comparison_C3.csv": "a51a7f8d3e4ede414518aa77ff22cf2069d200c8c4ec1fd25ac106106f24b311"
+  }
+}

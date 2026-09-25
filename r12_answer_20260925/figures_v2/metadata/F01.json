@@ -1,0 +1,66 @@
+{
+  "id": "F01",
+  "kind": "schematic",
+  "title": "计算资源、私有缓存与共享带宽池",
+  "reading_question": "哪些资源按核心独立，哪些由全部核心共享？",
+  "caveat": "硬件约束示意；连线表示资源可达，不是算法步骤。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 58,
+  "data_sha256": "1eab0d4537e3a3e0ab411a5a65788daaddba77558ed702654100697b36451434",
+  "files": {
+    "pdf": "a33e8b340556e399d1737c462bcb0c11ae59c0d38f876d4ad78937ae38a5f899",
+    "png": "211d0c4b77dea6f09ec7e32145e1d35ae9b28d555c113c81eabf8ab4cb277102",
+    "svg": "51a95fee8fe2bbbfad631a8b839ea3c11808502005d75ed41e29f14455b0c731"
+  },
+  "width_mm": 166,
+  "height_mm": 145.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "plotted_lines": [
+    {
+      "axis": 0,
+      "label": "_child4",
+      "x": [
+        28.0,
+        28.0,
+        14.0
+      ],
+      "y": [
+        83.0,
+        77.0,
+        77.0
+      ]
+    },
+    {
+      "axis": 0,
+      "label": "_child6",
+      "x": [
+        94.0,
+        94.0
+      ],
+      "y": [
+        83.0,
+        72.0
+      ]
+    }
+  ],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        100.0
+      ],
+      "ylim": [
+        0.0,
+        100.0
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

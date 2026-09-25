@@ -1,0 +1,26 @@
+{
+  "id": "F32",
+  "kind": "evidence",
+  "title": "求解墙钟与预算长尾",
+  "reading_question": "生成方案的成本与补跑例外是什么？",
+  "caveat": "含构造、评价和I/O；非模拟cycles；保留4个1800秒补跑。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 1400,
+  "data_sha256": "0827e79f235bbb07625e9fe91e6f60add30ee6b8778ae97202f94e77d0ae5b2d",
+  "files": {
+    "pdf": "dfbb993543859f5173e2dbb9d2fccdc125b71a2829b858c90383d2c38f33c1ff",
+    "png": "4d1ef569c078d5cf754d4b2d93c3371c20c400bd0058f19e132f18bfb5e6edf1",
+    "svg": "6fab86794db3c2acbf0e6c9748e6b810b37b0680daec6faa1a1304b3152683a1"
+  },
+  "width_mm": 166,
+  "height_mm": 119.00000000000001,
+  "minimum_source_font_pt": 8.1,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "箱体为四分位范围，须线为1.5IQR，圆点为离群观测，红色菱形标记1800秒补跑。各批次并发负载不同，只报告真实成本，不据此作跨场景算法耗时优劣证明。",
+  "source_data": "data/F32.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "本轮逐字节沿用旧图，继承既有作者检查：All groups and four extended-budget markers shown; budget legend is above, not covering low observations."
+}

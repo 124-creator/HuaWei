@@ -1,0 +1,26 @@
+{
+  "id": "F21",
+  "kind": "evidence",
+  "title": "微批阶段：两个实际改善案例的配对结果",
+  "reading_question": "哪些实例在插入后到微批后进一步改善？",
+  "caveat": "展示全部2个进一步改善例；其余98例未进一步改善，非等预算独立消融。",
+  "sources": [
+    "stages"
+  ],
+  "data_rows": 100,
+  "data_sha256": "3db7d8c0520d966db33d06dcf4dfeb0ed6817e5d4a94c0dbbc3773ceb462bada",
+  "files": {
+    "pdf": "1f977a93127ddc021e9399179deb1b37af04912da4011b760614fad4f998fd80",
+    "png": "4d25b257a07c33786f7ee84e4731325bd211f2a27ebe301b500f6419ddc6f3d3",
+    "svg": "2831c1afaef03ad17aee96ea36d2be9abd2b5fa9ab0387c099e87c9241fb6c13"
+  },
+  "width_mm": 166,
+  "height_mm": 119.00000000000001,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "B5的100请求中，case_067和case_073在微批阶段进一步改善；case_073贡献该阶段平均加速比增量的86.18%。这不是整体R12收益占比，也不是触发率或等预算独立消融。",
+  "source_data": "data/F21.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "实际查看PDF渲染。两案例共用相对尺度并标注原始cycles；展示全部进一步改善案例，98个其余请求状态与非独立消融限定保留。"
+}

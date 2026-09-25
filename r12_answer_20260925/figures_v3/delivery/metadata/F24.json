@@ -1,0 +1,26 @@
+{
+  "id": "F24",
+  "kind": "evidence",
+  "title": "L2：三条方案曲线与两种配置比",
+  "reading_question": "固定PB与另选PL在图中分别对应哪一种结果？",
+  "caveat": "每点100图；右侧直接逐图求比再平均，不用左侧均值相除。",
+  "sources": [
+    "pairs"
+  ],
+  "data_rows": 500,
+  "data_sha256": "0ed5157e3a5459ef4fe2cb43c0425f530ca59ba0a46b85518dbcf98af6cc62cd",
+  "files": {
+    "pdf": "00676f7d9b41c06b49857d4569ac15d1f76dfb9c20ace8a928c3f32445b7c4c7",
+    "png": "e7b9315147eb648f71e3a71deb46fdac7b3a994ab4aca41e433f6068f91f6c4f",
+    "svg": "23268742d45016681db0d9f15373c64e8aeced166c8ee17f35c74b1bbb180af2"
+  },
+  "width_mm": 166,
+  "height_mm": 121.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "五核PB在B/L2下相对REF的均值分别为4.131077/4.187457；另选PL为4.218978。右侧配置比和综合比均先逐图计算再汇总。",
+  "source_data": "data/F24.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "实际查看PDF渲染。PB/B、PB/L2和PL/L2三条曲线由颜色和标记区分；右侧逐图配置比独立计算，均值不能相除。"
+}

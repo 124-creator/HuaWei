@@ -1,0 +1,55 @@
+﻿id,group,pages_total,body_start,frontier,saw_references,saw_appendix,body_pages,eq_main,eq_appendix,eq_glued_extra,eq_multi_page,tables_main,tables_appendix,table_duplicate_ids,table_continues,year,title
+C24_A01,competition,68,4,46,True,True,42,51,0,0,0,0,0,0,0,2024,A24102940057
+C24_A02,competition,79,3,58,True,True,55,37,0,0,0,4,0,0,0,2024,A24103350007
+C24_A03,competition,73,3,65,True,True,62,89,0,0,0,8,0,0,0,2024,A24103530117
+C24_A04,competition,59,3,53,True,True,50,65,0,0,0,15,0,0,0,2024,A24107120016
+C24_B01,competition,90,4,34,True,True,30,29,0,0,0,6,0,0,0,2024,B24102860287
+C24_B02,competition,104,3,53,True,True,50,34,0,0,0,14,0,0,0,2024,B24103530099
+C24_B03,competition,113,6,67,True,True,61,42,0,0,0,5,0,1,0,2024,B24104760033
+C24_B04,competition,69,3,54,True,True,51,26,0,0,0,22,0,1,0,2024,B24116640167
+C24_C01,competition,71,7,52,True,False,45,51,0,0,0,32,0,1,0,2024,C24102890089
+C24_C02,competition,82,6,71,True,True,65,0,0,0,0,33,0,0,0,2024,C24103860012
+C24_C03,competition,71,6,56,True,True,50,35,0,0,0,28,0,3,0,2024,C24104220149
+C24_C04,competition,105,6,71,True,True,65,134,0,0,0,38,1,0,0,2024,C24106130096
+C24_D01,competition,113,3,80,True,True,77,33,0,0,0,10,0,0,0,2024,D24103850092
+C24_D02,competition,62,3,52,True,True,49,0,0,0,0,21,0,0,0,2024,D24104250063
+C24_D03,competition,96,7,77,True,True,70,18,0,0,0,31,0,0,0,2024,D24104460003
+C24_D04,competition,114,3,84,True,True,81,54,0,0,0,4,4,0,0,2024,D24106570027
+C24_E01,competition,84,6,69,True,True,63,40,0,0,0,6,0,0,0,2024,E24101480006
+C24_E02,competition,81,3,66,True,True,63,52,0,0,0,9,0,0,0,2024,E24102870008
+C24_E03,competition,60,6,59,True,True,53,57,0,0,0,10,0,0,0,2024,E24102910005
+C24_E04,competition,78,6,69,True,True,63,79,0,0,0,28,0,0,0,2024,E24106980067
+C24_F01,competition,44,3,41,True,True,38,51,0,0,0,7,0,0,0,2024,F24102870082
+C24_F02,competition,48,6,38,True,True,32,52,0,0,0,2,0,0,0,2024,F24103360083
+C24_F03,competition,79,6,51,True,True,45,139,0,0,0,4,0,0,0,2024,F24104860143
+C24_F04,competition,53,3,38,True,True,35,64,1,0,0,6,0,0,0,2024,F24910020063
+C25_A01,competition,59,3,43,True,True,40,0,0,0,0,5,0,0,0,2025,A题-1-通用神经网络处理器下的核内调度问题
+C25_A02,competition,98,4,37,True,True,33,71,0,0,0,8,0,0,0,2025,A题-2-通用神经网络处理器下的核内调度问题
+C25_A03,competition,120,7,91,True,True,84,143,0,0,0,14,0,0,0,2025,A题-NPU 核内调度算法设计与优化研究
+C25_A04,competition,77,3,56,True,True,53,30,0,0,0,22,0,1,0,2025,A题-面向 Davinci 架构的 NPU 核内调度算法研究
+C25_B01,competition,57,4,35,True,True,31,0,0,0,0,2,0,0,0,2025,B题-MIMO-OFDM 链路速率预测问题的建模研究
+C25_B02,competition,68,3,40,True,True,37,67,0,0,0,3,0,1,0,2025,B题-无线通信系统链路速率建模
+C25_B03,competition,76,5,56,True,True,51,33,0,0,0,22,0,1,0,2025,B题-机器学习驱动的面向 MIMO-OFDM 的链路速率预测
+C25_C01,competition,71,4,52,True,True,48,90,0,0,0,12,0,1,0,2025,C题-1-围岩裂隙精准识别与三维模型重构
+C25_C02,competition,78,3,51,True,True,48,0,0,0,0,8,0,0,0,2025,C题-2-围岩裂隙精准识别与三维模型重构
+C25_C03,competition,68,5,67,True,True,62,73,0,0,0,12,1,0,0,2025,C题-3-围岩裂隙精准识别与三维模型重构
+C25_C04,competition,91,4,91,True,False,87,68,0,0,0,17,0,1,0,2025,C题-基于 Frangi 滤波的钻孔裂隙识别与三维概率重构
+C25_C05,competition,76,3,67,True,True,64,54,0,0,0,7,0,0,0,2025,C题-基于钻孔裂隙智能识别的岩体结构面网络重构与稳定性分区研究
+C25_D01,competition,60,4,39,True,True,35,0,0,0,0,5,0,0,0,2025,D题-低空湍流监测及最优航路规划研究
+C25_D02,competition,110,3,63,True,False,60,131,0,0,0,16,0,0,0,2025,D题-基于多源数据融合的低空湍流监测与航路优化
+C25_E01,competition,93,3,58,True,True,55,66,0,0,0,14,1,0,0,2025,E题-基于迁移学习的高速列车轴承故障诊断研究
+C25_E02,competition,69,4,43,True,True,39,38,0,0,0,11,0,0,0,2025,E题-无监督迁移学习下的轴承故障诊断建模与优化
+C25_E03,competition,46,3,37,True,True,34,0,0,0,0,13,0,0,0,2025,E题-高速列车轴承智能故障诊断问题
+C25_F01,competition,182,6,102,True,True,96,76,0,0,0,8,0,0,0,2025,F题-1-江南古典园林的美学特征建模
+C25_F02,competition,71,3,70,True,True,67,128,0,0,0,29,0,5,0,2025,F题-2-江南古典园林的美学特征建模
+C25_F03,competition,116,6,85,True,True,79,106,0,0,0,19,0,0,0,2025,F题-多模态数据融合视角下江南古典园林美学特征量化建模研究
+C25_F04,competition,94,5,61,True,True,56,175,0,0,0,13,0,4,4,2025,F题-江南古典园林美学特征的量化建模与分析
+J_PIMCOMP,journal_research,14,1,13,True,False,12,3,0,0,0,5,1,0,0,2025,PIMCOMP: An End-to-End DNN Compiler for Processing-In-Memory Accelerators
+J_DNNVM,journal_research,18,1,16,True,False,15,6,0,0,0,5,0,0,0,2020,DNNVM: End-to-End Compiler Leveraging Heterogeneous Optimizations on FPGA-Based CNN Accelerators
+J_EYERISS,journal_research,12,1,11,True,False,10,1,0,0,0,5,1,0,0,2017,Eyeriss: An Energy-Efficient Reconfigurable Accelerator for Deep Convolutional Neural Networks
+J_SURVEY,journal_survey,32,1,28,True,False,27,2,0,0,1,4,1,1,0,2017,Efficient Processing of Deep Neural Networks: A Tutorial and Survey
+T_ALPA,conference,21,1,16,True,False,15,6,2,0,1,5,3,0,0,2022,Alpa
+T_WELDER,conference,19,1,20,False,False,19,0,0,0,0,7,0,1,0,2023,Welder
+T_LADDER,conference,18,1,16,True,False,15,0,0,0,0,2,0,1,0,2024,Ladder
+T_MIRAGE,conference,19,1,16,True,False,15,3,0,0,2,5,0,0,0,2025,Mirage
+T_SYNCOPATE,conference,18,1,19,False,False,18,2,0,0,0,2,0,0,0,2026,Syncopate

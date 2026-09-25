@@ -1,0 +1,39 @@
+{
+  "id": "F23",
+  "kind": "schematic",
+  "title": "方案×配置：两种比较的实验结构",
+  "reading_question": "哪些比较能描述配置效应，哪些含方案变化？",
+  "caveat": "仅使用三项已有评分；空白对照不补值，先逐图求比再汇总。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 17,
+  "data_sha256": "257e755156e240a0104aec330ea7285042469e7ff7a1b20fe48a108f80d7d9ec",
+  "files": {
+    "pdf": "bd2d21ce2e791aa4d74343b62055fd7ddb4347a78139aa1a47ffaec9ad4a8791",
+    "png": "b24fa74d0dbb6c25180594fb11ed5058c2fbd099c380d9f05294d667c9bac326",
+    "svg": "7af43744c19749d10057a761c737e2a1a46c1df8e9eccb7f78177509511b084b"
+  },
+  "width_mm": 166,
+  "height_mm": 139.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        100.0
+      ],
+      "ylim": [
+        0.0,
+        100.0
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

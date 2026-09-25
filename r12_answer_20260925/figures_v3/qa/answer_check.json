@@ -1,0 +1,59 @@
+{
+  "status": "TEXT_AND_LINK_CHECKS_PASS",
+  "records": [
+    {
+      "question": "Q1",
+      "original_sha256": "1657629a5e5b1155a2827ac6e663860e2cc537d954371ca1eb54cb9215cac312",
+      "output_sha256": "c509456052c5446c796415111b3064865297ac95d7473f29c0ffb4d9664c1d6b",
+      "main_figures": [
+        "F02",
+        "F01",
+        "F06",
+        "F33",
+        "F34",
+        "F07",
+        "F08",
+        "F10"
+      ],
+      "original_text_reversible": true,
+      "display_equations_unchanged": true,
+      "links_checked": 25
+    },
+    {
+      "question": "Q2",
+      "original_sha256": "9753df4640b866119c2f9c8fd11c43206c23c38d4ddd6884c307de70df92121d",
+      "output_sha256": "7389fc09cabe8cd633811b17340b9cf9640ccf41ee11d136f837dd0c83336423",
+      "main_figures": [
+        "F05",
+        "F13",
+        "F14",
+        "F15",
+        "F17",
+        "F18",
+        "F19",
+        "F21"
+      ],
+      "original_text_reversible": true,
+      "display_equations_unchanged": true,
+      "links_checked": 25
+    },
+    {
+      "question": "Q3",
+      "original_sha256": "13a37fe39f01664c8437ac233aa26ce9918e2327ded9b3bc6d6d799af3d2f6c5",
+      "output_sha256": "194f15100b25517daf78acbb22a8a9703e3dc8d4128bf35459d8e8b4d2b5d84e",
+      "main_figures": [
+        "F22",
+        "F23",
+        "F24",
+        "F25",
+        "F30",
+        "F27",
+        "F28"
+      ],
+      "original_text_reversible": true,
+      "display_equations_unchanged": true,
+      "links_checked": 23
+    }
+  ],
+  "scope": "Markdown integration only; not final full-paper typesetting"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "F16",
+  "kind": "evidence",
+  "title": "优化B1：相对固定单核的逐图变化",
+  "reading_question": "优化一核与定义为1的参考点是否相同？",
+  "caveat": "按收益排序展示全部100图；不是标准曲线的一核点。",
+  "sources": [
+    "selected"
+  ],
+  "data_rows": 100,
+  "data_sha256": "954e25b37f63b1fe2248ad3c4bfe5c70c936909a3fbdf660e736d084fc6a34e8",
+  "files": {
+    "pdf": "8af62cfd6adbf10672821e48c0d2c8dface69d09ef277a5f634e8eb5d4acb957",
+    "png": "1d036c879f518fed316c031b00dd54a0ae992533ec67beaaeeb2feefcee50961",
+    "svg": "487ffae615d9144357c2f03957091cb6364befde7968f20391a4633a6a2a7aff"
+  },
+  "width_mm": 166,
+  "height_mm": 99.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "优化B1平均REF加速比为1.061366；55图改善、45图相同。纵轴是加速比超出1的幅度，不是耗时降低率。",
+  "source_data": "data/F16.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：All 100 sorted cases represented; 55 improving and 45 unchanged cases explained in the figure."
+}

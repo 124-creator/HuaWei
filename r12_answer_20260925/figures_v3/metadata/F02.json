@@ -1,0 +1,39 @@
+{
+  "id": "F02",
+  "kind": "schematic",
+  "title": "调度模型：操作划分、核心映射与核序",
+  "reading_question": "P=(g,a,π)中的三个决策如何对应同一计算图？",
+  "caveat": "同一概念例的三种视图；不是实际选解，不含自由开始时刻决策。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 62,
+  "data_sha256": "925246b1b45a261386c8dd43ce7a2e23f9fe962548157339add0c42340897094",
+  "files": {
+    "pdf": "0e583e3bcf51803a6ba5903a160c3fb69faf69e56455a1ed9907eab39c387bea",
+    "png": "016ce899897c51c20feac3cdd6a7b4ce976f4c295c0374dca56807540a6277b1",
+    "svg": "5e1eb523e02e0673094a02d61b5ed2b05d9b9aa2200b2e9dcae5ffb9097ff1a9"
+  },
+  "width_mm": 166,
+  "height_mm": 174.0,
+  "minimum_source_font_pt": 7.8,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        100.0
+      ],
+      "ylim": [
+        0.0,
+        100.0
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

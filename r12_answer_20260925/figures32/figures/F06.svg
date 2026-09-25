@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="470.551181pt" height="351.496063pt" viewBox="0 0 470.551181 351.496063" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-25T10:41:45.936162</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 351.496063 
+L 470.551181 351.496063 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 140.598938 127.329987 
+Q 156.30184 120.859558 170.867654 114.857669 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 165.961332 114.499886 
+L 170.867654 114.857669 
+L 167.637634 118.568056 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 138.39746 179.496532 
+Q 156.299982 187.146535 173.07159 194.313284 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 169.889986 190.561298 
+L 173.07159 194.313284 
+L 168.161039 194.607376 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 298.546176 114.38902 
+Q 314.249078 120.859449 328.814892 126.861338 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 325.584873 123.15095 
+L 328.814892 126.861338 
+L 323.90857 127.219121 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 296.344699 194.798239 
+Q 314.24722 187.148236 331.018829 179.981487 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 326.108278 179.687395 
+L 331.018829 179.981487 
+L 327.837225 183.733473 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 15.775384 178.710746 
+L 138.88132 178.710746 
+L 138.88132 128.090909 
+L 15.775384 128.090909 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 173.722623 113.628098 
+L 296.828558 113.628098 
+L 296.828558 63.008261 
+L 173.722623 63.008261 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #edf5f1; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 173.722623 246.203862 
+L 296.828558 246.203862 
+L 296.828558 195.584025 
+L 173.722623 195.584025 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #edf5f1; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 331.669861 178.710746 
+L 454.775797 178.710746 
+L 454.775797 128.090909 
+L 331.669861 128.090909 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f8f2e7; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 26.227775 307.670808 
+L 258.503126 307.670808 
+L 258.503126 273.924249 
+L 26.227775 273.924249 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 304.958196 307.670808 
+L 444.323406 307.670808 
+L 444.323406 273.924249 
+L 304.958196 273.924249 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #ffffff"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(52.525688 150.126891)">依赖带0 / S0</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(61.053352 163.032185)">u0 → u1</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(210.472926 85.044243)">依赖带1 / S1</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(230.625591 97.949537)">u2</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(210.472926 217.620008)">依赖带1 / S2</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(230.625591 230.525302)">u3</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(368.420165 150.126891)">依赖带2 / S3</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(376.947829 163.032185)">u4 → u5</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="142.36545" y="294.058341" transform="rotate(-0 142.36545 294.058341)">核心0：S0 → S1 → S3</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="374.640801" y="294.058341" transform="rotate(-0 374.640801 294.058341)">核心1：S2</text>
+   </g>
+  </g>
+  <g id="text_7">
+   <text style="font-size: 10.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="12.35957" transform="rotate(-0 235.275591 12.35957)">F06  依赖带分块与前向核序</text>
+  </g>
+  <g id="text_8">
+   <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #404040" x="235.275591" y="343.399407" transform="rotate(-0 235.275591 343.399407)">小DAG为原理示意，不是实际用例的切图结果。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p567d77f9d2">
+   <rect x="3.00024" y="32.877405" width="464.550701" height="289.256213"/>
+  </clipPath>
+ </defs>
+</svg>

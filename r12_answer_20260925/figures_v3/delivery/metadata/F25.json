@@ -1,0 +1,26 @@
+{
+  "id": "F25",
+  "kind": "evidence",
+  "title": "L2收益：完整长尾与五核典型区间",
+  "reading_question": "均值能否代表每张图都获得相同收益？",
+  "caveat": "左图保留500对全范围；右图为五核100对ECDF的局部视窗，分母不变。",
+  "sources": [
+    "pairs"
+  ],
+  "data_rows": 500,
+  "data_sha256": "0ed5157e3a5459ef4fe2cb43c0425f530ca59ba0a46b85518dbcf98af6cc62cd",
+  "files": {
+    "pdf": "ab4954d20c6bc0df1b883f99df10bf63871fe83bf6536f515d418aeb509f3626",
+    "png": "b199123f2336c0a65251140358597b344ea6e9299cea509faa72bb94386e8a29",
+    "svg": "9c2f31f4253aa0a8b45b9263ec30bd19ba7a5744a348e40e56d0de90383a5645"
+  },
+  "width_mm": 166,
+  "height_mm": 127.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "五核同方案配置比的中位数为1.000546，均值为1.016766；ECDF局部视窗保留100图分母，左侧仍显示全部核数的完整长尾。",
+  "source_data": "data/F25.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "实际查看PDF渲染。长尾完整保留，局部ECDF保持100分母；修正原生压缩重复值导致的计数问题，比例1处为39/100，图例背景避免竖线穿字。"
+}

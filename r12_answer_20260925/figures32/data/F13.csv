@@ -1,0 +1,18 @@
+﻿record,id,label,x,y,width,height,color,border,source,target,both
+node,s1,核心0 / 子图s1,1.6,4.8,2.65,1.05,#F0F4F6,True,,,
+node,local,"私有L1 / UB
+允许驻留复用",5,4.8,2.65,1.05,#EDF5F1,True,,,
+node,s2,"核心0 / 子图s2
+仍属同一Task",8.4,4.8,2.65,1.05,#F0F4F6,True,,,
+node,spill,"容量不足
+换出与再换入",1.6,1.8,2.65,1.05,#F8F2E7,True,,,
+node,ddr,"DDR
+跨核源COPY_OUT",5,1.8,2.65,1.05,#F8F2E7,True,,,
+node,remote,"核心1 / COPY_IN
+源OUT完成后＋500",8.4,1.8,2.65,1.05,#F0F4F6,True,,,
+edge,,,,,,,,,s1,local,False
+edge,,,,,,,,,local,s2,False
+edge,,跨核时,,,,,,,local,ddr,False
+edge,,容量不足,,,,,,,local,spill,False
+edge,,,,,,,,,spill,ddr,True
+edge,,,,,,,,,ddr,remote,False

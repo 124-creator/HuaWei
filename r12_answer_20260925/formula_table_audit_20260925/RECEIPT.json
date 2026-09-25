@@ -1,0 +1,31 @@
+{
+  "status": "FORMULA_TABLE_STATS_DELIVERED_AUTHOR_CHECKED",
+  "papers": 54,
+  "pages_extracted": 3847,
+  "zero_equation_competition_papers": [
+    "C24_C02",
+    "C24_D02",
+    "C25_A01",
+    "C25_B01",
+    "C25_C02",
+    "C25_D01",
+    "C25_E03"
+  ],
+  "zip_sha256": "ff04ccaa5e51d6f2d0ffec7f8b33620939612f140c1b2af20aa943502e19ad84",
+  "files": {
+    "REPORT.md": "82be7b3893feddfd909e055b513d82daa5c53232eb0a8edec438d793107be608",
+    "PLAN.md": "787dde93a9c439a2c358566e9eb811b49cd5b1c1087c449373ab90328b214622",
+    "INPUTS.json": "4fed601056c13ba3837f0a1f2fcd0d7c3182ade612cb15ee188e07bd2313d42c",
+    "out/per_paper.csv": "3d930bb7be4a065fef183a043309c91db8401b36043b92c5222bf53b57c8aacf",
+    "out/candidates.csv": "fb5e10485272b4b01096c12395cfe0a827571a39d252dd6958436907178f8f0e",
+    "out/SUMMARY.json": "49c0ee44b0400f27aa3bb28fdcf899d95a28b65368925c5dad7286b7e51aa2a6",
+    "code/count.py": "5bc71a0bc750aa7f754f095e469ef1ba5a8269dd732a4066defd3e01676d7adb",
+    "code/extract.py": "aedb983cd16fc0caf0968f95c960364fac68e70558c7fd18360818b154313865",
+    "code/inventory.py": "620de8b22db7681b31b39b26219a8991d1f60263fd0f97ee9c16885697d914e8",
+    "code/pdf_rules.py": "f1c7c210f32c86689a13415afc21ee282a1604cb8f69ef90cb84b1d45573f444",
+    "code/report.py": "f9bca5348bbda06e76b3f52287b8d869860702c13808d0615c010b47f6a46ed3",
+    "code/test_pdf_rules.py": "127d668df5745c9024756568e49ff363125889791d341ad81ba10dab81a32f6a"
+  },
+  "protected_r12_files_unchanged": 4,
+  "independent_review": "NOT_PERFORMED"
+}

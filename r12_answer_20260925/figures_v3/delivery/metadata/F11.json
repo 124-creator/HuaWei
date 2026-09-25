@@ -1,0 +1,26 @@
+{
+  "id": "F11",
+  "kind": "evidence",
+  "title": "场景A：静态计算负载均衡",
+  "reading_question": "最终分核是否平均分配必做计算工作？",
+  "caveat": "静态M+V工作量，不等于实际Pipe利用率或Makespan。",
+  "sources": [
+    "plansA"
+  ],
+  "data_rows": 400,
+  "data_sha256": "803e457d8493dd06fce493d4b127d2bf9a0f64c000b431783bf8b40e1d1ce7ab",
+  "files": {
+    "pdf": "91978ff5dcdde46aa999f45fe01c9726c06d4843174c99371796a950143e50ca",
+    "png": "62e058a407407c059743f4bf4adeac6d3057b3fb565886751461ceb2a94c254f",
+    "svg": "00d911cdf07377300c00e1bd3828cd8ce8a8b03f5255774f4ac2913dec93055e"
+  },
+  "width_mm": 166,
+  "height_mm": 102.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "不平衡度为最大核心M+V工作量除以核心均值，1表示静态完全均衡；此量忽略通信、双Pipe重叠和等待，不是实际利用率。",
+  "source_data": "data/F11.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：本轮逐字节沿用旧图，继承既有作者检查：Observed static imbalance range is fully included; ideal-one reference and outliers are readable."
+}

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="470.551181pt" height="394.015748pt" viewBox="0 0 470.551181 394.015748" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-25T11:56:47.568386</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 394.015748 
+L 470.551181 394.015748 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 16.936761 231.475228 
+L 105.201394 231.475228 
+L 105.201394 130.733676 
+L 16.936761 130.733676 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #fafbfc; stroke-dasharray: 4.07,1.76; stroke-dashoffset: 0; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 128.428929 231.475228 
+L 216.693563 231.475228 
+L 216.693563 130.733676 
+L 128.428929 130.733676 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #fafbfc; stroke-dasharray: 4.07,1.76; stroke-dashoffset: 0; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 253.857619 231.475228 
+L 453.61442 231.475228 
+L 453.61442 130.733676 
+L 253.857619 130.733676 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #fafbfc; stroke-dasharray: 4.07,1.76; stroke-dashoffset: 0; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 61.069078 163.23095 
+Q 61.069078 132.358539 61.069078 102.660064 
+" clip-path="url(#pb389531f5c)" style="fill: none; stroke: #a66b20; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 59.269078 106.260064 
+L 61.069078 102.660064 
+L 62.869078 106.260064 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #a66b20; stroke: #a66b20; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 172.561246 101.486128 
+Q 172.561246 132.358539 172.561246 162.057015 
+" clip-path="url(#pb389531f5c)" style="fill: none; stroke: #a66b20; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 174.361246 158.457015 
+L 172.561246 162.057015 
+L 170.761246 158.457015 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #a66b20; stroke: #a66b20; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 323.540224 176.22986 
+Q 333.992615 176.22986 343.27107 176.22986 
+" clip-path="url(#pb389531f5c)" style="fill: none; stroke: #087f83; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 339.67107 174.42986 
+L 343.27107 176.22986 
+L 339.67107 178.02986 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #087f83; stroke: #087f83; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 367.67254 176.22986 
+Q 375.802178 176.22986 382.757879 176.22986 
+" clip-path="url(#pb389531f5c)" style="fill: none; stroke: #087f83; stroke-width: 1.05; stroke-linecap: round"/>
+    <path d="M 379.157879 174.42986 
+L 382.757879 176.22986 
+L 379.157879 178.02986 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #087f83; stroke: #087f83; stroke-width: 1.05; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 16.936761 101.486128 
+L 216.693563 101.486128 
+L 216.693563 72.238581 
+L 16.936761 72.238581 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #f8f0e2; stroke: #a66b20; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 35.518789 189.22877 
+L 86.619366 189.22877 
+L 86.619366 163.23095 
+L 35.518789 163.23095 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 147.010957 189.22877 
+L 198.111534 189.22877 
+L 198.111534 163.23095 
+L 147.010957 163.23095 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 253.857619 101.486128 
+L 453.61442 101.486128 
+L 453.61442 72.238581 
+L 253.857619 72.238581 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #f8f0e2; stroke: #a66b20; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 272.439647 189.22877 
+L 323.540224 189.22877 
+L 323.540224 163.23095 
+L 272.439647 163.23095 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 383.931815 189.22877 
+L 435.032392 189.22877 
+L 435.032392 163.23095 
+L 383.931815 163.23095 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 356.058773 184.841638 
+C 359.07718 184.841638 361.972367 183.934247 364.106703 182.319307 
+C 366.241039 180.704367 367.440265 178.513731 367.440265 176.22986 
+C 367.440265 173.94599 366.241039 171.755354 364.106703 170.140414 
+C 361.972367 168.525474 359.07718 167.618083 356.058773 167.618083 
+C 353.040366 167.618083 350.145179 168.525474 348.010843 170.140414 
+C 345.876506 171.755354 344.677281 173.94599 344.677281 176.22986 
+C 344.677281 178.513731 345.876506 180.704367 348.010843 182.319307 
+C 350.145179 183.934247 353.040366 184.841638 356.058773 184.841638 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #f8f0e2; stroke: #a66b20; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9.7px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: start; fill: #253845" x="12.291254" y="52.53841" transform="rotate(-0 12.291254 52.53841)">(a) 场景A：两个Task</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="116.815162" y="89.842198" transform="rotate(-0 116.815162 89.842198)">DDR</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="61.069078" y="218.045348" transform="rotate(-0 61.069078 218.045348)">Task S0</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="172.561246" y="218.045348" transform="rotate(-0 172.561246 218.045348)">Task S1</text>
+   </g>
+   <g id="text_5">
+    <!-- $u_0$ -->
+    <g style="fill: #253845" transform="translate(56.074078 177.98486)">
+     <text>
+      <tspan x="0" y="-0.078125" style="font-style: oblique; font-size: 9px; font-family: 'DejaVu Sans'; fill: #253845">u</tspan>
+      <tspan x="5.704102" y="1.271871" style="font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #253845">0</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_6">
+    <!-- $u_1$ -->
+    <g style="fill: #253845" transform="translate(167.566246 178.02986)">
+     <text>
+      <tspan x="0" y="-0.078125" style="font-style: oblique; font-size: 9px; font-family: 'DejaVu Sans'; fill: #253845">u</tspan>
+      <tspan x="5.704102" y="1.271871" style="font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #253845">1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="30.873282" y="120.381016" transform="rotate(-0 30.873282 120.381016)">OUT</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="202.757041" y="120.340391" transform="rotate(-0 202.757041 120.340391)">IN</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="119.137915" y="253.762967" transform="rotate(-0 119.137915 253.762967)">同核边界仍需一次写出、一次读入</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 8.7px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="119.137915" y="283.245749" transform="rotate(-0 119.137915 283.245749)">边界COPY：2b</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 9.7px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: start; fill: #253845" x="249.212112" y="52.53841" transform="rotate(-0 249.212112 52.53841)">(b) 场景B：同一Task</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="353.736019" y="89.842198" transform="rotate(-0 353.736019 89.842198)">DDR</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="356.058773" y="146.642773" transform="rotate(-0 356.058773 146.642773)">核心0 / 一个Task</text>
+   </g>
+   <g id="text_14">
+    <!-- $u_0$ -->
+    <g style="fill: #253845" transform="translate(292.994935 177.98486)">
+     <text>
+      <tspan x="0" y="-0.078125" style="font-style: oblique; font-size: 9px; font-family: 'DejaVu Sans'; fill: #253845">u</tspan>
+      <tspan x="5.704102" y="1.271871" style="font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #253845">0</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_15">
+    <!-- $u_1$ -->
+    <g style="fill: #253845" transform="translate(404.487103 178.02986)">
+     <text>
+      <tspan x="0" y="-0.078125" style="font-style: oblique; font-size: 9px; font-family: 'DejaVu Sans'; fill: #253845">u</tspan>
+      <tspan x="5.704102" y="1.271871" style="font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #253845">1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_16">
+    <!-- $t$ -->
+    <g style="fill: #253845" transform="translate(354.358773 179.24736)">
+     <text>
+      <tspan x="0" y="-0.03125" style="font-style: oblique; font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #253845">t</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="356.058773" y="218.165309" transform="rotate(-0 356.058773 218.165309)">私有缓存允许保留 t</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 8.7px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="356.058773" y="282.933093" transform="rotate(-0 356.058773 282.933093)">驻留且无Spill时：边界COPY为0</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="235.275591" y="325.275722" transform="rotate(-0 235.275591 325.275722)">相同片段：u₀产生 b 字节中间张量，u₁消费；无其他消费者、非最终输出</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #087f83" x="235.275591" y="347.869947" transform="rotate(-0 235.275591 347.869947)">场景B消除该同核边界，不代表容量足够或不会Spill</text>
+   </g>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 10.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="12.712579" transform="rotate(-0 235.275591 12.712579)">F05  相同计算片段下的A/B Task边界</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #404040" x="235.275591" y="385.153738" transform="rotate(-0 235.275591 385.153738)">单生产者、单消费者、非最终输出的示意；不含Spill。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb389531f5c">
+   <rect x="3.00024" y="36.491579" width="464.550701" height="324.972748"/>
+  </clipPath>
+ </defs>
+</svg>

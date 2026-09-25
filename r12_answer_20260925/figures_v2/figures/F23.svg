@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="470.551181pt" height="394.015748pt" viewBox="0 0 470.551181 394.015748" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-25T11:51:21.397990</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 394.015748 
+L 470.551181 394.015748 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 128.428929 163.23095 
+L 277.085154 163.23095 
+L 277.085154 94.986673 
+L 128.428929 94.986673 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #e9f0f7; stroke: #365d87; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 295.667182 163.23095 
+L 444.323406 163.23095 
+L 444.323406 94.986673 
+L 295.667182 94.986673 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #e5f2ef; stroke: #087f83; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 128.428929 244.474138 
+L 277.085154 244.474138 
+L 277.085154 176.22986 
+L 128.428929 176.22986 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #f3f4f5; stroke: #697781; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 295.667182 244.474138 
+L 444.323406 244.474138 
+L 444.323406 176.22986 
+L 295.667182 176.22986 
+z
+" clip-path="url(#pb389531f5c)" style="fill: #f8f0e2; stroke: #a66b20; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="202.757041" y="68.744985" transform="rotate(-0 202.757041 68.744985)">B配置：无L2</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="369.995294" y="68.924985" transform="rotate(-0 369.995294 68.924985)">L2配置：有L2</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #253845" transform="translate(40.746324 124.611375)">冻结方案</text>
+    <!-- $P_B$ -->
+    <g style="fill: #253845" transform="translate(53.706324 136.122146)">
+     <text>
+      <tspan x="0" y="-0.4375" style="font-style: oblique; font-size: 9px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="5.427246" y="0.912496" style="font-style: oblique; font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #253845" transform="translate(40.746324 205.845421)">另选方案</text>
+    <!-- $P_L$ -->
+    <g style="fill: #253845" transform="translate(54.111324 217.365333)">
+     <text>
+      <tspan x="0" y="-0.4375" style="font-style: oblique; font-size: 9px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="5.427246" y="0.912496" style="font-style: oblique; font-size: 6.3px; font-family: 'DejaVu Sans'; fill: #253845">L</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_5">
+    <!-- $T_B(P_B)$ -->
+    <g style="fill: #253845" transform="translate(187.707041 125.339964)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">T</tspan>
+      <tspan x="15.085449" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="6.108398" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+      <tspan x="21.115723" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+      <tspan x="11.184082" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">(</tspan>
+      <tspan x="26.191406" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">)</tspan>
+     </text>
+    </g>
+    <text style="font-size: 10px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #253845" transform="translate(182.757041 139.423753)">共同分子</text>
+   </g>
+   <g id="text_6">
+    <!-- $T_L(P_B)$ -->
+    <g style="fill: #253845" transform="translate(355.395294 125.339964)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">T</tspan>
+      <tspan x="14.183105" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="6.108398" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">L</tspan>
+      <tspan x="20.213379" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+      <tspan x="10.281738" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">(</tspan>
+      <tspan x="25.289062" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">)</tspan>
+     </text>
+    </g>
+    <text style="font-size: 10px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #253845" transform="translate(349.995294 139.447972)">同一方案</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="202.757041" y="213.462936" transform="rotate(-0 202.757041 213.462936)">未纳入本比较</text>
+   </g>
+   <g id="text_8">
+    <!-- $T_L(P_L)$ -->
+    <g style="fill: #253845" transform="translate(355.845294 206.583151)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">T</tspan>
+      <tspan x="14.183105" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="6.108398" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">L</tspan>
+      <tspan x="20.213379" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">L</tspan>
+      <tspan x="10.281738" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">(</tspan>
+      <tspan x="24.386719" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">)</tspan>
+     </text>
+    </g>
+    <text style="font-size: 10px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; fill: #253845" transform="translate(344.995294 220.691159)">方案可变化</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #087f83" x="123.783422" y="289.871298" transform="rotate(-0 123.783422 289.871298)">配置效应：固定方案</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #a66b20" x="356.058773" y="289.902235" transform="rotate(-0 356.058773 289.902235)">综合效应：允许另选</text>
+   </g>
+   <g id="text_11">
+    <!-- $R_{hw}=T_B(P_B)/T_L(P_B)$ -->
+    <g style="fill: #253845" transform="translate(77.583422 319.018142)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">R</tspan>
+      <tspan x="29.658691" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">T</tspan>
+      <tspan x="44.744141" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="63.120605" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">T</tspan>
+      <tspan x="77.303711" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="6.948242" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">h</tspan>
+      <tspan x="11.384766" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">w</tspan>
+      <tspan x="35.76709" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+      <tspan x="50.774414" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+      <tspan x="69.229004" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">L</tspan>
+      <tspan x="83.333984" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+      <tspan x="19.331543" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">=</tspan>
+      <tspan x="40.842773" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">(</tspan>
+      <tspan x="55.850098" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">)</tspan>
+      <tspan x="59.751465" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">/</tspan>
+      <tspan x="73.402344" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">(</tspan>
+      <tspan x="88.409668" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_12">
+    <!-- $R_{select}=T_B(P_B)/T_L(P_L)$ -->
+    <g style="fill: #253845" transform="translate(305.008773 318.968142)">
+     <text>
+      <tspan x="0" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">R</tspan>
+      <tspan x="40.29541" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">T</tspan>
+      <tspan x="55.380859" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="73.757324" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">T</tspan>
+      <tspan x="87.94043" y="-0.40625" style="font-style: oblique; font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">P</tspan>
+      <tspan x="6.948242" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">s</tspan>
+      <tspan x="10.595215" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">e</tspan>
+      <tspan x="14.901855" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">l</tspan>
+      <tspan x="16.84668" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">e</tspan>
+      <tspan x="21.15332" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">c</tspan>
+      <tspan x="25.001953" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">t</tspan>
+      <tspan x="46.403809" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+      <tspan x="61.411133" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">B</tspan>
+      <tspan x="79.865723" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">L</tspan>
+      <tspan x="93.970703" y="1.093745" style="font-style: oblique; font-size: 7px; font-family: 'DejaVu Sans'; fill: #253845">L</tspan>
+      <tspan x="29.968262" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">=</tspan>
+      <tspan x="51.479492" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">(</tspan>
+      <tspan x="66.486816" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">)</tspan>
+      <tspan x="70.388184" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">/</tspan>
+      <tspan x="84.039062" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">(</tspan>
+      <tspan x="98.144043" y="-0.40625" style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #253845">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #253845" x="235.275591" y="354.523894" transform="rotate(-0 235.275591 354.523894)">先逐图求比值，再对100图取算术均值；不能用两条均值曲线相除</text>
+   </g>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 10.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="12.763439" transform="rotate(-0 235.275591 12.763439)">F23  方案×配置：两种比较的实验结构</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #404040" x="235.275591" y="385.153738" transform="rotate(-0 235.275591 385.153738)">仅使用三项已有评分；空白对照不补值，先逐图求比再汇总。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb389531f5c">
+   <rect x="3.00024" y="36.491579" width="464.550701" height="324.972748"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "id": "F02",
+  "kind": "schematic",
+  "title": "R12候选生成与评价流程",
+  "reading_question": "从原图到最终方案经过哪些判断？",
+  "caveat": "算法示意；不将全部候选视为成功评价。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 13,
+  "data_sha256": "4c854d8c7ded409564cd26f5f285a7bbcb7cb8604a0afa0a91d1de77e82f7800",
+  "files": {
+    "pdf": "0eaac66ed90bfe29090bf3e91c86c945883d520204e4484c1bc007e9157b5fba",
+    "png": "6bcb4af6a32090b9a0aa5455e09ce14ed8d0102793ca61a3e8df35c39f75a2ab",
+    "svg": "be37f316537e81f9da8bb19278f5605db3696b5498dc5f9c267542fa05f978e1"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER"
+}

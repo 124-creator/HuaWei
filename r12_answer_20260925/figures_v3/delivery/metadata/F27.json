@@ -1,0 +1,26 @@
+{
+  "id": "F27",
+  "kind": "evidence",
+  "title": "case_073：缓存事件与共同观察窗口",
+  "reading_question": "F28所示窗口内有哪些可核实的缓存变化？",
+  "caveat": "e为全局缓存日志序号；净占用变化不等于驱逐字节，更不是Pipe瓶颈归因。",
+  "sources": [
+    "cache"
+  ],
+  "data_rows": 4252,
+  "data_sha256": "231a7b613b2e6ca361d5f1d2a2dea4046b22d1070fe5636ab953a4021730db59",
+  "files": {
+    "pdf": "b94d7c9308d9eb1b0be3191294266b5b80f89f161d211e363fb05a0f2f615943",
+    "png": "5cc0d126a7eb3d44087b18df2676b70f23fbcc726d65161da0f5b26d28431238",
+    "svg": "66df5d80b70dc4bff064e818b4b4c99c88174def7417dedb6904f16e0133a33c"
+  },
+  "width_mm": 166,
+  "height_mm": 157.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "完整4252条缓存事件保留。共同窗口内最大占用净降位于e2428（1143536 cycles）：986880降至762624 bytes。该insert事件净降219 KiB，不等于驱逐量，也不用于未核实的Pipe归因。",
+  "source_data": "data/F27.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "实际查看PDF渲染。全4252事件保留，共同窗口及e2428可定位；219 KiB只称占用净降，不称驱逐总量或流水线瓶颈原因。"
+}

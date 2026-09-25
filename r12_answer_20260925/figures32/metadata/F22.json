@@ -1,0 +1,24 @@
+{
+  "id": "F22",
+  "kind": "schematic",
+  "title": "只读FIFO：发射与完成是两个时点",
+  "reading_question": "查询、传输与缓存插入之间是什么关系？",
+  "caveat": "官方事件语义示意；命中不刷新已有键的FIFO次序。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 10,
+  "data_sha256": "ffc9ae28cfd023baf0ed69ea3dccd4eabb577682eb598affa3ce1f7e006dfeba",
+  "files": {
+    "pdf": "e4e4091383abe5e59d78adc5d294f0fb74ed6429f09134ecac2f39255e4c70f9",
+    "png": "f680fb7a605be8ab364f16169d83b79a630d8390acb2faa15a6e8f2387ada6b5",
+    "svg": "95212feda548ee34b7cd161081f9e966e069571bd6cacb28fb65aa61477fecc5"
+  },
+  "width_mm": 166,
+  "height_mm": 124.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER"
+}

@@ -1,0 +1,20 @@
+﻿record,id,label,x,y,width,height,color,border,source,target,both
+node,pb,冻结B方案 PB,1.6,4.8,2.65,1.05,#F0F4F6,True,,,
+node,b,"B配置评分
+B耗时(PB)",5,5,2.65,1.05,#F0F4F6,True,,,
+node,l,"L2配置评分
+L2耗时(PB)",5,3,2.65,1.05,#F0F4F6,True,,,
+node,hw,"配置效应
+B(PB) ÷ L2(PB)",8.4,4,2.65,1.05,#F0F4F6,True,,,
+node,pl,L2另选方案 PL,1.6,1,2.65,1.05,#F0F4F6,True,,,
+node,ls,"L2配置评分
+L2耗时(PL)",5,1,2.65,1.05,#F0F4F6,True,,,
+node,sel,"共用B(PB)分子
+综合选优比
+B(PB) ÷ L2(PL)",8.4,1,2.65,1.35,#F0F4F6,True,,,
+edge,,,,,,,,,pb,b,False
+edge,,,,,,,,,pb,l,False
+edge,,,,,,,,,b,hw,False
+edge,,,,,,,,,l,hw,False
+edge,,,,,,,,,pl,ls,False
+edge,,,,,,,,,ls,sel,False

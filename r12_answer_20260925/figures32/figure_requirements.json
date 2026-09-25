@@ -1,0 +1,290 @@
+[
+  {
+    "id": "F01",
+    "group": "共用",
+    "kind": "schematic",
+    "title": "固定硬件与三种执行场景",
+    "question": "A、B、L2的Task与通信边界有何不同？",
+    "note": "机制示意；不是设备测量或实验结果。",
+    "sources": "rules"
+  },
+  {
+    "id": "F02",
+    "group": "共用",
+    "kind": "schematic",
+    "title": "R12候选生成与评价流程",
+    "question": "从原图到最终方案经过哪些判断？",
+    "note": "算法示意；不将全部候选视为成功评价。",
+    "sources": "rules"
+  },
+  {
+    "id": "F03",
+    "group": "共用",
+    "kind": "evidence",
+    "title": "100张计算图的规模与计算组成",
+    "question": "输入规模与M/V计算组成有何差异？",
+    "note": "每点/每列对应一张图；非COPY工作量按max(1,cycles)。",
+    "sources": "graphs"
+  },
+  {
+    "id": "F04",
+    "group": "共用",
+    "kind": "evidence",
+    "title": "单张量大小与私有缓存容量",
+    "question": "单张量尺度距L1/UB容量多远？",
+    "note": "最大单张量不是运行时驻留峰值；零值保留。",
+    "sources": "graphs"
+  },
+  {
+    "id": "F05",
+    "group": "Q1",
+    "kind": "schematic",
+    "title": "场景A：跨Task数据必须经DDR",
+    "question": "同核Task是否可以省去边界搬运？",
+    "note": "规则示意；同核切换100、跨核前驱等待1000 cycles。",
+    "sources": "rules"
+  },
+  {
+    "id": "F06",
+    "group": "Q1",
+    "kind": "schematic",
+    "title": "依赖带分块与前向核序",
+    "question": "如何在扩大并行度时维持结构无环？",
+    "note": "小DAG为原理示意，不是实际用例的切图结果。",
+    "sources": "rules"
+  },
+  {
+    "id": "F07",
+    "group": "Q1",
+    "kind": "evidence",
+    "title": "场景A：核数扩展与参考性能",
+    "question": "平均执行性能随核数如何变化？",
+    "note": "100图逐例比值算术平均；C3并非等搜索预算。",
+    "sources": "selected"
+  },
+  {
+    "id": "F08",
+    "group": "Q1",
+    "kind": "evidence",
+    "title": "场景A：逐例相对C3的性能变化",
+    "question": "改善与退化集中在哪些图和核数？",
+    "note": "颜色为log2(T_C3/T_R12)；正值更快；全部400格。",
+    "sources": "selected"
+  },
+  {
+    "id": "F09",
+    "group": "Q1",
+    "kind": "evidence",
+    "title": "场景A：最终Task粒度分布",
+    "question": "实际Task数量与组内操作粒度如何变化？",
+    "note": "每核数组100图；箱体为四分位范围，不是置信区间。",
+    "sources": "plansA"
+  },
+  {
+    "id": "F10",
+    "group": "Q1",
+    "kind": "evidence",
+    "title": "场景A：新增COPY的来源",
+    "question": "边界搬运与Spill分别贡献多少字节？",
+    "note": "MiB=1048576 bytes；算术均值，不是每图都同向变化。",
+    "sources": "selected"
+  },
+  {
+    "id": "F11",
+    "group": "Q1",
+    "kind": "evidence",
+    "title": "场景A：静态计算负载均衡",
+    "question": "最终分核是否平均分配必做计算工作？",
+    "note": "静态M+V工作量，不等于实际Pipe利用率或Makespan。",
+    "sources": "plansA"
+  },
+  {
+    "id": "F12",
+    "group": "Q1",
+    "kind": "evidence",
+    "title": "困难案例case_087：五核执行时间线",
+    "question": "1800秒补跑所得方案如何占用各Pipe？",
+    "note": "原始官方时间线；仅合并相接忙区间，保留空闲。",
+    "sources": "timelineA"
+  },
+  {
+    "id": "F13",
+    "group": "Q2",
+    "kind": "schematic",
+    "title": "场景B：复用与Spill的区别",
+    "question": "同核通信省去边界COPY后为何仍可Spill？",
+    "note": "机制示意；同核复用不保证永久驻留。",
+    "sources": "rules"
+  },
+  {
+    "id": "F14",
+    "group": "Q2",
+    "kind": "schematic",
+    "title": "局部微批：保留核心，改变就绪顺序",
+    "question": "窗口重排如何保持依赖与核心归属？",
+    "note": "示意前提为A_i→B_i，无跨链依赖；非实测排序。",
+    "sources": "rules"
+  },
+  {
+    "id": "F15",
+    "group": "Q2",
+    "kind": "evidence",
+    "title": "场景B：核数扩展与参考性能",
+    "question": "B的总体性能与C3基线差异多大？",
+    "note": "标准一核点为1；实际优化B1另列；非等搜索预算。",
+    "sources": "selected"
+  },
+  {
+    "id": "F16",
+    "group": "Q2",
+    "kind": "evidence",
+    "title": "优化B1：相对固定单核的逐图变化",
+    "question": "优化一核与定义为1的参考点是否相同？",
+    "note": "按收益排序展示全部100图；不是标准曲线的一核点。",
+    "sources": "selected"
+  },
+  {
+    "id": "F17",
+    "group": "Q2",
+    "kind": "evidence",
+    "title": "场景B：边界COPY与Spill分解",
+    "question": "增加核心数如何改变两类额外搬运？",
+    "note": "官方模拟前COPY计账；每个核数100图。",
+    "sources": "selected"
+  },
+  {
+    "id": "F18",
+    "group": "Q2",
+    "kind": "evidence",
+    "title": "五核B的Spill集中度",
+    "question": "平均Spill是否被少数困难用例主导？",
+    "note": "全部100图按Spill降序排列；零Spill也在分母中。",
+    "sources": "selected"
+  },
+  {
+    "id": "F19",
+    "group": "Q2",
+    "kind": "evidence",
+    "title": "五核B：同次请求的阶段增量",
+    "question": "控制、快速插入和微批各保留了什么收益？",
+    "note": "100个同次请求阶段配对；不是等预算独立消融。",
+    "sources": "stages"
+  },
+  {
+    "id": "F20",
+    "group": "Q2",
+    "kind": "evidence",
+    "title": "五核B：执行时间与COPY的权衡",
+    "question": "更快的最终方案是否一定搬运更少？",
+    "note": "相对C3的逐例变化；非等搜索预算；不称全局Pareto前沿。",
+    "sources": "selected"
+  },
+  {
+    "id": "F21",
+    "group": "Q2",
+    "kind": "evidence",
+    "title": "case_073：B最终方案的Pipe活动",
+    "question": "微批后最终方案如何分布计算与搬运？",
+    "note": "单个开发案例的最终时间线，不单独证明微批因果收益。",
+    "sources": "timelineB"
+  },
+  {
+    "id": "F22",
+    "group": "Q3",
+    "kind": "schematic",
+    "title": "只读FIFO：发射与完成是两个时点",
+    "question": "查询、传输与缓存插入之间是什么关系？",
+    "note": "官方事件语义示意；命中不刷新已有键的FIFO次序。",
+    "sources": "rules"
+  },
+  {
+    "id": "F23",
+    "group": "Q3",
+    "kind": "schematic",
+    "title": "同方案对照与分别选优",
+    "question": "哪些比较能描述配置效应，哪些含方案变化？",
+    "note": "比较设计示意；各比值先逐图计算再汇总。",
+    "sources": "rules"
+  },
+  {
+    "id": "F24",
+    "group": "Q3",
+    "kind": "evidence",
+    "title": "L2：同方案配置效应与分别选优",
+    "question": "两类平均收益能否混为纯硬件收益？",
+    "note": "每点100对；右轴放大；不得用两条均值曲线相除。",
+    "sources": "pairs,selected"
+  },
+  {
+    "id": "F25",
+    "group": "Q3",
+    "kind": "evidence",
+    "title": "L2配置收益的逐图分布",
+    "question": "均值能否代表每张图都获得相同收益？",
+    "note": "每组100对，全部500对；箱体不是置信区间。",
+    "sources": "pairs"
+  },
+  {
+    "id": "F26",
+    "group": "Q3",
+    "kind": "evidence",
+    "title": "五核：命中字节率与配置收益",
+    "question": "命中率是否必然对应整体加速？",
+    "note": "100个观测配对；散点关系不是容量或带宽的因果分解。",
+    "sources": "pairs"
+  },
+  {
+    "id": "F27",
+    "group": "Q3",
+    "kind": "evidence",
+    "title": "case_073：FIFO占用与累计命中",
+    "question": "缓存占用与读取完成怎样沿事件时间轴演化？",
+    "note": "同一B方案在L2下的真实缓存事件；不是重新选优方案。",
+    "sources": "cache"
+  },
+  {
+    "id": "F28",
+    "group": "Q3",
+    "kind": "evidence",
+    "title": "case_073：同方案两配置的时间线",
+    "question": "保持方案不变后，流水线占用如何变化？",
+    "note": "共用真实时间坐标；不是各自归一化后比较长短。",
+    "sources": "timelineB,timelineL2"
+  },
+  {
+    "id": "F29",
+    "group": "Q3",
+    "kind": "evidence",
+    "title": "五核：不同最终方案的选解效应",
+    "question": "L2下改变方案还带来多少变化？",
+    "note": "仅列28对方案哈希不同的实例；其余72对方案相同。",
+    "sources": "pairs"
+  },
+  {
+    "id": "F30",
+    "group": "Q3",
+    "kind": "evidence",
+    "title": "全部同方案L2退化记录",
+    "question": "哪些图在开启L2后反而略慢？",
+    "note": "完整8对；横轴放大；低于1表示退化。",
+    "sources": "pairs"
+  },
+  {
+    "id": "F31",
+    "group": "综合",
+    "kind": "evidence",
+    "title": "跨场景：相对C3的逐例胜平负",
+    "question": "平均优势是否覆盖多数实际用例？",
+    "note": "14组各100图；非等搜索预算，仅描述终点解质量。",
+    "sources": "selected"
+  },
+  {
+    "id": "F32",
+    "group": "综合",
+    "kind": "evidence",
+    "title": "求解墙钟与预算长尾",
+    "question": "生成方案的成本与补跑例外是什么？",
+    "note": "含构造、评价和I/O；非模拟cycles；保留4个1800秒补跑。",
+    "sources": "selected"
+  }
+]

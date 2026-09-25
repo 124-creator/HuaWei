@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="470.551181pt" height="351.496063pt" viewBox="0 0 470.551181 351.496063" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-25T10:41:41.103051</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 351.496063 
+L 470.551181 351.496063 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 140.884525 90.728648 
+Q 156.303439 90.728648 170.492515 90.728648 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 166.092515 88.528648 
+L 170.492515 90.728648 
+L 166.092515 92.928648 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 298.831763 90.728648 
+Q 314.250677 90.728648 328.439754 90.728648 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 324.039754 88.528648 
+L 328.439754 90.728648 
+L 324.039754 92.928648 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 235.275591 118.038193 
+Q 235.275591 163.041505 235.275591 206.814979 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 237.475591 202.414979 
+L 235.275591 206.814979 
+L 233.075591 202.414979 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 206.15913 117.389821 
+Q 156.30063 163.043929 107.349159 207.867496 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 112.07996 206.518601 
+L 107.349159 207.867496 
+L 109.108523 203.273518 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 142.114362 235.356754 
+Q 156.303439 235.356754 170.492515 235.356754 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 146.514362 237.556754 
+L 142.114362 235.356754 
+L 146.514362 233.156754 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 166.092515 233.156754 
+L 170.492515 235.356754 
+L 166.092515 237.556754 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 298.831763 235.356754 
+Q 314.250677 235.356754 328.439754 235.356754 
+" clip-path="url(#p567d77f9d2)" style="fill: none; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+    <path d="M 324.039754 233.156754 
+L 328.439754 235.356754 
+L 324.039754 237.556754 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #516773; stroke: #516773; stroke-width: 1.1; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 15.775384 116.038567 
+L 138.88132 116.038567 
+L 138.88132 65.418729 
+L 15.775384 65.418729 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 173.722623 116.038567 
+L 296.828558 116.038567 
+L 296.828558 65.418729 
+L 173.722623 65.418729 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #edf5f1; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 331.669861 116.038567 
+L 454.775797 116.038567 
+L 454.775797 65.418729 
+L 331.669861 65.418729 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 15.775384 260.666673 
+L 138.88132 260.666673 
+L 138.88132 210.046836 
+L 15.775384 210.046836 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f8f2e7; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 173.722623 260.666673 
+L 296.828558 260.666673 
+L 296.828558 210.046836 
+L 173.722623 210.046836 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f8f2e7; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 331.669861 260.666673 
+L 454.775797 260.666673 
+L 454.775797 210.046836 
+L 331.669861 210.046836 
+z
+" clip-path="url(#p567d77f9d2)" style="fill: #f0f4f6; stroke: #62737d; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="77.328352" y="93.98946" transform="rotate(-0 77.328352 93.98946)">核心0 / 子图s1</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(210.733762 87.472149)">私有L1 / UB</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(207.375591 100.542373)">允许驻留复用</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(364.546134 87.436548)">核心0 / 子图s2</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(365.908438 100.460271)">仍属同一Task</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(58.728352 232.041404)">容量不足</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(49.428352 245.174839)">换出与再换入</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(225.457551 231.883014)">DDR</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(197.040239 244.799933)">跨核源COPY_OUT</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(358.345649 231.703553)">核心1 / COPY_IN</text>
+    <text style="font-size: 9.3px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'" transform="translate(353.441352 245.169753)">源OUT完成后＋500</text>
+   </g>
+   <g id="text_7">
+    <g id="patch_14">
+     <path d="M 221.991591 160.631175 
+L 248.559591 160.631175 
+L 248.559591 150.027229 
+L 221.991591 150.027229 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="157.877448" transform="rotate(-0 235.275591 157.877448)">跨核时</text>
+   </g>
+   <g id="text_8">
+    <g id="patch_15">
+     <path d="M 138.917971 160.611315 
+L 173.685971 160.611315 
+L 173.685971 150.047089 
+L 138.917971 150.047089 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="156.301971" y="157.857589" transform="rotate(-0 156.301971 157.857589)">容量不足</text>
+   </g>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 10.5px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle" x="235.275591" y="12.287383" transform="rotate(-0 235.275591 12.287383)">F13  场景B：复用与Spill的区别</text>
+  </g>
+  <g id="text_10">
+   <text style="font-size: 8.2px; font-family: 'Times New Roman', 'Microsoft YaHei', 'DejaVu Sans'; text-anchor: middle; fill: #404040" x="235.275591" y="343.399407" transform="rotate(-0 235.275591 343.399407)">机制示意；同核复用不保证永久驻留。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p567d77f9d2">
+   <rect x="3.00024" y="32.877405" width="464.550701" height="289.256213"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,26 @@
+{
+  "id": "F04",
+  "kind": "evidence",
+  "title": "单张量大小与私有缓存容量",
+  "reading_question": "单张量尺度距L1/UB容量多远？",
+  "caveat": "最大单张量不是运行时驻留峰值；零值保留。",
+  "sources": [
+    "graphs"
+  ],
+  "data_rows": 100,
+  "data_sha256": "df167733c688d36f55e82036e7f5379a1d28a3c08d5f08411c535af700fda099",
+  "files": {
+    "pdf": "4fb7947ae82d134de04ffd9f622879c9d75bd18f3325574110fb7ad62099e2d3",
+    "png": "62790ffe0e82a0aff1ea50f6f92da48f0985049462f2648571e6178a8b2972ac",
+    "svg": "5f334898bd1a25794a36c03c22032d8f12fd212f457e4ace1ea242e0e73271e0"
+  },
+  "width_mm": 166,
+  "height_mm": 96.0,
+  "minimum_source_font_pt": 8.2,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "单张量相对容量的大小仅描述输入尺度；多个张量生命周期重叠仍可能引起Spill，不能从本图推断运行时峰值。",
+  "source_data": "data/F04.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "本轮逐字节沿用旧图，继承既有作者检查：Zero ratios and full distributions retained; capacity reference is distinct from observed curves."
+}

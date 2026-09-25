@@ -1,0 +1,17 @@
+﻿record,id,label,x,y,width,height,color,border,source,target,both
+node,in,"COPY_IN发射
+查询逻辑张量键",5,5.15,2.65,1.05,#F0F4F6,True,,,
+node,lookup,"此刻键是否在FIFO？
+命中不刷新次序",5,3.75,2.65,1.05,#F0F4F6,True,,,
+node,hit,"命中：L2读池
+250 bytes/cycle",2,2.2,2.65,1.05,#F0F4F6,True,,,
+node,miss,"未命中：DDR池
+60 bytes/cycle",8,2.2,2.65,1.05,#F0F4F6,True,,,
+node,end,"完成时尝试插入
+不存在且可容纳才插入
+不足则FIFO逐出",5,0.65,3.5,1.15,#F0F4F6,True,,,
+edge,,,,,,,,,in,lookup,False
+edge,,,,,,,,,lookup,hit,False
+edge,,,,,,,,,lookup,miss,False
+edge,,,,,,,,,hit,end,False
+edge,,,,,,,,,miss,end,False

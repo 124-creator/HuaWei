@@ -1,0 +1,39 @@
+{
+  "id": "F34",
+  "kind": "schematic",
+  "title": "Treap区间索引：相同插入规则，更少无效搜索",
+  "reading_question": "索引如何利用子树摘要定位同一个可行空隙？",
+  "caveat": "概念树形，非实际Treap快照；只索引候选日历，不改变官方时刻或评分。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 45,
+  "data_sha256": "369be064cfa277e56a89be622634c374c0607a9c693685fd3f3470faac096ba9",
+  "files": {
+    "pdf": "ec41e283a53d5c70d51dd9d17fcdb1a74c6a57afb5b8e7169aa582adaa6f0ec7",
+    "png": "88dcd4f7c116c324e9fd49ee7355d5853335d26c979a27ca896e783a8fb25b8f",
+    "svg": "6dffbae5fe1a747407c76ad8f8d8c6c37e3a5ee1ba99bc485ca63fcfc50a0cb8"
+  },
+  "width_mm": 166,
+  "height_mm": 171.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "plotted_lines": [],
+  "source_binding": "INPUTS.json (private audit record)",
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "axis_views": [
+    {
+      "axis": 0,
+      "xlim": [
+        0.0,
+        100.0
+      ],
+      "ylim": [
+        0.0,
+        100.0
+      ]
+    }
+  ],
+  "plotted_images": [],
+  "plotted_scatter": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "F05",
+  "kind": "schematic",
+  "title": "相同计算片段下的A/B Task边界",
+  "reading_question": "相同的同核张量依赖为何产生不同边界搬运？",
+  "caveat": "单生产者、单消费者、非最终输出的示意；不含Spill。",
+  "sources": [
+    "rules"
+  ],
+  "data_rows": 34,
+  "data_sha256": "7c13f59cf15d1b0921dc6a7622665e8c70c729df5c49075017319952887c8b69",
+  "files": {
+    "pdf": "120db43475975f592903c6c73d73a79a01b7da1582ce28e7a8e0e51b8f3579c7",
+    "png": "b2c28c17cb550f34fd8a30f0127f63924570ff3eba2160d956c60e11aa896a9f",
+    "svg": "3f9ab95ff00b44457714202068bd3abc6269ea9eaea84688084ef6e0ecbe8c79"
+  },
+  "width_mm": 166,
+  "height_mm": 139.0,
+  "minimum_source_font_pt": 8.0,
+  "clipped_text": [],
+  "scientific_acceptance": "NOT_GRANTED_BY_RENDERER",
+  "takeaway": "单生产者、单消费者且非最终输出的b字节张量，在A的同核Task边界需写出和读入共2b；B中同核合并Task且无Spill时可省去该边界量。",
+  "source_data": "data/F05.csv",
+  "visual_review": "AUTHOR_INSPECTED",
+  "visual_note": "逐字节沿用v2，继承其作者检查：检查A/B相同片段、Task容器和2b/0的限定。修正背景遮住内部连线、搬运线穿过Task标签的问题；仅为单消费中间张量示意。"
+}

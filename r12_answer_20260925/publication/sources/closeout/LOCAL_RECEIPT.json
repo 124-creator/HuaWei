@@ -1,0 +1,27 @@
+{
+  "status": "PASS_WITH_DISCLOSED_LIMITS",
+  "input_bindings_rehashed": 5798,
+  "original_failures_preserved": 4,
+  "export_files_byte_identical": 11,
+  "syntax_compile_pass": {
+    "closeout.py": 153,
+    "evidence.py": 125,
+    "summarize.py": 136,
+    "test_evidence.py": 71
+  },
+  "tests_returncode": 0,
+  "tests_output": "test_byte_weighted_hit_rate_is_checked (test_evidence.EvidenceTests.test_byte_weighted_hit_rate_is_checked) ... ok\ntest_changed_evaluator_is_not_reused (test_evidence.EvidenceTests.test_changed_evaluator_is_not_reused) ... ok\ntest_changed_graph_is_not_reused (test_evidence.EvidenceTests.test_changed_graph_is_not_reused) ... ok\ntest_exact_candidate_is_reused (test_evidence.EvidenceTests.test_exact_candidate_is_reused) ... ok\ntest_incomplete_group_is_rejected (test_evidence.EvidenceTests.test_incomplete_group_is_rejected) ... ok\ntest_mean_uses_per_case_ratios (test_evidence.EvidenceTests.test_mean_uses_per_case_ratios) ... ok\ntest_non_l2_result_cannot_supply_cache_control (test_evidence.EvidenceTests.test_non_l2_result_cannot_supply_cache_control) ... ok\ntest_other_plan_is_not_reused (test_evidence.EvidenceTests.test_other_plan_is_not_reused) ... ok\ntest_tampered_raw_is_rejected (test_evidence.EvidenceTests.test_tampered_raw_is_rejected) ... ok\ntest_zero_denominator_is_rejected (test_evidence.EvidenceTests.test_zero_denominator_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.014s\n\nOK\n",
+  "decimal_recomputation": "500 pairs; 100 per group; both metrics within 1e-12",
+  "checker_sources": {
+    "/home/dreamboat/npu_r12_verify/NPU_R12/stage4_src/validate_selected_execution.py": "0a426cd2c1a5eb963b6d6228b2286bed84598960f6076eb5d03f096bf3fbd721",
+    "/home/dreamboat/npu_r12_verify/NPU_R12/stage4_src/collect_frozen_results.py": "32c7f23d468b1bae53caecfb2a9e94a5edf39913f0849e6c4f22302497ae7ec8",
+    "/home/dreamboat/npu_r12_verify/NPU_R12/src/traffic_model.py": "506556caa6330a617907346cd1a989b42054e85e94e33ccf16942b82c4f15c8f"
+  },
+  "lsp": "not installed; not run",
+  "not_claimed": [
+    "independent reimplementation of simulator",
+    "global optimum",
+    "D4",
+    "formal paper completion"
+  ]
+}
