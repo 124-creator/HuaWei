@@ -1,3 +1,5 @@
+# 本程序及代码是在人工智能工具辅助下完成的。
+# 人工智能工具名称、版本/型号、开发机构/公司、版本发布日期：【由参赛队按实际使用情况填写，见论文附录D】
 """由冻结数据直接生成第8章统计表与附录逐例结果表（Markdown），避免手抄。
 
 输出到 ../chapters/_gen/*.md，由 merge.py 通过 <!-- include: _gen/xxx.md --> 展开。
@@ -49,8 +51,8 @@ def speed_table():
     for sc, k in GROUPS:
         key = f"{sc}{k}"
         eff = "—" if k == 1 else f"{F[key+'.efficiency']:.4f}"
-        out.append(f"| {label(sc, k)} | {F[key+'.mean_speedup']:.4f} | {eff} | {F[key+'.min_speedup']:.4f}（{F[key+'.min_case']}） | "
-                   f"{F[key+'.max_speedup']:.4f}（{F[key+'.max_case']}） | {F[key+'.superlinear_count']} |")
+        out.append(f"| {label(sc, k)} | {F[key+'.mean_speedup']:.4f} | {eff} | {F[key+'.min_speedup']:.4f} ({F[key+'.min_case']}) | "
+                   f"{F[key+'.max_speedup']:.4f} ({F[key+'.max_case']}) | {F[key+'.superlinear_count']} |")
     write("S8_speed", "\n".join(out))
 
 
@@ -65,11 +67,35 @@ def sign_table():
 
 
 def rank_table():
-    out = ["| 场景-核数 | 规模与加速比的Spearman $r_s$ | 规模与求解墙钟的Spearman $r_s$ |", "|---|---:|---:|"]
+    out = ["| 场景-核数 | 规模与加速比 | 平均并行度与加速比 | 规模与求解墙钟 |", "|---|---:|---:|---:|"]
     for sc, k in (("A", 2), ("A", 5), ("B", 2), ("B", 5), ("L2", 5)):
         key = f"{sc}{k}"
-        out.append(f"| {label(sc, k)} | {F[key+'.spearman_size_speedup']:.3f} | {F[key+'.spearman_size_wall']:.3f} |")
+        out.append(f"| {label(sc, k)} | {F[key+'.spearman_size_speedup']:.3f} | {F[key+'.spearman_par_speedup']:.3f} | "
+                   f"{F[key+'.spearman_size_wall']:.3f} |")
     write("S8_rank", "\n".join(out))
+
+
+def s22_table():
+    """表S2-2：依赖结构与复用特征（队伍增补材料）。数字格式与增补材料原表逐格一致，生成时断言。"""
+    rows = [("关键路径长度（周期）", "cp_cycles", "int"), ("关键路径上的操作数", "cp_ops", "auto"),
+            ("最大并行宽度（操作数）", "max_level_width", "int"), ("平均并行度", "avg_parallelism", "2f"),
+            ("多用途张量占比", "multi_use_tensor_ratio", "3f"),
+            ("每图复用距离中位数（操作数）", "span_ops_median", "auto"), ("每图复用距离最大值（操作数）", "span_ops_max", "auto"),
+            ("每图复用距离中位数（周期）", "span_cycles_median", "auto"), ("每图复用距离最大值（周期）", "span_cycles_max", "auto")]
+    def fmt(x, kind):
+        if kind == "2f":
+            return f"{x:.2f}"
+        if kind == "3f":
+            return f"{x:.3f}"
+        return str(int(x)) if float(x).is_integer() else f"{x:.1f}"
+    src = (HERE.parent / "并行度统计_20260926/并行度统计材料.md").read_text(encoding="utf-8")
+    orig = [l for l in src.split("\n") if l.startswith("| ") and "|---" not in l and "统计量" not in l][:9]
+    out = ["| 统计量 | 最小值 | 下四分位 | 中位数 | 上四分位 | 最大值 |", "|---|---:|---:|---:|---:|---:|"]
+    for (label, key, kind), o in zip(rows, orig):
+        cells = [fmt(F[f"s22.{key}.{s}"], kind) for s in ("min", "q1", "median", "q3", "max")]
+        assert [c.strip() for c in o.strip("|").split("|")[1:]] == cells, (label, o, cells)
+        out.append(f"| {label} | " + " | ".join(cells) + " |")
+    write("S2_2", "\n".join(out))
 
 
 def origin_table():
@@ -88,7 +114,7 @@ def origin_table():
 
 
 def summary_table():
-    out = ["| 核数 | 问题一 场景A | 问题二 场景B | 问题三 无L2（$P_B$） | 问题三 只读Cache（$P_L$） | 同方案配置比 $\\overline R_{\\mathrm{hw}}$ | 分别选优比 $\\overline R_{\\mathrm{select}}$ |",
+    out = ["| 核数 | 问题一 场景A | 问题二 场景B | 问题三 无L2 $P_B$ | 问题三 有L2 $P_L$ | 同方案配置比 $\\overline R_{\\mathrm{hw}}$ | 分别选优比 $\\overline R_{\\mathrm{select}}$ |",
            "|---|---:|---:|---:|---:|---:|---:|"]
     for k in range(1, 6):
         a = "1（定义）" if k == 1 else f"{F[f'A{k}.mean_speedup']:.4f}"
@@ -140,5 +166,5 @@ def appendix():
 
 
 if __name__ == "__main__":
-    speed_table(); sign_table(); rank_table(); origin_table(); summary_table(); appendix()
+    s22_table(); speed_table(); sign_table(); rank_table(); origin_table(); summary_table(); appendix()
     print("tables ->", GEN)

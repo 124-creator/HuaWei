@@ -1,3 +1,5 @@
+# 本程序及代码是在人工智能工具辅助下完成的。
+# 人工智能工具名称、版本/型号、开发机构/公司、版本发布日期：【由参赛队按实际使用情况填写，见论文附录D】
 """合稿：按章顺序拼接，统一公式/表/图编号，插入图件，生成参考文献。
 
 输出
@@ -23,7 +25,8 @@ ORDER = ["00_摘要.md", "01_问题重述.md", "02_问题分析.md", "03_模型�
          "05_问题一.md", "06_问题二.md", "07_问题三.md", "08_模型检验与算法分析.md", "09_模型评价与推广.md",
          "10_结论.md", "REFS", "12_附录.md"]
 REFS = json.loads((HERE / "refs.json").read_text(encoding="utf-8"))
-NEW_FIGS = {"F35": "全文技术路线", "F37": "R12一次求解请求的流程"}
+NEW_FIGS = {"F35": "全文技术路线", "F38": "问题一（场景A）的求解流程", "F39": "问题二（场景B）的求解流程",
+            "F40": "问题三的求解与“方案×配置”受控对照"}
 # 正文图题：交付物曲线写明题目要求的名称，概念图标注“示意图”；其余沿用figures_v3元数据标题
 CAPTIONS = {
     "F01": "计算资源、私有缓存与共享带宽池（示意图）",
@@ -44,6 +47,30 @@ CAPTIONS = {
 EQ_LABEL = re.compile(r"^【式\(([^)]+)\)】\s*$")
 TAB_CAP = re.compile(r"^\*\*表(\S+?)\s{1,3}(.+?)\*\*\s*$")
 INCLUDE = re.compile(r"^<!-- include: (\S+) -->\s*$")
+TRANSPOSE = re.compile(r"^<!-- transpose(?: (\S+))? -->\s*$")
+
+
+def transpose_tables(lines: list[str]) -> list[str]:
+    """“核数×指标”的宽表在小四号字下放不进版心时，源稿用 <!-- transpose 核 --> 标记，
+    这里转置成“指标×核数”，单元格文字原样搬运，不改任何数字。"""
+    out, i = [], 0
+    while i < len(lines):
+        m = TRANSPOSE.match(lines[i])
+        if not m:
+            out.append(lines[i]); i += 1; continue
+        suffix, i = m.group(1) or "", i + 1
+        while i < len(lines) and not lines[i].startswith("|"):
+            out.append(lines[i]); i += 1
+        rows = []
+        while i < len(lines) and lines[i].startswith("|"):
+            rows.append([c.strip() for c in lines[i].strip().strip("|").split("|")]); i += 1
+        head, body = rows[0], rows[2:]
+        assert all(len(r) == len(head) for r in body), f"转置表列数不齐：{head}"
+        out.append("| " + " | ".join(["指标"] + [r[0] + suffix for r in body]) + " |")
+        out.append("|---|" + "---:|" * len(body))
+        for j in range(1, len(head)):
+            out.append("| " + " | ".join([head[j]] + [r[j] for r in body]) + " |")
+    return out
 
 
 def fig_info(fid: str) -> tuple[str, Path]:
@@ -72,7 +99,7 @@ def load() -> list[tuple[str, list[str]]]:
                 lines.extend((ROOT / "chapters" / m.group(1)).read_text(encoding="utf-8").rstrip("\n").split("\n"))
             else:
                 lines.append(line)
-        text = "\n".join(lines)
+        text = "\n".join(transpose_tables(lines))
         # 弯引号：跳过围栏代码块
         parts = re.split(r"(```.*?```)", text, flags=re.S)
         text = "".join(p if p.startswith("```") else curly_quotes(p) for p in parts)
@@ -143,6 +170,7 @@ def build():
             return f"表{tab_map[m.group(1)]}"
         def fig(m):
             return f"图{fig_map[m.group(1)]}"
+        line = line.replace("】【", "】、【")          # 相邻的两个引用之间补顿号
         line = re.sub(r"【式\(([^)]+)\)】", eq, line)
         line = re.sub(r"【表([^】]+)】", tab, line)
         line = re.sub(r"【图(F\d+)】", fig, line)
@@ -196,8 +224,9 @@ def build():
         human.append("")
         pand.append("")
     def hard_breaks(lines):
-        """算法块（引用块）逐行换行：连续两行都有内容时在前一行末加两个空格。"""
-        out = list(lines)
+        """算法块（引用块）逐行换行：连续两行都有内容时在前一行末加两个空格。
+        源稿以行号后两个空格表示循环体，这里换成两个全角空格，使缩进在Word与Markdown中都保留。"""
+        out = [re.sub(r"^> (\d+) {2,}", "> \\1　　", l) for l in lines]
         for i in range(len(out) - 1):
             a, b = out[i], out[i + 1]
             if a.startswith(">") and b.startswith(">") and a.strip("> ").strip() and b.strip("> ").strip():

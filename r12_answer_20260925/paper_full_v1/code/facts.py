@@ -1,3 +1,5 @@
+# 本程序及代码是在人工智能工具辅助下完成的。
+# 人工智能工具名称、版本/型号、开发机构/公司、版本发布日期：【由参赛队按实际使用情况填写，见论文附录D】
 """R12论文全文事实底座：只读冻结CSV/JSON，确定性地计算正文所需全部数值。
 
 输出 ../qa/facts.json（扁平键值，供数字核对）与 ../qa/事实总表.md（人读版）。
@@ -346,6 +348,35 @@ def main() -> None:
     late = {r["case"] for r in sel_rows if r["scene"] == "B" and int(r["cores"]) == 5
             and origin(r["raw"]) in ("insertion", "microbatch")}
     assert late == {r["case"] for r in stages if int(r["full"]) < int(r["control"])}, late
+
+    # ---- 10. 依赖结构与复用特征（队伍增补材料：并行度统计_20260926，表S2-2） ----
+    par = rows(HERE.parent / "并行度统计_20260926" / "per_case_stats.csv")
+    assert len(par) == 100 and all(not r["anomalies"] for r in par)
+    for r in par:     # 与存档数据交叉核对：规模列与F03一致，关键路径与校验记录的计算关键路径一致
+        g = graphs[r["case_id"]]
+        assert int(r["n_noncopy_ops"]) == int(g["noncopy_ops"]) and int(r["n_edges"]) == int(g["edges"])
+    cp_ver = {c["case"]: c["critical_path_compute_only"] for c in sel}
+    assert all(int(float(r["cp_cycles"])) == cp_ver[r["case_id"]] for r in par)
+    for col in ("cp_cycles", "cp_ops", "max_level_width", "avg_parallelism", "multi_use_tensor_ratio",
+                "span_ops_median", "span_ops_max", "span_cycles_median", "span_cycles_max"):
+        xs = [float(r[col]) for r in par]
+        F[f"s22.{col}.min"], F[f"s22.{col}.max"], F[f"s22.{col}.median"] = min(xs), max(xs), st.median(xs)
+        F[f"s22.{col}.q1"], F[f"s22.{col}.q3"] = nearest_rank(xs, .25), nearest_rank(xs, .75)
+    pb = {r["case_id"]: r for r in par}
+    for c in ("case_048", "case_064"):            # 正文点名的两张图
+        F[f"s22.avg_parallelism.{c}"] = float(pb[c]["avg_parallelism"])
+        F[f"s22.max_level_width.{c}"] = int(pb[c]["max_level_width"])
+    F["s22.avg_parallelism.lt5"] = sum(float(r["avg_parallelism"]) < 5 for r in par)
+    F["s22.avg_parallelism.lt10"] = sum(float(r["avg_parallelism"]) < 10 for r in par)
+    # 平均并行度与加速比的秩相关（与第8.4节规模相关性同组、同口径）
+    for sc, k in (("A", 5), ("B", 5), ("L2", 5), ("A", 2), ("B", 2)):
+        cs = sorted(pb)
+        F[f"{sc}{k}.spearman_par_speedup"] = spearman([float(pb[c]["avg_parallelism"]) for c in cs],
+                                                       [float(D[(c, k, sc)]["speedup"]) for c in cs])
+    low = [c for c in pb if float(pb[c]["avg_parallelism"]) < 10]
+    for sc in SCENES:
+        F[f"{sc}5.speedup_mean.par_lt10"] = st.mean(float(D[(c, 5, sc)]["speedup"]) for c in low)
+        F[f"{sc}5.speedup_mean.par_ge10"] = st.mean(float(D[(c, 5, sc)]["speedup"]) for c in pb if c not in low)
 
     QA.mkdir(parents=True, exist_ok=True)
     (QA / "facts.json").write_text(json.dumps(F, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
