@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="Codex" version="24.7.17" type="device">
+  <diagram id="R22_问题二" name="R22_问题二">
+    <mxGraphModel dx="1100" dy="1430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1430" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="问题二：场景 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;B&lt;/span&gt; 驻留与真实 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;Spill&lt;/span&gt; 微批" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontStyle=1;fontColor=#22364A;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="35" y="20" width="1030" height="55" />
+        </mxCell>
+        <mxCell id="input" value="原始图、固定 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;B&lt;/span&gt; 配置、核数 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;k&lt;/span&gt;=&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;1&lt;/span&gt;–&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;5&lt;/span&gt;、单请求总软预算" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#FFF4DA;strokeColor=#BB8730;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="96" width="820" height="72" />
+        </mxCell>
+        <mxCell id="control" value="构造并评价控制解；同核全部子图合成一个 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;Task&lt;/span&gt;" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#F0F6FC;strokeColor=#557CA5;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="198" width="820" height="72" />
+        </mxCell>
+        <mxCell id="expand" value="完整分量、活动核 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;m&lt;/span&gt;≤&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;k&lt;/span&gt;、驻留 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;target&lt;/span&gt;=&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;0&lt;/span&gt;/&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;512&lt;/span&gt;/&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;2048&lt;/span&gt;&lt;br&gt;补空到 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;k&lt;/span&gt; 队列；去重与下界剪枝&lt;br&gt;预算内至多评价 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;6&lt;/span&gt; 个新候选；成功且更优才更新" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#F0F6FC;strokeColor=#557CA5;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="300" width="820" height="117" />
+        </mxCell>
+        <mxCell id="insert" value="快速插入候选：受剩余预算约束，完整成功且更优才更新" style="rounded=1;arcSize=7;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#F0F6FC;strokeColor=#557CA5;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="435" width="820" height="75" />
+        </mxCell>
+        <mxCell id="spill" value="成功解有实测 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;Spill&lt;/span&gt;？&lt;br&gt;诊断预算仍足？" style="rhombus;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#FFF4DA;strokeColor=#C18A29;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="260" y="550" width="580" height="105" />
+        </mxCell>
+        <mxCell id="micro" value="独立诊断原版 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;Step&lt;/span&gt; &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;2&lt;/span&gt; &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;Spill&lt;/span&gt;；生成至多两份固定窗口候选&lt;br&gt;窗口 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;4&lt;/span&gt; / &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;8&lt;/span&gt; 子图；单候选≤&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;16&lt;/span&gt;个不重叠窗，每窗≤&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;128&lt;/span&gt;原操作" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#F0F6FC;strokeColor=#557CA5;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="708" width="820" height="116" />
+        </mxCell>
+        <mxCell id="invariant" value="窗口外顺序和核心归属不变；&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;Spill&lt;/span&gt; 前边界 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;COPY&lt;/span&gt; 不变&lt;br&gt;候选仍须结构检查与原版 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;B&lt;/span&gt; 完整评分" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#F7F8FA;strokeColor=#A6B0BA;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="862" width="820" height="104" />
+        </mxCell>
+        <mxCell id="select" value="完整成功且 (&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;Makespan&lt;/span&gt;, 新增 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;COPY&lt;/span&gt;, 名称) 更优才更新&lt;br&gt;失败或未改进则保留当前解和状态记录" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#F0F6FC;strokeColor=#557CA5;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="1004" width="820" height="82" />
+        </mxCell>
+        <mxCell id="output" value="输出已成功评价的两字段方案；否则返回失败" style="rounded=1;arcSize=7;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#EDF8F0;strokeColor=#5A926E;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="1170" width="820" height="84" />
+        </mxCell>
+        <mxCell id="stats" value="五核平均加速比 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;4&lt;/span&gt;.&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;1311&lt;/span&gt;；新增 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;COPY&lt;/span&gt; &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;8&lt;/span&gt;.&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;2173&lt;/span&gt; &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;MiB&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;4&lt;/span&gt; 例较 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;C3&lt;/span&gt; 更快但 &lt;span style=&quot;font-family:Times New Roman;&quot;&gt;COPY&lt;/span&gt; 更高" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=28.3;fontColor=#25394B;fontStyle=0;fillColor=#F7F8FA;strokeColor=#A6B0BA;strokeWidth=1.7;spacing=9;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="1305" width="820" height="90" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="input" target="control">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="control" target="expand">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="expand" target="insert">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="insert" target="spill">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="spill" target="micro">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="micro" target="invariant">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="invariant" target="select">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e8" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="spill" target="output">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1010" y="602" />
+              <mxPoint x="1010" y="1212" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#50677D;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=28.3;fontColor=#50677D;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="select" target="output">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
