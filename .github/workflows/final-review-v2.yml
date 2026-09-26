@@ -1,0 +1,164 @@
+name: Build latest final-review DOCX with reviewed flowcharts
+on:
+  push:
+    branches: ['final/submission-review-20260927-v2']
+    paths:
+      - '.github/workflows/final-review-v2.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: final/submission-review-20260927-v2
+          fetch-depth: 0
+      - name: Install QA dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libreoffice-writer fonts-wqy-zenhei fonts-liberation poppler-utils
+          python -m pip install pillow pymupdf==1.26.7
+      - name: Fetch reviewed flowcharts
+        run: git fetch origin design/body-flowchart-fonts-20260926
+      - name: Patch latest corrected DOCX and render before/after
+        run: |
+          python - <<'PY'
+          from zipfile import ZipFile, ZIP_DEFLATED
+          from PIL import Image
+          from pathlib import Path
+          import io,hashlib,json,subprocess,shutil,re,os
+          root=Path('最终提交_20260927'); paper=root/'01_论文'; qa=root/'04_核验记录'
+          src=paper/'多核NPU切图调度论文_提交版_修复.docx'
+          out=paper/'多核NPU切图调度论文_终审流程图版.docx'
+          tmp=Path('/tmp/final-v2'); tmp.mkdir(parents=True,exist_ok=True)
+          branch='origin/design/body-flowchart-fonts-20260926'
+          mapping={
+             'word/media/image7.png':('F35',(2400,2571)),
+             'word/media/image13.png':('F38',(2400,2429)),
+             'word/media/image21.png':('F39',(2400,3086)),
+             'word/media/image30.png':('F40',(2400,2529)),
+          }
+          prepared={}
+          for entry,(n,target) in mapping.items():
+              p=tmp/f'{n}.png'
+              with p.open('wb') as f:
+                  subprocess.run(['git','show',f'{branch}:r12_answer_20260925/paper_full_v1/figures/{n}.png'],check=True,stdout=f)
+              im=Image.open(p).convert('RGB'); tw,th=target
+              sc=min(tw/im.width,th/im.height); nw,nh=round(im.width*sc),round(im.height*sc)
+              im=im.resize((nw,nh),Image.Resampling.LANCZOS)
+              canvas=Image.new('RGB',(tw,th),'white'); canvas.paste(im,((tw-nw)//2,(th-nh)//2))
+              b=io.BytesIO(); canvas.save(b,'PNG',optimize=True,dpi=(600,600)); prepared[entry]=b.getvalue()
+
+          with ZipFile(src) as zin, ZipFile(out,'w',ZIP_DEFLATED) as zout:
+              for item in zin.infolist(): zout.writestr(item,prepared.get(item.filename,zin.read(item.filename)))
+
+          with ZipFile(src) as a, ZipFile(out) as b:
+              structural={}
+              for n in ('word/document.xml','word/_rels/document.xml.rels','word/styles.xml','docProps/core.xml'):
+                  ha=hashlib.sha256(a.read(n)).hexdigest(); hb=hashlib.sha256(b.read(n)).hexdigest()
+                  structural[n]={'before':ha,'after':hb}; assert ha==hb
+              changed=[]
+              for n in sorted(set(a.namelist())|set(b.namelist())):
+                  aa=a.read(n) if n in a.namelist() else b''; bb=b.read(n) if n in b.namelist() else b''
+                  if hashlib.sha256(aa).digest()!=hashlib.sha256(bb).digest(): changed.append(n)
+              assert changed==sorted(mapping),changed
+              xml=b.read('word/document.xml').decode('utf-8','ignore')
+              checks={'old_ChatGPT_count':xml.count('ChatGPT'),'old_Claude_count':xml.count('Claude'),
+                      'Qwen_count':xml.count('Qwen3.8-Max'),'DeepSeek_count':xml.count('DeepSeek V4.1 Flash')}
+              assert checks['old_ChatGPT_count']==0 and checks['old_Claude_count']==0,checks
+              assert checks['Qwen_count']>0 and checks['DeepSeek_count']>0,checks
+
+          def sha(p):
+              h=hashlib.sha256()
+              with open(p,'rb') as f:
+                  for x in iter(lambda:f.read(1<<20),b''):h.update(x)
+              return h.hexdigest()
+
+          env=os.environ.copy(); env['HOME']='/tmp/lohome'; Path(env['HOME']).mkdir(exist_ok=True)
+          for label,p in [('before',src),('after',out)]:
+              od=tmp/label;od.mkdir(exist_ok=True)
+              subprocess.run(['libreoffice','--headless','--convert-to','pdf','--outdir',str(od),str(p.resolve())],
+                             check=True,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+          bp=next((tmp/'before').glob('*.pdf')); ap=next((tmp/'after').glob('*.pdf'))
+          preview=paper/'多核NPU切图调度论文_终审流程图版_排版核对_勿提交.pdf'; shutil.copy2(ap,preview)
+
+          import fitz
+          bd,ad=fitz.open(bp),fitz.open(ap)
+          assert len(bd)==len(ad)
+          text_changed=[];render_changed=[]
+          for i,(p,q) in enumerate(zip(bd,ad)):
+              if p.get_text()!=q.get_text():text_changed.append(i+1)
+              pp=p.get_pixmap(matrix=fitz.Matrix(1,1),alpha=False); qq=q.get_pixmap(matrix=fitz.Matrix(1,1),alpha=False)
+              if pp.samples!=qq.samples:render_changed.append(i+1)
+          assert not text_changed,text_changed
+          assert render_changed==[8,27,38,48],render_changed
+          rec={
+             'baseline_main_commit':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),
+             'source_docx_sha256':sha(src),'review_docx_sha256':sha(out),
+             'docx_changed_entries':changed,'structural_hashes':structural,'ai_text_checks':checks,
+             'libreoffice_pages_before':len(bd),'libreoffice_pages_after':len(ad),
+             'text_changed_pages':text_changed,'render_changed_pages':render_changed,
+             'preview_pdf_sha256':sha(preview),
+             'formal_pdf_status':'PENDING_WINDOWS_WORD_EXPORT',
+             'stale_named_pdf_sha256':sha(paper/'A26104850001.pdf'),
+             'support_zip_status':'AI comments still old wording per main correction record; requires sync before attachment lock'
+          }
+          (qa/'流程图替换终审核验_最新main_20260927.json').write_text(json.dumps(rec,ensure_ascii=False,indent=2),encoding='utf-8')
+
+          report=f'''# 最终提交终审（最新 main + 流程图替换）· 2026-09-27
+
+## 当前可确认状态
+- 基线使用最新 main 的 多核NPU切图调度论文_提交版_修复.docx，已包含团队确认的 AI 工具更正：DeepSeek V4.1 Flash / Qwen3.8-Max。
+- 仅原位替换图2-3、图5-4、图6-4、图7-2，对应 DOCX 媒体 image7/image13/image21/image30。
+- document.xml、关系、样式、核心属性均未变化；正文文字、表格、公式和分页结构未因换图改写。
+- 同一 LibreOffice 渲染器前后比对：页数均为 {len(bd)}，文本变化页 0；仅第 8、27、38、48 页的流程图区域发生渲染变化。
+- 新增 多核NPU切图调度论文_终审流程图版.docx 为当前应继续导出的 Word 真源。
+- 新增 多核NPU切图调度论文_终审流程图版_排版核对_勿提交.pdf 仅供布局审查，不是正式提交 PDF。
+
+## P0 提交阻断
+1. 当前 A26104850001.pdf 已过期，不应直接提交。它仍是 AI 工具更正之前的 Windows 导出版，且未含本轮流程图。必须从 多核NPU切图调度论文_终审流程图版.docx 在 Windows Word/WPS 中重新导出正式 PDF。
+2. 正式 PDF 导出后，重新计算 SHA256，并用官方 FileMD5.exe 现场生成论文识别码；旧 MD5 已不能作为新稿识别码。
+3. 支撑材料.zip 的 60 个程序头部 AI 注释仍为旧 ChatGPT/GPT 口径。main 的工具更正记录已明确这一点。附件锁定前应按团队真实使用记录同步并重打包，再更新 ZIP 哈希。
+
+## P1 文字一致性
+- 流程图已改成 场景A/B官方完整评价、官方 Step 2 Spill 记录、3%近优性证书 等正式用语。
+- 正文算法框仍有少量 近优门控/认证、控制链、原版程序/评价器、两字段方案 等开发期术语。它们不是科学错误，但若继续改正文，就必须重新进行 Windows 导出与 MD5 锁定。
+- 标题本轮保持现状，不擅自修改。
+
+## 结论
+从科学结果与版式结构看，当前剩余风险已集中在提交一致性而非算法：正式 PDF 必须从最新 Word 重导，附件 AI 注释必须与正文真实记录一致，然后再锁 MD5。
+'''
+          (qa/'最终提交终审_最新main_20260927.md').write_text(report,encoding='utf-8')
+
+          (qa/'论文识别码MD5_预计算.txt').write_text(
+             '状态: 失效，禁止用于最终提交。\n原因: 最新Word已更正AI工具声明且替换4张流程图，当前A26104850001.pdf尚未从最新Word重新Windows导出。\n'
+             '下一步: 从01_论文/多核NPU切图调度论文_终审流程图版.docx正式导出A26104850001.pdf后，再用官方FileMD5.exe现场生成识别码。\n',encoding='utf-8')
+
+          rp=root/'README_提交包说明与状态.md'; s=rp.read_text(encoding='utf-8')
+          s=re.sub(r'\| 论文（命名版） \|.*?\|', '| 论文（命名版） | ⚠️ 当前 A26104850001.pdf 已过期：未包含最新AI工具更正与本轮流程图；禁止直接提交 |',s)
+          if '多核NPU切图调度论文_终审流程图版.docx' not in s:
+              s=s.replace('| 01_论文/多核NPU切图调度论文_提交版_修复.docx',
+                          '| 01_论文/多核NPU切图调度论文_终审流程图版.docx | **最新终审Word真源**：AI工具更正 + 4张流程图替换；请从此文件正式导出PDF |\n| 01_论文/多核NPU切图调度论文_提交版_修复.docx')
+          warning='> **终审阻断：** 当前命名版PDF和旧MD5不可提交；须从“终审流程图版.docx”重新Windows导出。支撑材料程序AI注释也须同步真实工具记录后再锁附件。\n\n'
+          if warning not in s:s=s.replace('## 文件说明',warning+'## 文件说明')
+          rp.write_text(s,encoding='utf-8')
+          print(json.dumps(rec,ensure_ascii=False,indent=2))
+          PY
+      - name: Commit final-folder-only changes
+        run: |
+          git add "最终提交_20260927"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Apply reviewed flowcharts to latest AI-corrected final Word and audit submission blockers'
+          git push origin HEAD:final/submission-review-20260927-v2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: final-review-v2
+          path: |
+            最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图版.docx
+            最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图版_排版核对_勿提交.pdf
+            最终提交_20260927/04_核验记录/最终提交终审_最新main_20260927.md
+            最终提交_20260927/04_核验记录/流程图替换终审核验_最新main_20260927.json
+          retention-days: 7
