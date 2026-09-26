@@ -1,0 +1,12 @@
+{
+  "status": "ALL_FOUR_SVG_RENDERS_CHECKED",
+  "renderer": "CairoSVG",
+  "dpi": 180,
+  "comparison": "Final PDF MuPDF preview versus outlined SVG CairoSVG preview; RGB difference includes edge antialiasing. Visual inspection also performed.",
+  "records": [
+    {"figure":"00_R12_总体技术路线","svg_sha256":"6c33baa9a10397e36066723c5923cd0a44b2546fa9b904833b5d7a38df457b2f","normalized_mean_absolute_rgb_difference":0.013912948480095126,"conclusion":"PASS"},
+    {"figure":"01_R12_问题一_候选与评价","svg_sha256":"8aee93fb83d9d016393111590888a3967ac40229dbc579c9d29f1515fd8a02a3","normalized_mean_absolute_rgb_difference":0.020720366505698518,"conclusion":"PASS"},
+    {"figure":"02_R12_问题二_Spill微批","svg_sha256":"d5f82348c9fa3f5de8f228ad30bb3df97215260624fbb71bd7eb2321f315b793","normalized_mean_absolute_rgb_difference":0.011341911737081234,"conclusion":"PASS"},
+    {"figure":"03_R12_问题三_配置与选解","svg_sha256":"35966b60440a96cfb136100d3e2c27c5213d0fb0b167272a1a0322b9b5357d90","normalized_mean_absolute_rgb_difference":0.021266625706657546,"conclusion":"PASS"}
+  ]
+}

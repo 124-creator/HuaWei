@@ -1,0 +1,19 @@
+{
+  "status": "AUTHOR_VISUAL_CHECKS_PASS_AT_166MM",
+  "review_date": "2026-09-26",
+  "base_commit": "7cc49df7a561115f63b42753b99ebecf59f7b36e",
+  "native_export_workflow_run": 36223516204,
+  "reviewer": "ChatGPT; diagram author-side inspection, not independent scientific acceptance",
+  "checked": ["four native PDF previews at 180dpi", "four grayscale previews", "four vector A4 placements at 166mm width", "native draw.io PDF Chinese text and mathematical subscripts", "CairoSVG renders of all four final outlined SVGs"],
+  "unresolved_format_findings": [],
+  "asset_manifest_entries_rehashed": 16,
+  "source_vs_pdf_chinese_character_counts": [[218,218],[248,248],[252,252],[218,218]],
+  "records": [
+    {"figure":"00_R12_总体技术路线","pdf_sha256":"9df5dbf3e96e10bd3f32472f6897bd49b23441b7fe83382ba72f414843cf5e0c","conclusion":"PASS","note":"Three inputs, shared evaluation steps and A/B/L2 branches are aligned; intentional fan-out bus is clear; no performance-number clutter."},
+    {"figure":"01_R12_问题一_候选与评价","pdf_sha256":"efd0fcb5841b25fe0be06ce8fbeccfa20152931be77c750d298d9ae4dcce2f40","conclusion":"PASS","note":"Early-stage gating is separated from insertion. Shared candidate evaluator has distinct entry ports. No edge-label or node-text overlap observed."},
+    {"figure":"02_R12_问题二_Spill微批","pdf_sha256":"db1daab08ba97457c26d96c987a67311f8d3fe4621cf9985668b83a451b3adb7","conclusion":"PASS","note":"Yes/no branches are both connected; no-Spill path routes around the microbatch panel. 2rb and invariant statement are readable."},
+    {"figure":"03_R12_问题三_配置与选解","pdf_sha256":"a1f68794abba4b965f86781dcef2147ed4de0ff830597118a9a984186a271094","conclusion":"PASS","note":"Independent PB/PL paths, three evaluation values and two ratio definitions remain distinct. All subscripts and FIFO/DDR footnote text are complete."}
+  ],
+  "resolved_findings": ["Removed draw.io native print scaling with an anchor-verified uniform vector transform; regenerated and rechecked final exports."],
+  "boundary": "No paper_full_v1 file edited. No manuscript DOCX/PDF rebuilt. Original R22 assets retained unchanged. This record is hash binding, not a cryptographic signature or award certification."
+}

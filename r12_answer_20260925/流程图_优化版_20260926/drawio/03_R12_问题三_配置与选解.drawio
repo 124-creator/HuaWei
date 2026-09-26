@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="R12-flowchart-redesign" version="24.7.17">
+  <diagram id="03_R12_问题三_配置与选解" name="问题三：分开衡量配置效应与选解效应">
+    <mxGraphModel page="1" pageScale="1" pageWidth="627.4015748031496" pageHeight="714.3307086614174" grid="0" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;问题三：分开衡量配置效应与选解效应&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=17.333333333333332;fontColor=#222222;fillColor=none;strokeColor=none;strokeWidth=1.2;spacing=5;" r12Role="text">
+          <mxGeometry as="geometry" x="18.897637795275593" y="7.559055118110237" width="589.6062992125985" height="34.01574803149607" />
+        </mxCell>
+        <mxCell id="solve_head" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;01  分别求解：所有候选均在本次请求预算内生成&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.6;fontColor=#555555;fillColor=none;strokeColor=none;strokeWidth=1.2;spacing=5;" r12Role="text">
+          <mxGeometry as="geometry" x="26.45669291338583" y="56.69291338582678" width="574.4881889763781" height="26.45669291338583" />
+        </mxCell>
+        <mxCell id="pb" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;场景 B 独立求解&lt;br&gt;原图、固定配置与相同核数&lt;br&gt;按 B 配置评价并选出&lt;br&gt;&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.466666666666667;fontColor=#222222;fillColor=#E6F2F2;strokeColor=#007C83;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="26.45669291338583" y="105.82677165354332" width="268.3464566929134" height="124.7244094488189" />
+        </mxCell>
+        <mxCell id="pl" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;L2 配置下独立求解&lt;br&gt;本场景候选＋重新生成 B 类候选&lt;br&gt;先按 L2 重评，再插入与微批&lt;br&gt;&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;L&lt;/sub&gt;&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.466666666666667;fontColor=#222222;fillColor=#F7EFE6;strokeColor=#B16D24;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="332.5984251968504" y="105.82677165354332" width="268.3464566929134" height="124.7244094488189" />
+        </mxCell>
+        <mxCell id="freeze_b" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;02  冻结方案 &lt;i&gt;P&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.6;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="26.45669291338583" y="264.5669291338583" width="268.3464566929134" height="45.35433070866142" />
+        </mxCell>
+        <mxCell id="freeze_l" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;02  冻结方案 &lt;i&gt;P&lt;/i&gt;&lt;sub&gt;L&lt;/sub&gt;&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.6;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="332.5984251968504" y="264.5669291338583" width="268.3464566929134" height="45.35433070866142" />
+        </mxCell>
+        <mxCell id="tb" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;[1]  无 L2&lt;br&gt;&lt;i&gt;T&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;(&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;)&lt;br&gt;共同分子&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.866666666666667;fontColor=#222222;fillColor=#E6F2F2;strokeColor=#007C83;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="26.45669291338583" y="347.71653543307093" width="173.85826771653547" height="86.92913385826773" />
+        </mxCell>
+        <mxCell id="tlb" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;[2]  有 L2 · 同方案&lt;br&gt;&lt;i&gt;T&lt;/i&gt;&lt;sub&gt;L&lt;/sub&gt;(&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;)&lt;br&gt;仅评价配置改变&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.6;fontColor=#222222;fillColor=#E6F2F2;strokeColor=#007C83;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="226.7716535433071" y="347.71653543307093" width="173.85826771653547" height="86.92913385826773" />
+        </mxCell>
+        <mxCell id="tll" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;[3]  有 L2 · 另选方案&lt;br&gt;&lt;i&gt;T&lt;/i&gt;&lt;sub&gt;L&lt;/sub&gt;(&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;L&lt;/sub&gt;)&lt;br&gt;包含方案变化&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.6;fontColor=#222222;fillColor=#F7EFE6;strokeColor=#B16D24;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="427.0866141732284" y="347.71653543307093" width="173.85826771653547" height="86.92913385826773" />
+        </mxCell>
+        <mxCell id="measure" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;03  对照不反馈选解；逐图求比，再取 100 图算术均值&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.466666666666667;fontColor=#555555;fillColor=none;strokeColor=none;strokeWidth=1.2;spacing=5;" r12Role="text">
+          <mxGeometry as="geometry" x="26.45669291338583" y="453.5433070866142" width="574.4881889763781" height="26.45669291338583" />
+        </mxCell>
+        <mxCell id="rhw" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;[1] / [2]  同方案配置比&lt;br&gt;&lt;i&gt;R&lt;/i&gt;&lt;sub&gt;hw&lt;/sub&gt; = &lt;i&gt;T&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;(&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;) / &lt;i&gt;T&lt;/i&gt;&lt;sub&gt;L&lt;/sub&gt;(&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;)&lt;br&gt;方案固定，识别配置联合净效应&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.466666666666667;fontColor=#222222;fillColor=#E6F2F2;strokeColor=#007C83;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="26.45669291338583" y="502.6771653543308" width="268.3464566929134" height="86.92913385826773" />
+        </mxCell>
+        <mxCell id="rsel" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;[1] / [3]  分别选优综合比&lt;br&gt;&lt;i&gt;R&lt;/i&gt;&lt;sub&gt;select&lt;/sub&gt; = &lt;i&gt;T&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;(&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;B&lt;/sub&gt;) / &lt;i&gt;T&lt;/i&gt;&lt;sub&gt;L&lt;/sub&gt;(&lt;i&gt;P&lt;/i&gt;&lt;sub&gt;L&lt;/sub&gt;)&lt;br&gt;配置与选解效应同时存在&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.466666666666667;fontColor=#222222;fillColor=#F7EFE6;strokeColor=#B16D24;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="332.5984251968504" y="502.6771653543308" width="268.3464566929134" height="86.92913385826773" />
+        </mxCell>
+        <mxCell id="cache" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;只读 FIFO：发射查询；COPY_IN 完成后尝试插入；命中不刷新次序&lt;br&gt;L2 读池：1 MiB、250 bytes/cycle；DDR：全核共享 60 bytes/cycle&lt;br&gt;命中字节率与 COPY 计账另报，不代替 Makespan&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=13.066666666666668;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="26.45669291338583" y="627.4015748031496" width="574.4881889763781" height="75.59055118110237" />
+        </mxCell>
+        <mxCell id="pb_freeze_b" parent="1" edge="1" source="pb" target="freeze_b" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pl_freeze_l" parent="1" edge="1" source="pl" target="freeze_l" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pb_tb" parent="1" edge="1" source="freeze_b" target="tb" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.323943661971831;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pb_tlb" parent="1" edge="1" source="freeze_b" target="tlb" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.8;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="241.13385826771656" y="328.8188976377953" />
+              <mxPoint x="313.7007874015748" y="328.8188976377953" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pl_tll" parent="1" edge="1" source="freeze_l" target="tll" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.676056338028169;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
