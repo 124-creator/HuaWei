@@ -1,0 +1,38 @@
+name: LBSS support archive snapshot
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/lbss-support-snapshot.yml']
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: f65bf76d771d2a12aab66da67667bf02c87a652f
+          persist-credentials: false
+      - name: Inventory existing archives only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile,json
+          base=Path('r12_answer_20260925')
+          names=['R12_answers_candidate.zip','R12_team_share.zip']
+          inv={}
+          for name in names:
+              p=base/name
+              with zipfile.ZipFile(p) as z:
+                  inv[name]=[{'name':i.filename,'bytes':i.file_size} for i in z.infolist()]
+          Path('support-archive-inventory.json').write_text(json.dumps(inv,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lbss-existing-support-archives
+          path: |
+            r12_answer_20260925/R12_answers_candidate.zip
+            r12_answer_20260925/R12_team_share.zip
+            support-archive-inventory.json
+          retention-days: 3
