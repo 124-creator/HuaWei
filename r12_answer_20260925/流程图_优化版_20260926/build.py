@@ -1,4 +1,4 @@
-"""R12 flowchart redesign. AI-assisted code; no solver or manuscript execution.
+"""R12 flowchart V1.1 readability enhancement. AI-assisted code; no solver or manuscript execution.
 Generate editable drawio, vector PDF/SVG, 600dpi PNG and geometry/font checks.
 Release requires Liberation Serif and WenQuanYi Zen Hei. No font files are shipped.
 """
