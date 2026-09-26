@@ -21,24 +21,26 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq libreoffice-writer fonts-noto-cjk fonts-stix fonts-liberation
-          python3 -m pip install --quiet python-docx pypandoc-binary Pillow PyMuPDF numpy scipy
-      - name: Expand verified text sources
+          python3 -m pip install --quiet python-docx==1.2.0 pypandoc-binary Pillow PyMuPDF numpy scipy
+      - name: Verify and combine readable source patches
         run: |
           python3 - <<'PY'
-          import os, json, base64, gzip, hashlib
+          import os, json, hashlib, ast
           from pathlib import Path
           root = Path(os.environ['TARGET'])
-          payload = json.loads((root/'build_payload.json').read_text())
-          for item in payload['files']:
-              name = item['name']
-              if Path(name).is_absolute() or '..' in Path(name).parts:
-                  raise ValueError('Unsafe payload path')
-              raw = gzip.decompress(base64.b64decode(item['gzip_base64'], validate=True))
-              if hashlib.sha256(raw).hexdigest() != item['sha256']:
-                  raise ValueError('Text source checksum mismatch: '+name)
-              dest = root/name
-              dest.parent.mkdir(parents=True, exist_ok=True)
-              dest.write_bytes(raw)
+          release = json.loads((root/'PUBLISH.json').read_text())
+          edits = {}
+          for path in sorted(root.glob('edits_*.json')):
+              part = json.loads(path.read_text())
+              if set(edits) & set(part):
+                  raise ValueError('Duplicate paragraph patch')
+              edits.update(part)
+          canonical = json.dumps(edits, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
+          assert len(edits) == 190
+          assert hashlib.sha256(canonical).hexdigest() == release['edits_sha256'], 'Patch transfer mismatch'
+          (root/'edits.json').write_text(json.dumps(edits, ensure_ascii=False, indent=2))
+          semantic = ast.dump(ast.parse((root/'build_paper.py').read_text()), include_attributes=False).encode()
+          assert hashlib.sha256(semantic).hexdigest() == release['builder_ast_sha256'], 'Builder transfer mismatch'
           PY
           mkdir -p "$HOME/.config/fontconfig/conf.d"
           cp "$TARGET/fonts.conf" "$HOME/.config/fontconfig/conf.d/99-r12-fonts.conf"
