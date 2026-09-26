@@ -82,4 +82,8 @@ jobs:
             r12_answer_20260925/paper_full_v1/figures/F38.png
             r12_answer_20260925/paper_full_v1/figures/F39.png
             r12_answer_20260925/paper_full_v1/figures/F40.png
+            r12_answer_20260925/paper_full_v1/figures/F35.svg
+            r12_answer_20260925/paper_full_v1/figures/F38.svg
+            r12_answer_20260925/paper_full_v1/figures/F39.svg
+            r12_answer_20260925/paper_full_v1/figures/F40.svg
           retention-days: 7
