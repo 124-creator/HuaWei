@@ -1,0 +1,47 @@
+name: Final review v2
+on:
+  push:
+    branches:
+      - final/submission-review-20260927-v2
+    paths:
+      - '.github/workflows/final-review-v2.yml'
+      - '.github/scripts/final_review_v2.py'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: final/submission-review-20260927-v2
+          fetch-depth: 0
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libreoffice-writer fonts-wqy-zenhei fonts-liberation poppler-utils
+          python -m pip install pillow pymupdf==1.26.7
+      - name: Fetch flowchart branch
+        run: git fetch origin design/body-flowchart-fonts-20260926
+      - name: Run final review
+        run: python .github/scripts/final_review_v2.py
+      - name: Commit final folder
+        run: |
+          git add "最终提交_20260927"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if ! git diff --cached --quiet; then
+            git commit -m 'Apply reviewed flowcharts to latest AI-corrected final Word and audit blockers'
+            git push origin HEAD:final/submission-review-20260927-v2
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: final-review-v2
+          path: |
+            最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图版.docx
+            最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图版_排版核对_勿提交.pdf
+            最终提交_20260927/04_核验记录/最终提交终审_最新main_20260927.md
+            最终提交_20260927/04_核验记录/流程图替换终审核验_最新main_20260927.json
+          retention-days: 7
