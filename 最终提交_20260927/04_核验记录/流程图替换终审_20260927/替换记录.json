@@ -1,0 +1,92 @@
+{
+  "source": "最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图版_含附录D更正.docx",
+  "source_sha256": "66eb5a960ab083ac2ae4acfeff8a93ce75e62c6c6f5f732401c66931e4140c3a",
+  "output": "最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图优化版_20260927.docx",
+  "output_sha256": "ddf343a1667342aca9843c3193742d459fbacee63843fee0c2551f64d4cf6486",
+  "replacements": [
+    {
+      "caption": "图2-3",
+      "caption_para_index": 180,
+      "image_para_index": 181,
+      "relationship_id": "rId14",
+      "target": "media/image7.png",
+      "new_source": "r12_answer_20260925/paper_full_v1/figures/F35.png",
+      "new_source_sha256": "2f39f97258e10bfe6251d8e11d9b95b38a47db0ebce9a3296c1fe47864b6882d",
+      "embedded_sha256": "2f39f97258e10bfe6251d8e11d9b95b38a47db0ebce9a3296c1fe47864b6882d",
+      "new_source_px": [
+        4089,
+        4252
+      ],
+      "embedded_px": [
+        4089,
+        4252
+      ]
+    },
+    {
+      "caption": "图5-4",
+      "caption_para_index": 726,
+      "image_para_index": 722,
+      "relationship_id": "rId19",
+      "target": "media/image12.png",
+      "new_source": "r12_answer_20260925/paper_full_v1/figures/F38.png",
+      "new_source_sha256": "70a1c4dbbfd517f1ef8e66b20aaaaf3e618f5e0353397ba185b0cfd16aa8fb4f",
+      "embedded_sha256": "70a1c4dbbfd517f1ef8e66b20aaaaf3e618f5e0353397ba185b0cfd16aa8fb4f",
+      "new_source_px": [
+        3969,
+        4016
+      ],
+      "embedded_px": [
+        3969,
+        4016
+      ]
+    },
+    {
+      "caption": "图6-4",
+      "caption_para_index": 1036,
+      "image_para_index": 1024,
+      "relationship_id": "rId27",
+      "target": "media/image20.png",
+      "new_source": "r12_answer_20260925/paper_full_v1/figures/F39.png",
+      "new_source_sha256": "73d77b682b979469b9c3c8bb9e940cc3241003d0bfeab074ddc069340e55c316",
+      "embedded_sha256": "73d77b682b979469b9c3c8bb9e940cc3241003d0bfeab074ddc069340e55c316",
+      "new_source_px": [
+        3969,
+        5103
+      ],
+      "embedded_px": [
+        3969,
+        5103
+      ]
+    },
+    {
+      "caption": "图7-2",
+      "caption_para_index": 1312,
+      "image_para_index": 1287,
+      "relationship_id": "rId36",
+      "target": "media/image29.png",
+      "new_source": "r12_answer_20260925/paper_full_v1/figures/F40.png",
+      "new_source_sha256": "0118e83cc1d968bb675e026baa1ecfd9c26040b838b496a8791473a58c06b109",
+      "embedded_sha256": "0118e83cc1d968bb675e026baa1ecfd9c26040b838b496a8791473a58c06b109",
+      "new_source_px": [
+        3969,
+        4181
+      ],
+      "embedded_px": [
+        3969,
+        4181
+      ]
+    }
+  ],
+  "replacement_count": 4,
+  "stale_terms": {
+    "近优门控": 9,
+    "两字段方案": 1
+  },
+  "title_candidates": [
+    "题 目：基于可证下界与结构化搜索的多核NPU切图调度",
+    "关键词：多核NPU调度；计算图切分；结构化搜索；可证下界；缓存驻留；只读缓存",
+    "神经网络模型的规模仍在快速增长，单个AI核心受制造成本、功耗和散热的约束，难以独立提供所需算力，多核NPU因此成为提升并行能力与能效的主流架构。深度神经网络加速器的研究早已表明，片上缓存的数据复用与片外存储的访问次数在很大程度上决定了执行效率和能耗[1,2]。多核化以后，这一问题又多了一层：一张完整的计算图需要被划分为若干子图，分配到不同核心上执行，核内要尽量复用私有缓存中的数据，核间依赖则要经过共享主存或同步机制传递。",
+    "本文围绕多核 NPU 的切图、分核和核序建立统一的仿真驱动模型，采用结构化候选、适用下界与官方评价相结合的 LBSS 流程。在100张正式图、1400个场景—核数配置上保留全量结果。三问主要数值见表10-1，逐例原始指标见附录 A。"
+  ],
+  "scope": "Only four embedded flowchart images replaced; no prose, equations, tables, results, headers, footers, or section settings intentionally edited."
+}
