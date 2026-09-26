@@ -1,0 +1,48 @@
+{
+  "baseline_main_commit": "763e1ab704e751840cbc0c32132a1b0a49805429",
+  "source_docx_sha256": "7278ed1fc1ef7d240375d87e33833d420a4266959cf01808a90f1a5309decfaf",
+  "review_docx_sha256": "66eb5a960ab083ac2ae4acfeff8a93ce75e62c6c6f5f732401c66931e4140c3a",
+  "docx_changed_entries": [
+    "word/media/image13.png",
+    "word/media/image21.png",
+    "word/media/image30.png",
+    "word/media/image7.png"
+  ],
+  "structural_hashes": {
+    "word/document.xml": {
+      "before": "fd0fdde02fbebe9eb5e5ac90e3e92b4ee46d12d6c6b1e228ede5eb384cb0c25d",
+      "after": "fd0fdde02fbebe9eb5e5ac90e3e92b4ee46d12d6c6b1e228ede5eb384cb0c25d"
+    },
+    "word/_rels/document.xml.rels": {
+      "before": "0bf1b614504fb85967f99948f9d17636fcdc49e9dc25b1bc7d49960fda5239d4",
+      "after": "0bf1b614504fb85967f99948f9d17636fcdc49e9dc25b1bc7d49960fda5239d4"
+    },
+    "word/styles.xml": {
+      "before": "455ae2ce1147005204cf8476614b77736d32510005b6d7b9eb166e90616c10d4",
+      "after": "455ae2ce1147005204cf8476614b77736d32510005b6d7b9eb166e90616c10d4"
+    },
+    "docProps/core.xml": {
+      "before": "ce77720e325a9cfc1375cad26fca09ea73e8c3c57f45156e4d6fae0081dc041e",
+      "after": "ce77720e325a9cfc1375cad26fca09ea73e8c3c57f45156e4d6fae0081dc041e"
+    }
+  },
+  "ai_text_checks": {
+    "old_ChatGPT_count": 0,
+    "old_Claude_count": 0,
+    "Qwen_count": 9,
+    "DeepSeek_count": 5
+  },
+  "libreoffice_pages_before": 98,
+  "libreoffice_pages_after": 98,
+  "text_changed_pages": [],
+  "render_changed_pages": [
+    8,
+    28,
+    39,
+    49
+  ],
+  "preview_pdf_sha256": "73427814d14a5ca283884173cdb32455ac7d2c01e84cb71c6d83c11a3f46ac74",
+  "formal_pdf_status": "PENDING_WINDOWS_WORD_EXPORT",
+  "stale_named_pdf_sha256": "91dd6952b6ff40b969c9366fb6d4a61cb13942a6c659feb9b7ddc4f1fe49e647",
+  "support_zip_status": "AI comments still old wording per main correction record; requires sync before attachment lock"
+}
