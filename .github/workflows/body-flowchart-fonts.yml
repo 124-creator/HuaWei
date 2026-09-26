@@ -92,7 +92,7 @@ jobs:
             'r12_answer_20260925/paper_full_v1/figures/F40.',
             'r12_answer_20260925/paper_full_v1/qa/正文流程图字体增强_20260926/'
           ]
-          paths=subprocess.check_output(['git','diff','--cached','--name-only']).decode().splitlines()
+          paths=subprocess.check_output(['git','-c','core.quotePath=false','diff','--cached','--name-only']).decode().splitlines()
           bad=[p for p in paths if not any(p==a or p.startswith(a) for a in allowed)]
           assert not bad,bad
           PY
