@@ -18,13 +18,13 @@
       },
       "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes      8  0\nBAAAAA+LiberationSerif               CID TrueType      Identity-H       yes yes yes     13  0\nCAAAAA+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     18  0\n",
       "font_sizes_pt": [
-        9.0,
-        9.098,
-        9.195,
-        9.398,
-        12.195
+        9.795,
+        9.9,
+        9.998,
+        10.2,
+        12.998
       ],
-      "body_cjk_min_pt": 9.000073432922363,
+      "body_cjk_min_pt": 9.795080184936523,
       "cjk_expected": 218,
       "cjk_extracted": 218,
       "pdf_raster_images": 0,
@@ -38,7 +38,7 @@
       ],
       "svg_text_as_paths": true,
       "svg_foreign_objects": 0,
-      "second_renderer_mad": 0.011671925982908402,
+      "second_renderer_mad": 0.010650390209153981,
       "errors": []
     },
     {
@@ -57,13 +57,13 @@
       },
       "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes      8  0\nBAAAAA+LiberationSerif               CID TrueType      Identity-H       yes yes yes     13  0\nCAAAAA+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     18  0\n",
       "font_sizes_pt": [
-        9.0,
-        9.098,
-        9.195,
-        9.398,
-        12.195
+        9.795,
+        9.9,
+        9.998,
+        10.2,
+        12.998
       ],
-      "body_cjk_min_pt": 9.000186920166016,
+      "body_cjk_min_pt": 9.795204162597656,
       "cjk_expected": 248,
       "cjk_extracted": 248,
       "pdf_raster_images": 0,
@@ -77,7 +77,7 @@
       ],
       "svg_text_as_paths": true,
       "svg_foreign_objects": 0,
-      "second_renderer_mad": 0.010190483159918627,
+      "second_renderer_mad": 0.012181844739198385,
       "errors": []
     },
     {
@@ -96,12 +96,12 @@
       },
       "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes      9  0\nBAAAAA+LiberationSerif               CID TrueType      Identity-H       yes yes yes     14  0\nCAAAAA+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     19  0\n",
       "font_sizes_pt": [
-        9.0,
-        9.098,
-        9.3,
-        12.195
+        9.795,
+        9.9,
+        10.095,
+        12.998
       ],
-      "body_cjk_min_pt": 9.000182151794434,
+      "body_cjk_min_pt": 9.795198440551758,
       "cjk_expected": 252,
       "cjk_extracted": 252,
       "pdf_raster_images": 0,
@@ -115,7 +115,7 @@
       ],
       "svg_text_as_paths": true,
       "svg_foreign_objects": 0,
-      "second_renderer_mad": 0.010106235278221921,
+      "second_renderer_mad": 0.01191122460883919,
       "errors": []
     },
     {
@@ -134,16 +134,16 @@
       },
       "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes      8  0\nBAAAAA+LiberationSerif               CID TrueType      Identity-H       yes yes yes     13  0\nCAAAAA+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     18  0\n",
       "font_sizes_pt": [
-        7.748,
-        7.83,
-        7.995,
-        9.0,
-        9.3,
-        9.398,
-        9.6,
-        12.195
+        8.415,
+        8.498,
+        8.663,
+        9.795,
+        10.095,
+        10.2,
+        10.395,
+        12.998
       ],
-      "body_cjk_min_pt": 9.000081062316895,
+      "body_cjk_min_pt": 9.795087814331055,
       "cjk_expected": 218,
       "cjk_extracted": 218,
       "pdf_raster_images": 0,
@@ -157,7 +157,7 @@
       ],
       "svg_text_as_paths": true,
       "svg_foreign_objects": 0,
-      "second_renderer_mad": 0.010468621624414951,
+      "second_renderer_mad": 0.01228965622186434,
       "errors": []
     }
   ],

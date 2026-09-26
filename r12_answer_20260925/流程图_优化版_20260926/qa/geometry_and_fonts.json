@@ -10,8 +10,8 @@
       "figure": "00_R12_总体技术路线",
       "width_mm": 166.0,
       "height_mm": 159.0,
-      "body_font_min_pt": 9.0,
-      "title_font_pt": 12.2,
+      "body_font_min_pt": 9.8,
+      "title_font_pt": 13.0,
       "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nFMOLHP+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     15  0\nZEAWTS+LiberationSerif               CID TrueType      Identity-H       yes yes yes     22  0\nGIOYVT+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes     29  0\n",
       "png_size": [
         3921,
@@ -32,8 +32,8 @@
       "figure": "01_R12_问题一_候选与评价",
       "width_mm": 166.0,
       "height_mm": 190.0,
-      "body_font_min_pt": 9.0,
-      "title_font_pt": 12.2,
+      "body_font_min_pt": 9.8,
+      "title_font_pt": 13.0,
       "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBNXPIM+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     15  0\nELYYXT+LiberationSerif               CID TrueType      Identity-H       yes yes yes     22  0\nEYBPAR+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes     29  0\n",
       "png_size": [
         3921,
@@ -54,8 +54,8 @@
       "figure": "02_R12_问题二_Spill微批",
       "width_mm": 166.0,
       "height_mm": 195.0,
-      "body_font_min_pt": 9.0,
-      "title_font_pt": 12.2,
+      "body_font_min_pt": 9.8,
+      "title_font_pt": 13.0,
       "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCDLCYC+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     15  0\nCETXAM+LiberationSerif               CID TrueType      Identity-H       yes yes yes     22  0\nGDNJGF+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes     29  0\n",
       "png_size": [
         3921,
@@ -76,8 +76,8 @@
       "figure": "03_R12_问题三_配置与选解",
       "width_mm": 166.0,
       "height_mm": 189.0,
-      "body_font_min_pt": 9.0,
-      "title_font_pt": 12.2,
+      "body_font_min_pt": 9.8,
+      "title_font_pt": 13.0,
       "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBYPNEY+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     15  0\nVAYZRL+LiberationSerif               CID TrueType      Identity-H       yes yes yes     22  0\nHJOEFG+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes     29  0\n",
       "png_size": [
         3921,
