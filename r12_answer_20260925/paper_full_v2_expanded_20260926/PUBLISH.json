@@ -8,5 +8,6 @@
   "solver_rerun": false,
   "official_evaluator_rerun": false,
   "publish_scope": "new paper directory only",
-  "revision": 2
+  "revision": 3,
+  "math_normalization": "literal superscripts, alignment markers, factorial sign-test expression; reject PDF parser-error glyphs"
 }
