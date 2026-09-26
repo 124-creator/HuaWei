@@ -4,8 +4,8 @@
 
 由队伍“流程图初级稿件”（参考材料/流程图_初级稿件_20260925）优化与适配而来：
   0_总流程图  → F35 技术路线（与原F35合并，按四个阶段组织）
-  1_问题一    → F38 问题一求解流程（补“减少活动核心”与近优门控，去掉图内结果数字）
-  2_问题二    → F39 问题二求解流程（补关键链局部移动与近优门控）
+  1_问题一    → F38 问题一求解流程（补“减少活动核心”与3%近优性证书，去掉图内结果数字）
+  2_问题二    → F39 问题二求解流程（补关键链局部移动与3%近优性证书）
   3_问题三    → F40 问题三求解与受控对照（与原F23合并，术语与正文一致）
 流程与参数逐项取自 reproduction/NPU_R12 源码（solve_round12/10/7/6、solve_case_v2、residency_bands）。
 坐标以毫米为单位、自上而下计；字体与figures_v3一致（西文Times系、中文黑体）。
@@ -122,7 +122,7 @@ def roadmap(out):
             ("B", "问题二 · 场景B", "主导代价：核内驻留与容量溢出",
              "活动核数与驻留组织候选\n沿官方关键链的局部移动\nSpill触发的局部微批\n核归属不变 ⇒ 边界搬运不变", "五核平均加速比 4.131"),
             ("L2", "问题三 · 共享只读L2", "新增代价：命中、逐出与双带宽池",
-             "沿用场景B候选机制\n同一请求内跨配置重评价\n同方案配置比与分别选优比\n逐例分解恒等式", "五核平均加速比 4.219")]
+             "沿用场景B候选机制\nB类候选在L2配置下重评\n同方案配置比与分别选优比\n逐例分解恒等式", "五核平均加速比 4.219")]
     for i, (k, head, cost, body, res) in enumerate(cols):
         cx = x0 + w3 / 2 + i * (w3 + 3)
         h1 = cv.node(cx, 89, w3, 11, head + "\n" + cost, ec=C[k], fc=C[k], fs=7.8, color="white", weight="bold")
@@ -154,7 +154,7 @@ def q1_flow(out):
         cx = left + bw / 2 + i * (bw + gap)
         boxes.append(cv.node(cx, 50, bw, 12, n, ec=C["A"] if i in (1, 2) else GREY, fc=FC["A"] if i in (1, 2) else "white", fs=7.8))
         cv.path([(cx, hdr["b"]), (cx, 50)])
-    # 近优门控作用于②—⑤：红色虚线框，说明文字放在左下，避开连接线
+    # 3%近优性证书作用于②—⑤：红色虚线框仅标示适用范围
     gl, gr = boxes[0]["l"] - 1.2, boxes[3]["r"] + 1.2
     cv.ax.add_patch(FancyBboxPatch((gl, cv.y(63.3)), gr - gl, 14.6, boxstyle="round,pad=0,rounding_size=1.2",
                                    fc="none", ec=RED, lw=0.9, ls=(0, (3, 2))))
