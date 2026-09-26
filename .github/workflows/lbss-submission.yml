@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      PHASE: preflight
+      PHASE: build
       TARGET: r12_answer_20260925/paper_full_v2_expanded_20260926/submission_20260926
     steps:
       - uses: actions/checkout@v4
@@ -28,15 +28,15 @@ jobs:
           mkdir -p ~/.config/fontconfig/conf.d
           cp r12_answer_20260925/paper_full_v2_expanded_20260926/fonts.conf ~/.config/fontconfig/conf.d/99-paper.conf
           fc-cache -f >/dev/null
+      - name: Apply fragment-tested source fixes
+        run: |
+          python "$TARGET/apply_preflight_fixes.py"
+          python "$TARGET/asset_viewport_fix.py"
+          python "$TARGET/final_quality_adjustments.py"
+          python -m py_compile "$TARGET/build_submission.py" "$TARGET/figures.py" "$TARGET/support.py" "$TARGET/verify_delivery.py"
       - name: Prepare preserved-data figure assets
         run: python "$TARGET/figures.py"
-      - name: Validate content and render fragments only
-        if: env.PHASE == 'preflight'
-        run: |
-          python "$TARGET/build_submission.py" --mode preflight
-          soffice -env:UserInstallation=file:///tmp/lbss-fragment-profile --headless --convert-to pdf --outdir "$TARGET/preflight" "$TARGET/preflight/abstract.docx" "$TARGET/preflight/equations.docx"
       - name: Full manuscript construction (one invocation only)
-        if: env.PHASE == 'build'
         run: |
           python "$TARGET/build_submission.py" --mode build
           soffice -env:UserInstallation=file:///tmp/lbss-full-profile --headless --convert-to pdf --outdir "$TARGET/out" "$TARGET/out/多核NPU切图调度论文.docx"
@@ -61,10 +61,10 @@ jobs:
           if-no-files-found: error
           retention-days: 7
       - name: Publish built files without rebuilding
-        if: env.PHASE == 'build' && success()
+        if: success()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add "$TARGET/out" "$TARGET/assets"
+          git add "$TARGET/out" "$TARGET/assets" "$TARGET/build_submission.py" "$TARGET/figures.py" "$TARGET/verify_delivery.py"
           git commit -m 'Publish one-build LBSS review revision and validation; experiments unchanged'
           git push origin HEAD:main
