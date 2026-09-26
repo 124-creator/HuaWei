@@ -1,0 +1,85 @@
+{
+  "scope": "flowchart replacement only; no solver/evaluator execution",
+  "flowchart_source_branch": "design/body-flowchart-fonts-20260926",
+  "flowchart_source_commit": "b0d7860bef6b88d31599c2939caa3a14909e6bbd",
+  "docx_changed_entries": [
+    "word/media/image13.png",
+    "word/media/image21.png",
+    "word/media/image30.png",
+    "word/media/image7.png"
+  ],
+  "docx_structural_hashes": {
+    "word/document.xml": {
+      "before": "52ded03631121af2071832276b2dc909da7541381f3bf39c806f1b30c8edc589",
+      "after": "52ded03631121af2071832276b2dc909da7541381f3bf39c806f1b30c8edc589"
+    },
+    "word/_rels/document.xml.rels": {
+      "before": "0bf1b614504fb85967f99948f9d17636fcdc49e9dc25b1bc7d49960fda5239d4",
+      "after": "0bf1b614504fb85967f99948f9d17636fcdc49e9dc25b1bc7d49960fda5239d4"
+    },
+    "word/styles.xml": {
+      "before": "455ae2ce1147005204cf8476614b77736d32510005b6d7b9eb166e90616c10d4",
+      "after": "455ae2ce1147005204cf8476614b77736d32510005b6d7b9eb166e90616c10d4"
+    },
+    "docProps/core.xml": {
+      "before": "ce77720e325a9cfc1375cad26fca09ea73e8c3c57f45156e4d6fae0081dc041e",
+      "after": "ce77720e325a9cfc1375cad26fca09ea73e8c3c57f45156e4d6fae0081dc041e"
+    }
+  },
+  "pdf_pages": 95,
+  "pdf_text_changed_pages": [],
+  "pdf_render_changed_pages": [
+    8,
+    27,
+    38,
+    48
+  ],
+  "pdf_image_records": [
+    {
+      "page": 8,
+      "bbox": [
+        121.68,
+        70.8,
+        473.64,
+        447.72
+      ],
+      "entry": "word/media/image7.png"
+    },
+    {
+      "page": 27,
+      "bbox": [
+        111.36,
+        70.8,
+        483.96,
+        447.84
+      ],
+      "entry": "word/media/image13.png"
+    },
+    {
+      "page": 38,
+      "bbox": [
+        151.08,
+        136.08,
+        444.24,
+        513.12
+      ],
+      "entry": "word/media/image21.png"
+    },
+    {
+      "page": 48,
+      "bbox": [
+        118.68,
+        70.8,
+        476.52,
+        447.96
+      ],
+      "entry": "word/media/image30.png"
+    }
+  ],
+  "named_pdf_sha256_before": "91dd6952b6ff40b969c9366fb6d4a61cb13942a6c659feb9b7ddc4f1fe49e647",
+  "named_pdf_md5_before": "477fec907caaf90db7b2e0b89c4ba3b6",
+  "source_docx_sha256": "108b73cf6ca134659fc7fd6aa7c684954825e1acf17cb53411f6dfbc8e50a2e6",
+  "named_pdf_sha256_after": "312206d391c4012f945b03b1dadba11b55ca535f488e9c524c58bc75fae6f4d5",
+  "named_pdf_md5_after": "7965e08eae89f05189bb7e95e248b5ae",
+  "review_docx_sha256": "4bf859eedf8ecb6feb7944b07dc7c0d0eb139165198a00470c3c05bccb91773f"
+}
