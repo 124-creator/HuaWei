@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# AI-assisted maintenance utility. It does not modify experiments or numerical results.\n# Triggered only for the final-submission document review branch.
+# AI-assisted maintenance utility. It does not modify experiments or numerical results.\n# Triggered only for the final-submission document review branch.\n# Figure lookup scans all document-order paragraphs, including table-contained objects.
 from __future__ import annotations
 import argparse, hashlib, json, os, re, shutil, tempfile, zipfile
 from pathlib import Path
