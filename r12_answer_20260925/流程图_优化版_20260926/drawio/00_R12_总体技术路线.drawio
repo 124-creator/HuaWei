@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="R12-flowchart-redesign" version="24.7.17">
+  <diagram id="00_R12_总体技术路线" name="多核 NPU 切图调度：总体技术路线">
+    <mxGraphModel page="1" pageScale="1" pageWidth="627.4015748031496" pageHeight="600.9448818897638" grid="0" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;多核 NPU 切图调度：总体技术路线&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=16.266666666666666;fontColor=#222222;fillColor=none;strokeColor=none;strokeWidth=1.2;spacing=5;" r12Role="text">
+          <mxGeometry as="geometry" x="18.897637795275593" y="7.559055118110237" width="589.6062992125985" height="34.01574803149607" />
+        </mxCell>
+        <mxCell id="graphs" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;原始计算图 &lt;i&gt;G&lt;/i&gt;&lt;br&gt;结构、依赖与张量复用&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.0;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="22.67716535433071" y="64.25196850393701" width="173.85826771653547" height="64.25196850393701" />
+        </mxCell>
+        <mxCell id="config" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;固定硬件配置 &lt;i&gt;θ&lt;/i&gt;&lt;br&gt;容量、共享带宽与同步&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.0;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="226.7716535433071" y="64.25196850393701" width="173.85826771653547" height="64.25196850393701" />
+        </mxCell>
+        <mxCell id="ref" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;官方评价与单核 REF&lt;br&gt;统一执行和统计口径&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.0;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="430.8661417322835" y="64.25196850393701" width="173.85826771653547" height="64.25196850393701" />
+        </mxCell>
+        <mxCell id="model" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;联合决策 &lt;i&gt;P&lt;/i&gt; = (&lt;i&gt;g&lt;/i&gt;, &lt;i&gt;a&lt;/i&gt;, &lt;i&gt;π&lt;/i&gt;)：划分、核心归属、核上顺序&lt;br&gt;满足执行约束；先比较 Makespan，再比较新增 COPY&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.533333333333333;fontColor=#222222;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="22.67716535433071" y="170.07874015748033" width="582.0472440944883" height="71.81102362204726" />
+        </mxCell>
+        <mxCell id="gen" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;结构化&lt;br&gt;候选生成&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.266666666666666;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="22.67716535433071" y="283.46456692913387" width="128.50393700787401" height="64.25196850393701" />
+        </mxCell>
+        <mxCell id="screen" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;结构检查与&lt;br&gt;有效下界筛选&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.266666666666666;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="173.85826771653547" y="283.46456692913387" width="128.50393700787401" height="64.25196850393701" />
+        </mxCell>
+        <mxCell id="evaluate" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;官方完整&lt;br&gt;事件评价&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.266666666666666;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="325.0393700787402" y="283.46456692913387" width="128.50393700787401" height="64.25196850393701" />
+        </mxCell>
+        <mxCell id="keep" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;字典序保留&lt;br&gt;已得可行解&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.266666666666666;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="476.22047244094495" y="283.46456692913387" width="128.50393700787401" height="64.25196850393701" />
+        </mxCell>
+        <mxCell id="a" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;问题一 · 场景 A&lt;br&gt;每子图一个 Task&lt;br&gt;依赖带与反馈重排&lt;br&gt;Task 粒度与并行权衡&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.0;fontColor=#222222;fillColor=#EDF0F7;strokeColor=#3C5488;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="22.67716535433071" y="415.74803149606305" width="173.85826771653547" height="109.60629921259843" />
+        </mxCell>
+        <mxCell id="b" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;问题二 · 场景 B&lt;br&gt;每核心一个 Task&lt;br&gt;活动核与驻留组织&lt;br&gt;真实 Spill 引导微批&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.0;fontColor=#222222;fillColor=#E6F2F2;strokeColor=#007C83;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="226.7716535433071" y="415.74803149606305" width="173.85826771653547" height="109.60629921259843" />
+        </mxCell>
+        <mxCell id="l2" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;问题三 · 共享 L2&lt;br&gt;沿用 B 的 Task 结构&lt;br&gt;L2 评价下独立选解&lt;br&gt;同方案配置对照&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.0;fontColor=#222222;fillColor=#F7EFE6;strokeColor=#B16D24;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="430.8661417322835" y="415.74803149606305" width="173.85826771653547" height="109.60629921259843" />
+        </mxCell>
+        <mxCell id="deliver" parent="1" vertex="1" value="&lt;div style=&quot;font-family:'Liberation Serif','WenQuanYi Zen Hei';line-height:1.48;&quot;&gt;验证与交付：逐核曲线、逐例表、失败与预算记录、可复现程序&lt;/div&gt;" style="rounded=1;arcSize=7;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=WenQuanYi Zen Hei;fontSize=12.133333333333333;fontColor=#222222;fillColor=#F3F4F7;strokeColor=#555555;strokeWidth=1.2;spacing=5;" r12Role="node">
+          <mxGeometry as="geometry" x="22.67716535433071" y="551.8110236220473" width="582.0472440944883" height="41.5748031496063" />
+        </mxCell>
+        <mxCell id="graphs_model" parent="1" edge="1" source="graphs" target="model" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.14935064935064934;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="config_model" parent="1" edge="1" source="config" target="model" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ref_model" parent="1" edge="1" source="ref" target="model" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.8506493506493507;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gen_screen" parent="1" edge="1" source="gen" target="screen" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="screen_evaluate" parent="1" edge="1" source="screen" target="evaluate" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evaluate_keep" parent="1" edge="1" source="evaluate" target="keep" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="model_gen" parent="1" edge="1" source="model" target="gen" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.11038961038961038;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="86.92913385826773" y="260.7874015748032" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="shared_a" parent="1" edge="1" source="keep" target="a" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="shared_pipeline_fanout">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="540.4724409448819" y="385.5118110236221" />
+              <mxPoint x="109.60629921259843" y="385.5118110236221" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="shared_b" parent="1" edge="1" source="keep" target="b" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="shared_pipeline_fanout">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="540.4724409448819" y="385.5118110236221" />
+              <mxPoint x="313.7007874015748" y="385.5118110236221" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="shared_l2" parent="1" edge="1" source="keep" target="l2" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="shared_pipeline_fanout">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="540.4724409448819" y="385.5118110236221" />
+              <mxPoint x="517.7952755905512" y="385.5118110236221" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a_deliver" parent="1" edge="1" source="a" target="deliver" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.14935064935064934;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_deliver" parent="1" edge="1" source="b" target="deliver" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l2_deliver" parent="1" edge="1" source="l2" target="deliver" style="edgeStyle=none;rounded=0;html=1;strokeColor=#555555;strokeWidth=1.15;endArrow=block;endFill=1;endSize=6;exitX=0.5;exitY=1;entryX=0.8506493506493507;entryY=0;exitPerimeter=0;entryPerimeter=0;" r12Bus="">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,22 @@
+{
+  "scope": "editable sources and final exports only",
+  "base_commit": "7cc49df7a561115f63b42753b99ebecf59f7b36e",
+  "sha256": {
+    "drawio/00_R12_总体技术路线.drawio": "2c724a9b834c983e8015bf2fcc204d3fc01e98e27758716aad7cc555cecdaec2",
+    "drawio/01_R12_问题一_候选与评价.drawio": "ac8952b62ffee0481ba030453c4875ccc400ccd66163a320fa6a0eecb0d64125",
+    "drawio/02_R12_问题二_Spill微批.drawio": "3100e18ff1f34d15b89c643d3aae9865acd08e35cc41262d7be54b2e2c7f177b",
+    "drawio/03_R12_问题三_配置与选解.drawio": "5cd490be87038dab7fb1ea83a5dad7252ec1bf8bd3bc79f9deaebd2b8e10c0b1",
+    "exports/00_R12_总体技术路线.pdf": "9df5dbf3e96e10bd3f32472f6897bd49b23441b7fe83382ba72f414843cf5e0c",
+    "exports/00_R12_总体技术路线.png": "48fee803fcec3832756fd8f646424ff6dffa69491398bd3b8edd403067a7aba0",
+    "exports/00_R12_总体技术路线.svg": "6c33baa9a10397e36066723c5923cd0a44b2546fa9b904833b5d7a38df457b2f",
+    "exports/01_R12_问题一_候选与评价.pdf": "efd0fcb5841b25fe0be06ce8fbeccfa20152931be77c750d298d9ae4dcce2f40",
+    "exports/01_R12_问题一_候选与评价.png": "0ecc9c1d4d474c6a4e7e5b5ff116df8597e731fa200d469873eecf7a8f917116",
+    "exports/01_R12_问题一_候选与评价.svg": "8aee93fb83d9d016393111590888a3967ac40229dbc579c9d29f1515fd8a02a3",
+    "exports/02_R12_问题二_Spill微批.pdf": "db1daab08ba97457c26d96c987a67311f8d3fe4621cf9985668b83a451b3adb7",
+    "exports/02_R12_问题二_Spill微批.png": "c30af116d975ff4bcb03cff283150d3e38454f04f91930661afe77f78368b29f",
+    "exports/02_R12_问题二_Spill微批.svg": "d5f82348c9fa3f5de8f228ad30bb3df97215260624fbb71bd7eb2321f315b793",
+    "exports/03_R12_问题三_配置与选解.pdf": "a1f68794abba4b965f86781dcef2147ed4de0ff830597118a9a984186a271094",
+    "exports/03_R12_问题三_配置与选解.png": "ccba218cbb493e52aabcdb437bfed2142c56e62898b09fa1dc3fff95299954ea",
+    "exports/03_R12_问题三_配置与选解.svg": "35966b60440a96cfb136100d3e2c27c5213d0fb0b167272a1a0322b9b5357d90"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "base_commit": "7cc49df7a561115f63b42753b99ebecf59f7b36e",
+  "renderer": "draw.io Desktop 31.5.2 -> uniform vector page normalization -> PDF/SVG paths/PNG",
+  "figures": [
+    {
+      "figure": "00_R12_总体技术路线",
+      "native_export_returncode": 0,
+      "dimensions_mm": [
+        166.0,
+        159.0
+      ],
+      "native_page_normalization": {
+        "uniform_scale": 1.0457122528050375,
+        "translation_pt": [
+          0.3653477451685454,
+          0.3576766511668481
+        ]
+      },
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes      8  0\nBAAAAA+LiberationSerif               CID TrueType      Identity-H       yes yes yes     13  0\nCAAAAA+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     18  0\n",
+      "font_sizes_pt": [
+        9.0,
+        9.098,
+        9.195,
+        9.398,
+        12.195
+      ],
+      "body_cjk_min_pt": 9.000073432922363,
+      "cjk_expected": 218,
+      "cjk_extracted": 218,
+      "pdf_raster_images": 0,
+      "png_dimensions": [
+        3922,
+        3756
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_text_as_paths": true,
+      "svg_foreign_objects": 0,
+      "second_renderer_mad": 0.011671925982908402,
+      "errors": []
+    },
+    {
+      "figure": "01_R12_问题一_候选与评价",
+      "native_export_returncode": 0,
+      "dimensions_mm": [
+        166.0,
+        190.0
+      ],
+      "native_page_normalization": {
+        "uniform_scale": 1.0457175730758466,
+        "translation_pt": [
+          0.3651710372222148,
+          0.35766892684134177
+        ]
+      },
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes      8  0\nBAAAAA+LiberationSerif               CID TrueType      Identity-H       yes yes yes     13  0\nCAAAAA+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     18  0\n",
+      "font_sizes_pt": [
+        9.0,
+        9.098,
+        9.195,
+        9.398,
+        12.195
+      ],
+      "body_cjk_min_pt": 9.000186920166016,
+      "cjk_expected": 248,
+      "cjk_extracted": 248,
+      "pdf_raster_images": 0,
+      "png_dimensions": [
+        3922,
+        4489
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_text_as_paths": true,
+      "svg_foreign_objects": 0,
+      "second_renderer_mad": 0.010190483159918627,
+      "errors": []
+    },
+    {
+      "figure": "02_R12_问题二_Spill微批",
+      "native_export_returncode": 0,
+      "dimensions_mm": [
+        166.0,
+        195.0
+      ],
+      "native_page_normalization": {
+        "uniform_scale": 1.0457083054594551,
+        "translation_pt": [
+          0.3631546497345006,
+          0.35767364501953125
+        ]
+      },
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes      9  0\nBAAAAA+LiberationSerif               CID TrueType      Identity-H       yes yes yes     14  0\nCAAAAA+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     19  0\n",
+      "font_sizes_pt": [
+        9.0,
+        9.098,
+        9.3,
+        12.195
+      ],
+      "body_cjk_min_pt": 9.000182151794434,
+      "cjk_expected": 252,
+      "cjk_extracted": 252,
+      "pdf_raster_images": 0,
+      "png_dimensions": [
+        3922,
+        4607
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_text_as_paths": true,
+      "svg_foreign_objects": 0,
+      "second_renderer_mad": 0.010106235278221921,
+      "errors": []
+    },
+    {
+      "figure": "03_R12_问题三_配置与选解",
+      "native_export_returncode": 0,
+      "dimensions_mm": [
+        166.0,
+        189.0
+      ],
+      "native_page_normalization": {
+        "uniform_scale": 1.045702161018141,
+        "translation_pt": [
+          0.36338647613655795,
+          0.36177191772982553
+        ]
+      },
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes      8  0\nBAAAAA+LiberationSerif               CID TrueType      Identity-H       yes yes yes     13  0\nCAAAAA+LiberationSerif-Italic        CID TrueType      Identity-H       yes yes yes     18  0\n",
+      "font_sizes_pt": [
+        7.748,
+        7.83,
+        7.995,
+        9.0,
+        9.3,
+        9.398,
+        9.6,
+        12.195
+      ],
+      "body_cjk_min_pt": 9.000081062316895,
+      "cjk_expected": 218,
+      "cjk_extracted": 218,
+      "pdf_raster_images": 0,
+      "png_dimensions": [
+        3922,
+        4465
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_text_as_paths": true,
+      "svg_foreign_objects": 0,
+      "second_renderer_mad": 0.010468621624414951,
+      "errors": []
+    }
+  ],
+  "error_count": 0,
+  "visual_review": "See separately signed-by-hash visual_review.json; machine checks are not visual review"
+}
