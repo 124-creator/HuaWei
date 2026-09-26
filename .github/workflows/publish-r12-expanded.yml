@@ -39,8 +39,15 @@ jobs:
           assert len(edits) == 190
           assert hashlib.sha256(canonical).hexdigest() == release['edits_sha256'], 'Patch transfer mismatch'
           (root/'edits.json').write_text(json.dumps(edits, ensure_ascii=False, indent=2))
-          semantic = ast.dump(ast.parse((root/'build_paper.py').read_text()), include_attributes=False).encode()
-          assert hashlib.sha256(semantic).hexdigest() == release['builder_ast_sha256'], 'Builder transfer mismatch'
+          def norm(x):
+              if isinstance(x, ast.AST):
+                  return {'node': type(x).__name__, **{k:norm(v) for k,v in ast.iter_fields(x) if v is not None and v != []}}
+              if isinstance(x, list): return [norm(v) for v in x]
+              return x
+          semantic = json.dumps(norm(ast.parse((root/'build_paper.py').read_text())), ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
+          actual = hashlib.sha256(semantic).hexdigest()
+          print('Normalized builder hash:', actual)
+          assert actual == release['builder_ast_sha256'], 'Builder transfer mismatch'
           PY
           mkdir -p "$HOME/.config/fontconfig/conf.d"
           cp "$TARGET/fonts.conf" "$HOME/.config/fontconfig/conf.d/99-r12-fonts.conf"
