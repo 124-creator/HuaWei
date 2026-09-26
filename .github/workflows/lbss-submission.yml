@@ -1,0 +1,70 @@
+name: LBSS submission preflight and single build
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/lbss-submission.yml']
+permissions:
+  contents: write
+concurrency:
+  group: lbss-submission-single-build
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PHASE: preflight
+      TARGET: r12_answer_20260925/paper_full_v2_expanded_20260926/submission_20260926
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install document-only dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libreoffice-writer fonts-noto-cjk fonts-stix fonts-liberation
+          python -m pip install --quiet python-docx pypandoc-binary Pillow PyMuPDF numpy scipy matplotlib cairosvg
+          mkdir -p ~/.config/fontconfig/conf.d
+          cp r12_answer_20260925/paper_full_v2_expanded_20260926/fonts.conf ~/.config/fontconfig/conf.d/99-paper.conf
+          fc-cache -f >/dev/null
+      - name: Prepare preserved-data figure assets
+        run: python "$TARGET/figures.py"
+      - name: Validate content and render fragments only
+        if: env.PHASE == 'preflight'
+        run: |
+          python "$TARGET/build_submission.py" --mode preflight
+          soffice -env:UserInstallation=file:///tmp/lbss-fragment-profile --headless --convert-to pdf --outdir "$TARGET/preflight" "$TARGET/preflight/abstract.docx" "$TARGET/preflight/equations.docx"
+      - name: Full manuscript construction (one invocation only)
+        if: env.PHASE == 'build'
+        run: |
+          python "$TARGET/build_submission.py" --mode build
+          soffice -env:UserInstallation=file:///tmp/lbss-full-profile --headless --convert-to pdf --outdir "$TARGET/out" "$TARGET/out/多核NPU切图调度论文.docx"
+          python "$TARGET/verify_delivery.py"
+      - name: Archive outputs and staged sources
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import os, zipfile
+          root=Path(os.environ['TARGET'])
+          with zipfile.ZipFile('lbss-submission-bundle.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(root.rglob('*')):
+                  if p.is_file() and '__pycache__' not in p.parts:
+                      z.write(p,p.relative_to(root))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lbss-submission-bundle
+          path: lbss-submission-bundle.zip
+          if-no-files-found: error
+          retention-days: 7
+      - name: Publish built files without rebuilding
+        if: env.PHASE == 'build' && success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$TARGET/out" "$TARGET/assets"
+          git commit -m 'Publish one-build LBSS review revision and validation; experiments unchanged'
+          git push origin HEAD:main
