@@ -1,0 +1,12 @@
+{
+  "edition": "R12完整增强版匿名核验稿",
+  "requested_page_range": [80, 100],
+  "source_commit": "c58842775316e636705b187ed351516a7613a175",
+  "source_docx_sha256": "64ed65d80b63e7e7e2bbc5bbe13f22988f1c4ed25ecb2ac2e6018e7b695a724d",
+  "edits_sha256": "5d7d8c82460c629f4351e9fd863aa59c40a9fed5a0098ee92d963d6e7568f4b1",
+  "builder_ast_sha256": "139ae2ed86687f8457ab18a700feefb03d87a0c2b25cfd29ff7130d512e1ab94",
+  "solver_rerun": false,
+  "official_evaluator_rerun": false,
+  "publish_scope": "new paper directory only",
+  "revision": 1
+}
