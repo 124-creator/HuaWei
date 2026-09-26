@@ -1,0 +1,44 @@
+{
+  "source_docx_sha256": "731421f1e173b28e263be5a167c350d0bb779f3bc4b9f90b63332891821e1558",
+  "edits": {
+    "规模数据给出三条直接影响方法设计的信息。": 1,
+    "依赖结构又给出两条信息。": 1,
+    "本文选择结构化候选与官方评价组合，主要考虑如下。": 1,
+    "本章自身的结论可归为三点。": 1,
+    "可以得到四条不依赖具体数字的认识。": 1,
+    "本文的方法特点概括如下。": 1,
+    "COPY 操作计0。": 1,
+    "只计原始计算周期": 3,
+    "只计计算周期": 2
+  },
+  "cover": {
+    "school": "郑州航空工业管理学院",
+    "team_no": "",
+    "members": [
+      "田中斐",
+      "安镕基",
+      "王玥"
+    ]
+  },
+  "tables_text_unchanged": true,
+  "submission_docx_sha256": "1794d615064d0236a1127c0ea61f1986b71e3857251fe6bf6c7a46aadd6babdc",
+  "support": {
+    "custom_python_AI_annotated": 58,
+    "official_python_byte_identical": 10,
+    "custom_AST_identical": true,
+    "archive_sha256": "f83f1831dee0a13d6d98defccc4ad50c0b41b31e5d26743e40f28e27fe4ccbf3",
+    "input_completeness": {
+      "official_input_graphs_present": 0,
+      "full_selected_plan_files_present": 0,
+      "status": "CODE_AND_ARCHIVED_TABLES_PACKAGED; complete replay inputs not present in scoped source snapshot",
+      "required_from_official_originals": [
+        "100 original case_*.json graphs",
+        "Actual selected two-field plans and complete official raw outputs/traces for independent replay as needed"
+      ],
+      "note": "Existing answer/team-share archives were inventoried; they are document/table packages, not a complete graph-and-plan replay archive."
+    }
+  },
+  "support_zip_sha256": "5dc51d6b83df1fde66b57b87eae17554aa0801425ddf2d1085d93a14537df753",
+  "path_sanitized_files": 8,
+  "solver_or_evaluator_executed": false
+}
