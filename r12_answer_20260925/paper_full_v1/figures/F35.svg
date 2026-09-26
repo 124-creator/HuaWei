@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="476.311181pt" height="510.326929pt" viewBox="0 0 476.311181 510.326929" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="490.95492pt" height="510.326929pt" viewBox="0 0 490.95492 510.326929" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-25T19:04:14.103668</dc:date>
+    <dc:date>2026-09-26T08:37:41.009171</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -22,8 +22,8 @@
  <g id="figure_1">
   <g id="patch_1">
    <path d="M 0 510.326929 
-L 476.311181 510.326929 
-L 476.311181 0 
+L 490.95492 510.326929 
+L 490.95492 0 
 L 0 0 
 z
 " style="fill: #ffffff"/>
@@ -575,7 +575,7 @@ z
    </g>
    <g id="text_1">
     <!-- 阶段一 -->
-    <g style="fill: #333333" transform="translate(16.391811 56.291149) scale(0.08 -0.08)">
+    <g style="fill: #333333" transform="translate(14.951811 56.25576) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-6b02" d="M 5019 -769 
 Q 4769 -744 4519 -769 
@@ -728,7 +728,7 @@ z
    </g>
    <g id="text_2">
     <!-- 数据与口径 -->
-    <g style="fill: #333333" transform="translate(8.391811 67.67499) scale(0.08 -0.08)">
+    <g style="fill: #333333" transform="translate(5.991811 68.288817) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-3a3c" d="M 263 1500 
 Q 275 1663 263 1819 
@@ -1030,7 +1030,7 @@ z
    </g>
    <g id="text_3">
     <!-- 阶段二 -->
-    <g style="fill: #333333" transform="translate(16.391811 175.346267) scale(0.08 -0.08)">
+    <g style="fill: #333333" transform="translate(14.951811 175.310878) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-2358" d="M 6044 400 
 Q 6025 175 6044 -56 
@@ -1061,7 +1061,7 @@ z
    </g>
    <g id="text_4">
     <!-- 统一建模 -->
-    <g style="fill: #333333" transform="translate(12.391811 186.800733) scale(0.08 -0.08)">
+    <g style="fill: #333333" transform="translate(10.471811 187.423035) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-53ab" d="M 4744 -669 
 Q 4456 -669 4278 -494 
@@ -1361,7 +1361,7 @@ z
    </g>
    <g id="text_5">
     <!-- 阶段三 -->
-    <g style="fill: #333333" transform="translate(16.391811 334.086425) scale(0.08 -0.08)">
+    <g style="fill: #333333" transform="translate(14.951811 334.051036) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-22d5" d="M 6013 144 
 Q 5994 -81 6013 -313 
@@ -1402,7 +1402,7 @@ z
    </g>
    <g id="text_6">
     <!-- 分问求解 -->
-    <g style="fill: #333333" transform="translate(12.391811 345.482141) scale(0.08 -0.08)">
+    <g style="fill: #333333" transform="translate(10.471811 346.097392) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-26d2" d="M 2088 2169 
 Q 1688 2169 1288 2150 
@@ -1676,7 +1676,7 @@ z
    </g>
    <g id="text_7">
     <!-- 阶段四 -->
-    <g style="fill: #333333" transform="translate(16.391811 464.480126) scale(0.08 -0.08)">
+    <g style="fill: #333333" transform="translate(14.951811 464.444737) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-2ba7" d="M 781 4781 
 L 5775 4781 
@@ -1727,7 +1727,7 @@ z
    </g>
    <g id="text_8">
     <!-- 检验与交付 -->
-    <g style="fill: #333333" transform="translate(8.391811 475.973341) scale(0.08 -0.08)">
+    <g style="fill: #333333" transform="translate(5.991811 476.600293) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-3d8c" d="M 6175 -213 
 Q 6156 -381 6175 -544 
@@ -1999,7 +1999,7 @@ z
    </g>
    <g id="text_9">
     <!-- 100张正式计算图 -->
-    <g transform="translate(97.506969 29.430194) scale(0.079 -0.079)">
+    <g transform="translate(93.756969 29.379433) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-14" d="M 1959 250 
 L 2816 166 
@@ -2386,7 +2386,7 @@ z
    </g>
    <g id="text_10">
     <!-- 规模、依赖结构与复用特征普查 -->
-    <g transform="translate(71.831969 40.803197) scale(0.079 -0.079)">
+    <g transform="translate(64.831969 41.480013) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-5e90" d="M 4756 -675 
 Q 4475 -675 4290 -500 
@@ -3178,7 +3178,7 @@ z
    </g>
    <g id="text_11">
     <!-- 固定配置 θ：L1/UB容量、共享DDR -->
-    <g transform="translate(203.392513 23.924528) scale(0.079 -0.079)">
+    <g transform="translate(195.583373 23.53287) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2bc6" d="M 2294 306 
 L 1856 306 
@@ -3912,7 +3912,7 @@ z
    </g>
    <g id="text_12">
     <!-- 60 B/cycle、同步等待；问题三另加 -->
-    <g transform="translate(204.632443 35.039547) scale(0.079 -0.079)">
+    <g transform="translate(196.980256 35.342809) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-19" d="M 3009 1300 
 Q 3009 647 2679 292 
@@ -4520,7 +4520,7 @@ z
    </g>
    <g id="text_13">
     <!-- 1 MiB只读L2（250 B/cycle） -->
-    <g transform="translate(215.71281 46.253933) scale(0.079 -0.079)">
+    <g transform="translate(209.463201 47.264693) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-30" d="M 2694 0 
 L 2584 0 
@@ -4793,7 +4793,7 @@ z
    </g>
    <g id="text_14">
     <!-- 官方评估程序：唯一评分口径 -->
-    <g transform="translate(351.68748 29.541905) scale(0.079 -0.079)">
+    <g transform="translate(345.18748 29.505285) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-3064" d="M 1319 3731 
 L 4644 3738 
@@ -5235,7 +5235,7 @@ z
    </g>
    <g id="text_15">
     <!-- 整图单核REF：统一加速比分母 -->
-    <g transform="translate(348.393551 40.714322) scale(0.079 -0.079)">
+    <g transform="translate(341.476598 41.379888) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-3a40" d="M 6113 -319 
 Q 6094 -463 6113 -606 
@@ -5742,7 +5742,7 @@ z
    </g>
    <g id="text_16">
     <!-- 认清代价从何而来：切图、分核、核序三项决策互相牵制；Makespan由评估程序事件推进决定，写不出闭式表达式 -->
-    <g transform="translate(67.149607 87.580476) scale(0.079 -0.079)">
+    <g transform="translate(42.094529 87.896394) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-6070" d="M 3875 5063 
 Q 4156 5031 4438 5063 
@@ -7520,7 +7520,7 @@ z
    </g>
    <g id="text_17">
     <!-- 决策 P=(g, a, π)；覆盖、唯一排布与联合无环；字典序目标（Makespan，新增搬运量） -->
-    <g transform="translate(116.585092 135.920188) scale(0.079 -0.079)">
+    <g transform="translate(97.78767 135.531968) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-33" d="M 2681 2950 
 Q 2681 3466 2440 3687 
@@ -8893,7 +8893,7 @@ z
    </g>
    <g id="text_18">
     <!-- 评价语义约束：依赖与Pipe串行、Task释放、活跃集合容量、带宽公平共享、边界计账 -->
-    <g transform="translate(116.359818 147.116059) scale(0.079 -0.079)">
+    <g transform="translate(97.533881 147.432992) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-60b9" d="M 2850 -769 
 Q 2606 -744 2369 -769 
@@ -10068,7 +10068,7 @@ z
    </g>
    <g id="text_19">
     <!-- 复杂性与下界：忽略搬运时已NP难；与方案无关的计算下界与窗口下界 -->
-    <g transform="translate(141.535513 158.373031) scale(0.079 -0.079)">
+    <g transform="translate(125.896373 159.402853) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-3c0e" d="M 5744 -50 
 L 5419 -431 
@@ -10860,7 +10860,7 @@ z
    </g>
    <g id="text_20">
     <!-- 认代价 -->
-    <g transform="translate(97.587874 195.972324) scale(0.082 -0.082)">
+    <g transform="translate(96.111874 196.267812) scale(0.09184 -0.09184)">
      <use xlink:href="#WenQuanYiZenHei-6070"/>
      <use xlink:href="#WenQuanYiZenHei-23af" transform="translate(100 0)"/>
      <use xlink:href="#WenQuanYiZenHei-23c3" transform="translate(200 0)"/>
@@ -10868,7 +10868,7 @@ z
    </g>
    <g id="text_21">
     <!-- 找出各场景的 -->
-    <g transform="translate(86.487874 214.431502) scale(0.078 -0.078)">
+    <g transform="translate(83.187874 214.340063) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-374a" d="M 5669 4119 
 L 5300 3800 
@@ -11128,7 +11128,7 @@ z
    </g>
    <g id="text_22">
     <!-- 主导代价 -->
-    <g transform="translate(94.287874 225.622153) scale(0.078 -0.078)">
+    <g transform="translate(92.087874 226.396838) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2307" d="M 6138 44 
 Q 6113 -163 6138 -369 
@@ -11236,7 +11236,7 @@ z
    </g>
    <g id="text_23">
     <!-- 造候选 -->
-    <g transform="translate(201.052441 195.996667) scale(0.082 -0.082)">
+    <g transform="translate(199.576441 196.295077) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-64ec" d="M 1263 2925 
 L 838 2925 
@@ -11480,7 +11480,7 @@ z
    </g>
    <g id="text_24">
     <!-- 针对主导代价的 -->
-    <g transform="translate(186.052441 214.545455) scale(0.078 -0.078)">
+    <g transform="translate(182.202441 214.470087) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-6954" d="M 4725 -769 
 Q 4481 -744 4231 -769 
@@ -11607,7 +11607,7 @@ z
    </g>
    <g id="text_25">
     <!-- 结构化候选族 -->
-    <g transform="translate(189.952441 225.523434) scale(0.078 -0.078)">
+    <g transform="translate(186.652441 226.284197) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-27e2" d="M 3863 81 
 Q 3863 -63 3922 -166 
@@ -11746,7 +11746,7 @@ z
    </g>
    <g id="text_26">
     <!-- 设下界 -->
-    <g transform="translate(304.517008 195.972324) scale(0.082 -0.082)">
+    <g transform="translate(303.041008 196.267812) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-608a" d="M 2694 2225 
 Q 2719 2425 2694 2619 
@@ -11820,7 +11820,7 @@ z
    </g>
    <g id="text_27">
     <!-- 下界剪枝与 -->
-    <g transform="translate(297.317008 214.514986) scale(0.078 -0.078)">
+    <g transform="translate(294.567008 214.435321) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2736" d="M 2550 894 
 L 994 894 
@@ -11998,7 +11998,7 @@ z
    </g>
    <g id="text_28">
     <!-- 3%近优认证 -->
-    <g transform="translate(296.01843 225.530747) scale(0.078 -0.078)">
+    <g transform="translate(293.085297 226.292541) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-16" d="M 2950 1141 
 Q 2950 575 2562 256 
@@ -12254,7 +12254,7 @@ z
    </g>
    <g id="text_29">
     <!-- 凭评测 -->
-    <g transform="translate(407.981575 195.972324) scale(0.082 -0.082)">
+    <g transform="translate(406.505575 196.267812) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-26b9" d="M 5838 -719 
 L 4425 -719 
@@ -12412,7 +12412,7 @@ z
    </g>
    <g id="text_30">
     <!-- 官方评价器 -->
-    <g transform="translate(400.781575 214.541799) scale(0.078 -0.078)">
+    <g transform="translate(398.031575 214.465915) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2b34" d="M 3850 -769 
 Q 3631 -744 3413 -769 
@@ -12511,7 +12511,7 @@ z
    </g>
    <g id="text_31">
     <!-- 字典序定案 -->
-    <g transform="translate(400.781575 225.652622) scale(0.078 -0.078)">
+    <g transform="translate(398.031575 226.431603) scale(0.089 -0.089)">
      <use xlink:href="#WenQuanYiZenHei-3023"/>
      <use xlink:href="#WenQuanYiZenHei-2644" transform="translate(100 0)"/>
      <use xlink:href="#WenQuanYiZenHei-335b" transform="translate(200 0)"/>
@@ -12521,7 +12521,7 @@ z
    </g>
    <g id="text_32">
     <!-- 问题一 · 场景A -->
-    <g style="fill: #ffffff" transform="translate(101.565031 267.561608) scale(0.078 -0.078)">
+    <g style="fill: #ffffff" transform="translate(97.959437 267.467419) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-Bold-3" transform="scale(0.015625)"/>
       <path id="LiberationSerif-Bold-79" d="M 1066 1597 
@@ -12573,7 +12573,7 @@ z
    </g>
    <g id="text_33">
     <!-- 主导代价：Task边界搬运与启动等待 -->
-    <g style="fill: #ffffff" transform="translate(64.651531 278.771759) scale(0.078 -0.078)">
+    <g style="fill: #ffffff" transform="translate(55.840187 279.546444) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-Bold-37" d="M 969 0 
 L 969 228 
@@ -12821,7 +12821,7 @@ z
    </g>
    <g id="text_34">
     <!-- 安全链收缩、依赖带弱连通分组 -->
-    <g transform="translate(72.531969 321.803636) scale(0.078 -0.078)">
+    <g transform="translate(64.831969 320.876581) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-3055" d="M 6069 2750 
 Q 6044 2550 6069 2350 
@@ -13493,7 +13493,7 @@ z
    </g>
    <g id="text_35">
     <!-- 尾长优先的追加式分核 -->
-    <g transform="translate(88.131969 332.777959) scale(0.078 -0.078)">
+    <g transform="translate(82.631969 332.68652) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-310a" d="M 3813 -688 
 Q 3356 -650 3219 -256 
@@ -13726,7 +13726,7 @@ z
    </g>
    <g id="text_36">
     <!-- 划分不变的反馈重排 -->
-    <g transform="translate(92.031969 343.949719) scale(0.078 -0.078)">
+    <g transform="translate(87.081969 344.72174) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-26de" d="M 3113 4138 
 L 2663 3919 
@@ -14067,7 +14067,7 @@ z
    </g>
    <g id="text_37">
     <!-- Treap区间索引的插入候选 -->
-    <g transform="translate(83.075984 354.977057) scale(0.078 -0.078)">
+    <g transform="translate(76.862961 356.592171) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-55" d="M 2075 3016 
 L 2075 2222 
@@ -14415,7 +14415,7 @@ z
    </g>
    <g id="text_38">
     <!-- 五核平均加速比 3.743 -->
-    <g transform="translate(89.131969 401.447826) scale(0.08 -0.08)">
+    <g transform="translate(84.571969 401.738957) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-2360" d="M 6138 75 
 Q 6113 -144 6138 -356 
@@ -14602,7 +14602,7 @@ z
    </g>
    <g id="text_39">
     <!-- 问题二 · 场景B -->
-    <g style="fill: #ffffff" transform="translate(239.732896 267.561608) scale(0.078 -0.078)">
+    <g style="fill: #ffffff" transform="translate(236.157638 267.467419) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-Bold-25" d="M 2744 3156 
 Q 2744 3522 2586 3684 
@@ -14655,7 +14655,7 @@ z
    </g>
    <g id="text_40">
     <!-- 主导代价：核内驻留与容量溢出 -->
-    <g style="fill: #ffffff" transform="translate(210.484724 278.771759) scale(0.078 -0.078)">
+    <g style="fill: #ffffff" transform="translate(202.784724 279.546444) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2651" d="M 1025 194 
 Q 1025 -275 1044 -750 
@@ -14949,7 +14949,7 @@ z
    </g>
    <g id="text_41">
     <!-- 活动核数与驻留组织候选 -->
-    <g transform="translate(222.184724 321.788402) scale(0.078 -0.078)">
+    <g transform="translate(216.134724 320.859198) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-5393" d="M 5950 -763 
 Q 5425 281 4663 1169 
@@ -15030,7 +15030,7 @@ z
    </g>
    <g id="text_42">
     <!-- 沿官方关键链的局部移动 -->
-    <g transform="translate(222.184724 332.888256) scale(0.078 -0.078)">
+    <g transform="translate(216.134724 332.812371) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-418b" d="M 3094 -775 
 Q 2850 -750 2606 -775 
@@ -15431,7 +15431,7 @@ z
    </g>
    <g id="text_43">
     <!-- Spill触发的局部微批 -->
-    <g transform="translate(230.415553 343.938141) scale(0.078 -0.078)">
+    <g transform="translate(225.52631 344.708529) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-36" d="M 434 1128 
 L 638 1128 
@@ -15811,7 +15811,7 @@ z
    </g>
    <g id="text_44">
     <!-- 核归属不变 ⇒ 边界搬运不变 -->
-    <g transform="translate(216.334724 355.026417) scale(0.078 -0.078)">
+    <g transform="translate(209.459724 356.648491) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-341e" d="M 2488 4231 
 Q 2513 4438 2488 4644 
@@ -15970,7 +15970,7 @@ z
    </g>
    <g id="text_45">
     <!-- 五核平均加速比 4.131 -->
-    <g transform="translate(227.084724 401.447826) scale(0.08 -0.08)">
+    <g transform="translate(222.524724 401.738957) scale(0.0896 -0.0896)">
      <defs>
       <path id="LiberationSerif-Bold-14" d="M 2141 344 
 L 2869 269 
@@ -16004,7 +16004,7 @@ z
    </g>
    <g id="text_46">
     <!-- 问题三 · 共享只读L2 -->
-    <g style="fill: #ffffff" transform="translate(367.935652 267.679827) scale(0.078 -0.078)">
+    <g style="fill: #ffffff" transform="translate(362.985394 267.60231) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-Bold-2f" d="M 2278 3963 
 L 1631 3881 
@@ -16067,7 +16067,7 @@ z
    </g>
    <g id="text_47">
     <!-- 新增代价：命中、逐出与双带宽池 -->
-    <g style="fill: #ffffff" transform="translate(344.53748 278.764447) scale(0.078 -0.078)">
+    <g style="fill: #ffffff" transform="translate(336.28748 279.5381) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2949" d="M 3350 2250 
 L 5350 2256 
@@ -16354,7 +16354,7 @@ z
    </g>
    <g id="text_48">
     <!-- 沿用场景B全部部件 -->
-    <g transform="translate(369.236058 321.784745) scale(0.078 -0.078)">
+    <g transform="translate(364.469191 320.855026) scale(0.089 -0.089)">
      <use xlink:href="#WenQuanYiZenHei-418b"/>
      <use xlink:href="#WenQuanYiZenHei-49f4" transform="translate(100 0)"/>
      <use xlink:href="#WenQuanYiZenHei-2c06" transform="translate(200 0)"/>
@@ -16368,7 +16368,7 @@ z
    </g>
    <g id="text_49">
     <!-- 同一请求内跨配置重评价 -->
-    <g transform="translate(360.13748 332.819396) scale(0.078 -0.078)">
+    <g transform="translate(354.08748 332.733801) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-60c3" d="M 4838 -63 
 L 4838 375 
@@ -16563,7 +16563,7 @@ z
    </g>
    <g id="text_50">
     <!-- 同方案配置比与分别选优比 -->
-    <g transform="translate(356.23748 343.999078) scale(0.078 -0.078)">
+    <g transform="translate(349.63748 344.77806) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-26f7" d="M 163 -344 
 Q 800 -113 1203 481 
@@ -16641,7 +16641,7 @@ z
    </g>
    <g id="text_51">
     <!-- 逐例分解恒等式 -->
-    <g transform="translate(375.73748 354.938667) scale(0.078 -0.078)">
+    <g transform="translate(371.88748 356.548366) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2457" d="M 5419 119 
 L 5419 4100 
@@ -16785,7 +16785,7 @@ z
    </g>
    <g id="text_52">
     <!-- 五核平均加速比 4.219 -->
-    <g transform="translate(365.03748 401.447826) scale(0.08 -0.08)">
+    <g transform="translate(360.47748 401.738957) scale(0.0896 -0.0896)">
      <defs>
       <path id="LiberationSerif-Bold-1c" d="M 175 2913 
 Q 175 3550 540 3894 
@@ -16834,7 +16834,7 @@ z
    </g>
    <g id="text_53">
     <!-- 模型检验：加速比分布与并行效率 ｜ 相对C3的配对检验 ｜ 核数、规模与并行度的稳健性 -->
-    <g transform="translate(112.492959 447.550183) scale(0.078 -0.078)">
+    <g transform="translate(90.973607 447.454382) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2c57" d="M 5250 2288 
 L 5250 4294 
@@ -17496,7 +17496,7 @@ z
    </g>
    <g id="text_54">
     <!-- 最终方案来源的白盒统计 ｜ 求解预算的灵敏度 -->
-    <g transform="translate(185.214553 458.668927) scale(0.078 -0.078)">
+    <g transform="translate(173.95081 459.42911) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-3bcc" d="M 3019 -769 
 Q 2788 -744 2556 -769 
@@ -18080,7 +18080,7 @@ z
    </g>
    <g id="text_55">
     <!-- 交付：1至5核平均加速比曲线、无L2与只读Cache对比曲线、逐例结果表、可复现程序 -->
-    <g transform="translate(118.407553 491.489549) scale(0.078 -0.078)">
+    <g transform="translate(97.72231 491.837574) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-56bf" d="M 6138 -6 
 Q 6113 -206 6138 -400 

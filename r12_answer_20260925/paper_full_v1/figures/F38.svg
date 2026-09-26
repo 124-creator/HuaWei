@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-25T19:04:16.859095</dc:date>
+    <dc:date>2026-09-26T08:37:42.182109</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -422,7 +422,7 @@ L 331.698898 392.64378
    </g>
    <g id="text_1">
     <!-- 输入：原始图 G、固定A配置 θ、核数 k = 2～5、软预算 600 s -->
-    <g transform="translate(109.144165 26.726526) scale(0.082 -0.082)">
+    <g transform="translate(96.043896 27.036928) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-645f" d="M 5269 -38 
 L 5269 1744 
@@ -1763,7 +1763,7 @@ z
    </g>
    <g id="text_2">
     <!-- ① 基础构造并逐个评价：分量打包、链块波次、分量批次 → 首个可行解 P* -->
-    <g transform="translate(82.783086 64.81298) scale(0.082 -0.082)">
+    <g transform="translate(66.519488 64.788698) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-32a" d="M 6206 2294 
 Q 6206 1500 5800 788 
@@ -3315,7 +3315,7 @@ z
    </g>
    <g id="text_3">
     <!-- 计算与方案无关的下界 LB（计算下界与窗口下界） -->
-    <g transform="translate(125.94904 76.537791) scale(0.082 -0.082)">
+    <g transform="translate(114.865356 77.185721) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-606d" d="M 4569 -769 
 Q 4313 -738 4056 -769 
@@ -3948,7 +3948,7 @@ z
    </g>
    <g id="text_4">
     <!-- 生成下一候选：以下五类按固定顺序、在剩余预算内依次尝试 -->
-    <g transform="translate(107.613071 116.021708) scale(0.082 -0.082)">
+    <g transform="translate(94.329071 116.332572) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-49eb" d="M 6131 25 
 Q 6113 -181 6131 -388 
@@ -5070,7 +5070,7 @@ z
    </g>
    <g id="text_5">
     <!-- ② 减少活动核心 -->
-    <g transform="translate(34.982953 158.545969) scale(0.078 -0.078)">
+    <g transform="translate(30.995453 158.468452) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-32b" d="M 6206 2294 
 Q 6206 1500 5800 788 
@@ -5410,7 +5410,7 @@ z
    </g>
    <g id="text_6">
     <!-- （至多6个） -->
-    <g transform="translate(41.807953 169.493479) scale(0.078 -0.078)">
+    <g transform="translate(38.782953 170.247797) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-56bf" d="M 6138 -6 
 Q 6113 -206 6138 -400 
@@ -5515,7 +5515,7 @@ z
    </g>
    <g id="text_7">
     <!-- ③ 依赖带 -->
-    <g transform="translate(122.793189 158.469797) scale(0.078 -0.078)">
+    <g transform="translate(120.455689 158.381538) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-32c" d="M 6206 2294 
 Q 6206 1500 5800 788 
@@ -5751,7 +5751,7 @@ z
    </g>
    <g id="text_8">
     <!-- w = 4/8/2/16 -->
-    <g transform="translate(119.402017 169.020909) scale(0.078 -0.078)">
+    <g transform="translate(116.586275 169.708582) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-5a" d="M 3284 -63 
 L 3041 -63 
@@ -5873,7 +5873,7 @@ z
    </g>
    <g id="text_9">
     <!-- ④ 反馈重排 -->
-    <g transform="translate(195.003425 158.488688) scale(0.078 -0.078)">
+    <g transform="translate(192.115925 158.403092) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-32d" d="M 6206 2294 
 Q 6206 1500 5800 788 
@@ -6224,7 +6224,7 @@ z
    </g>
    <g id="text_10">
     <!-- 划分 g 不变 -->
-    <g transform="translate(195.978425 169.61901) scale(0.078 -0.078)">
+    <g transform="translate(193.228425 170.391031) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-26de" d="M 3113 4138 
 L 2663 3919 
@@ -6440,7 +6440,7 @@ z
    </g>
    <g id="text_11">
     <!-- ⑤ 分量家族 -->
-    <g transform="translate(271.113661 158.553891) scale(0.078 -0.078)">
+    <g transform="translate(268.226161 158.477491) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-32e" d="M 6206 2294 
 Q 6206 1500 5800 788 
@@ -6645,7 +6645,7 @@ z
    </g>
    <g id="text_12">
     <!-- m ≤ k（至多6个） -->
-    <g transform="translate(261.064458 169.493479) scale(0.078 -0.078)">
+    <g transform="translate(256.759763 170.247797) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-50" d="M 1019 2700 
 Q 1253 2834 1515 2925 
@@ -6723,7 +6723,7 @@ z
    </g>
    <g id="text_13">
     <!-- ⑥ Treap插入 -->
-    <g transform="translate(346.138601 158.492953) scale(0.078 -0.078)">
+    <g transform="translate(343.098046 158.40796) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-32f" d="M 6206 2294 
 Q 6206 1500 5800 788 
@@ -7008,7 +7008,7 @@ z
    </g>
    <g id="text_14">
     <!-- 同一插入规则 -->
-    <g transform="translate(344.298898 169.569651) scale(0.078 -0.078)">
+    <g transform="translate(340.998898 170.334711) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-28d8" d="M 2338 538 
 L 1888 538 
@@ -7193,7 +7193,7 @@ z
    </g>
    <g id="text_15">
     <!-- 红框内②—⑤为近优门控范围：每个阶段开始前 -->
-    <g style="fill: #b55252" transform="translate(28.391811 198.859336) scale(0.078 -0.078)">
+    <g style="fill: #b55252" transform="translate(28.391811 198.796651) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-536e" d="M 6175 -131 
 Q 6156 -331 6175 -525 
@@ -8086,7 +8086,7 @@ z
      <use xlink:href="#WenQuanYiZenHei-2719" transform="translate(2000 0)"/>
     </g>
     <!-- 若 T(P*) ≤ 1.03·LB，则跳过其余改进阶段 -->
-    <g style="fill: #b55252" transform="translate(28.391811 207.724371) scale(0.078 -0.078)">
+    <g style="fill: #b55252" transform="translate(28.391811 208.507298) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-57b1" d="M 2475 -769 
 Q 2238 -744 1994 -769 
@@ -8623,7 +8623,7 @@ z
    </g>
    <g id="text_16">
     <!-- 覆盖与联合无环、未重复， -->
-    <g transform="translate(170.313071 232.199181) scale(0.08 -0.08)">
+    <g transform="translate(164.553071 232.182992) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-5e52" d="M 2638 1463 
 Q 2694 1938 2669 2356 
@@ -9114,7 +9114,7 @@ z
    </g>
    <g id="text_17">
     <!-- 且候选下界 ≤ T(P*)？ -->
-    <g transform="translate(180.786196 243.423021) scale(0.08 -0.08)">
+    <g transform="translate(176.282971 244.036848) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-22e0" d="M 6138 38 
 Q 6113 -169 6138 -375 
@@ -9198,7 +9198,7 @@ z
    </g>
    <g id="text_18">
     <!-- 原版A评价：核内 Step 1～3 ＋ 全局事件模拟（单次至多30～120 s） -->
-    <g transform="translate(96.792274 287.328821) scale(0.082 -0.082)">
+    <g transform="translate(82.209778 287.304078) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-4714" d="M 2125 -500 
 Q 3081 263 3056 1975 
@@ -9842,7 +9842,7 @@ z
    </g>
    <g id="text_19">
     <!-- 完整成功且 (Makespan, 新增COPY, 名称) 字典序更优，则 P* ← 该候选 -->
-    <g transform="translate(92.767868 299.025445) scale(0.082 -0.082)">
+    <g transform="translate(77.702443 299.669531) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-3058" d="M 4231 -681 
 Q 3950 -681 3762 -475 
@@ -10817,7 +10817,7 @@ z
    </g>
    <g id="text_20">
     <!-- 是 -->
-    <g style="fill: #555555" transform="translate(221.714646 266.477897) scale(0.078 -0.078)">
+    <g style="fill: #555555" transform="translate(221.714646 266.794298) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-3afb" d="M 2956 1875 
 L 1006 1875 
@@ -10883,7 +10883,7 @@ z
    </g>
    <g id="text_21">
     <!-- 仍有候选与预算？ -->
-    <g transform="translate(186.313071 344.041876) scale(0.08 -0.08)">
+    <g transform="translate(182.473071 344.332482) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-2399" d="M 3137 2575 
 L 3137 4225 
@@ -10990,7 +10990,7 @@ z
    </g>
    <g id="text_22">
     <!-- 否（剪枝，不送评） -->
-    <g style="fill: #555555" transform="translate(324.612283 232.100579) scale(0.078 -0.078)">
+    <g style="fill: #555555" transform="translate(324.612283 232.445941) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-28f2" d="M 2138 -775 
 Q 1894 -750 1650 -775 
@@ -11290,13 +11290,13 @@ z
    </g>
    <g id="text_23">
     <!-- 是 -->
-    <g style="fill: #555555" transform="translate(119.100472 338.194433) scale(0.078 -0.078)">
+    <g style="fill: #555555" transform="translate(119.100472 338.510833) scale(0.089 -0.089)">
      <use xlink:href="#WenQuanYiZenHei-3afb"/>
     </g>
    </g>
    <g id="text_24">
     <!-- 已有成功方案？ -->
-    <g transform="translate(190.313071 395.217998) scale(0.08 -0.08)">
+    <g transform="translate(186.953071 395.526905) scale(0.0896 -0.0896)">
      <defs>
       <path id="WenQuanYiZenHei-32be" d="M 1369 -706 
 Q 900 -663 750 -269 
@@ -11342,13 +11342,13 @@ z
    </g>
    <g id="text_25">
     <!-- 否 -->
-    <g style="fill: #555555" transform="translate(221.714646 368.448969) scale(0.078 -0.078)">
+    <g style="fill: #555555" transform="translate(221.714646 368.754628) scale(0.089 -0.089)">
      <use xlink:href="#WenQuanYiZenHei-28f2"/>
     </g>
    </g>
    <g id="text_26">
     <!-- 输出两字段方案 -->
-    <g transform="translate(81.896535 450.404869) scale(0.082 -0.082)">
+    <g transform="translate(78.452535 450.390197) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-26c6" d="M 5400 -594 
 Q 5150 -569 4906 -594 
@@ -11463,7 +11463,7 @@ z
    </g>
    <g id="text_27">
     <!-- 保留官方评价与完整状态记录 -->
-    <g transform="translate(57.296535 462.013727) scale(0.082 -0.082)">
+    <g transform="translate(50.900535 462.657352) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-24a9" d="M 4219 -775 
 Q 3981 -750 3744 -775 
@@ -11890,7 +11890,7 @@ z
    </g>
    <g id="text_28">
     <!-- 返回失败状态 -->
-    <g transform="translate(307.098898 450.301088) scale(0.082 -0.082)">
+    <g transform="translate(304.146898 450.273962) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-64a0" d="M 1250 3263 
 L 913 3263 
@@ -12097,7 +12097,7 @@ z
    </g>
    <g id="text_29">
     <!-- 保留原始失败原因，不补零 -->
-    <g transform="translate(282.498898 461.981696) scale(0.082 -0.082)">
+    <g transform="translate(276.594898 462.621477) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-2bac" d="M 2031 2963 
 Q 1669 2963 1306 2944 
@@ -12310,13 +12310,13 @@ z
    </g>
    <g id="text_30">
     <!-- 是 -->
-    <g style="fill: #555555" transform="translate(119.100472 389.218055) scale(0.078 -0.078)">
+    <g style="fill: #555555" transform="translate(119.100472 389.534455) scale(0.089 -0.089)">
      <use xlink:href="#WenQuanYiZenHei-3afb"/>
     </g>
    </g>
    <g id="text_31">
     <!-- 否 -->
-    <g style="fill: #555555" transform="translate(310.439055 389.141883) scale(0.078 -0.078)">
+    <g style="fill: #555555" transform="translate(310.439055 389.447541) scale(0.089 -0.089)">
      <use xlink:href="#WenQuanYiZenHei-28f2"/>
     </g>
    </g>

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-25T19:04:21.767837</dc:date>
+    <dc:date>2026-09-26T08:37:44.659995</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -362,7 +362,7 @@ L 275.005984 194.218583
    </g>
    <g id="text_1">
     <!-- 输入：100张图 × 1～5核；无L2配置（场景B）与只读Cache配置（1 MiB只读FIFO，读带宽250 B/cycle， -->
-    <g transform="translate(61.110216 22.490899) scale(0.078 -0.078)">
+    <g transform="translate(36.142278 22.414499) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-645f" d="M 5269 -38 
 L 5269 1744 
@@ -1954,7 +1954,7 @@ z
    </g>
    <g id="text_2">
     <!-- 与60 B/cycle的DDR池互不占用）；整图单核REF -->
-    <g transform="translate(155.281809 33.468268) scale(0.078 -0.078)">
+    <g transform="translate(143.594481 34.227914) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-19" d="M 3009 1300 
 Q 3009 647 2679 292 
@@ -2542,7 +2542,7 @@ z
    </g>
    <g id="text_3">
     <!-- 场景B求解（第6章流程） -->
-    <g transform="translate(76.15029 73.042797) scale(0.082 -0.082)">
+    <g transform="translate(70.656111 72.359758) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-410e" d="M 4844 3950 
 Q 4412 4463 3919 4906 
@@ -3077,7 +3077,7 @@ z
    </g>
    <g id="text_4">
     <!-- 在无L2配置下选出方案 -->
-    <g transform="translate(80.480915 84.735578) scale(0.082 -0.082)">
+    <g transform="translate(75.506411 84.720906) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-2bf4" d="M 6138 56 
 Q 6113 -144 6138 -338 
@@ -3412,7 +3412,7 @@ z
    </g>
    <g id="text_5">
     <!-- $P_B$ -->
-    <g transform="translate(116.757618 102.943586) scale(0.095 -0.095)">
+    <g transform="translate(116.136318 103.215783) scale(0.1064 -0.1064)">
      <defs>
       <path id="STIXGeneral-Italic-33" d="M 934 4179 
 L 2477 4179 
@@ -3493,7 +3493,7 @@ z
    </g>
    <g id="text_6">
     <!-- 只读Cache配置下独立求解：第6章流程另加 -->
-    <g transform="translate(282.180813 68.73855) scale(0.076 -0.076)">
+    <g transform="translate(269.831625 66.881709) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-47b8" d="M 4169 1619 
 L 3388 1619 
@@ -3717,7 +3717,7 @@ z
    </g>
    <g id="text_7">
     <!-- 跨配置重评价（同一请求内独立求解B方案 -->
-    <g transform="translate(283.441344 79.572198) scale(0.076 -0.076)">
+    <g transform="translate(271.307774 78.856437) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-62b4" d="M 3319 1713 
 L 2475 1700 
@@ -4211,7 +4211,7 @@ z
    </g>
    <g id="text_8">
     <!-- 至多180 s，按L2配置评价至多40 s） -->
-    <g transform="translate(293.997032 90.21644) scale(0.076 -0.076)">
+    <g transform="translate(283.66904 90.60936) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-56bf" d="M 6138 -6 
 Q 6113 -206 6138 -400 
@@ -4499,7 +4499,7 @@ z
    </g>
    <g id="text_9">
     <!-- $P_L$ -->
-    <g transform="translate(349.388563 107.195555) scale(0.095 -0.095)">
+    <g transform="translate(348.790063 107.467752) scale(0.1064 -0.1064)">
      <defs>
       <path id="STIXGeneral-Italic-2f" d="M 3578 1152 
 L 3206 0 
@@ -4533,7 +4533,7 @@ z
    </g>
    <g id="text_10">
     <!-- 开启L2，同一方案 -->
-    <g transform="translate(51.830521 152.613998) scale(0.082 -0.082)">
+    <g transform="translate(47.840017 152.268025) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-33cc" d="M 4331 -775 
 Q 4075 -750 3819 -775 
@@ -4635,7 +4635,7 @@ z
    </g>
    <g id="text_11">
     <!-- 关闭L2（共同分子） -->
-    <g transform="translate(200.801387 152.530076) scale(0.082 -0.082)">
+    <g transform="translate(196.318883 152.174033) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-263f" d="M 1263 1850 
 Q 900 1850 538 1831 
@@ -4886,7 +4886,7 @@ z
    </g>
    <g id="text_12">
     <!-- 开启L2，独立选优 -->
-    <g transform="translate(357.972254 152.569795) scale(0.082 -0.082)">
+    <g transform="translate(353.981749 152.218518) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-23e4" d="M 5250 3731 
 Q 4819 4244 4319 4694 
@@ -4961,7 +4961,7 @@ z
    </g>
    <g id="text_13">
     <!-- $T_L(P_B)$ -->
-    <g transform="translate(72.754724 170.005304) scale(0.09 -0.09)">
+    <g transform="translate(71.275124 170.263175) scale(0.1008 -0.1008)">
      <defs>
       <path id="STIXGeneral-Italic-37" d="M 4051 4179 
 L 3770 3130 
@@ -5022,7 +5022,7 @@ z
    </g>
    <g id="text_14">
     <!-- $T_B(P_B)$ -->
-    <g transform="translate(225.645591 170.005304) scale(0.09 -0.09)">
+    <g transform="translate(224.144391 170.263175) scale(0.1008 -0.1008)">
      <use xlink:href="#STIXGeneral-Italic-37" transform="translate(0 0.40625)"/>
      <use xlink:href="#STIXGeneral-Italic-25" transform="translate(55.599945 -14.59375) scale(0.7)"/>
      <use xlink:href="#STIXGeneral-Regular-b" transform="translate(102.869907 0.40625)"/>
@@ -5033,7 +5033,7 @@ z
    </g>
    <g id="text_15">
     <!-- $T_L(P_L)$ -->
-    <g transform="translate(379.031457 170.005304) scale(0.09 -0.09)">
+    <g transform="translate(377.568057 170.263175) scale(0.1008 -0.1008)">
      <use xlink:href="#STIXGeneral-Italic-37" transform="translate(0 0.40625)"/>
      <use xlink:href="#STIXGeneral-Italic-2f" transform="translate(55.599945 -14.59375) scale(0.7)"/>
      <use xlink:href="#STIXGeneral-Regular-b" transform="translate(99.019907 0.40625)"/>
@@ -5044,7 +5044,7 @@ z
    </g>
    <g id="text_16">
     <!-- 同方案配置比：只含硬件配置效应 -->
-    <g transform="translate(77.442992 223.48014) scale(0.082 -0.082)">
+    <g transform="translate(70.062992 223.134167) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-40a0" d="M 3738 350 
 Q 3738 225 3800 137 
@@ -5416,7 +5416,7 @@ z
    </g>
    <g id="text_17">
     <!-- $R_{\mathrm{hw}}=T_B(P_B)\,/\,T_L(P_B)$ -->
-    <g transform="translate(99.657992 240.304516) scale(0.09 -0.09)">
+    <g transform="translate(94.943792 240.562387) scale(0.1008 -0.1008)">
      <defs>
       <path id="STIXGeneral-Italic-35" d="M 845 4179 
 L 2458 4179 
@@ -5574,7 +5574,7 @@ z
    </g>
    <g id="text_18">
     <!-- 分别选优比：另含求解器的选解效应 -->
-    <g transform="translate(271.768189 223.435937) scale(0.082 -0.082)">
+    <g transform="translate(263.896189 223.08466) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-26f7" d="M 163 -344 
 Q 800 -113 1203 481 
@@ -5743,7 +5743,7 @@ z
    </g>
    <g id="text_19">
     <!-- $R_{\mathrm{select}}=T_B(P_B)\,/\,T_L(P_L)$ -->
-    <g transform="translate(294.933189 240.304516) scale(0.09 -0.09)">
+    <g transform="translate(289.840989 240.562387) scale(0.1008 -0.1008)">
      <defs>
       <path id="STIXGeneral-Regular-56" d="M 998 1926 
 L 1664 1523 
@@ -5894,7 +5894,7 @@ z
    </g>
    <g id="text_20">
     <!-- 逐例分解恒等式：分别选优比 ＝ 同方案配置比 × 选解比 -->
-    <g transform="translate(137.443575 288.67699) scale(0.082 -0.082)">
+    <g transform="translate(125.358133 288.331018) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-64dc" d="M 1250 3319 
 L 838 3319 
@@ -6277,7 +6277,7 @@ z
    </g>
    <g id="text_21">
     <!-- $R_{\mathrm{select},i}=R_{\mathrm{hw},i}\times T_L(P_{B,i})\,/\,T_L(P_{L,i})$ -->
-    <g transform="translate(175.245591 308.182204) scale(0.09 -0.09)">
+    <g transform="translate(167.696391 308.421618) scale(0.1008 -0.1008)">
      <defs>
       <path id="STIXGeneral-Regular-f" d="M 531 -902 
 L 467 -781 
@@ -6376,7 +6376,7 @@ z
    </g>
    <g id="text_22">
     <!-- 汇总：先逐图求比值，再对100张图取算术平均（不用两条均值曲线相除） -->
-    <g transform="translate(104.905591 348.213484) scale(0.082 -0.082)">
+    <g transform="translate(88.915591 348.181515) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-4113" d="M 5969 4750 
 Q 5944 4544 5969 4338 
@@ -7455,7 +7455,7 @@ z
    </g>
    <g id="text_23">
     <!-- 500对同方案对照中，430对两种配置的最终方案相同，70对不同 -->
-    <g transform="translate(123.355591 360.002358) scale(0.082 -0.082)">
+    <g transform="translate(109.579591 360.650288) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-4633" d="M 3144 1194 
 Q 3219 1975 3144 2763 
@@ -7874,7 +7874,7 @@ z
    </g>
    <g id="text_24">
     <!-- 只读Cache语义（与官方实现一致） -->
-    <g transform="translate(177.710466 398.346991) scale(0.078 -0.078)">
+    <g transform="translate(169.186153 397.421053) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-60b9" d="M 2850 -769 
 Q 2606 -744 2369 -769 
@@ -8243,7 +8243,7 @@ z
    </g>
    <g id="text_25">
     <!-- COPY_IN 在发射时按逻辑张量编号查询：命中则走L2读带宽池，未命中则访问DDR； -->
-    <g transform="translate(91.1457 409.420032) scale(0.078 -0.078)">
+    <g transform="translate(70.413536 409.343633) scale(0.089 -0.089)">
      <defs>
       <path id="LiberationSerif-33" d="M 2681 2950 
 Q 2681 3466 2440 3687 
@@ -9370,7 +9370,7 @@ z
    </g>
    <g id="text_26">
     <!-- 读取完成后才插入Cache，命中不刷新次序；容量不足时按先进先出淘汰； -->
-    <g transform="translate(111.410466 420.500386) scale(0.078 -0.078)">
+    <g transform="translate(93.536153 421.274556) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-3058" d="M 4231 -681 
 Q 3950 -681 3762 -475 
@@ -10271,7 +10271,7 @@ z
    </g>
    <g id="text_27">
     <!-- 新增COPY在事件模拟之前计账，命中不回减新增COPY -->
-    <g transform="translate(143.249091 431.56185) scale(0.078 -0.078)">
+    <g transform="translate(129.864841 433.183924) scale(0.089 -0.089)">
      <defs>
       <path id="WenQuanYiZenHei-2d6a" d="M 3137 -769 
 Q 2912 -744 2687 -769 
@@ -10971,7 +10971,7 @@ z
    </g>
    <g id="text_28">
     <!-- 报告：1至5核两种配置的对比曲线；同核数的配置比与选优比； -->
-    <g transform="translate(123.355591 470.131435) scale(0.082 -0.082)">
+    <g transform="translate(109.579591 470.102849) scale(0.09184 -0.09184)">
      <defs>
       <path id="WenQuanYiZenHei-3771" d="M 2844 4950 
 L 5662 4950 
@@ -11223,7 +11223,7 @@ z
    </g>
    <g id="text_29">
     <!-- 逐例两配置的Makespan、新增COPY与命中率；全部同方案退化记录 -->
-    <g transform="translate(116.0672 481.892122) scale(0.082 -0.082)">
+    <g transform="translate(101.416593 482.540052) scale(0.09184 -0.09184)">
      <defs>
       <path id="LiberationSerif-4e" d="M 1075 1416 
 L 2278 2713 

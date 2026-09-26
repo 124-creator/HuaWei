@@ -1,0 +1,86 @@
+{
+  "scope": "current manuscript F35/F38/F39/F40 only; manuscript DOCX/PDF not rebuilt",
+  "figures": [
+    {
+      "figure": "F35",
+      "page_mm": [
+        173.12,
+        180.03
+      ],
+      "min_text_pt": 8.9,
+      "min_cjk_pt": 8.9,
+      "max_text_pt": 9.184,
+      "pdf_raster_images": 0,
+      "png_px": [
+        4087,
+        4252
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nDOPJAN+LiberationSerif-Bold          CID TrueType      Identity-H       yes yes yes     15  0\nEDXMZZ+LiberationSerif               CID TrueType      Identity-H       yes yes yes     22  0\nDUNEQN+LiberationSerif               CID TrueType      Identity-H       yes yes yes     29  0\nYRWLGR+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes     36  0\n"
+    },
+    {
+      "figure": "F38",
+      "page_mm": [
+        168.03,
+        170.03
+      ],
+      "min_text_pt": 8.9,
+      "min_cjk_pt": 8.9,
+      "max_text_pt": 9.184,
+      "pdf_raster_images": 0,
+      "png_px": [
+        3969,
+        4016
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCCVTBS+LiberationSerif               CID TrueType      Identity-H       yes yes yes     15  0\nEGAOGP+LiberationSerif               CID TrueType      Identity-H       yes yes yes     22  0\nBRETGX+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes     29  0\n"
+    },
+    {
+      "figure": "F39",
+      "page_mm": [
+        168.03,
+        216.03
+      ],
+      "min_text_pt": 8.9,
+      "min_cjk_pt": 8.9,
+      "max_text_pt": 9.184,
+      "pdf_raster_images": 0,
+      "png_px": [
+        3969,
+        5103
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCEBVBF+LiberationSerif               CID TrueType      Identity-H       yes yes yes     15  0\nFPPFNM+LiberationSerif               CID TrueType      Identity-H       yes yes yes     22  0\nGWDCQE+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes     29  0\n"
+    },
+    {
+      "figure": "F40",
+      "page_mm": [
+        168.03,
+        177.03
+      ],
+      "min_text_pt": 7.056,
+      "min_cjk_pt": 8.9,
+      "max_text_pt": 10.64,
+      "pdf_raster_images": 0,
+      "png_px": [
+        3969,
+        4181
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCUKHEY+STIXGeneral-Regular           CID TrueType      Identity-H       yes yes yes     15  0\nGLKHNH+STIXGeneral-Italic            CID TrueType      Identity-H       yes yes yes     22  0\nBTFOWP+LiberationSerif               CID TrueType      Identity-H       yes yes yes     29  0\nGZUGYJ+WenQuanYiZenHei               CID TrueType      Identity-H       yes yes yes     36  0\n"
+    }
+  ],
+  "errors": []
+}
