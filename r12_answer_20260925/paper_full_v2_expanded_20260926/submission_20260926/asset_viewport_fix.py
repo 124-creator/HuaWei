@@ -9,7 +9,9 @@ if '# LBSS_VIEWPORT_V1' not in s:
     assert old in s
     new="""        if key not in ('F35','F38','F39','F40'):
             vx,vy,vw,vh=map(float,root.get('viewBox').split())
-            title=next(t for t in root.xpath('//s:text',namespaces=NS) if re.match(r'^F[0-9]{2}\\s',''.join(t.itertext())))
+            candidates=[t for t in root.xpath('//s:text',namespaces=NS) if 'y' in t.attrib and float(t.get('y'))<20 and 'font-size: 10.5px' in t.get('style','')]
+            assert len(candidates)==1,(key,'source title location changed')
+            title=candidates[0]
             footers=[t for t in root.xpath('//s:text',namespaces=NS) if 'y' in t.attrib and float(t.get('y'))>vh-12 and 'font-size: 8.2px' in t.get('style','')]
             top=float(title.get('y'))+4;bottom=vh
             title.getparent().remove(title)
