@@ -24,6 +24,15 @@ FC = {"A": "#EDF0F7", "B": "#E6F2F2", "L2": "#F7EFE6", "red": "#FBEFEF", "light"
 plt.rcParams.update({"font.family": ["Liberation Serif", "WenQuanYi Zen Hei", "DejaVu Serif"], "mathtext.fontset": "stix",
                      "svg.hashsalt": "R12-paper", "pdf.fonttype": 42})
 
+# 正文现行流程图 V1.1：只增强可读性，不改变流程拓扑、节点关系或配色。
+# 166 mm 版心下，原 7.6–8.2 pt 的小字提升到约 8.9–9.2 pt；
+# 9 pt 以上公式/重点文字按比例放大。为避免节点增高，行距略收紧。
+FONT_SCALE = 1.12
+FONT_MIN = 8.9
+
+def readable_fs(fs: float) -> float:
+    return max(FONT_MIN, fs * FONT_SCALE)
+
 
 class Canvas:
     def __init__(self, h, w=166.0):
@@ -37,8 +46,9 @@ class Canvas:
 
     def lines(self, cx, cy, text, fs=8.2, color="black", weight="normal", ha="center"):
         """多行文字：以“$”开头的行按数学式排（不含汉字），其余按普通文字排。"""
+        fs = readable_fs(fs)
         rows = text.split("\n")
-        step = fs * 0.3528 * 1.42
+        step = fs * 0.3528 * 1.34
         top = cy - step * (len(rows) - 1) / 2
         for i, r in enumerate(rows):
             self.ax.text(cx, self.y(top + i * step), r, ha=ha, va="center", fontsize=fs, color=color, weight=weight)
@@ -64,7 +74,7 @@ class Canvas:
                                           linestyle=ls, shrinkA=0, shrinkB=0))
         if label:
             x, y = xy[at]
-            self.ax.text(x + dx, y + dy, label, fontsize=fs, color=color, ha=ha, va="center")
+            self.ax.text(x + dx, y + dy, label, fontsize=readable_fs(fs), color=color, ha=ha, va="center")
 
     def save(self, out, name):
         out.mkdir(parents=True, exist_ok=True)
@@ -152,7 +162,7 @@ def q1_flow(out):
         cv.ax.plot([b["cx"], b["cx"]], [cv.y(b["b"]), cv.y(65.5)], color=GREY, lw=0.9)
     cv.ax.plot([boxes[0]["cx"], boxes[-1]["cx"]], [cv.y(65.5), cv.y(65.5)], color=GREY, lw=0.9)
     cv.ax.text(boxes[0]["l"], cv.y(69.8), "红框内②—⑤为近优门控范围：每个阶段开始前\n若 T(P*) ≤ 1.03·LB，则跳过其余改进阶段", color=RED,
-               fontsize=7.8, ha="left", va="center", linespacing=1.3)
+               fontsize=readable_fs(7.8), ha="left", va="center", linespacing=1.25)
     d1 = cv.diamond(xm, 74, 72, 16, "覆盖与联合无环、未重复，\n且候选下界 ≤ T(P*)？")
     cv.path([(xm, 65.5), (xm, d1["t"])])
     ev = cv.node(xm, 95, W, 13, "原版A评价：核内 Step 1～3 ＋ 全局事件模拟（单次至多30～120 s）\n完整成功且 (Makespan, 新增COPY, 名称) 字典序更优，则 P* ← 该候选")
@@ -186,7 +196,7 @@ def q2_flow(out):
     cv.path([(xm, g["b"]), (xm, c2["t"])], label="否", dy=-2.2)
     cv.path([(xm, c2["b"]), (xm, c3["t"])]); cv.path([(xm, c3["b"]), (xm, c4["t"])]); cv.path([(xm, c4["b"]), (xm, c5["t"])])
     cv.path([(g["r"], g["cy"]), (142, g["cy"]), (142, c5["cy"]), (c5["r"], c5["cy"])], label="是：跳过②—④", at=0, dx=1.5, dy=2.0, color=RED)
-    cv.ax.text(143.5, cv.y(74), "②—④每个阶段\n开始前均检查", color=RED, fontsize=7.8, ha="left", va="center", linespacing=1.3)
+    cv.ax.text(143.5, cv.y(74), "②—④每个阶段\n开始前均检查", color=RED, fontsize=readable_fs(7.8), ha="left", va="center", linespacing=1.25)
     d = cv.diamond(xm, 109, 74, 15, "P* 有实测Spill，\n且预算尚有剩余？")
     cv.path([(xm, c5["b"]), (xm, d["t"])])
     m1 = cv.node(xm, 129, W, 12, "⑥ 在独立进程中观察原版 Step 2 的Spill事件（至多40 s）\n筛选大张量事件：不小于容量的1/4，前后两次使用的子图距离不超过8", ec=C["B"], fc=FC["B"])
