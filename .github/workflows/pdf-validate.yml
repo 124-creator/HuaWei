@@ -1,0 +1,29 @@
+name: Validate current submission PDFs
+on:
+  push:
+    branches: ['final/review-20260927-flowcharts']
+    paths:
+      - '.github/workflows/pdf-validate.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: final/review-20260927-flowcharts
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y qpdf poppler-utils
+          for f in \
+            '最终提交_20260927/01_论文/A26104850001_附录D更正版.pdf' \
+            '最终提交_20260927/01_论文/A26104850001.pdf'
+          do
+            echo "===== $f ====="
+            file "$f"
+            ls -lh "$f"
+            head -c 8 "$f" | xxd
+            pdfinfo "$f" | sed -n '1,20p'
+            qpdf --check "$f"
+          done
