@@ -1,5 +1,5 @@
 """R12 flowchart V1.1 readability enhancement. AI-assisted code; no solver or manuscript execution.
-Generate editable drawio, vector PDF/SVG, 600dpi PNG and geometry/font checks.
+Generate editable drawio, vector PDF/SVG, 600dpi PNG and geometry/font checks.\nV1.1 target: ordinary visible text >= 9.8 pt while preserving the V1 topology.
 Release requires Liberation Serif and WenQuanYi Zen Hei. No font files are shipped.
 """
 from __future__ import annotations
