@@ -46,24 +46,35 @@ jobs:
               return x
           semantic = json.dumps(norm(ast.parse((root/'build_paper.py').read_text())), ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
           actual = hashlib.sha256(semantic).hexdigest()
-          print('Normalized builder hash:', actual)
           assert actual == release['builder_ast_sha256'], 'Builder transfer mismatch'
           PY
           mkdir -p "$HOME/.config/fontconfig/conf.d"
           cp "$TARGET/fonts.conf" "$HOME/.config/fontconfig/conf.d/99-r12-fonts.conf"
           fc-cache -f
-      - name: Build Word from the frozen original and export PDF
+      - name: Build and normalize editable equations
         run: |
           python3 "$TARGET/build_paper.py"
+          python3 "$TARGET/finalize_math.py"
           timeout 480 libreoffice -env:UserInstallation=file:///tmp/r12-expanded-lo --headless --convert-to pdf --outdir "$TARGET/out" "$TARGET/out/R12论文_完整增强版_匿名.docx"
           python3 "$TARGET/verify_release.py"
+          python3 - <<'PY'
+          import os, fitz
+          from pathlib import Path
+          path = Path(os.environ['TARGET'])/'out/R12论文_完整增强版_匿名.pdf'
+          for i,p in enumerate(fitz.open(path),1):
+              assert '¿' not in p.get_text(), ('Math parser error',i)
+              for b in p.get_text('dict')['blocks']:
+                  for line in b.get('lines',[]):
+                      for span in line['spans']:
+                          assert span['color'] != 0x800000, ('Math error marker',i,span['text'])
+          PY
       - name: Publish only the new paper directory
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- "$TARGET"
           if ! git diff --cached --quiet; then
-            git commit -m 'Publish expanded R12 Word/PDF with frozen-result checks; keep original paper and experiments unchanged'
+            git commit -m 'Publish verified full-length R12 paper with corrected editable math; frozen results unchanged'
             git push origin HEAD:main
           fi
       - uses: actions/upload-artifact@v4
