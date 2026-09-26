@@ -100,7 +100,7 @@ def roadmap(out):
         "100张正式计算图\n规模、依赖结构与复用特征普查",
         "固定配置 θ：L1/UB容量、共享DDR\n60 B/cycle、同步等待；问题三另加\n1 MiB只读L2（250 B/cycle）",
         "官方评估程序：唯一评分口径\n整图单核REF：统一加速比分母"])]
-    base = cv.node(xm, 23, x1 - x0, 12, "认清代价从何而来：切图、分核、核序三项决策互相牵制；Makespan由评估程序事件推进决定，写不出闭式表达式", fs=7.9)
+    base = cv.node(xm, 23, x1 - x0, 12, "识别主导代价：切图、分核与核序相互耦合；Makespan由官方事件模拟确定，难以写成闭式目标函数", fs=7.9)
     for n in ins:
         cv.path([(n["cx"], n["b"]), (n["cx"], base["t"])])
     model = cv.node(xm, 40, x1 - x0, 20,
@@ -108,7 +108,7 @@ def roadmap(out):
                     "评价语义约束：依赖与Pipe串行、Task释放、活跃集合容量、带宽公平共享、边界计账\n"
                     "复杂性与下界：忽略搬运时已NP难；与方案无关的计算下界与窗口下界", fs=7.9)
     cv.path([(xm, base["b"]), (xm, model["t"])])
-    steps = [("认代价", "找出各场景的\n主导代价"), ("造候选", "针对主导代价的\n结构化候选族"), ("设下界", "下界剪枝与\n3%近优认证"), ("凭评测", "官方评价器\n字典序定案")]
+    steps = [("识代价", "识别各场景的\n主导代价"), ("构候选", "构造面向瓶颈的\n结构化候选族"), ("下界筛选", "下界剪枝与\n3%近优性证书"), ("官方评测", "官方评价器\n字典序择优")]
     w4 = (x1 - x0 - 9) / 4
     for i, (h, b) in enumerate(steps):
         cx = x0 + w4 / 2 + i * (w4 + 3)
@@ -122,7 +122,7 @@ def roadmap(out):
             ("B", "问题二 · 场景B", "主导代价：核内驻留与容量溢出",
              "活动核数与驻留组织候选\n沿官方关键链的局部移动\nSpill触发的局部微批\n核归属不变 ⇒ 边界搬运不变", "五核平均加速比 4.131"),
             ("L2", "问题三 · 共享只读L2", "新增代价：命中、逐出与双带宽池",
-             "沿用场景B全部部件\n同一请求内跨配置重评价\n同方案配置比与分别选优比\n逐例分解恒等式", "五核平均加速比 4.219")]
+             "沿用场景B候选机制\n同一请求内跨配置重评价\n同方案配置比与分别选优比\n逐例分解恒等式", "五核平均加速比 4.219")]
     for i, (k, head, cost, body, res) in enumerate(cols):
         cx = x0 + w3 / 2 + i * (w3 + 3)
         h1 = cv.node(cx, 89, w3, 11, head + "\n" + cost, ec=C[k], fc=C[k], fs=7.8, color="white", weight="bold")
@@ -131,7 +131,7 @@ def roadmap(out):
         r1 = cv.node(cx, 135.5, w3, 8.5, res, ec=C["ok"], fc=FC["ok"], fs=8.0, weight="bold")
         cv.path([(cx, b1["b"]), (cx, r1["t"])])
         cv.path([(cx, r1["b"]), (cx, 152)])
-    cv.node(xm, 152, x1 - x0, 12, "模型检验：加速比分布与并行效率 ｜ 相对C3的配对检验 ｜ 核数、规模与并行度的稳健性\n最终方案来源的白盒统计 ｜ 求解预算的灵敏度", fs=7.8)
+    cv.node(xm, 152, x1 - x0, 12, "模型检验：加速比分布与并行效率 ｜ 相对静态构造基线（SCB）的配对检验 ｜ 核数、规模与并行度的稳健性\n最终方案来源的白盒统计 ｜ 求解预算的灵敏度", fs=7.8)
     cv.node(xm, 167, x1 - x0, 9, "交付：1至5核平均加速比曲线、无L2与只读Cache对比曲线、逐例结果表、可复现程序", fc=FC["light"], fs=7.8)
     cv.path([(xm, 164), (xm, 167)])
     cv.save(out, "F35")
@@ -163,18 +163,18 @@ def q1_flow(out):
     cv.ax.plot([boxes[0]["cx"], boxes[-1]["cx"]], [cv.y(65.5), cv.y(65.5)], color=GREY, lw=0.9)
     cv.ax.text(boxes[0]["l"], cv.y(69.8), "红框内②—⑤为近优门控范围：每个阶段开始前\n若 T(P*) ≤ 1.03·LB，则跳过其余改进阶段", color=RED,
                fontsize=readable_fs(7.8), ha="left", va="center", linespacing=1.25)
-    d1 = cv.diamond(xm, 74, 72, 16, "覆盖与联合无环、未重复，\n且候选下界 ≤ T(P*)？")
+    d1 = cv.diamond(xm, 74, 72, 16, "方案合法且未重复，\n且候选下界 ≤ 当前 Makespan？")
     cv.path([(xm, 65.5), (xm, d1["t"])])
-    ev = cv.node(xm, 95, W, 13, "原版A评价：核内 Step 1～3 ＋ 全局事件模拟（单次至多30～120 s）\n完整成功且 (Makespan, 新增COPY, 名称) 字典序更优，则 P* ← 该候选")
+    ev = cv.node(xm, 95, W, 13, "场景A官方完整评价：核内 Step 1～3 ＋ 多核全局事件模拟\n评价成功且 (Makespan, 新增COPY) 字典序更优，则更新当前方案 P*")
     cv.path([(xm, d1["b"]), (xm, ev["t"])], label="是", dy=-2.2)
     d2 = cv.diamond(xm, 113, 60, 13, "仍有候选与预算？")
     cv.path([(xm, ev["b"]), (xm, d2["t"])])
     cv.path([(d1["r"], d1["cy"]), (150, d1["cy"]), (150, d2["cy"]), (d2["r"], d2["cy"])], label="否（剪枝，不送评）", at=0, dx=1.5, dy=2.0)
     cv.path([(d2["l"], d2["cy"]), (4, d2["cy"]), (4, hdr["cy"]), (hdr["l"], hdr["cy"])], label="是", at=0, dx=-5, dy=2.0)
-    d3 = cv.diamond(xm, 131, 60, 13, "已有成功方案？")
+    d3 = cv.diamond(xm, 131, 60, 13, "已获得可行方案？")
     cv.path([(xm, d2["b"]), (xm, d3["t"])], label="否", dy=-2.2)
-    ok = cv.node(38, 153, 64, 12, "输出两字段方案\n保留官方评价与完整状态记录", ec=C["ok"], fc=FC["ok"])
-    bad = cv.node(116, 153, 64, 12, "返回失败状态\n保留原始失败原因，不补零", ec=RED, fc=FC["red"])
+    ok = cv.node(38, 153, 64, 12, "输出切图映射与各核子图序列\n并保存官方评价结果", ec=C["ok"], fc=FC["ok"])
+    bad = cv.node(116, 153, 64, 12, "返回失败状态\n并保留原始失败原因", ec=RED, fc=FC["red"])
     cv.path([(d3["l"], d3["cy"]), (ok["cx"], d3["cy"]), (ok["cx"], ok["t"])], label="是", at=0, dx=-5, dy=2.0)
     cv.path([(d3["r"], d3["cy"]), (bad["cx"], d3["cy"]), (bad["cx"], bad["t"])], label="否", at=0, dx=2.5, dy=2.0)
     cv.save(out, "F38")
@@ -199,15 +199,15 @@ def q2_flow(out):
     cv.ax.text(143.5, cv.y(74), "②—④每个阶段\n开始前均检查", color=RED, fontsize=readable_fs(7.8), ha="left", va="center", linespacing=1.25)
     d = cv.diamond(xm, 109, 74, 15, "P* 有实测Spill，\n且预算尚有剩余？")
     cv.path([(xm, c5["b"]), (xm, d["t"])])
-    m1 = cv.node(xm, 129, W, 12, "⑥ 在独立进程中观察原版 Step 2 的Spill事件（至多40 s）\n筛选大张量事件：不小于容量的1/4，前后两次使用的子图距离不超过8", ec=C["B"], fc=FC["B"])
+    m1 = cv.node(xm, 129, W, 12, "⑥ 依据官方 Step 2 的 Spill 记录进行诊断（至多40 s）\n筛选大张量事件：不小于容量的1/4，前后两次使用的子图距离不超过8", ec=C["B"], fc=FC["B"])
     cv.path([(xm, d["b"]), (xm, m1["t"])], label="是", dy=-2.2)
     m2 = cv.node(xm, 146, W, 12, "生成至多两个固定窗口候选：窗口宽4或8个子图，至多16个互不重叠的窗口，\n每个窗口不超过128个原计算操作；窗口内让共享输入的使用者连续执行", ec=C["B"], fc=FC["B"])
     cv.path([(xm, m1["b"]), (xm, m2["t"])])
     inv = cv.node(xm, 163, W, 9, "不变量：窗口外次序与每个操作的核归属都不变 ⇒ Spill前的边界COPY严格不变", ec=GREY, fc=FC["light"], ls=(0, (3, 2)))
     cv.path([(xm, m2["b"]), (xm, inv["t"])])
-    m3 = cv.node(xm, 177, W, 8, "每个候选仍经结构检查与原版B完整评价（至多45 s）；字典序更优才更新 P*")
+    m3 = cv.node(xm, 177, W, 8, "每个候选仍经结构检查与场景B官方完整评价（至多45 s）；字典序更优才更新 P*")
     cv.path([(xm, inv["b"]), (xm, m3["t"])])
-    out_ok = cv.node(xm, 196, 110, 12, "已有成功方案则输出两字段方案与官方评价结果；\n否则返回失败，不补0、不删图", ec=C["ok"], fc=FC["ok"])
+    out_ok = cv.node(xm, 196, 110, 12, "已有可行方案则输出切图映射、各核子图序列及官方评价结果；\n若无可行方案则返回失败状态", ec=C["ok"], fc=FC["ok"])
     cv.path([(xm, m3["b"]), (xm, out_ok["t"])])
     cv.path([(d["l"], d["cy"]), (4, d["cy"]), (4, 190), (xm - 20, 190), (xm - 20, out_ok["t"])], label="否", at=0, dx=-5, dy=2.0)
     cv.save(out, "F39")
@@ -241,13 +241,13 @@ def q3_flow(out):
     idn = cv.node(xm, 96, 160, 16, "逐例分解恒等式：分别选优比 ＝ 同方案配置比 × 选解比\n\n", ec=GREY, fc="white")
     cv.lines(xm, 107, r"$R_{\mathrm{select},i}=R_{\mathrm{hw},i}\times T_L(P_{B,i})\,/\,T_L(P_{L,i})$", fs=9)
     cv.path([(48, hw["b"]), (48, idn["t"])]); cv.path([(118, sel["b"]), (118, idn["t"])])
-    agg = cv.node(xm, 117, 160, 12, "汇总：先逐图求比值，再对100张图取算术平均（不用两条均值曲线相除）\n500对同方案对照中，430对两种配置的最终方案相同，70对不同", fc=FC["light"])
+    agg = cv.node(xm, 117, 160, 12, "汇总：先逐图计算比值，再对100张图取算术平均\n500组配对评估中，430组两配置最终方案相同，70组不同", fc=FC["light"])
     cv.path([(xm, idn["b"]), (xm, agg["t"])])
     fifo = cv.node(xm, 134, 160, 21, "只读Cache语义（与官方实现一致）\n"
                    "COPY_IN 在发射时按逻辑张量编号查询：命中则走L2读带宽池，未命中则访问DDR；\n"
                    "读取完成后才插入Cache，命中不刷新次序；容量不足时按先进先出淘汰；\n"
-                   "新增COPY在事件模拟之前计账，命中不回减新增COPY", ec=C["L2"], fc="white", fs=7.8, ls=(0, (3, 2)))
-    res = cv.node(xm, 160, 160, 12, "报告：1至5核两种配置的对比曲线；同核数的配置比与选优比；\n逐例两配置的Makespan、新增COPY与命中率；全部同方案退化记录", ec=C["ok"], fc=FC["ok"])
+                   "新增COPY在事件模拟之前计账，Cache命中不改变已计入的新增COPY字节", ec=C["L2"], fc="white", fs=7.8, ls=(0, (3, 2)))
+    res = cv.node(xm, 160, 160, 12, "报告：1至5核两种配置的对比曲线；同核数的配置比与选优比；\n逐例两配置的Makespan、新增COPY与命中率；全部同方案退化实例", ec=C["ok"], fc=FC["ok"])
     cv.path([(xm, agg["b"]), (xm, fifo["t"])])
     cv.path([(xm, fifo["b"]), (xm, res["t"])])
     cv.save(out, "F40")
