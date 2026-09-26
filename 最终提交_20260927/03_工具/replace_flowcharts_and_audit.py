@@ -72,7 +72,7 @@ def replace_images(src:Path,dst:Path,flowdir:Path):
         records=[]
         used=set()
         for cap,source_name in CAPTIONS.items():
-            matches=[i for i,p in enumerate(paras) if re.match(r"^\\s*"+re.escape(cap)+r"(?:\\s|$)", para_text(p))]
+            matches=[i for i,p in enumerate(paras) if re.match(r"^\s*"+re.escape(cap)+r"(?:\s|$)", para_text(p))]
             if not matches: raise RuntimeError(f"Caption not found: {cap}")
             # Match the actual caption paragraph only; prose such as "见图5-4" must never qualify.
             idx=matches[0]
