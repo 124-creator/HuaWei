@@ -1,0 +1,85 @@
+name: Replace final-submission flowcharts and audit
+on:
+  push:
+    branches: ['final/review-20260927-flowcharts']
+    paths:
+      - '.github/workflows/final-flowchart-replace.yml'
+      - 'r12_answer_20260925/paper_full_v1/code/flowcharts.py'
+      - '最终提交_20260927/03_工具/replace_flowcharts_and_audit.py'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: final/review-20260927-flowcharts
+          fetch-depth: 0
+      - name: Install isolated document dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-wqy-zenhei fonts-liberation
+          python -m pip install matplotlib pillow python-docx lxml
+          fc-cache -f
+      - name: Generate reviewed current-paper flowcharts
+        run: |
+          python r12_answer_20260925/paper_full_v1/code/flowcharts.py
+      - name: Replace four figures in latest final DOCX
+        run: |
+          mkdir -p '最终提交_20260927/04_核验记录/流程图替换终审_20260927'
+          python '最终提交_20260927/03_工具/replace_flowcharts_and_audit.py' \
+            --src '最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图版_含附录D更正.docx' \
+            --dst '最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图优化版_20260927.docx' \
+            --flowdir 'r12_answer_20260925/paper_full_v1/figures' \
+            --report '最终提交_20260927/04_核验记录/流程图替换终审_20260927/替换记录.json' \
+            --text '/tmp/final_review_text.txt'
+      - name: Assert document text and structure unchanged
+        run: |
+          python - <<'PY'
+          from docx import Document
+          from pathlib import Path
+          import hashlib,json
+          src=Path('最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图版_含附录D更正.docx')
+          dst=Path('最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图优化版_20260927.docx')
+          def sig(p):
+              d=Document(p)
+              paras=[x.text for x in d.paragraphs]
+              tables=[[[c.text for c in row.cells] for row in t.rows] for t in d.tables]
+              secs=[(s.top_margin,s.bottom_margin,s.left_margin,s.right_margin,s.page_width,s.page_height) for s in d.sections]
+              return paras,tables,secs,len(d.inline_shapes)
+          a,b=sig(src),sig(dst)
+          assert a[0]==b[0], 'paragraph text changed'
+          assert a[1]==b[1], 'table text changed'
+          assert a[2]==b[2], 'section geometry changed'
+          assert a[3]==b[3], 'inline image count changed'
+          rec={'paragraphs':len(a[0]),'tables':len(a[1]),'sections':len(a[2]),'inline_shapes':a[3],
+               'text_identical':True,'tables_identical':True,'section_geometry_identical':True,'inline_shape_count_identical':True}
+          Path('最终提交_20260927/04_核验记录/流程图替换终审_20260927/结构不变核验.json').write_text(json.dumps(rec,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps(rec,ensure_ascii=False,indent=2))
+          PY
+      - name: Commit only final DOCX and replacement audit
+        run: |
+          git add '最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图优化版_20260927.docx' \
+                  '最终提交_20260927/04_核验记录/流程图替换终审_20260927/替换记录.json' \
+                  '最终提交_20260927/04_核验记录/流程图替换终审_20260927/结构不变核验.json'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if ! git diff --cached --quiet; then
+            git commit -m 'Replace four final-submission flowcharts with reviewed versions'
+            git push origin HEAD:final/review-20260927-flowcharts
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: final-submission-flowchart-review
+          path: |
+            最终提交_20260927/01_论文/多核NPU切图调度论文_终审流程图优化版_20260927.docx
+            最终提交_20260927/04_核验记录/流程图替换终审_20260927/
+            /tmp/final_review_text.txt
+            r12_answer_20260925/paper_full_v1/figures/F35.png
+            r12_answer_20260925/paper_full_v1/figures/F38.png
+            r12_answer_20260925/paper_full_v1/figures/F39.png
+            r12_answer_20260925/paper_full_v1/figures/F40.png
+          retention-days: 7
