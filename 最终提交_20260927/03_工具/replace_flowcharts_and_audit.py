@@ -34,12 +34,12 @@ def para_text(p):
     return "".join((t.text or "") for t in p.findall(".//w:t",NS))
 
 def nearest_image_rid(paras, idx):
-    for j in range(idx-1, max(-1,idx-12), -1):
+    for j in range(idx-1, max(-1,idx-40), -1):
         blip=paras[j].find(".//a:blip",NS)
         if blip is not None:
             rid=blip.get("{%s}embed"%NS["r"])
             if rid: return j,rid
-    raise RuntimeError(f"No preceding image within 12 paragraphs for caption paragraph {idx}")
+    raise RuntimeError(f"No preceding image within 40 document-order paragraphs for caption paragraph {idx}")
 
 def replace_images(src:Path,dst:Path,flowdir:Path):
     with tempfile.TemporaryDirectory() as td:
@@ -49,7 +49,7 @@ def replace_images(src:Path,dst:Path,flowdir:Path):
         relxml=td/"word/_rels/document.xml.rels"
         tree=ET.parse(docxml); root=tree.getroot()
         body=root.find("w:body",NS)
-        paras=[x for x in list(body) if x.tag=="{%s}p"%NS["w"]]
+        paras=body.findall(".//w:p",NS)
         reltree=ET.parse(relxml); relroot=reltree.getroot()
         relmap={x.get("Id"):x.get("Target") for x in relroot}
         records=[]
