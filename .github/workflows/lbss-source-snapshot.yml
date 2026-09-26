@@ -1,0 +1,36 @@
+name: LBSS scoped source snapshot
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/lbss-source-snapshot.yml']
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: f65bf76d771d2a12aab66da67667bf02c87a652f
+          persist-credentials: false
+      - name: Archive requested sources without execution
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          roots = [Path('r12_answer_20260925/reproduction'), Path('r12_answer_20260925/publication'), Path('r12_answer_20260925/figures_v3'), Path('r12_answer_20260925/paper_full_v2_expanded_20260926'), Path('r12_answer_20260925/paper_full_v1/template'), Path('r12_answer_20260925/paper_full_v1/code'), Path('r12_answer_20260925/paper_full_v1/qa'), Path('参考材料/官方文件_2026')]
+          with zipfile.ZipFile('lbss-sources.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for root in roots:
+                  for p in sorted(root.rglob('*')):
+                      if p.is_file() and '__pycache__' not in p.parts:
+                          z.write(p, p.as_posix())
+          print('Archive bytes:',Path('lbss-sources.zip').stat().st_size)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lbss-scoped-sources
+          path: lbss-sources.zip
+          retention-days: 3
+          if-no-files-found: error
