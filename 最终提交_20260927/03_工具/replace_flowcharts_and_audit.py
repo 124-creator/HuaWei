@@ -12,6 +12,7 @@ NS = {
     "a":"http://schemas.openxmlformats.org/drawingml/2006/main",
     "r":"http://schemas.openxmlformats.org/officeDocument/2006/relationships",
     "pr":"http://schemas.openxmlformats.org/package/2006/relationships",
+    "v":"urn:schemas-microsoft-com:vml",
 }
 CAPTIONS = {
     "图2-3":"F35.png",
@@ -33,13 +34,29 @@ def sha256(p: Path)->str:
 def para_text(p):
     return "".join((t.text or "") for t in p.findall(".//w:t",NS))
 
+def paragraph_image_rid(p):
+    blip=p.find(".//a:blip",NS)
+    if blip is not None:
+        rid=blip.get("{%s}embed"%NS["r"])
+        if rid:return rid
+    vm=p.find(".//v:imagedata",NS)
+    if vm is not None:
+        rid=vm.get("{%s}id"%NS["r"])
+        if rid:return rid
+    return None
+
 def nearest_image_rid(paras, idx):
-    for j in range(idx-1, max(-1,idx-40), -1):
-        blip=paras[j].find(".//a:blip",NS)
-        if blip is not None:
-            rid=blip.get("{%s}embed"%NS["r"])
-            if rid: return j,rid
-    raise RuntimeError(f"No preceding image within 40 document-order paragraphs for caption paragraph {idx}")
+    # Captions in this submission are normally below figures. Prefer backward search.
+    for j in range(idx-1, max(-1,idx-60), -1):
+        rid=paragraph_image_rid(paras[j])
+        if rid:return j,rid
+    # Compatibility/layout edits may place the caption before an anchored image.
+    for j in range(idx+1, min(len(paras),idx+25)):
+        rid=paragraph_image_rid(paras[j])
+        if rid:return j,rid
+    ctx=[{"i":j,"text":para_text(paras[j])[:120],"rid":paragraph_image_rid(paras[j])}
+         for j in range(max(0,idx-12),min(len(paras),idx+13))]
+    raise RuntimeError(f"No nearby image for caption paragraph {idx}; context={ctx}")
 
 def replace_images(src:Path,dst:Path,flowdir:Path):
     with tempfile.TemporaryDirectory() as td:
