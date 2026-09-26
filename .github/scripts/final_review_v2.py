@@ -99,7 +99,7 @@ for i, (p, q) in enumerate(zip(bd, ad)):
     if pp.samples != qq.samples:
         render_changed.append(i + 1)
 assert not text_changed, text_changed
-assert render_changed == [8, 27, 38, 48], render_changed
+assert render_changed == [8, 28, 39, 49], render_changed
 
 rec = {
     "baseline_main_commit": subprocess.check_output(["git", "rev-parse", "HEAD"]).decode().strip(),
@@ -125,7 +125,7 @@ report = f"""# 最终提交终审（最新 main + 流程图替换）· 2026-09-2
 - 基线使用最新 main 的 多核NPU切图调度论文_提交版_修复.docx，已包含团队确认的 AI 工具更正：DeepSeek V4.1 Flash / Qwen3.8-Max。
 - 仅原位替换图2-3、图5-4、图6-4、图7-2，对应 DOCX 媒体 image7/image13/image21/image30。
 - document.xml、关系、样式、核心属性均未变化；正文文字、表格、公式和分页结构未因换图改写。
-- 同一 LibreOffice 渲染器前后比对：页数均为 {len(bd)}，文本变化页 0；仅第 8、27、38、48 页的流程图区域发生渲染变化。
+- 同一 LibreOffice 渲染器前后比对：页数均为 {len(bd)}，文本变化页 0；仅第 8、28、39、49 页的流程图区域发生渲染变化。
 - 新增 多核NPU切图调度论文_终审流程图版.docx 为当前应继续导出的 Word 真源。
 - 新增 多核NPU切图调度论文_终审流程图版_排版核对_勿提交.pdf 仅供布局审查，不是正式提交 PDF。
 
