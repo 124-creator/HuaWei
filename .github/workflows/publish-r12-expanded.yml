@@ -1,0 +1,64 @@
+name: Publish expanded R12 paper
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'r12_answer_20260925/paper_full_v2_expanded_20260926/PUBLISH.json'
+permissions:
+  contents: write
+concurrency:
+  group: r12-expanded-paper
+  cancel-in-progress: false
+jobs:
+  build-paper:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      TARGET: r12_answer_20260925/paper_full_v2_expanded_20260926
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install document rendering dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libreoffice-writer fonts-noto-cjk fonts-stix fonts-liberation
+          python3 -m pip install --quiet python-docx pypandoc-binary Pillow PyMuPDF numpy scipy
+      - name: Expand verified text sources
+        run: |
+          python3 - <<'PY'
+          import os, json, base64, gzip, hashlib
+          from pathlib import Path
+          root = Path(os.environ['TARGET'])
+          payload = json.loads((root/'build_payload.json').read_text())
+          for item in payload['files']:
+              name = item['name']
+              if Path(name).is_absolute() or '..' in Path(name).parts:
+                  raise ValueError('Unsafe payload path')
+              raw = gzip.decompress(base64.b64decode(item['gzip_base64'], validate=True))
+              if hashlib.sha256(raw).hexdigest() != item['sha256']:
+                  raise ValueError('Text source checksum mismatch: '+name)
+              dest = root/name
+              dest.parent.mkdir(parents=True, exist_ok=True)
+              dest.write_bytes(raw)
+          PY
+          mkdir -p "$HOME/.config/fontconfig/conf.d"
+          cp "$TARGET/fonts.conf" "$HOME/.config/fontconfig/conf.d/99-r12-fonts.conf"
+          fc-cache -f
+      - name: Build Word from the frozen original and export PDF
+        run: |
+          python3 "$TARGET/build_paper.py"
+          timeout 480 libreoffice -env:UserInstallation=file:///tmp/r12-expanded-lo --headless --convert-to pdf --outdir "$TARGET/out" "$TARGET/out/R12论文_完整增强版_匿名.docx"
+          python3 "$TARGET/verify_release.py"
+      - name: Publish only the new paper directory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- "$TARGET"
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish expanded R12 Word/PDF with frozen-result checks; keep original paper and experiments unchanged'
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: R12-expanded-paper
+          path: r12_answer_20260925/paper_full_v2_expanded_20260926/out/
+          retention-days: 30
